@@ -2212,10 +2212,12 @@ register boolean newlev;
 			You("不気味な感じがした…");
 		    break;
 		case BEEHIVE:
+		    if (monstinroom(&mons[PM_QUEEN_BEE], roomno))
 /*JP
 		    You("enter a giant beehive!");
 */
 		    You("巨大な蜂の巣に入った！");
+		    rt = 0;
 		    break;
 		case COCKNEST:
 /*JP
