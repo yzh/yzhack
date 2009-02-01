@@ -1,0 +1,33 @@
+	MS Windows 用 jnethack のコンパイル方法
+							Kentaro Shirakata
+
+0.必要環境
+
+　私がテストしたのは Visual C++ 6 SP5 と Boland C++ 5.5 です。
+　以下、トップディレクトリ(README.j があるディレクトリ)を基準とします。
+　(基本的に sys/winnt/Install.nt と同じです)
+
+1. VC/GUI 版
+
+・sys/winnt/nhsetup.bat を実行。
+・nethack.dsw をダブルクリック(Visual Studio 起動)。
+・[ビルド]→[アクティブな構成の設定...] で "nethackw - Win32 Release" を選択。
+・[ビルド]→[ビルド] でコンパイル・インストール。
+・binary/ ディレクトリに必要ファイルが作成されます。
+
+2. VC/CUI 版(コマンドラインから)
+
+・(Visual Studio の)VCVARS32.BAT を実行。
+・sys/winnt/nhsetup.bat を実行。
+・src/ ディレクトリに移動。
+・nmake all でコンパイル・インストール。
+・binary/ ディレクトリに必要ファイルが作成されます。
+
+3. BCC 版(コマンドラインから)
+
+・sys/winnt/nhsetup.bat を実行。
+・src/ ディレクトリに移動。
+・デフォルトでは CUI 版になっているので、GUI 版を作成する場合は
+  Makefile.bcc の 51 行目を「GRAPHICAL = Y」に変更。
+・make /f Makefile.bcc install でコンパイル・インストール。
+・binary/ ディレクトリに必要ファイルが作成されます。

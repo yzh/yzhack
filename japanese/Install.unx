@@ -1,0 +1,118 @@
+(このドキュメントは古いもので、3.4.0ベースでは当てはまらないものもあります)
+
+                               JNetHack
+                                   
+         Copyright 1993-1999  I.Numata, S.Miyashita, N.Hamada
+
+
+			INSTALL GUIDE FOR UNIX
+
+0) はじめに
+
+日本語 NetHackをインストールするには、8ビットスルーな lexが必要です。
+lexに -8 オプション(あるいはそれと同等のもの)があるかどうかをインストー
+ルの前に確認します。なければ、8ビットスルーな lexをインストールしなけ
+ればなりません。幸い GNUの flexが8ビットスルーですので、これをインストー
+ルするのがよいでしょう。また、gzipや patchも GNUの最新バージョンをインス
+トールしておくことをおすすめします。
+
+またバージョン 1.0.6からは X11 および XPMがデフォルトで必須となっています。
+インストールされてない方はこれを機会に是非追加してください。
+
+1) JNetHackのインストール方法
+
+JNetHack-currentを展開します。
+
+	% gzip -dc jnethack-current.tar.gz | tar xvf -
+
+漢字コードは EUCで記述されています。
+
+OSやコンパイル環境が不幸にしてSJISしかサポートしていない環境の方は
+
+	% gzip -dc nethack-3.3.0.tar.gz | tar xvf -
+
+とNetHack-3.3.0を展開して、
+
+        % gzip -dc  jnethack-current-nethack-3.3.0.patch.gz | nkf -s | patch -p1
+
+等とすればよいでしょう。次に Makefileを作ります。
+
+        % cd sys/unix
+        % sh setup.sh
+
+src/Makefile のコメントを参考にして、いくつかのフラグをマシンの設定に
+合せて自分で編集します。重要なのはWINTTYLIBと WINX11LIBです。デフォル
+トではFreeBSDになっているので、Linuxでは
+
+WINTTYLIB = -ltermcap
+WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11 -lm
+
+としてください。次に include/config.hや include/unixconf.h を編集します。
+オジナル版Nethackがインストールされている場合を考慮し、HACKDIRは別のディ
+レクトリになっています。 HACKDIRを変更した場合はトップ階層にある
+Makefileも変更します。さもないと make installが正しく動作しません。
+
+次に、lexを使うか、flexを使うかによって、util/Makefileの対応する部分を
+書き替えます。
+
+        % make
+
+エラーなくコンパイルできたならば、次のコマンドを実行します。(多くの場
+合rootになる必要があるはずです)
+
+        # make install
+
+インストール仕直すときは
+
+	# make update
+
+とすればよいでしょう。これを行わないとセーブファイル等が全て初期化されて
+しまいます。但しバージョンやコンパイルオプションを大きく変更したときは
+初期化インストールすることをオススメします。
+
+その他不明なことは
+
+http://www.jnethack.org
+
+を御覧ください。
+	
+(付録)
+
+JNetHackに追加されたオプション
+
+kcode(デフォルト:無変換)
+
+	OPTIONS=kcode:jis
+
+	のように指定してください。このオプションは ttyおよび設定ファイ
+	ルの漢字コードに影響を与えます。XはXの国際化部分に依存します。
+	また、.nethackrcより先に .jnethackrc を読みに行くので、英語版
+	との共存が可能です。
+
+	kterm-5.2.0(以上)がインストールされているならば、X11版をインス
+	トールしなくても -decオプションをつけることにより、そこそこの
+	グラフィックを堪能できます。この場合 kcode:jisとする必要があり
+	ます。
+
+homeurl(デフォルト:"")
+
+	OPTIONS=homeurl:http://www.guru.gr.jp/
+
+	のように指定してください。このオプションでURLを指定している
+	とスコアサーバにスコアを送るときにHome PageのURLをも送ります。
+
+proxy(デフォルト:"")
+
+	OPTIONS=proxy:proxy.guru.gr.jp:1234
+
+	のように指定してください。
+
+report(デフォルト:TRUE)
+
+	このオプションを指定するとゲーム終了時にスコアをスコアサーバ
+	に報告します。デフォルトはオフになっています。
+
+radar(デフォルト:TRUE)
+
+	レーダーのオンオフをします。win版でタイルを使用しているとき
+	のみ有効です。

@@ -1,0 +1,1117 @@
+#
+#	Japanese NetHack Copyright (c) Issei Numata 2000
+#	For 3.4, (c) Kentaro Shirakata 2003-2004
+#	JNetHack may be freely redistributed.  See license for details. 
+#
+#	English -> Japanese objects transfer table
+#
+#	missiles
+#
+)arrow:			矢:
+)elven arrow:		エルフの矢:
+)runed arrow:		ルーンの刻まれた矢:
+)orcish arrow:		オークの矢:
+)crude arrow:		粗末な矢:
+)silver arrow:		銀の矢:
+)crossbow bolt:		クロスボゥボルト:
+)bamboo arrow:		竹の矢:
+)dart:			投げ矢:
+)shuriken:		手裏剣:
+)throwing star:		星型の投擲武器:
+)boomerang:		ブーメラン:
+)spear:			槍:
+)elven spear:		エルフの槍:
+)runed spear:		ルーンの刻まれた槍:
+)orcish spear:		オークの槍:
+)crude spear:		粗末な槍:
+)dwarvish spear:	ドワーフの槍:
+)stout spear:		頑丈な槍:
+)silver spear:		銀の槍:
+)javelin:		ジャベリン:
+)throwing spear:	投げ槍:
+)trident:		トライデント:
+)lance:			ランス:
+)dagger:		短剣:
+)elven dagger:		エルフの短剣:
+)runed dagger:		ルーンの刻まれた短剣:
+)orcish dagger:		オークの短剣:
+)silver dagger:		銀の短剣:
+)crude dagger:		粗末な短剣:
+)athame:		アサメ:
+)scalpel:		メス:
+)knife:			ナイフ:
+)stiletto:		スティレット:
+)worm tooth:		ワームの歯:
+)crysknife:		クリスナイフ:
+)dwarvish mattock:	ドワーフのつるはし:
+)broad pick:		幅広のつるはし:
+)heavy pick:		重いつるはし:
+)axe:			斧:
+)battle-axe:		戦斧:
+)double-headed axe:	両刃の斧:
+)short sword:		小剣:
+)elven short sword:	エルフの小剣:
+)runed short sword:	ルーンの刻まれた小剣:
+)orcish short sword:	オークの小剣:
+)crude short sword:	粗末な小剣:
+)dwarvish short sword:	ドワーフの小剣:
+)broad short sword:	幅広の小剣:
+)scimitar:		シミター:
+)curved sword:		曲った剣:
+)iron saber:		サーベル:
+)silver saber:		銀のサーベル:
+)broadsword:		幅広の剣:
+)elven broadsword:	エルフの幅広の剣:
+)runed broadsword:	ルーンの刻まれた幅広の剣:
+)long sword:		長剣:
+)two-handed sword:	両手剣:
+)katana:		カタナ:
+)samurai sword:		侍の剣:
+)tsurugi:		ツルギ:
+)long samurai sword:	侍の長剣:
+)runesword:		ルーンソード:
+)partisan:		パルチザン:
+)vulgar polearm:	両翼副刃の長槍:
+)ranseur:		ランサー:
+)hilted polearm:	十字刃の長槍:
+)spetum:		スペタム:
+)forked polearm:	三叉穂先の長槍:
+)glaive:		グレイブ:
+)single-edged polearm:	片刃の槍剣:
+)halberd:		ハルバード:
+)angled poleaxe:	斜刃の槍斧:
+)bardiche:		バーディック:
+)long poleaxe:		長刃の鉞:
+)voulge:		ヴォウジェ:
+)pole cleaver:		鉈付きの竿:
+)fauchard:		フォシャール:
+)pole sickle:		鎌付きの竿:
+)guisarme:		ギザルム:
+)pruning hook:		高枝刈り鎌:
+)bill-guisarme:		ビル・ギザルム:
+)hooked polearm:	鈎付きの長槍:
+)lucern hammer:		ルッツェルンハンマー:
+)pronged polearm:	棘付きの矛槍:
+)bec de corbin:		ベック・ド・コルバン:
+)beaked polearm:	くちばし付きの矛槍:
+)mace:			メイス:
+)morning star:		モーニングスター:
+)war hammer:		ウォーハンマー:
+)club:			棍棒:
+)rubber hose:		ゴムホース:
+)quarterstaff:		六尺棒:
+)staff:			棒:
+)aklys:			アキリス:
+)thonged club:		紐付の棍棒:
+)flail:			フレイル:
+)bullwhip:		鞭:
+)silver long sword:	銀の長剣:
+)silver mace:		銀のメイス:
+)sword mace:		ソードメイス:
+#
+#	bows
+#
+)bow:		弓:
+)elven bow:	エルフの弓:
+)runed bow:	ルーンの刻まれた弓:
+)orcish bow:	オークの弓:
+)crude bow:	粗末な弓:
+)yumi:		和弓:
+)long bow:	長弓:
+)sling:		スリング:
+)crossbow:	クロスボゥ:
+#
+#	dummy weapon(for #enhance)
+#
+)polearms:		長槍:
+)saber:			サーベル:
+)two weapon combat:	二刀流:
+)pick-axe:		つるはし:
+)bare handed combat:	素手:
+)martial arts:		マーシャルアーツ:
+)unicorn horn:		ユニコーンの角:
+#
+#	armors
+#
+]elven leather helm:	エルフの革帽子:
+]leather hat:		革帽子:
+]orcish helm:		オークの兜:
+]iron skull cap:	鉄の帽子:
+]dwarvish iron helm:	ドワーフの鉄兜:
+]hard hat:		固い帽子:
+]fedora:		フィドーラ:
+]cornuthaum:		とんがり帽子:
+]conical hat:		円錐形の帽子:
+]dunce cap:		低能帽:
+]dented pot:		くぼんだ鍋:
+]helmet:		ヘルメット:
+]plumed helmet:		羽兜:
+]helm of brilliance:	知性の兜:
+]etched helmet:		飾り彫りのある兜:
+]helm of opposite alignment:	逆属性の兜:
+]crested helmet:	頭立て付きの兜:
+]helm of telepathy:	テレパシーの兜:
+]visored helmet:	面頬付きの兜:
+]katyusha:		カチューシャ:	#from NetHack brass#
+]headpiece:		頭飾り:		#from NetHack brass#
+]nurse cap:		ナースキャップ:		#from NetHack brass#
+]white cap:		白い帽子:	# yzh
+]gray dragon scale mail:	灰色ドラゴンの鱗鎧:
+]silver dragon scale mail:	銀色ドラゴンの鱗鎧:
+]red dragon scale mail:		赤色ドラゴンの鱗鎧:
+]white dragon scale mail:	白ドラゴンの鱗鎧:
+]orange dragon scale mail:	オレンジドラゴンの鱗鎧:
+]black dragon scale mail:	黒ドラゴンの鱗鎧:
+]blue dragon scale mail:	青ドラゴンの鱗鎧:
+]green dragon scale mail:	緑ドラゴンの鱗鎧:
+]yellow dragon scale mail:	黄色ドラゴンの鱗鎧:
+]gray dragon scales:		灰色ドラゴンの鱗:
+]silver dragon scales:		銀色ドラゴンの鱗:
+]red dragon scales:		赤色ドラゴンの鱗:
+]white dragon scales:		白ドラゴンの鱗:
+]orange dragon scales:		オレンジドラゴンの鱗:
+]black dragon scales:		黒ドラゴンの鱗:
+]blue dragon scales:		青ドラゴンの鱗:
+]green dragon scales:		緑ドラゴンの鱗:
+]yellow dragon scales:		黄色ドラゴンの鱗:
+]plate mail:		プレートメイル:
+]crystal plate mail:	クリスタルメイル:
+]bronze plate mail:	ブロンズメイル:
+]splint mail:		スプリントメイル:
+]banded mail:		バンデッドメイル:
+]dwarvish mithril-coat:	ドワーフのミスリル服:
+]elven mithril-coat:	エルフのミスリル服:
+]chain mail:		チェインメイル:
+]orcish chain mail:	オークのチェインメイル:
+]crude chain mail:	粗末なチェインメイル:
+]scale mail:		スケイルメイル:
+]studded leather armor:	鋲留めの革鎧:
+]ring mail:		リングメイル:
+]orcish ring mail:	オークのリングメイル:
+]crude ring mail:	粗末なリングメイル:
+]leather armor:		革鎧:
+]leather jacket:	革の服:
+]maid dress:		メイド服:	#from NetHack brass#
+]black dress:		黒い婦人服:	#from NetHack brass#
+]nurse uniform:		ナース服:	#from NetHack brass#
+]white dress:		白い婦人服:	#from NetHack brass#
+#
+#	cloaks
+#
+]mummy wrapping:	ミイラの包帯:
+]elven cloak:		エルフのクローク:
+]faded pall:		陰気な外套:
+]orcish cloak:		オークのクローク:
+]coarse mantelet:	粗末なマント:
+]dwarvish cloak:	ドワーフのクローク:
+]hooded cloak:		フードつきのクローク:
+]oilskin cloak:		防水クローク:
+]slippery cloak:	つるつるしたクローク:
+]cloak of protection:	守りのクローク:
+]tattered cape:		ぼろぼろのケープ:
+]cloak of invisibility:	透明のクローク:
+]opera cloak:		オペラクローク:
+]cloak of magic resistance:	魔法を防ぐクローク:
+]ornamental cope:	装飾用の外套:
+]cloak of displacement:	幻影のクローク:
+]piece of cloth:	布切れ:
+]robe:			ローブ:
+]alchemy smock:		錬金術の仕事着:
+]apron:			エプロン:
+]leather cloak:		革のクローク:
+]kitchen apron:		料理用エプロン:		#from NetHack brass#
+]frilled apron:		フリル付きのエプロン:	#from NetHack brass#
+#
+#	shields
+#
+]small shield:		小さな盾:
+]elven shield:		エルフの盾:
+]blue and green shield:	青と緑の盾:
+]Uruk-hai shield:	ウルク・ハイの盾:
+]white-handed shield:	白の手の盾:
+]orcish shield:		オークの盾:
+]red-eyed shield:	赤い目の盾:
+]large shield:		大きな盾:
+]dwarvish roundshield:	ドワーフの丸盾:
+]large round shield:	大きな丸盾:
+]shield of reflection:	反射の盾:
+]polished silver shield:	磨かれた銀の盾:
+#
+#	underwears
+#
+]Hawaiian shirt:		アロハシャツ:
+]T-shirt:		Ｔシャツ:
+#
+#	gloves
+#
+]leather gloves:	革の手袋:
+]old gloves:		古い手袋:
+]gauntlets of fumbling:	不器用さの籠手:
+]padded gloves:		詰めもののある手袋:
+]gauntlets of power:	力の籠手:
+]riding gloves:		乗馬用の手袋:
+]gauntlets of dexterity:	器用さの籠手:
+]fencing gloves:	フェンシングの籠手:
+]silver gauntlets:	銀の籠手:
+]boxing gloves:		ボクシングの手袋:
+#
+#	boots
+#
+]low boots:		ショートブーツ:
+]walking shoes:		散歩用の靴:
+]iron shoes:		鉄の靴:
+]hard shoes:		固い靴:
+]high boots:		ロングブーツ:
+]jackboots:		軍靴:
+]speed boots:		すばやさのブーツ:
+]combat boots:		戦闘用ブーツ:
+]water walking boots:	水上歩行の靴:
+]jungle boots:		ジャングル用ブーツ:
+]jumping boots:		跳躍のブーツ:
+]hiking boots:		ハイキング用ブーツ:
+]elven boots:		エルフのブーツ:
+]mud boots:		長靴:
+]fumble boots:		つまずきのブーツ:
+]riding boots:		乗馬用のブーツ:
+]levitation boots:	浮遊のブーツ:
+]snow boots:		雪靴:
+]kicking boots:		蹴り上げブーツ:
+]buckled boots:		留め金のあるブーツ:
+#
+#	rings
+#
+=adornment:		飾りの指輪:
+=gain strength:		強さの指輪:
+=gain constitution:	体力の指輪:
+=increase accuracy:	命中の指輪:
+=increase damage:	攻撃の指輪:
+=protection:		守りの指輪:
+=regeneration:		回復の指輪:
+=searching:		探索の指輪:
+=stealth:		忍びの指輪:
+=sustain ability:	能力維持の指輪:
+=levitation:		浮遊の指輪:
+=hunger:		飢餓の指輪:
+=aggravate monster:	反感の指輪:
+=conflict:		争いの指輪:
+=warning:		警告の指輪:
+=poison resistance:	耐毒の指輪:
+=fire resistance:	耐炎の指輪:
+=cold resistance:	耐冷の指輪:
+=shock resistance:	耐電撃の指輪:
+=free action:		自由行動の指輪:
+=slow digestion:	消化遅延の指輪:
+=teleportation:		テレポートの指輪:
+=teleport control:	テレポート制御の指輪:
+=polymorph:		変化の指輪:
+=polymorph control:	変化制御の指輪:
+=invisibility:		透明の指輪:
+=see invisible:		可視の指輪:
+=protection from shape changers:	耐変化怪物の指輪:
+#
+=wooden:	木の指輪:
+=granite:	花崗岩の指輪:
+=opal:		オパールの指輪:
+=clay:		土の指輪:
+=coral:		珊瑚の指輪:
+=black onyx:	黒瑪瑙の指輪:
+=moonstone:	月長石の指輪:
+=tiger eye:	虎目石の指輪:
+=jade:		翡翠の指輪:
+=bronze:	青銅の指輪:
+=agate:		瑪瑙の指輪:
+=topaz:		トパーズの指輪:
+=sapphire:	サファイアの指輪:
+=ruby:		ルビーの指輪:
+=diamond:	ダイヤモンドの指輪:
+=pearl:		真珠の指輪:
+=iron:		鉄の指輪:
+=brass:		真鍮の指輪:
+=copper:	銅の指輪:
+=twisted:	ねじれた指輪:
+=steel:		鋼鉄の指輪:
+=silver:	銀の指輪:
+=gold:		金の指輪:
+=ivory:		象牙の指輪:
+=emerald:	エメラルドの指輪:
+=wire:		針金の指輪:
+=engagement:	婚約指輪:
+=shiny:		光る指輪:
+#
+#	amulets
+#
+"amulet of ESP:			テレパシーの魔除け:
+"amulet of life saving:		命の魔除け:
+"amulet of strangulation:	絞殺の魔除け:
+"amulet of restful sleep:	安眠の魔除け:
+"amulet versus poison:		耐毒の魔除け:
+"amulet of change:		性転換の魔除け:
+"amulet of unchanging:		無変化の魔除け:
+"amulet of reflection:		反射の魔除け:
+"amulet of magical breathing:	呼吸の魔除け:
+"amulet of drain resistance:    耐生命力吸収の魔除け:
+"circular:	丸い魔除け:
+"spherical:	球の魔除け:
+"oval:		楕円形の魔除け:
+"triangular:	三角形の魔除け:
+"pyramidal:	四角錐の魔除け:
+"square:	四角の魔除け:
+"concave:	凹面の魔除け:
+"hexagonal:	六角形の魔除け:
+"octagonal:	八角形の魔除け:
+"warped:        歪んだ魔除け:
+"cheap plastic imitation of the Amulet of Yendor:偽物のイェンダーの魔除け:
+"Amulet of Yendor:	イェンダーの魔除け:
+#
+#	containers
+#
+(large box:	大箱:
+(chest:		宝箱:
+(ice box:	アイスボックス:
+(sack:		袋:
+(oilskin sack:	防水袋:
+(bag of holding:	軽量化の鞄:
+(bag of tricks:	トリックの鞄:
+(bag:		鞄:
+#
+#	lock opening tools
+#
+(skeleton key:	万能鍵:
+(key:		鍵:
+(lock pick:	錠破り器具:
+(credit card:	クレジットカード:
+#
+#	light sources
+#
+(tallow candle:	獣脂のろうそく:
+(candle:	ろうそく:
+(wax candle:	蜜蝋のろうそく:
+(brass lantern:	真鍮のランタン:
+(oil lamp:	オイルランプ:
+(lamp:		ランプ:
+(magic lamp:	魔法のランプ:
+#
+#	other tools
+#
+(expensive camera:	高価なカメラ:
+(mirror:	鏡:
+(looking glass:	姿見:
+(crystal ball:	水晶玉:
+(glass orb:	ガラスの球:
+(lenses:	めがね:
+(blindfold:	目隠し:
+(towel:		タオル:
+(saddle:	鞍:
+(leash:		引き綱:
+(stethoscope:	聴診器:
+(tinning kit:	缶詰作成道具:
+(tin opener:	缶切り:
+(can of grease:	脂の缶:
+(figurine:	人形:
+(magic marker:	魔法のマーカ:
+#
+#	instruments
+#
+(tin whistle:	ブリキの笛:
+(whistle:	笛:
+(magic whistle:	魔法の笛:
+(wooden flute:	木のフルート:
+(flute:		フルート:
+(magic flute:	魔法のフルート:
+(tooled horn:	細工のほどこされたホルン:
+(horn:		ホルン:
+(frost horn:	吹雪のホルン:
+(fire horn:	炎のホルン:
+(horn of plenty:	恵みのホルン:
+(wooden harp:	木の竪琴:
+(harp:		竪琴:
+(magic harp:	魔法の竪琴:
+(bell:		ベル:
+(bugle:		ラッパ:
+(leather drum:	革の太鼓:
+(drum:		太鼓:
+(drum of earthquake:	地震の太鼓:
+(land mine:	地雷:
+(beartrap:	トラバサミ:
+#
+#	tools useful as weapons
+#
+(pick-axe:	つるはし:
+(grappling hook:	ひっかけ棒:
+(iron hook:		鉄のフック:
+(unicorn horn:	ユニコーンの角:
+#
+#	special tools
+#
+(Candelabrum of Invocation:	祈りの燭台:
+(candelabrum:			燭台:
+(Bell of Opening:		開放のベル:
+(silver bell:			銀のベル:
+#
+#	meat
+#
+%tripe ration:	臓物のレーション:
+%corpse:	死体:
+%egg:		卵:
+%meatball:	ミートボール:
+%meat stick:	ミートスティック:
+%huge chunk of meat:	巨大な肉塊:
+%meat ring:	ミートリング:
+%kelp frond:	昆布:
+%eucalyptus leaf:	ユーカリの葉:
+#
+#	fruits & veggies
+#
+%apple:		リンゴ:
+%orange:	オレンジ:
+%pear:		洋ナシ:
+%melon:		メロン:
+%banana:		バナナ:
+%carrot:		ニンジン:
+%sprig of wolfsbane:	トリカブト:
+%clove of garlic:	ニンニク:
+%slime mold:		ねばねばカビ:
+%slice of pizza:	ピザ:
+#
+#	human food
+#
+%lump of royal jelly:	ロイヤルゼリー:
+%cream pie:		クリームパイ:
+%candy bar:		キャンディ:
+%fortune cookie:	占いクッキー:
+%pancake:		パンケーキ:
+%lembas wafer:		レンバス:
+%cram ration:		クラム:
+%food ration:		食料:
+%K-ration:		Ｋレーション:
+%C-ration:		Ｃレーション:
+%tin:			缶:
+#
+#	potions
+#
+!gain ability:		能力獲得の薬:
+!restore ability:	能力回復の薬:
+!confusion:		混乱の薬:
+!blindness:		盲目の薬:
+!paralysis:		麻痺の薬:
+!speed:			加速の薬:
+!levitation:		浮遊の薬:
+!hallucination:		幻覚の薬:
+!invisibility:		透明の薬:
+!see invisible:		可視の薬:
+!healing:		回復の薬:
+!extra healing:		超回復の薬:
+!gain level:		レベルアップの薬:
+!enlightenment:		啓蒙の薬:
+!monster detection:	怪物探知の薬:
+!object detection:	物体探知の薬:
+!gain energy:		魔力の薬:
+!sleeping:		睡眠の薬:
+!full healing:		完全回復の薬:
+!polymorph:		変化の薬:
+!booze:			酔っぱらいの薬:
+!sickness:		毒薬:
+!fruit juice:		フルーツジュース:
+!water:			水:
+!oil:			油:
+!acid:			酸の薬:
+!ruby:			ルビー色の:
+!pink:			ピンク色の:
+!orange:		オレンジ色の:
+!yellow:		黄色の:
+!emerald:		エメラルド色の:
+!dark green:		暗緑色の:
+!cyan:			シアン色の:
+!sky blue:		水色の:
+!brilliant blue:	明るい青色の:
+!magenta:		マゼンダ色の:
+!purple-red:		赤紫色の:
+!puce:			暗褐色の:
+!milky:			ミルク色の:
+!swirly:		渦を巻いている:
+!bubbly:		泡だっている:
+!smoky:			煙がでている:
+!cloudy:		曇っている:
+!effervescent:		沸騰している:
+!black:			黒い:
+!white:			白い:
+!brown:			茶色の:
+!fizzy:			発泡している:
+!dark:			陰気な色の:
+!clear:			無色の:
+!murky:			濃黒の:
+!golden:		金色の:
+#
+#	scrolls
+#
+?enchant armor:		防具強化の巻物:
+?destroy armor:		防具破壊の巻物:
+?confuse monster:	怪物を混乱させる巻物:
+?scare monster:		怪物を怯えさせる巻物:
+?remove curse:		解呪の巻物:
+?enchant weapon:	武器強化の巻物:
+?create monster:	怪物を作る巻物:
+?taming:		怪物を飼いならす巻物:
+?genocide:		虐殺の巻物:
+?light:			灯りの巻物:
+?teleportation:		瞬間移動の巻物:
+?gold detection:	金貨を探す巻物:
+?food detection:	食料を探す巻物:
+?identify:		識別の巻物:
+?magic mapping:		地図の巻物:
+?amnesia:		記憶喪失の巻物:
+?fire:			炎の巻物:
+?earth:			大地の巻物:
+?punishment:		罰の巻物:
+?charging:		充填の巻物:
+?stinking cloud:	悪臭雲の巻物:
+?mail:			手紙の巻物:
+?blank paper:		白紙の巻物:
+?ZELGO MER:            『あのそのえっと』と書かれた巻物:
+?JUYED AWK YACC:       『るんららー』と書かれた巻物:
+?NR 9:                 『ぐんにょり』と書かれた巻物:
+?XIXAXA XOXAXA XUXAXA: 『ぐつぐつにゃーにゃー』と書かれた巻物:
+?PRATYAVAYAH:          『ひどいよー』と書かれた巻物:
+?DAIYEN FOOELS:        『やまんば』と書かれた巻物:
+?LEP GEX VEN ZEA:      『あはだしちゃえ』と書かれた巻物:
+?PRIRUTSENIE:          『あらあらうふふ』と書かれた巻物:
+?ELBIB YLOH:           『えんいー』と書かれた巻物:
+?VERR YED HORRE:       『さのばびっちばんごはん』と書かれた巻物:
+?VENZAR BORGAVVE:      『そーれにゃうーん』と書かれた巻物:
+?THARR:                『みっくみく』と書かれた巻物:
+?YUM YUM:              『はわわー』と書かれた巻物:
+?KERNOD WEL:           『ひぎぃ』と書かれた巻物:
+?ELAM EBOW:            『あっちいけ』と書かれた巻物:
+?DUAM XNAHT:           『かにみそ』と書かれた巻物:
+?ANDOVA BEGARIN:       『にょろーん』と書かれた巻物:
+?VE FORBRYDERNE:       『ねこみみもーど』と書かれた巻物:
+?HACKEM MUCHE:         『はにほー』と書かれた巻物:
+?VELOX NEB:            『めがっさ』と書かれた巻物:
+?FOOBIE BLETCH:        『えーりんえーりん』と書かれた巻物:
+?TEMOV:                『うるさいうるさいうるさい』と書かれた巻物:
+?GARVEN DEH:           『あなたをはんにんです』と書かれた巻物:
+?READ ME:              『ふもっふ』と書かれた巻物:
+?KIRJE:                『うっうー』と書かれた巻物:
+?stamped:		消印の押された巻物:
+?unlabeled:		ラベルのない巻物:
+#
+#	spellbooks
+#
++dig:			穴掘りの魔法書:
++magic missile:		矢の魔法書:
++fireball:		火の玉の魔法書:
++cone of cold:		冷気の魔法書:
++sleep:			眠りの魔法書:
++finger of death:	死の指の魔法書:
++light:			灯りの魔法書:
++detect monsters:	怪物探知の魔法書:
++healing:		回復の魔法書:
++knock:			開錠の魔法書:
++force bolt:		衝撃の魔法書:
++confuse monster:	混乱の魔法書:
++cure blindness:	盲目治療の魔法書:
++drain life:		生命力吸収の魔法書:
++slow monster:		鈍足化の魔法書:
++wizard lock:		施錠の魔法書:
++create monster:	怪物を造る魔法書:
++detect food:		食料探知の魔法書:
++cause fear:		恐怖の魔法書:
++clairvoyance:		千里眼の魔法書:
++cure sickness:		病気を癒す魔法書:
++charm monster:		魅了の魔法書:
++haste self:		速度増加の魔法書:
++detect unseen:		霊感の魔法書:
++levitation:		浮遊の魔法書:
++extra healing:		超回復の魔法書:
++restore ability:	能力回復の魔法書:
++invisibility:		透明の魔法書:
++detect treasure:	財宝感知の魔法書:
++remove curse:		解呪の魔法書:
++magic mapping:		地図の魔法書:
++identify:		識別の魔法書:
++turn undead:		蘇生の魔法書:
++polymorph:		変化の魔法書:
++teleport away:		テレポートの魔法書:
++create familiar:	造魔の魔法書:
++cancellation:		無力化の魔法書:
++protection:		守りの魔法書:
++jumping:		跳躍の魔法書:
++stone to flesh:	軟化の魔法書:
++lightning:		雷の魔法書:
+#
++parchment:	羊皮紙の魔法書:
++vellum:	子牛皮の魔法書:
++ragged:	ぼろぼろの魔法書:
++dog eared:	ページの折られた魔法書:
++mottled:	まだらの魔法書:
++stained:	よごれた魔法書:
++cloth:		布地の魔法書:
++leather:	革の魔法書:
++white:		白い魔法書:
++pink:		ピンク色の魔法書:
++red:		赤い魔法書:
++orange:	オレンジ色の魔法書:
++yellow:	黄色い魔法書:
++velvet:	ビロードの魔法書:
++light green:	淡緑色の魔法書:
++dark green:	濃緑色の魔法書:
++turquoise:	青緑色の魔法書:
++cyan:		シアン色の魔法書:
++light blue:	淡青の魔法書:
++dark blue:	濃青の魔法書:
++indigo:	藍色の魔法書:
++magenta:	マゼンダ色の魔法書:
++purple:	紫色の魔法書:
++violet:	スミレ色の魔法書:
++tan:		黄褐色の魔法書:
++plaid:		ラシャの魔法書:
++light brown:	淡茶色の魔法書:
++dark brown:	濃茶色の魔法書:
++gray:		灰色の魔法書:
++dusty:		ほこりっぽい魔法書:
++bronze:	青銅の魔法書:
++copper:	銅の魔法書:
++silver:	銀の魔法書:
++gold:		金の魔法書:
++glittering:	きらびらかな魔法書:
++shining:	輝く魔法書:
++thin:		薄い色の魔法書:
++thick:		濃い色の魔法書:
++plain:		真っ白な魔法書:
++dull:		鉛色の魔法書:
++canvas:	麻の魔法書:
++hardcover:	固い表紙の魔法書:
++rainbow:	虹色の魔法書:
++Book of the Dead:	死者の書:
++papyrus:	パピルスの魔法書:
++blank paper:		白紙の魔法書:
++wrinkled:	くしゃくしゃの魔法書:
+#
+#	wands
+#
+/light:			灯りの杖:
+/secret door detection:	扉探索の杖:
+/enlightenment:		啓蒙の杖:
+/create monster:	怪物を造る杖:
+/wishing:		願いの杖:
+/nothing:		単なる杖:
+/striking:		衝撃の杖:
+/make invisible:	透明化の杖:
+/slow monster:		減速の杖:
+/speed monster:		加速の杖:
+/undead turning:	蘇生の杖:
+/polymorph:		変化の杖:
+/cancellation:		無力化の杖:
+/teleportation:		瞬間移動の杖:
+/opening:		開錠の杖:
+/locking:		施錠の杖:
+/probing:		探査する杖:
+/digging:		穴掘りの杖:
+/magic missile:		矢の杖:
+/fire:			炎の杖:
+/cold:			吹雪の杖:
+/sleep:			眠りの杖:
+/death:			死の杖:
+/lightning:		雷の杖:
+#
+/glass:		ガラスの杖:
+/balsa:		バルサの杖:
+/crystal:	水晶の杖:
+/maple:		楓の杖:
+/pine:		松の杖:
+/oak:		樫の杖:
+/ebony:		黒檀の杖:
+/marble:	大理石の杖:
+/tin:		ブリキの杖:
+/brass:		真鍮の杖:
+/copper:	銅の杖:
+/silver:	銀の杖:
+/platinum:	プラチナの杖:
+/iridium:	イリジウムの杖:
+/zinc:		亜鉛の杖:
+/aluminum:	アルミニウムの杖:
+/uranium:	ウラニウムの杖:
+/iron:		鉄の杖:
+/steel:		鋼鉄の杖:
+/hexagonal:	六角形の杖:
+/short:		短い杖:
+/runed:		ルーンの刻まれた杖:
+/long:		長い杖:
+/curved:	曲った杖:
+/forked:	二叉の杖:
+/spiked:	くさびの打ちつけられた杖:
+/jeweled:	宝石が埋められた杖:
+#
+#	gold
+#
+$gold piece:	金貨:
+#
+#	gems & rocks
+#
+*dilithium crystal:	ディリジウムの結晶:
+*white:		白い石:
+*diamond:	ダイヤモンド:
+*ruby:		ルビー:
+*red:		赤い石:
+*sapphire:	サファイア:
+*blue:		青い石:
+*emerald:	エメラルド:
+*turquoise:	トルコ石:
+*aquamarine:	アクアマリン:
+*lapis lazuri:	ラピスラズリ:
+*green:		緑の石:
+*amber:		琥珀:
+*yellowish brown:	茶褐色の石:
+*topaz:		トパーズ:
+*opal:		オパール:
+*garnet:	ガーネット:
+*amethyst:	アメジスト:
+*violet:	紫の石:
+*jasper:	ジャスパー:
+*fluorite:	フルオライト:
+*jade:		翡翠:
+#
+# jactinthは出エジプト記28章で黄水晶と訳されているが，
+# citrineとかぶるので橙水晶
+#
+*jacinth:	橙水晶:
+*orange:	橙色の石:
+*black opal:	黒オパール:
+*black:		黒い石:
+*citrine:	黄水晶:
+*yellow:	黄色い石:
+*jet:		黒玉:
+*chrysoberyl:	金緑石:
+*obsidian:	黒燿石:
+*agate:		瑪瑙:
+*worthless piece of white glass:	白いガラス:
+*worthless piece of blue glass:		青いガラス:
+*worthless piece of red glass:		赤いガラス:
+*worthless piece of yellowish brown glass:	茶褐色のガラス:
+*worthless piece of green glass:	緑のガラス:
+*worthless piece of violet glass:	紫のガラス:
+*worthless piece of orange glass:	橙色のガラス:
+*worthless piece of black glass:	黒色のガラス:
+*worthless piece of yellow glass:	黄色のガラス:
+#
+*luckstone:	幸せの石:
+*gray:		灰色の宝石:
+*loadstone:	重石:
+*touchstone:	試金石:
+*flint:		火打ち石:
+*rock:		石:
+#
+#	miscellaneous
+#
+'boulder:		大きな岩:
+'statue:		像:
+0heavy iron ball:	重い鉄球:
+_iron chain:		鉄の鎖:
+'blinding venom:	目潰しの毒液:
+'splash of venom:	毒液のしぶき:
+'acid venom:		酸の毒液:
+#
+#	samurai's item
+#
+)wakizashi:	脇差し:
+)ninja-to:	忍者刀:
+)nunchaku:	ヌンチャク:
+)naginata:	薙刀:
+)ya:		征矢:
+(osaku:		さく:
+(koto:		琴:
+)shito:		刺刀:
+]tanko:		短甲:
+]kabuto:	兜:
+]yugake:	弓懸:
+%gunyoki:	兵糧丸:
+%nori:		海苔:
+!sake:		酒:
+#
+#	artifacts
+#
+AExcalibur:		エクスカリバー:
+AStormbringer:		ストームブリンガー:
+AMjollnir:		ミョルニール:
+ACleaver:		クリーバー:
+AGrimtooth:		グリムトゥース:
+AOrcrist:		オークリスト:
+ASting:			つらぬき丸:
+AMagicbane:		マジックベーン:
+AFrost Brand:		フロストブランド:
+AFire Brand:		ファイアブランド:
+ADragonslayer:		ドラゴンスレイヤー:
+ADemonbane:		デーモンベーン:
+AWerebane:		ウェアベーン:
+AGrayswandir:		グレイスワンダー:
+AGiantslayer:		ジャイアントスレイヤー:
+AOgresmasher:		オーガスマッシャー:
+ATrollsbane:		トロルスベーン:
+AVorpal Blade:		ボーパルブレード:
+ASnickersnee:		スニッカーズニー:
+ASunsword:		サンソード:
+AFist of Fury:		怒りの鉄拳:
+AThe Palantir of Westernesse:	パランティアの石:
+AMirrorbright:	 		ミラーブライト:
+
+# A
+AThe Orb of Detection:		探索のオーブ:
+# B
+AThe Heart of Ahriman:		アーリマンの心臓:
+# C
+AThe Sceptre of Might:		力の王笏:
+# F
+AThe Fortune Sword:		フォーチュンソード:
+# H
+AThe Staff of Aesculapius:	アスクレピオスの杖:
+# K
+AThe Magic Mirror of Merlin:	マーリンの魔法の鏡:
+# Med
+AThe Holy Dagger:		破魔の短剣:
+# Mon
+AThe Eyes of the Overworld:	超世界の目:
+# P
+AThe Mitre of Holiness:		聖なる宝冠:
+# Ran
+AThe Longbow of Diana:		ダイアナの長弓:
+# R
+#AThe Master Key of Thievery:	盗賊のマスターキー:
+AThe Butterfly Knife:		蝶のナイフ:
+# S
+AThe Tsurugi of Muramasa:	村正の刀:
+# T
+AThe Platinum Yendorian Express Card:	イェンダーエクスプレスのプラチナカード:
+# V
+AThe Orb of Fate:		運命のオーブ:
+# W
+AThe Eye of the Aethiopica:	エチオピアの目:
+#
+# name of dungeon
+#
+dSokoban:		倉庫番:
+dThe Dungeons of Doom:	運命の大迷宮:
+dThe Gnomish Mines:	ノームの鉱山:
+dThe Quest:		クエスト:
+dGehennom:		ゲヘナ:
+dFort Ludios:		ローディオス砦:
+dVlad's Tower:		ヴラド侯の塔:
+dThe Elemental Planes:	精霊界:
+# add
+dThe Deep Forest:	深い森:
+dThe Ant Caves:		蟻地獄:
+dThe Abandoned Castle:	捨てられた城:
+dThe Sunless Sea:	暗闇の海:
+
+#
+# Symbols or other things name (this is not a object name (See: drawing.c))
+#
+Sremembered, unseen, creature:		覚えているが見えていない生物:
+#
+Sstrange object:			奇妙な物体:
+Sweapon:				武器:
+Ssuit or piece of armor:		服または鎧のたぐい:
+Sring:					指輪:
+Samulet:				魔除け:
+Suseful item (pick-axe, key, lamp...):	便利な道具(つるはし，鍵，ランプ…):
+Spiece of food:				食料:
+Spotion:				薬:
+Sscroll:				巻物:
+Sspell book:				魔法の本:
+Sspellbook:				魔法の本:
+Swand:					杖:
+Spile of coins:				金貨の山:
+Sgem or rock:				宝石または石:
+Sboulder or statue:			岩または像:
+Siron ball:				鉄球:
+Siron chain:				鉄の鎖:
+Ssplash of venom:			毒液:
+#
+Sillegal objects:	奇妙な物体:
+Sweapons:		武器:
+Sarmor:			鎧:
+Srings:			指輪:
+Samulets:		魔除け:
+Stools:			道具:
+Sfood:			食料:
+Spotions:		薬:
+Sscrolls:		巻物:
+Sspell books:		魔法の本:
+Swands:			杖:
+Scoins:			金貨:
+Srocks:			石:
+Slarge stones:		巨石:
+Siron balls:		鉄球:
+Schains:		鎖:
+Svenoms:		毒:
+#
+Sant or other insect:	蟻または他の昆虫:
+Sblob:			ブロッブ:
+Scockatrice:		コカトリス:
+Sdog or other canine:	犬またはイヌ科の動物:
+Seye or sphere:		目または球体:
+Sfeline:		猫またはネコ科の動物:
+Scat or other feline:	猫またはネコ科の動物:
+Sgremlin:		グレムリン:
+Shumanoid:		ヒューマノイド:
+Simp or minor demon:	インプまたは下級悪魔:
+Sjelly:			ゼリー:
+Skobold:		コボルト:
+Sleprechaun:		レプラコーン:
+Smimic:			ミミック:
+Snymph:			ニンフ:
+Sorc:			オーク:
+Spiercer:		穴喰い:
+Squadruped:		四足動物:
+Srodent:		齧歯動物:
+Sarachnid or centipede:		クモ形類動物またはムカデ:
+Strapper or lurker above:	トラッパーまたはラーカー:
+Sunicorn:		ユニコーン:
+Sunicorn or horse:	ユニコーンまたは馬:
+Svortex:		渦:
+Sworm:			ワーム:
+Sxan or other mythical/fantastic insect:	ザンまたは神話やファンタジーの昆虫:
+Slight:			光:
+Szruty:			ズルティ:
+Sangelic being:		天使:
+Sbat:			こうもり:
+Sbat or bird:		こうもりまたは鳥:
+Scentaur:		ケンタウロス:
+Sdragon:		ドラゴン:
+Selemental:		精霊:
+Sfungus or mold:	キノコまたはモールド:
+Sgnome:			ノーム:
+Sgiant humanoid:	巨人:
+Sinvisible stalker:	透明ストーカー:
+Sjabberwock:		ジャバウォック:
+SKeystone Kop:		警備員:
+Slich:			リッチ:
+Smummy:			ミイラ:
+Snaga:			ナーガ:
+Sogre:			オーガ:
+Spudding or ooze:	プリンまたはウーズ:
+Squantum mechanic:	量子場:
+Srust monster:		錆の怪物:
+Srust monster or disenchanter:	錆の怪物または吸魔の怪物:
+Ssnake:			ヘビ:
+Stroll:			トロル:
+Sumber hulk:		アンバーハルク:
+Svampire:		吸血鬼:
+Swraith:		レイス:
+Sxorn:			ゾーン:
+Sapelike creature:	猿のような生物:
+Szombie:		ゾンビ:
+Shuman:			人間:
+Shuman or elf:		人間またはエルフ:
+#Sranger:		レンジャー:
+Sghost:			幽霊:
+Sgolem:			ゴーレム:
+Sdemon:			悪魔:
+Smajor demon:		悪魔:
+Ssea monster:		海の怪物:
+Slizard:		トカゲ:
+Slong worm tail:	ロングワームの尻尾:
+#
+#	part of room
+#
+Sdark part of a room:	部屋の暗い部分:
+Swall:			壁:
+Sdoorway:		出入口:
+Sopen door:		開いた扉:
+Sclosed door:		閉じた扉:
+Sfloor of a room:	部屋の床:
+Scorridor:		通路:
+Slit corridor:		明るい通路:
+Sstaircase up:		上り階段:
+Sstaircase down:	下り階段:
+Sladder up:		上りはしご:
+Sladder down:		下りはしご:
+Strap:			罠:
+Sweb:			くもの巣:
+Saltar:			祭壇:
+Sopulent throne:	華やかな玉座:
+Ssink:			流し台:
+Sfountain:		泉:
+Swater filled area:	水のたまった場所:
+Swater:			水のたまった場所:
+Sice:			氷:
+Smolten lava:		溶岩:
+Slowered drawbridge:	降りている跳ね橋:
+Sraised drawbridge:	上っている跳ね橋:
+Sair filled area:	空気のたまった場所:
+Sair:			空気のたまった場所:
+Scloud filled area:	曇:
+Scloud:			曇:
+Sgrave:			墓:
+Stree:			木:
+Siron bars:		鉄棒:
+#
+#	traps
+#
+^arrow trap:		矢の罠:
+^dart trap:		投げ矢の罠:
+^falling rock trap:	落石の罠:
+^squeaky board:		きしむ板:
+^beartrap:		トラバサミ:
+^bear trap:		トラバサミ:
+^land mine:		地雷:
+^sleeping gas trap:	睡眠ガスの罠:
+^hole:			穴:
+^rust trap:		腐食の罠:
+^fire trap:		火の罠:
+^pit:			落し穴:
+^spiked pit:		トゲだらけの落し穴:
+^trapdoor:		落し扉:
+^trap door:		落し扉:
+^teleportation trap:	瞬間移動の罠:
+^level teleporter:	別の階への瞬間移動の罠:
+^magic portal:		魔法の入口:
+^web:			くもの巣:
+^statue trap:		彫像の罠:
+^magic trap:		魔法の罠:
+^anti-magic field:	反魔法空間の罠:
+^anti-magic trap field:	反魔法空間の罠:
+^polymorph trap:	変化の罠:
+^rolling boulder trap:	巨岩の罠:
+#
+#	SKILLs
+#
+Kmartial arts:		体術:
+Kbare handed combat:	素手:
+Ktwo weapon combat:	二刀流:
+Kriding:		騎乗:
+Kdagger:		短剣:
+Kaxe:			斧:
+Kknife:			ナイフ:
+Kpick-axe:		つるはし:
+Kshort sword:		小剣:
+Kbroadsword:		幅広の剣:
+Klong sword:		長剣:
+Ktwo-handed sword:	両手剣:
+Kscimitar:		シミター:
+Ksaber:			サーベル:
+Kclub:			棍棒:
+Kmace:			メイス:
+Kquarterstaff:		六尺棒:
+Kmorning star:		モーニングスター:
+Kflail:			フレイル:
+Khammer:		ハンマー:
+Kpolearms:		長斧:
+Kspear:			槍:
+Kjavelin:		ジャベリン:
+Ktrident:		トライデント:
+Klance:			ランス:
+Ksling:			スリング:
+Kunicorn horn:		ユニコーンの角:
+Kcrossbow:		クロスボゥ:
+Kdart:			ダーツ:
+Kboomerang:		ブーメラン:
+Kwhip:			鞭:
+Kshuriken:		手裏剣:
+Kbow:			弓:
+Kdivination spells:	予知:
+Kattack spells:		攻撃:
+Kescape spells:		脱出:
+Kmatter spells:		物質:
+Khealing spells:	治癒:
+Kenchantment spells:	補助:
+Kclerical spells:	僧侶:

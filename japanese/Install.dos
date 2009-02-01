@@ -1,0 +1,26 @@
+	DJGPP 版 jnethack のコンパイル方法
+							Kentaro Shirakata
+
+0.必要環境
+
+　最近の DJGPP V2 なら多分問題ないはずです。私がインストールしたのは
+　以下のものです。
+
+bnu2112b.zip
+djdev203.zip
+fil40b.zip
+gcc304b.zip
+mak3791b.zip
+
+　以下、トップディレクトリ(README.j があるディレクトリ)を基準とします。
+　ソースの漢字コードは EUC のままにしてください。
+
+1.コンパイル
+
+・sys/msdos/setup.bat gcc を実行。
+・src/makefile の "YACC_LEX = Y" を "YACC_LEX = N"に変更。(yacc と lex を
+　インストールすれば Y のままでも構いません)
+・make install を実行。
+・3.4.3 では makefile が壊れていて途中でエラーが出るので、もう一度
+　make install を実行。
+・binary/ ディレクトリに必要ファイルが作成されます。

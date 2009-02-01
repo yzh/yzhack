@@ -1,0 +1,177 @@
+diff -aurbN -x.svn -xMakefile yzhack/include/color.h yzhack-osx/include/color.h
+--- yzhack/include/color.h	2007-09-07 15:26:13.000000000 +0900
++++ yzhack-osx/include/color.h	2007-11-09 12:39:24.000000000 +0900
+@@ -57,13 +57,18 @@
+ #ifdef MENU_COLOR
+ struct menucoloring {
+ # ifdef MENU_COLOR_REGEX
++#  ifdef MENU_COLOR_REGEX_POSIX
++    regex_t match;
++#  else
+     struct re_pattern_buffer match;
++#  endif
+ # else
+     char *match;
+ # endif
+     int color, attr;
+     struct menucoloring *next;
+ };
++
+ #endif /* MENU_COLOR */
+ 
+ #endif /* COLOR_H */
+diff -aurbN -x.svn -xMakefile yzhack/include/config.h yzhack-osx/include/config.h
+--- yzhack/include/config.h	2007-11-09 12:12:35.000000000 +0900
++++ yzhack-osx/include/config.h	2007-11-09 12:24:58.000000000 +0900
+@@ -374,6 +374,7 @@
+ #ifdef TTY_GRAPHICS
+ #define MENU_COLOR
+ #define MENU_COLOR_REGEX
++#define MENU_COLOR_REGEX_POSIX
+ /* if MENU_COLOR_REGEX is defined, use regular expressions (GNU regex.h)
+  * otherwise use pmatch() to match menu color lines.
+  * pmatch() provides basic globbing: '*' and '?' wildcards.
+diff -aurbN -x.svn -xMakefile yzhack/include/unixconf.h yzhack-osx/include/unixconf.h
+--- yzhack/include/unixconf.h	2007-11-09 12:12:35.000000000 +0900
++++ yzhack-osx/include/unixconf.h	2007-11-09 12:29:19.000000000 +0900
+@@ -19,20 +19,20 @@
+  */
+ 
+ /* define exactly one of the following four choices */
+-/* #define BSD 1 */	/* define for 4.n/Free/Open/Net BSD  */
++#define BSD 1	/* define for 4.n/Free/Open/Net BSD  */
+ 			/* also for relatives like SunOS 4.x, DG/UX, and */
+ 			/* older versions of Linux */
+ /* #define ULTRIX */	/* define for Ultrix v3.0 or higher (but not lower) */
+ 			/* Use BSD for < v3.0 */
+ 			/* "ULTRIX" not to be confused with "ultrix" */
+-#define SYSV	/* define for System V, Solaris 2.x, newer versions */
++/* #define SYSV */	/* define for System V, Solaris 2.x, newer versions */
+ 			/* of Linux */
+ /* #define HPUX */	/* Hewlett-Packard's Unix, version 6.5 or higher */
+ 			/* use SYSV for < v6.5 */
+ 
+ 
+ /* define any of the following that are appropriate */
+-#define SVR4		/* use in addition to SYSV for System V Release 4 */
++/* #define SVR4 */		/* use in addition to SYSV for System V Release 4 */
+ 			/* including Solaris 2+ */
+ #define NETWORK		/* if running on a networked system */
+ 			/* e.g. Suns sharing a playground through NFS */
+@@ -143,7 +143,7 @@
+  * A stat system call is done on the mailbox every MAILCKFREQ moves.
+  */
+ 
+-#define MAIL			/* Deliver mail during the game */
++/* #define MAIL */			/* Deliver mail during the game */
+ 
+ /* The Andrew Message System does mail a little differently from normal
+  * UNIX.  Mail is deposited in the user's own directory in ~/Mailbox
+diff -aurbN -x.svn -xMakefile yzhack/src/options.c yzhack-osx/src/options.c
+--- yzhack/src/options.c	2007-09-07 15:26:15.000000000 +0900
++++ yzhack-osx/src/options.c	2007-11-09 13:10:38.000000000 +0900
+@@ -1207,6 +1207,10 @@
+     int i, c = NO_COLOR, a = ATR_NONE;
+     struct menucoloring *tmp;
+     char *tmps, *cs = strchr(str, '=');
++#ifdef MENU_COLOR_REGEX_POSIX
++    int errnum;
++    char errbuf[80];
++#endif
+     const char *err = (char *)0;
+ 
+     if (!cs || !str) return FALSE;
+@@ -1251,12 +1255,21 @@
+ 
+     tmp = (struct menucoloring *)alloc(sizeof(struct menucoloring));
+ #ifdef MENU_COLOR_REGEX
++#ifdef MENU_COLOR_REGEX_POSIX
++    errnum = regcomp(&tmp->match, tmps, REG_EXTENDED | REG_NOSUB);
++    if (errnum != 0)
++      {
++	regerror(errnum, &tmp->match, errbuf, sizeof(errbuf));
++	err = errbuf;
++      }
++#else
+     tmp->match.translate = 0;
+     tmp->match.fastmap = 0;
+     tmp->match.buffer = 0;
+     tmp->match.allocated = 0;
+     tmp->match.regs_allocated = REGS_FIXED;
+     err = re_compile_pattern(tmps, strlen(tmps), &tmp->match);
++#endif
+ #else
+     tmp->match = (char *)alloc(strlen(tmps)+1);
+     (void) memcpy((genericptr_t)tmp->match, (genericptr_t)tmps, strlen(tmps)+1);
+diff -aurbN -x.svn -xMakefile yzhack/sys/unix/Makefile.src yzhack-osx/sys/unix/Makefile.src
+--- yzhack/sys/unix/Makefile.src	2007-11-09 12:12:35.000000000 +0900
++++ yzhack-osx/sys/unix/Makefile.src	2007-11-09 12:29:39.000000000 +0900
+@@ -127,8 +127,8 @@
+ 
+ # flags for Linux
+ #   compile normally
+-CFLAGS = -O2 -fomit-frame-pointer -I../include
+-LFLAGS = -L/usr/X11R6/lib
++# CFLAGS = -O2 -fomit-frame-pointer -I../include
++# LFLAGS = -L/usr/X11R6/lib
+ #   OR compile backwards compatible a.out format
+ # CFLAGS = -O2 -b i486-linuxaout -fomit-frame-pointer -I../include
+ # LFLAGS = -b i486-linuxaout -L/usr/X11R6/lib
+@@ -154,15 +154,15 @@
+ # flags for debugging:
+ # CFLAGS = -g -I../include
+ 
+-# CFLAGS = -W -g -O -I../include
+-# LFLAGS = 
++CFLAGS = -W -g -O -fast -I../include -DNeXT -Dbsdi
++LFLAGS = 
+ 
+ # The Qt and Be window systems are written in C++, while the rest of
+ # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
+ # the C++ libraries linked in.
+ CXXFLAGS = $(CFLAGS) -I. -I$(QTDIR)/include
+ CXX=g++
+-#LINK=g++
++LINK=g++
+ #	For cross-compiling, eg. with gcc on Linux (see also CC further up):
+ #CXX=arm-linux-g++
+ #LINK=arm-linux-gcc
+diff -aurbN -x.svn -xMakefile yzhack/sys/unix/Makefile.utl yzhack-osx/sys/unix/Makefile.utl
+--- yzhack/sys/unix/Makefile.utl	2007-11-09 12:12:35.000000000 +0900
++++ yzhack-osx/sys/unix/Makefile.utl	2007-11-09 12:14:16.000000000 +0900
+@@ -89,7 +89,7 @@
+ # flags for debugging:
+ # CFLAGS = -g -I../include
+ 
+-CFLAGS = -O -I../include
++CFLAGS = -O -I../include -DNeXT -Dbsdi
+ LFLAGS =
+ 
+ LIBS =
+diff -aurbN -x.svn -xMakefile yzhack/win/tty/termcap.c yzhack-osx/win/tty/termcap.c
+--- yzhack/win/tty/termcap.c	2007-11-09 12:12:36.000000000 +0900
++++ yzhack-osx/win/tty/termcap.c	2007-11-09 12:14:16.000000000 +0900
+@@ -862,7 +862,7 @@
+ #include <curses.h>
+ 
+ #ifndef LINUX
+-extern char *tparm();
++//extern char *tparm();
+ #endif
+ 
+ #  ifdef COLOR_BLACK	/* trust include file */
+diff -aurbN -x.svn -xMakefile yzhack/win/tty/wintty.c yzhack-osx/win/tty/wintty.c
+--- yzhack/win/tty/wintty.c	2007-09-07 15:26:15.000000000 +0900
++++ yzhack-osx/win/tty/wintty.c	2007-11-09 13:12:52.000000000 +0900
+@@ -1281,7 +1281,11 @@
+     if (iflags.use_menu_color)
+ 	for (tmpmc = menu_colorings; tmpmc; tmpmc = tmpmc->next)
+ # ifdef MENU_COLOR_REGEX
++#  ifdef MENU_COLOR_REGEX_POSIX
++	  if (regexec(&tmpmc->match, str, 0, NULL, 0) == 0) {
++#  else
+ 	    if (re_search(&tmpmc->match, str, strlen(str), 0, 9999, 0) >= 0) {
++# endif
+ # else
+ 	    if (pmatch(tmpmc->match, str)) {
+ # endif

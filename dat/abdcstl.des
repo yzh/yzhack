@@ -1,0 +1,310 @@
+# The Abandoned Castle
+
+MAZE: "abdcstl1", ' '
+FLAGS: hardfloor
+GEOMETRY: center, center
+MAP
+...............................}--------  ----   ----- ----      --------}
+..............TTTT.............}|...+..|--|..|----...|-|..|------|.+.|..|}
+...T.......TTT..............}}.}|...|---..S..|..|....|.+..+.|-..||.|.|}.|}
+........TTTTTTTTTTTTT...TT.}}.}}|...|-....--+|.---..--.|---.|...-|.}}}TT|}
+....TTTTTTTTTTTTTTTTTTTT...}.TTT--TT|.T..}}}.-.| |..+..|.|..+....+.|.+.-|}
+.........TTTTTTTTT.....P...TT..}TTT|.....}}}}}.---S---------}}}..|-|.|..|}
+..TT..TTTTTTTTTT..TTT.....TT..TTTTTTT......|.}}}--.-----.}}}}--.---|.|..|}
+..T..........TTTTT..TTPPTTTTTTT}}}}}}TTT..-|.--}}.T.+.|.+.------|..+.|T.}}
+.......T..........PPPPPT.TTT...}}--.}}...--|.|..}}.-|.|-...|--..|.-|.|}}}}
+.............P...PP....TTT...}.}.|...}..----S-S---..S.+..|.S....+.|-+}}.|}
+.........................T.......+.....}...+.\.S.|------+--|....|---}}..|}
+......TTT.........T...........}..|......----S-S----..|}|..--+-.----}}|.T|}
+.....T..TTT........T...........}}--.T....--|.|..|..T.}---....|---.}+.|}.|}
+..........T...TT...T..T.......}}}}|...TTT.--T----.TTT.+.|-+----..}}|.}}.|}
+...............PPPP............}|.--......T....}}}...--.|..-|..}}}-}}|}}}}
+.....TTT...........PP......TTT.TTTTT}}}.TT.---}}}-S--|}}}-..+.}}+.}}.|..}}
+........TTT.........PPPT.T}TTTT}|TT}}......S.}}---..---...---S-}}}--.|.--}
+.T......TT.T..TTTT..T..T..}}}}}}|.TT--....--}}.-|....|--}}--|.|...||.|..|}
+..TTT.....T.TTTTTTTTTTTT.....}}}|..TTTT|..S..|..|.T..+}}}...+...+--|.|..|}
+....TTT....TTTT..TTTTT.......T.}|...+..|--|..|-----.---...--|.T..| |.S..|}
+......................TT.......}--------  ----    --- ----- ------ ------}
+ENDMAP
+RANDOM_PLACES:(38,1),(56,1),(70,1),(65,7),(61,9),(70,17),(44,18)
+
+# NON_DIGGABLE: (32,00,72,20)
+BRANCH:(2,10,2,10),(0,0,0,0)
+
+STAIR: (2,10),up
+STAIR: place[0],down
+
+DOOR: broken,(36,01)
+DOOR: broken,(67,01)
+DOOR: broken,(55,02)
+DOOR: closed,(58,02)
+DOOR: broken,(44,03)
+DOOR: broken,(52,04)
+DOOR: broken,(60,04)
+DOOR: broken,(65,04)
+DOOR: broken,(69,04)
+DOOR: broken,(52,07)
+DOOR: broken,(56,07)
+DOOR: broken,(67,07)
+DOOR: broken,(54,09)
+DOOR: broken,(64,09)
+DOOR: broken,(68,09)
+DOOR: broken,(33,10)
+DOOR: broken,(43,10)
+DOOR: broken,(56,10)
+DOOR: broken,(60,11)
+DOOR: broken,(67,12)
+DOOR: broken,(54,13)
+DOOR: broken,(58,13)
+DOOR: broken,(60,15)
+DOOR: broken,(64,15)
+DOOR: broken,(53,18)
+DOOR: broken,(60,18)
+DOOR: broken,(64,18)
+DOOR: broken,(36,19)
+
+MONSTER: '&',"balrog",(48,10)
+MONSTER: ';',"giant eel",(31,03)
+MONSTER: ';',"giant eel",(31,08)
+MONSTER: ';',"giant eel",(31,13)
+MONSTER: ';',"giant eel",(31,17)
+MONSTER: ';',"giant eel",(31,18)
+MONSTER: ';',"giant eel",(32,07)
+MONSTER: ';',"giant eel",(43,05)
+MONSTER: ';',"giant eel",(47,07)
+MONSTER: ';',"giant eel",(47,15)
+MONSTER: ';',"giant eel",(48,14)
+MONSTER: ';',"giant eel",(64,14)
+MONSTER: ';',"giant eel",(67,11)
+MONSTER: ';',"giant eel",(73,04)
+MONSTER: ';',"giant eel",(73,10)
+MONSTER: ';',"giant eel",(73,14)
+MONSTER: 'D',random,(44,02)
+MONSTER: 'D',random,(51,17)
+MONSTER: 'D',random,(57,11)
+MONSTER: 'W',"barrow wight",(23,11)
+MONSTER: 'W',"barrow wight",(27,10)
+MONSTER: 'Z',random,(35,09)
+MONSTER: 'Z',random,(35,11)
+MONSTER: 'Z',random,(36,09)
+MONSTER: 'Z',random,(36,10)
+MONSTER: 'Z',random,(36,11)
+MONSTER: 'Z',random,(37,12)
+MONSTER: 'Z',random,(38,05)
+MONSTER: 'Z',random,(39,14)
+MONSTER: 'Z',random,(40,06)
+MONSTER: 'Z',random,(40,17)
+MONSTER: 'Z',random,(42,10)
+MONSTER: 'Z',random,(44,08)
+MONSTER: 'Z',random,(46,12)
+MONSTER: 'Z',random,(47,02)
+MONSTER: 'Z',random,(50,02)
+MONSTER: 'Z',random,(51,01)
+MONSTER: 'Z',random,(57,08)
+MONSTER: 'Z',random,(62,03)
+MONSTER: 'Z',random,(63,09)
+MONSTER: 'Z',random,(65,17)
+
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+
+############
+
+MAZE: "abdcstl2", ' '
+#FLAGS: hardfloor
+
+GEOMETRY: center, center
+#         1    1    2    2    3    3    4    4    5    5    6    6    7    7
+#1   5    0    5    0    5    0    5    0    5    0    5    0    5    0    5
+MAP
+---------------------}}}}-------------}}}}}|-------------------  -----
+|....|.}.|.|...|......}}}}}}...|......-----|............+.....+##.}}}|
+|}---|...|.+...|....}}}.+..}...|....}.|....|.----+------|.}.}.|  |}}}|
+|}}..|.}.+.|...|.}}}}.+.|....}.|.}....|....+.|..|...}}..|..}..|  -----
+|.}}}|...|.|...|}.}}..|.|.}....|}}}}..|....|.|..---..}}.|...}.+####   
+---+}}}---+-----}------+-------}}-+---------.+....|...}.|--+---   #   
+|.....}}......}.........|.....|}.............|....|.....|.....|   ### 
+-+-----}}----}---------.|.....}}----+-----+------------+|.....|     # 
+|.....}.}}+.....|.....|.|....}}.|......|}}#}}}}}}}}}}}|.|.....|     # 
+|.--}}}--}}}}}|.+...}.|.|..}}}|.|......|}}##}}}}}}}}}}|.+.....|     # 
+|}|}}.}}}}|..}}}|.}...|.|}}}---.|-------}}}#}}}}}}}}}}|.|.....|  #### 
+|}}}}}}.|.}...|}}}----|.|}..|...|....}}}}}}###}}}}}}}}|+-------  #    
+|}------|.|}}}}}}}}}..|.|...|.--|..}}|}}}}}###}}}}}}}}|...}...| -.--- 
+|.|.....|.|...|.}}}}}.|.|...|.+}|.}..|}}}}}}}}}}}}}}}}|..}}...| |...| 
+|.|.....|.----|}}}}}}}}.--+--------+------------------|}}}....| |...| 
+|.+.....|.....+}}}}}}}}}}............+................+}......| ----- 
+----------------}}}}}}-----------------------------------------       
+ENDMAP
+
+STAIR: (66,14),up
+
+NON_DIGGABLE: (00,00,69,16)
+
+REGION: (55,12,61,15),unlit,"swamp"
+REGION: (57,01,61,04),unlit,"swamp"
+REGION: (16,01,21,04),unlit,"swamp"
+REGION: (65,01,68,02),unlit,"swamp"
+REGION: (57,06,61,10),unlit,"morgue",filled
+REGION: (46,03,55,06),unlit,"morgue",filled
+REGION: (32,01,37,04),unlit,"morgue",filled
+
+DOOR: locked,(56,01)
+DOOR: locked,(62,01)
+DOOR: locked,(11,02)
+DOOR: locked,(24,02)
+DOOR: locked,(49,02)
+DOOR: locked,(09,03)
+DOOR: locked,(22,03)
+DOOR: locked,(43,03)
+DOOR: locked,(62,04)
+DOOR: locked,(03,05)
+DOOR: locked,(10,05)
+DOOR: locked,(23,05)
+DOOR: locked,(34,05)
+DOOR: locked,(45,05)
+DOOR: locked,(59,05)
+DOOR: locked,(01,07)
+DOOR: locked,(36,07)
+DOOR: locked,(42,07)
+DOOR: locked,(55,07)
+DOOR: locked,(10,08)
+DOOR: locked,(16,09)
+DOOR: locked,(56,09)
+DOOR: locked,(55,11)
+DOOR: locked,(30,13)
+DOOR: broken,(26,14)
+DOOR: locked,(35,14)
+DOOR: closed,(02,15)
+DOOR: locked,(14,15)
+DOOR: locked,(37,15)
+DOOR: locked,(54,15)
+
+MONSTER: ';',"electric eel",(03,11)
+MONSTER: ';',"electric eel",(05,05)
+MONSTER: ';',"electric eel",(06,10)
+MONSTER: ';',"electric eel",(17,14)
+MONSTER: ';',"electric eel",(18,13)
+MONSTER: ';',"electric eel",(19,03)
+MONSTER: ';',"electric eel",(19,15)
+MONSTER: ';',"electric eel",(22,01)
+MONSTER: ';',"electric eel",(28,09)
+MONSTER: ';',"electric eel",(31,06)
+MONSTER: ';',"electric eel",(40,12)
+MONSTER: ';',"electric eel",(41,10)
+MONSTER: ';',"electric eel",(48,09)
+MONSTER: ';',"electric eel",(49,11)
+MONSTER: ';',"electric eel",(51,09)
+MONSTER: ';',"electric eel",(52,11)
+MONSTER: ';',"electric eel",(67,01)
+MONSTER: ';',"electric eel",(68,02)
+MONSTER: 'D',random,(41,02)
+MONSTER: 'D',random,(41,03)
+MONSTER: 'D',random,(19,10)
+MONSTER: 'D',random,(21,10)
+MONSTER: 'D',random,(41,04)
+MONSTER: 'M',random,(10,01)
+MONSTER: 'M',random,(10,02)
+MONSTER: 'M',random,(10,03)
+MONSTER: 'M',random,(10,04)
+MONSTER: 'P',random,(04,14)
+MONSTER: 'P',random,(05,13)
+MONSTER: 'P',random,(07,15)
+MONSTER: 'P',random,(12,01)
+MONSTER: 'P',random,(12,02)
+MONSTER: 'P',random,(13,03)
+MONSTER: 'm',random,(03,13)
+MONSTER: 'm',random,(04,15)
+MONSTER: 'm',random,(05,14)
+MONSTER: 'm',random,(06,13)
+MONSTER: 'm',random,(12,04)
+MONSTER: 'm',random,(14,02)
+MONSTER: 'm',random,(26,07)
+MONSTER: 'm',random,(27,06)
+MONSTER: 'm',random,(27,12)
+MONSTER: 'm',random,(33,08)
+MONSTER: 'm',random,(35,09)
+MONSTER: 'm',random,(37,08)
+MONSTER: 'm',random,(39,03)
+MONSTER: 'm',random,(40,04)
+
+OBJECT: '[',"gauntlets of power",(44,11)
+OBJECT: '[',"levitation boots",(44,12)
+
+OBJECT: '(',random,(26,06)
+OBJECT: '(',random,(26,07)
+OBJECT: '(',random,(26,08)
+OBJECT: '(',random,(26,12)
+OBJECT: '(',random,(27,06)
+OBJECT: '(',random,(27,07)
+OBJECT: '(',random,(27,12)
+OBJECT: '(',random,(28,06)
+OBJECT: '(',random,(28,07)
+OBJECT: ')',random,(12,01)
+OBJECT: ')',random,(12,02)
+OBJECT: ')',random,(12,03)
+OBJECT: ')',random,(12,04)
+OBJECT: ')',random,(13,01)
+OBJECT: ')',random,(13,02)
+OBJECT: ')',random,(13,03)
+OBJECT: ')',random,(13,04)
+OBJECT: ')',random,(14,01)
+OBJECT: ')',random,(14,02)
+OBJECT: ')',random,(14,03)
+OBJECT: ')',random,(14,04)
+OBJECT: '*',"diamond",(19,08)
+OBJECT: '*',"diamond",(20,08)
+OBJECT: '*',"emerald",(21,08)
+OBJECT: '*',"emerald",(17,08)
+OBJECT: '*',"ruby",(17,09)
+OBJECT: '*',"ruby",(18,08)
+OBJECT: '*',random,(18,09)
+OBJECT: '*',random,(19,09)
+OBJECT: '*',random,(20,10)
+OBJECT: '*',random,(21,09)
+OBJECT: '/',random,(11,08)
+OBJECT: '/',random,(11,13)
+OBJECT: '/',random,(12,08)
+OBJECT: '/',random,(12,10)
+OBJECT: '/',random,(12,13)
+OBJECT: '/',random,(13,11)
+OBJECT: '/',random,(13,13)
+OBJECT: '=',random,(39,02)
+OBJECT: '=',random,(39,03)
+OBJECT: '=',random,(39,04)
+OBJECT: '=',random,(40,02)
+OBJECT: '=',random,(40,03)
+OBJECT: '=',random,(40,04)
+OBJECT: '?',random,(33,09)
+OBJECT: '?',random,(34,08)
+OBJECT: '?',random,(34,09)
+OBJECT: '?',random,(35,08)
+OBJECT: '?',random,(35,09)
+OBJECT: '?',random,(36,08)
+OBJECT: '?',random,(36,09)
+OBJECT: '?',random,(37,08)
+OBJECT: '?',random,(37,09)
+OBJECT: '?',random,(38,08)
+OBJECT: '?',random,(38,09)
+OBJECT: '[',random,(03,13)
+OBJECT: '[',random,(03,13)
+OBJECT: '[',random,(03,14)
+OBJECT: '[',random,(03,15)
+OBJECT: '[',random,(04,13)
+OBJECT: '[',random,(04,14)
+OBJECT: '[',random,(04,15)
+OBJECT: '[',random,(05,13)
+OBJECT: '[',random,(05,14)
+OBJECT: '[',random,(05,15)
+OBJECT: '[',random,(06,13)
+OBJECT: '[',random,(06,14)
+OBJECT: '[',random,(06,15)
+OBJECT: '[',random,(07,13)
+OBJECT: '[',random,(07,14)
+OBJECT: '[',random,(07,15)

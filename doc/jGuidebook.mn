@@ -1,0 +1,4750 @@
+.\" "Guidebook.mn" Japanese Translation
+.\"
+.\" Translated
+.\"   for NetHack 3.1.0 PL10 by Keizo Yamamoto
+.\"   for NetHack 3.1.3      by Kentaro Shirakata
+.\"   for JNetHack 1.0.5     by Issei Numata
+.\"   for NetHack 3.3.0      by Kentaro Shirakata
+.\"   for (J)NetHack 3.4     by Kentaro Shirakata <argrath@ub32.org>
+.\"
+.\" Usage:
+.\"   tbl tmac.n jGuideBook.mn | nroff -Tnippon
+.\"
+.\"WORD:	Dungeoneer		洞窟の主
+.\"WORD:	the Mazes of Menace	恐怖の迷宮
+.\"WORD:	dungeon			洞窟
+.\"WORD:	proficiency		技量
+.\"
+.ds h0 "NetHack Guidebook
+.ds h1
+.ds h2 %
+.ds vr "NetHack 3.4
+.ds f0 "\*(vr
+.ds f1
+.ds f2 "December 2, 2003
+.mt
+.\"O A Guide to the Mazes of Menace
+.\"O (Guidebook for NetHack)
+恐怖の迷宮への招待
+(NetHack ガイドブック)
+.au
+Eric S. Raymond
+.\"O (Extensively edited and expanded for 3.4)
+(バージョン 3.4 のための広範囲な校訂と拡充)
+.hn 1
+.\"O Introduction
+はじめに
+.pg
+.\"O Recently, you have begun to find yourself unfulfilled and distant 
+.\"O in your daily occupation.  Strange dreams of prospecting, stealing, 
+.\"O crusading, and combat have haunted you in your sleep for many months, 
+.\"O but you aren't sure of the reason.  You wonder whether you have in 
+.\"O fact been having those dreams all your life, and somehow managed to 
+.\"O forget about them until now.  Some nights you awaken suddenly
+.\"O and cry out, terrified at the vivid recollection of the strange and 
+.\"O powerful creatures that seem to be lurking behind every corner of the 
+.\"O dungeon in your dream.  Could these details haunting your dreams be real?  
+.\"O As each night passes, you feel the desire to enter the mysterious caverns 
+.\"O near the ruins grow stronger.  Each morning, however, you quickly put 
+.\"O the idea out of your head as you recall the tales of those who entered 
+.\"O the caverns before you and did not return.  Eventually you can resist 
+.\"O the yearning to seek out the fantastic place in your dreams no longer.  
+.\"O After all, when other adventurers came back this way after spending time 
+.\"O in the caverns, they usually seemed better off than when they passed 
+.\"O through the first time.  And who was to say that all of those who did 
+.\"O not return had not just kept going?
+.\"O 
+最近、あなたは日々の仕事に満たされなく、敬遠しつつある自分に気がついた。
+最近数ヶ月、あなたが見る夢は探査、盗み、十字軍、戦闘といったものであったが、
+あなたにはその理由がはっきりとはわからなかった。
+あなたはこれらの夢を実際には生まれてこのかたずっと見続けていて、
+なぜか今までそれらについて忘れようとしていたのではないか、と思った。
+ある夜、あなたは飛び起きて、
+夢の中の洞窟のあらゆる角の後ろに潜んでいるように見える、
+奇妙で強力な怪物の鮮明な記憶にぞっとして大声で叫んだ。
+あなたの夢に出没する内容は本当なのだろうか?
+夜毎に、廃墟の近くの不思議な洞窟に入るという欲求が強くなった。
+それでも、毎朝あなたはそのような考えを、
+洞窟に入って帰って来なかった人々の話を思い出すことで頭から追い出した。
+しかし、ついにあなたは夢の中に出てくる不思議な場所を捜し求めるという思いを
+抑えきれなくなった。
+何といっても、冒険者は最初にその道を通っていった時より、
+こちらに戻って来る時の方が裕福になっているように見えるのだ。
+戻って来ない人たちは皆、単にまだ冒険を続けているだけなのでは?
+
+.pg
+.\"O Asking around, you hear about a bauble, called the Amulet of Yendor by some,
+.\"O which, if you can find it, will bring you great wealth.  One legend you were
+.\"O told even mentioned that the one who finds the amulet will be granted
+.\"O immortality by the gods.  The amulet is rumored to be somewhere beyond the
+.\"O Valley of Gehennom, deep within the Mazes of Menace.  Upon hearing the
+.\"O legends, you immediately realize that there is some profound and 
+.\"O undiscovered reason that you are to descend into the caverns and seek 
+.\"O out that amulet of which they spoke.  Even if the rumors of the amulet's 
+.\"O powers are untrue, you decide that you should at least be able to sell the 
+.\"O tales of your adventures to the local minstrels for a tidy sum, especially 
+.\"O if you encounter any of the terrifying and magical creatures of 
+.\"O your dreams along the way.  You spend one last night fortifying yourself 
+.\"O at the local inn, becoming more and more depressed as you watch the odds 
+.\"O of your success being posted on the inn's walls getting lower and lower.  
+あちこちで尋ねるうちに、あなたはある噂を耳にした。
+イェンダーの魔除けとかいうものがあり、手に入れることができたなら、
+すばらしい財産をもたらすと言うのだ。
+あなたが聞いたとある伝説では、
+魔除けを見つけたものは神から不死の体を授かるとさえ言われているらしい。
+魔除けは恐怖の迷宮の奥深く、ゲヘナの谷を越えたどこかにあるという噂である。
+伝説を聞いた瞬間、あなたは自分には洞窟に入って彼らの話している
+魔除けを捜し求めるべき深遠で未知のなんらかの理由があると確信した。
+あなたはたとえ魔除けの力が真実でなくても、
+少なくとも冒険談を地元のの吟遊詩人にかなりの金額で売り込めるだろうと考えた。
+夢の中で出てきた恐ろしく、不思議な怪物に出会うことができればなおさらである。
+あなたは地元の安宿で最後の宿を取り対策を練った。
+安宿の壁に掲げられた成功率のオッズが下がれば下がるほど、
+あなたは意気消沈した。
+
+.pg
+.\"O   In the morning you awake, collect your belongings, and 
+.\"O set off for the dungeon.  After several days of uneventful 
+.\"O travel, you see the ancient ruins that mark the entrance to the 
+.\"O Mazes of Menace.  It is late at night, so you make camp at the entrance 
+.\"O and spend the night sleeping under the open skies.  In the morning, you 
+.\"O gather your gear, eat what may be your last meal outside, and enter the 
+.\"O dungeon...
+朝起きると、あなたは所持品をかき集め、あなたは洞窟に向けて旅立った。
+無事何日かの旅を続けて恐怖の迷宮への入口を
+示す古代の遺跡へとたどり着いた。夜も更けていたので入口でキャンプをすることにし、
+その夜は広々とした空の下で眠りに就いた。翌朝あなたは道具をかき集め、
+もしかすると地上での最後になるかもしれない食事を済ませ、
+洞窟へと入っていった。
+
+.hn 1
+.\"O What is going on here?
+あなたを取り巻く状況
+.pg
+.\"O You have just begun a game of NetHack.  Your goal is to grab as much
+.\"O treasure as you can, retrieve the Amulet of Yendor, and escape the
+.\"O Mazes of Menace alive.
+こうしてあなたは NetHack というゲームを始めることになった。あなたの目的は
+持てる限りの宝を集め、イェンダーの魔除けを見つけ出し、さらにはこの恐怖
+の迷宮から生きて脱出することである。
+.pg
+.\"O Your abilities and strengths for dealing with the hazards of adventure
+.\"O will vary with your background and training:
+冒険におけるいろいろな困難に対応するための各種の能力や力は、
+あなたの生い立ちと修行によって変化する。
+.pg
+.\"O \fIArcheologists\fP understand dungeons pretty well; this enables them
+.\"O to move quickly and sneak up on the local nasties.  They start equipped
+.\"O with the tools for a proper scientific expedition.
+\fI考古学者(Archeologist)\fP は洞窟について多くの知識を持っている。
+このため素早く動いたり洞窟での不快な事態を切り抜けることができる。
+彼らは学術的調査のための探検旅行に適した道具を持って出発する。
+.pg
+.\"O \fIBarbarians\fP are warriors out of the hinterland, hardened to battle.
+.\"O They begin their quests with naught but uncommon strength, a trusty hauberk,
+.\"O and a great two-handed sword.
+\fI 野蛮人(Barbarian)\fP は奥地からやってきた戦士であり、戦闘のために鍛えられている。
+彼らは類まれな力の強さを持ち、丈夫な鎖かたびらと大きな両手持ちの
+剣のみを持って探求に出発する。
+.pg
+.\"O \fICavemen\fP and \fICavewomen\fP start with exceptional strength but,
+.\"O unfortunately, with neolithic weapons.
+\fI 洞窟人(Caveman と Cavewoman)\fPはとりわけ強い力を持っているが、
+新石器時代に使われた武器を持って出発する。
+.pg
+.\"O \fIHealers\fP are wise in medicine and apothecary.  They know the
+.\"O herbs and simples that can restore vitality, ease pain, anesthetize,
+.\"O and neutralize poisons; and with their instruments, they can divine a
+.\"O being's state of health or sickness.  Their medical practice earns them
+.\"O quite reasonable amounts of money, with which they enter the dungeon.
+\fI医者(Healer)\fPは医術や薬物について精通している。
+生気を回復させたり、苦痛を和らげたり、麻酔をかけたり、
+毒を中和させたりする香草や薬草について詳しい。
+そして器具を使って生物の健康状態を見抜くことができる。
+彼らは開業医としてかなりよい報酬を得て、それを持って洞窟に入っていく。
+.pg
+.\"O \fIKnights\fP are distinguished from the common skirmisher by their
+.\"O devotion to the ideals of chivalry and by the surpassing excellence of
+.\"O their armor.
+\fI騎士(Knight)\fP は騎士道に忠実であることと防具が驚くほど優れていることとい
+う点で、普通の戦士とは区別される。
+.pg
+.\"O \fIMonks\fP are ascetics, who by rigorous practice of physical and mental
+.\"O disciplines have become capable of fighting as effectively without weapons
+.\"O as with.  They wear no armor but make up for it with increased mobility.
+\fI モンク(Monk) \fP は修道者であり、厳格な肉体的習慣と精神的訓練によって、
+武器なしでも武器を使うのと同じように戦うことが出来る。
+モンクは防具をつけないが、機動性を向上させることで埋め合わせている。
+.pg
+.\"O \fIPriests\fP and \fIPriestesses\fP are clerics militant, crusaders
+.\"O advancing the cause of righteousness with arms, armor, and arts
+.\"O thaumaturgic.  Their ability to commune with deities via prayer
+.\"O occasionally extricates them from peril, but can also put them in it.
+\fI僧侶と尼僧(Priest と Priestess)\fP は聖職の戦士であり、
+武器と防具を持ち魔法の業を駆使して正義を広めんとする聖戦士である。
+祈りを通じて神と語る能力により、彼らはしばしば危難から逃れることができる…
+が、祈りは危難をもたらすこともある。
+.pg
+.\"O \fIRangers\fP are most at home in the woods, and some say slightly out
+.\"O of place in a dungeon.  They are, however, experts in archery as well
+.\"O as tracking and stealthy movement.
+\fI レンジャー(Ranger)\fP はほとんど森を住みかとし、洞窟は少々場違いかもしれない。
+しかし、彼らは追跡術や隠密行動と共に、弓術の達人である。
+.pg
+.\"O \fIRogues\fP are agile and stealthy thieves, with knowledge of locks,
+.\"O traps, and poisons.  Their advantage lies in surprise, which they employ
+.\"O to great advantage.
+\fI 盗賊(Rogue)\fP は敏捷で身を隠す業に長けた泥棒であり、
+錠や罠や毒に詳しい。
+彼らの長所は奇襲であり、これは非常な長所となる。
+.pg
+.\"O \fISamurai\fP are the elite warriors of feudal Nippon.  They are lightly
+.\"O armored and quick, and wear the \fIdai-sho\fP, two swords of the deadliest
+.\"O keenness.
+\fI 侍(Samurai)\fP は封建時代の日本の精鋭の武人である。
+防具は軽装で身のこなし
+に秀でており、この上なく研ぎ澄まされた \fI 大小 \fP 2本の刀を帯びている。
+.pg
+.\"O \fITourists\fP start out with lots of gold (suitable for shopping with),
+.\"O a credit card, lots of food, some maps, and an expensive camera.  Most
+.\"O monsters don't like being photographed.
+\fI 観光客(Tourist)\fP は多額の金(買物に最適である)とクレジットカード、大量の食料、
+地図、そして高価なカメラを持って出発する。
+ほとんどの怪物は写真に撮られるのを嫌うものである。
+.pg
+.\"O \fIValkyries\fP are hardy warrior women.  Their upbringing in the harsh
+.\"O Northlands makes them strong, inures them to extremes of cold, and instills
+.\"O in them stealth and cunning.
+\fI ワルキューレ(Valkyrie)\fP は勇敢な女戦士である。
+過酷なスカンジナビアの国々で育った彼女らは頑強で、厳しい寒さにも耐え、
+身を隠す業と巧妙さを身につけている。
+.pg
+.\"O \fIWizards\fP start out with a knowledge of magic, a selection of magical
+.\"O items, and a particular affinity for dweomercraft.  Although seemingly weak
+.\"O and easy to overcome at first sight, an experienced Wizard is a deadly foe.
+\fI 魔法使い(Wizard)\fPは魔術の知識とに選び抜かれた魔法の道具を準備しており、
+いにしえの魔法学に対して特に造詣が深い。
+見かけは弱そうで簡単に打ち倒せるように思えるが、
+経験を積んだ魔法使いは恐るべき敵である。
+.pg
+.\"O You may also choose the race of your character:
+また、キャラクターの種族も選ぶことができる。
+.pg
+.\"O \fIDwarves\fP are smaller than humans or elves, but are stocky and solid
+.\"O individuals.  Dwarves' most notable trait is their great expertise in mining
+.\"O and metalwork.  Dwarvish armor is said to be second in quality not even to the
+.\"O mithril armor of the Elves.
+\fI ドワーフ(Dwarf) \fP は人間やエルフよりも小さいが、がっしりした体つきで丈夫である。
+ドワーフの注目すべき特性は採掘と金属工作の専門的技術である。
+ドワーフの防具はエルフのミスリル防具と同じとまではいかないまでも、
+それに次ぐ品質である。
+.pg
+.\"O \fIElves\fP are agile, quick, and perceptive; very little of what goes
+.\"O on will escape an Elf.  The quality of Elven craftsmanship often gives
+.\"O them an advantage in arms and armor.
+\fI エルフ(Elf) \fP は機敏さと迅速さ、そして鋭敏な感覚を持っている。
+周囲で起きるどんな些細なことも彼らの目を逃れることはできない。
+職人気質の彼らの持つ武器と防具は優秀なものである。
+.pg
+.\"O \fIGnomes\fP are smaller than but generally similar to dwarves.  Gnomes are
+.\"O known to be expert miners, and it is known that a secret underground mine
+.\"O complex built by this race exists within the Mazes of Menace, filled with
+.\"O both riches and danger.
+\fI ノーム(Gnome) \fP はドワーフよりもさらに小さいが、ドワーフと似ている。
+ノームは熟練した採掘師として知られ、
+富と危険で満ちている秘密の地下坑道を恐怖の迷宮に作っていることで知られる。
+.pg
+.\"O \fIHumans\fP are by far the most common race of the surface world, and
+.\"O are thus the norm by which other races are often compared.  Although
+.\"O they have no special abilities, they can succeed in any role.
+\fI 人間(Human) \fP は地上で最も一般的な種族で、ゆえに他の種族と比較される時の基準となっている。
+特別な能力は持っていないが、あらゆる職業で成功することができる。
+.pg
+.\"O \fIOrcs\fP are a cruel and barbaric race that hate every living thing
+.\"O (including other orcs).  Above all others, Orcs hate Elves with a passion
+.\"O unequalled, and will go out of their way to kill one at any opportunity.
+.\"O The armor and weapons fashioned by the Orcs are typically of inferior quality.
+\fI オーク(Orc) \fP は残酷で野蛮な種族で、(他のオークを含む)あらゆる生物を嫌っている。
+特に、オークはエルフを感性の違いゆえに嫌い、わざわざあらゆる機会を見つけて殺そうとする。
+オークによって作られた防具と武器は一般的に品質が劣る。
+.hn 1
+.\"O What do all those things on the screen mean?
+画面に表示されるものの意味
+.pg
+.\"O On the screen is kept a map of where you have
+.\"O been and what you have seen on the current dungeon level; as you
+.\"O explore more of the level, it appears on the screen in front of you.
+画面上にはあなたが現在いる洞窟の階
+ですでに探索を終えた部分の地図と、そこで目にした物が示されている。さら
+に深く探検を進めるに連れて洞窟はその姿を次第にあなたの前の画面に明らか
+にしていく。
+.pg
+.\"O When NetHack's ancestor \fIrogue\fP first appeared, its screen
+.\"O orientation was almost unique among computer fantasy games.  Since
+.\"O then, screen orientation has become the norm rather than the
+.\"O exception; NetHack continues this fine tradition.  Unlike text
+.\"O adventure games that accept commands in pseudo-English sentences and
+.\"O explain the results in words, NetHack commands are all one or two
+.\"O keystrokes and the results are displayed graphically on the screen.  A
+.\"O minimum screen size of 24 lines by 80 columns is recommended; if the
+.\"O screen is larger, only a 21x80 section will be used for the map.
+NetHack の祖先である \fIrogue\fP が最初に現れたとき、そのスクリーン指向は
+コンピュータファンタジーゲームの中でも全く独特のものであった。それ以来
+スクリーン指向は例外的なものというよりむしろ標準となった。NetHack はこ
+のすばらしい伝統を受け継いでいる。疑似的な英語でコマンドを入力し、結果
+が文章で表示されるテキストアドベンチャーゲームとは異なり、NetHack のコ
+マンドはすべて 1 文字か 2 文字のキー入力で与えられ、その結果は画面上に
+グラフィカルに表示される。画面は最低 80 桁および 24 行の大きさが推奨さ
+れる。それ以上の大きさがあっても 80 × 21 の領域だけが地図の表示に使わ
+れる。
+.pg
+.\"O NetHack can even be played by blind players, with the assistance of Braille
+.\"O readers or speech synthesisers.  Instructions for configuring NetHack for
+.\"O the blind are included later in this document.
+NetHack は点字や音声合成の助けを借りて、目の不自由な人でもプレイできる。
+目の不自由な人のためのNetHackの設定方法については、このドキュメントで
+後述する。
+.pg
+.\"O NetHack generates a new dungeon every time you play it; even the
+.\"O authors still find it an entertaining and exciting game despite
+.\"O having won several times.
+NetHack はプレイするたびに新しい洞窟を作成する。
+このため何回かゲームに勝利したことのある作者たちにも、
+いまだこのゲームは楽しく興奮に満ちたものと感じられる。
+.pg
+.\"O NetHack offers a variety of display options.  The options available to you
+.\"O will vary from port to port, depending on the capabilities of your
+.\"O hardware and software, and whether various compile-time options were
+.\"O enabled when your executable was created.  The three possible display
+.\"O options are: a monochrome character interface, a color character interface,
+.\"O and a graphical interface using small pictures called tiles.  The two
+.\"O character interfaces allow fonts with other characters to be substituted,
+.\"O but the default assignments use standard ASCII characters to represent
+.\"O everything.  There is no difference between the various display options
+.\"O with respect to game play.  Because we cannot reproduce the tiles or
+.\"O colors in the Guidebook, and because it is common to all ports, we will
+.\"O use the default ASCII characters from the monochrome character display
+.\"O when referring to things you might see on the screen during your game.
+NetHack はさまざまな表示のオプションを提供する。
+オプションはあなたのハードウェアやソフトウェアの能力に依存し、
+プラットフォーム毎にさまざまである。
+さまざまなコンパイル時のオプションは実行ファイルが作られたときにのみ可能となる。
+モノクロキャラクタインタフェース、
+カラーキャラクタインタフェース、
+タイルと呼ばれる小さな絵を用いたグラフィカルインタフェースの 3 つの表示方法がある。
+2 つのキャラクタインタフェースはフォントを他の文字に置き換えることもできるが、
+標準設定では 標準の ASCII キャラクタを用いて全てを表現する。
+さまざまな表示のオプションはゲーム内容には影響を与えない。
+タイルや色はガイドブックで表記できないし、
+それは全てのプラットフォームに共通ではないので、
+ゲーム中に表示されるものの説明としては
+モノクロキャラクタディスプレイで表示される標準の ASCII キャラクタを用いる。
+.pg
+.\"O In order to understand what is going on in NetHack, first you must
+.\"O understand what NetHack is doing with the screen.  The NetHack screen
+.\"O replaces the ``You see ...'' descriptions of text adventure games.
+.\"O Figure 1 is a sample of what a NetHack screen might look like.
+.\"O The way the screen looks for you depends on your platform.
+NetHack で何が起きているのかを理解するには、まず NetHack では画面が
+どうなっているのかを理解しなくてはならない。NetHack の画面は、テキストアド
+ベンチャーゲームにおける「あなたは…を見た」のような文章の代わりである。
+図 1 は NetHack では画面に何が表示されるかの一例である。
+画面がどのように表示されるかはプラットホームに依存する。
+
+.TS S
+center tab(~);
+a.
+_
+The bat bites!
+
+    ------
+    |....|    ----------
+    |.<..|####...@...$.|
+    |....-#   |...B....+
+    |....|    |.d......|
+    ------    -------|--
+
+
+
+Player the Rambler     St:12 Dx:7 Co:18 In:11 Wi:9 Ch:15  Neutral
+Dlvl:1 $:0  HP:9(12) Pw:3(3) AC:10 Exp:1/19 T:257 Weak
+
+_
+.TE
+.ce 1
+Figure 1
+
+.hn 2
+.\"O The status lines (bottom)
+ステータス行(画面の下部)
+.pg
+.\"O The bottom two lines of the screen contain several cryptic pieces of
+.\"O information describing your current status.  If either status line
+.\"O becomes longer than the width of the screen, you might not see all of
+.\"O it.  Here are explanations of what the various status items mean
+.\"O (though your configuration may not have all the status items listed
+.\"O below):
+画面の下 2 行には、あなたの現在の状態を表す暗号のような情報の断片が含まれている。
+どちらかの行が画面の幅よりも長くなるとその全部を見ることはできない
+かもしれない。以下に状態を示すいろいろな項目が何を意味するのかを述べる
+(コンフィグレーションによっては、以下に一覧されている状態を示す項目の
+すべてが表示されるとは限らない)。
+.\"O .lp "Rank  "
+.lp 名前とランク(Rank)
+.\"O Your character's name and professional ranking (based on the
+.\"O experience level, see below).
+あなたのキャラクタ名と(後述の経験レベルに基づく)職業別の等級。
+.\"O .lp Strength
+.lp 強さ(Strength)
+.\"O A measure of your character's strength; one of your six basic
+.\"O attributes.  A human character's attributes can range from 3 to 18 inclusive;
+.\"O non-humans may exceed these limits
+.\"O (occasionally you may get super-strengths of the form 18/xx, and magic can
+.\"O also cause attributes to exceed the normal limits).  The
+.\"O higher your strength, the stronger you are.  Strength affects how
+.\"O successfully you perform physical tasks, how much damage you do in
+.\"O combat, and how much loot you can carry.
+あなたのキャラクタの力の強さの値であり、6 つの基本的な属性の 1 
+つである。人間のキャラクターの場合，力の強さは 3 から 18 の間の値をとる。
+その他の場合，この制限を越えることもある
+(時折 18/xx のような特別な力を得ることもあり、魔法の力も普通の制限を越える
+能力を与えることがある)。
+力の強さの値が大きいほど、あなたの力は強い。
+力の強さは力仕事をどれだけうまくやれるか、戦いでどれだけの
+ダメージを与えるか、どれくらい荷物を運べるかに影響する。
+.\"O .lp Dexterity
+.lp 素早さ(Dexterity)
+.\"O Dexterity affects your chances to hit in combat, to avoid traps, and
+.\"O do other tasks requiring agility or manipulation of objects.
+素早さは戦いにおける命中率、罠を逃れる可能性、そしてその他の
+敏捷さを必要とする仕事や物をいかに器用に扱えるかなどのことがら
+に影響を与える。
+.\"O .lp Constitution
+.lp
+耐久力(Constitution)
+.\"O Constitution affects your ability to recover from injuries and other
+.\"O strains on your stamina.
+耐久力は怪我やその他の圧迫によるスタミナの消耗から回復する能力に影響する。
+.\"O .lp Intelligence
+.lp 知力(Intelligence)
+.\"O Intelligence affects your ability to cast spells and read spellbooks.
+知力は呪文を唱える能力や魔法書を読む能力に影響を与える。
+.\"O .lp Wisdom
+.lp 賢さ(Wisdom)
+.\"O Wisdom comes from your practical experience (especially when dealing with
+.\"O magic).  It affects your magical energy.
+賢さは(特に魔法を扱う)実戦的な経験により得られる。
+魔法のエネルギーに影響する。
+.\"O .lp Charisma
+.lp 魅力(Charisma)
+.\"O Charisma affects how certain creatures react toward you.  In
+.\"O particular, it can affect the prices shopkeepers offer you.
+魅力はある種の生物があなたに対してとる態度に影響を与える。
+特に店主が示す価格に影響する。
+.\"O .lp Alignment
+.lp 属性(Alignment)
+.\"O \fBLawful\fP, \fBNeutral\fP, or \fBChaotic\fP.  Often, Lawful is
+.\"O taken as good and Chaotic as evil, but legal and ethical do not always
+.\"O coincide.  Your alignment influences how other
+.\"O monsters react toward you.  Monsters of a like alignment are more likely
+.\"O to be non-aggressive, while those of an opposing alignment are more likely
+.\"O to be seriously offended at your presence.
+属性には \fB 秩序 (Lawful)\fP, \fB 中立 (Neutral)\fP,
+\fB 混沌(Chaotic)\fP がある。
+しばしば、秩序は善、混沌は悪であるとされるが、法と道徳が
+常に一致するとは限らない。
+あなたの属性は他の怪物のあなたに対する反応に影響を与える。
+属性が似ている怪物は好戦的ではなく、
+反対の属性に対してはあなたの存在に対して極めて好戦的であるらしい。
+.\"O .lp "Dungeon Level
+.lp "階数(Dungeon Level)"
+.\"O How deep you are in the dungeon.  You start at level one and the number
+.\"O increases as you go deeper into the dungeon.  Some levels are special,
+.\"O and are identified by a name and not a number.  The Amulet of Yendor is
+.\"O reputed to be somewhere beneath the twentieth level.
+どれだけ洞窟の奥深くまで行ったかを示す。
+初期値は 1 で、洞窟を奥深く行くほど大きな値になる。
+いくつかの階は特別で、数字ではなく名前で識別される。
+イェンダーの魔除けは地下 20 階より深くのどこかにあると考えられている。
+.\"O .lp "Gold  "
+.lp 金(Gold)
+.\"O The number of gold pieces you are openly carrying.  Gold which you have
+.\"O concealed in containers is not counted.
+大っぴらに所持している金貨の数である。箱などに隠したお金は勘定に入っていない。
+.\"O .lp "Hit Points
+.lp "体力(Hit Points)
+.\"O Your current and maximum hit points.  Hit points indicate how much
+.\"O damage you can take before you die.  The more you get hit in a fight,
+.\"O the lower they get.  You can regain hit points by resting, or by using
+.\"O certain magical items or spells.  The number in parentheses is the maximum
+.\"O number your hit points can reach.
+体力の現在値と最大値である。
+体力はあとどれだけのダメージを受けると死ぬかを示す。
+戦いで傷つくほど値は減少する。体力は休息や魔法のアイテムや呪文により回復できる。
+括弧の中の数字は体力のとり得る最大値である。
+.\"O .lp Power
+.lp 魔力(Power)
+.\"O Spell points.  This tells you how much mystic energy (\fImana\fP)
+.\"O you have available for spell casting.  Again, resting will regenerate the
+.\"O amount available.
+呪文に使う魔力である。これは呪文を唱えるのに必要な神秘の力
+(\fImana: マナ \fP) がどれほどあるかを示す。
+魔力もまた休息することにより回復する。
+.\"O .lp "Armor Class
+.lp "防御値(Armor Class)
+.\"O A measure of how effectively your armor stops blows from unfriendly
+.\"O creatures.  The lower this number is, the more effective the armor; it
+.\"O is quite possible to have negative armor class. 
+非友好的な生物からの攻撃を防具がどれほど食い止められるかを示す値である。
+数字が小さいほど防具は有効であり、
+防御値が負の値になることさえ十分あり得る。
+.\"O .lp Experience
+.lp 経験値(Experience)
+.\"O Your current experience level and experience points.  As you
+.\"O adventure, you gain experience points.  At certain experience point
+.\"O totals, you gain an experience level.  The more experienced you are,
+.\"O the better you fight and withstand magical attacks.  Many dungeons
+.\"O show only your experience level here.
+現在の経験レベルと経験値である。冒険が進むと経験値を得ること
+ができる。経験値の合計がある一定値まで達すると、経験レベルが上
+がる。経験を積むにつれ、戦い方が上達し魔法の攻撃にも耐えられるよ
+うになる。多くのバージョンでは経験レベルだけが表示される。
+.\"O .lp "Time  "
+.lp 時間(Time)
+.\"O The number of turns elapsed so far, displayed if you have the
+.\"O .op time
+.\"O option set.
+経過したターン数である。
+.op time
+オプションがオンのときに表示される。
+.\"O .lp "Hunger status
+.lp "腹具合(Hunger status)
+.\"O Your current hunger status, ranging from \fBSatiated\fP down to
+.\"O \fBFainting\fP.  If your hunger status is normal, it is not displayed.
+現在の腹具合である。腹具合は \fB 満腹(Satiated)\fP から
+\fB ふらふら(Fainting) \P までの値をとる。腹具合が普通なら表示されない。
+.pg
+.\"O Additional status flags may appear after the hunger status:  \fBConf\fP
+.\"O when you're confused, \fBFoodPois\fP or \fBIll\fP
+.\"O when sick, \fBBlind\fP when you can't
+.\"O see, \fBStun\fP when stunned, and \fBHallu\fP when hallucinating.
+この他にも状態を示す表示が腹具合の後ろに表示されることがあるかもしれ
+ない。混乱しているときには \fBConf\fP、病気のときには \fBFoodPois\fP または \fBIll\fP、
+目が見えないときには \fBBlind\fP、眩暈がしたときは \fBStun\fP、
+幻覚を見ているときは \fBHallu\fP と表示される。
+.hn 2
+.\"O The message line (top)
+メッセージ行(画面の上部)
+.pg
+.\"O The top line of the screen is reserved for messages that describe
+.\"O things that are impossible to represent visually.  If you see a
+.\"O ``\fB--More--\fP'' on the top line, this means that NetHack has
+.\"O another message to display on the screen, but it wants to make certain
+.\"O that you've read the one that is there first.  To read the next message,
+.\"O just press the space bar.
+画面の最上行は視覚的に表現できないことを説明するメッセージのために使われる。
+最上行に``\fB--More--\fP''が表示されたときは、
+このあとにさらにメッセージが続いているけれども
+現在のメッセージをまず確実に読むよう促しているということである。
+次のメッセージを読むためには単にスペースキーを押せばよい。
+.hn 2
+.\"O The map (rest of the screen)
+地図(画面のその他の部分)
+.pg
+.\"O The rest of the screen is the map of the level as you have explored it
+.\"O so far.  Each symbol on the screen represents something.  You can set
+.\"O various graphics options to change some of the symbols the game uses;
+.\"O otherwise, the game will use default symbols.  Here is a list of what the
+.\"O default symbols mean:
+画面のその他の部分は、あなたが現在いる階で
+それまでに探索し終わった部分の地図である。
+画面上のシンボルはそれぞれ何かを表している。
+表示されるシンボルのうちいくつかは、
+さまざまなグラフィックオプションを設定することによって変えることができる。
+そうでなければ標準設定のシンボルが用いられる。
+次に標準設定のシンボルの意味の一覧を示す。
+.\"O .lp "- and |
+.lp "- と |
+.\"O The walls of a room, or an open door.  Or a grave (|).
+部屋の壁、または開いた扉、または墓 (|)。
+.lp .
+.\"O The floor of a room, ice, or a doorless doorway.
+部屋の床、氷、または扉のない出入口。
+.lp #
+.\"O A corridor, or iron bars, or a tree, or possibly a kitchen sink (if
+.\"O your dungeon has sinks), or a drawbridge.
+通路、鉄の棒、木、あるいは台所の流し台(流し台がインプリメントされているとき)
+または跳ね橋
+.lp >
+.\"O Stairs down: a way to the next level.
+上り階段:上の階への通路。
+.lp <
+.\"O Stairs up: a way to the previous level.
+下り階段:下の階への通路。
+.lp +
+.\"O A closed door, or a spellbook containing a spell you may be able to learn.
+閉じた扉、または学習できるかもしれない呪文の書かれた魔法書。
+.lp @
+.\"O Your character or a human.
+あなたのキャラクター、または人間。
+.lp $
+.\"O A pile of gold.
+金貨の山。
+.lp ^
+.\"O A trap (once you have detected it).
+罠(ひとたび発見すれば表示される)。
+.lp )
+.\"O A weapon.
+武器。
+.lp [
+.\"O A suit or piece of armor.
+服またはなんらかの防具。
+.lp %
+.\"O Something edible (not necessarily healthy).
+食料(衛生的であるとは限らない)。
+.lp ?
+.\"O A scroll.
+巻物。
+.lp /
+.\"O A wand.
+杖。
+.lp =
+.\"O A ring.
+指輪。
+.lp !
+.\"O A potion.
+水薬。
+.lp (
+.\"O A useful item (pick-axe, key, lamp...).
+便利なアイテム(つるはし、鍵、ランプ…)。
+.lp """
+.\"O An amulet or a spider web.
+.lp *
+.\"O A gem or rock (possibly valuable, possibly worthless).
+宝石または岩(貴重なものかもしれないし、価値のないものかもしれない)。
+.lp `
+.\"O A boulder or statue.
+岩、または彫像。
+.lp 0
+.\"O An iron ball.
+鉄球。
+.lp _
+.\"O An altar, or an iron chain.
+祭壇、または鉄の鎖。
+.lp {
+.\"O A fountain.
+泉
+.lp }
+.\"O A pool of water or moat or a pool of lava.
+水たまり、または堀、または溶岩の海。
+.lp "\e
+.\"O An opulent throne.
+豪華な王座
+.\"O .lp "a-zA-Z and other symbols
+.lp "a-zA-Z およびその他のシンボル
+.\"O Letters and certain other symbols represent the various inhabitants
+.\"O of the Mazes of Menace.  Watch out, they can be nasty and vicious.
+.\"O Sometimes, however, they can be helpful.
+これらの文字とその他のいくつかのシンボルは恐怖の迷宮のいろいろな住人たちを表す。
+彼らは不機嫌で悪意に満ちているかも知れないので警戒しなければならない。
+が、ときには何かの手助けになることもある。
+.lp I
+.\"O This marks the last known location of an invisible or otherwise unseen
+.\"O monster.  Note that the monster could have moved.  The 'F' and 'm' commands
+.\"O may be useful here.
+このマークは透明、あるいはその他の見えない怪物が最後にいたらしい場所に表示される。
+怪物はすでに移動しているかもしれないことに注意すること。
+ここでは'F'と'm'のコマンドが便利だろう。
+.pg
+.\"O You need not memorize all these symbols; you can ask the game what any
+.\"O symbol represents with the `/' command (see the next section for
+.\"O more info).
+これらのシンボルをすべて記憶する必要はない。`/' コマンドでどのシンボ
+ルが何を表すか知ることができる(詳細は次の項を参照のこと)。
+
+.hn 1
+.\"O Commands
+コマンド
+.pg
+.\"O Commands are initiated by typing one or two characters.  Some commands,
+.\"O like ``search'', do not require that any more information be collected by
+.\"O NetHack.  Other commands might require additional information, for
+.\"O example a direction, or an object to be used.  For those commands that
+.\"O require additional information, NetHack will present you with either a
+.\"O menu of choices or with a command line prompt requesting information.  Which
+.\"O you are presented with will depend chiefly on how you have set the
+.\"O .op menustyle
+.\"O option.
+コマンドは 1 文字か 2 文字のキー入力を行うことで実行される。
+いくつかのコマンド、例えば``search''はそれ以上 NetHack に情報を与える必要がない。
+他のコマンドは例えば方向や使用する物などの情報をさらに与える必要がある。
+これらさらなる情報を必要とするコマンドに対しては、
+NetHack は選択メニューもしくはコマンドラインプロンプトのいずれかを表示する。
+どちらが表示されるかは主として
+.op menustyle
+オプションをどのように設定したかによる。
+.pg
+.\"O For example, a common question, in the form ``What do you want to
+.\"O use?\ [a-zA-Z\ ?*]'', asks you to choose an object you are carrying.
+.\"O Here, ``a-zA-Z'' are the inventory letters of your possible choices.
+.\"O Typing `?' gives you an inventory list of these items, so you can see
+.\"O what each letter refers to.  In this example, there is also a `*'
+.\"O indicating that you may choose an object not on the list, if you
+.\"O wanted to use something unexpected.  Typing a `*' lists your entire
+.\"O inventory, so you can see the inventory letters of every object you're
+.\"O carrying.  Finally, if you change your mind and decide you don't want
+.\"O to do this command after all, you can press the ESC key to abort the
+.\"O command.
+例えば ``What do you want to use?\ [a-zA-Z\ ?*]'' という形式の質問がよくあるが、
+これはあなたに持っている物のうちどれを選ぶかを尋ねるものである。
+この質問において「a-zA-Z」はあなたが選べる持物の目録記号である。
+`?' を入力するとこれらの物の目録一覧が得られ、
+個々の記号が何を表しているのか知ることができる。
+この例では、`*' もある。これは一覧には表示されておらず、
+通常そのコマンドでの使用を想定していない物でも、使おうと思えばそれを
+選ぶことができることを示している。`*' を入力するとすべての持物の目録が
+表示され、個々の持物すべてについての目録記号を知ることができる。
+考え直して結局このコマンドを使わないことにしたときには ESC キーを押せば
+コマンドを終了することができる。
+.pg
+.\"O You can put a number before some commands to repeat them that many
+.\"O times; for example, ``10s'' will search ten times.  If you have the
+.\"O .op number_pad
+.\"O option set, you must type `n' to prefix a count, so the example above
+.\"O would be typed ``n10s'' instead.  Commands for which counts make no
+.\"O sense ignore them.  In addition, movement commands can be prefixed for
+.\"O greater control (see below).  To cancel a count or a prefix, press the
+.\"O ESC key.
+コマンドの中には、その前に数字を入力することで何回も繰り返すこと
+ができるものもある。例えば「10s」は 10 回の探索を表している。もし
+.op number_pad
+オプションがオンのときには数字の前に `n' を入力しなければならない。
+つまり上の例では代わりに「n 10s」と入力しなければならない。
+複数回実行することが無意味なコマンドではこれは無視される。
+さらに、移動コマンドの前に特定の文字(プレフィックス)を付けることによって
+さまざまな移動方法をとることができる(後述)。
+繰り返し回数やプレフィックスを取り消すためには ESC キーを押せばよい。
+.pg
+.\"O The list of commands is rather long, but it can be read at any time
+.\"O during the game through the `?' command, which accesses a menu of
+.\"O helpful texts.  Here are the commands for your reference:
+コマンドの一覧はかなり長いが、ゲーム中に `?' コマンドを使用して
+ヘルプメニューを見ることにより、いつでもコマンドの一覧を見ることができる。
+以下はコマンドの一覧である。
+.lp ?
+.\"O Help menu:  display one of several help texts available.
+ヘルプメニュー: 表示可能なヘルプ画面のうちの 1 つを表示する。
+.lp /
+.\"O Tell what a symbol represents.  You may choose to specify a location
+.\"O or type a symbol (or even a whole word) to explain.
+シンボルが何を意味するかを示す。指定するには場所を示すか、
+またはシンボル(あるいは単語全体)を入力するかを選択することができる。
+.\"O Specifying a location is done by moving the cursor to a particular spot
+.\"O on the map and then pressing one of `.', `,', `;',
+.\"O or `:'.  `.' will explain the symbol at the chosen location,
+.\"O conditionally check for ``More info?'' depending upon whether the
+.\"O .op help
+.\"O option is on, and then you will be asked to pick another location;
+.\"O `,' will explain the symbol but skip any additional
+.\"O information; `;' will skip additional info and also not bother asking
+.\"O you to choose another location to examine; `:' will show additional
+.\"O info, if any, without asking for confirmation.  When picking a location,
+.\"O pressing the ESC key will terminate this command, or pressing `?'
+.\"O will give a brief reminder about how it works.
+.pg
+場所の指定は、適切な位置までカーソルを移動させてから`.'、`,'、`;'、`:'の
+どれかを押すことによって行なう。
+`.'を押すと、選んだ場所で表示されているシンボルの説明が表示され、
+もし
+.op help
+オプションがオンなら場合によっては``More info?''(詳細を見る?)と質問され、
+それからさらに他の場所を指定することができる。
+`,'を押すと、シンボルの説明が表示されるが、詳細情報は表示されない。
+`;'を押すと、詳細情報は表示されず、さらに他の場所の指定もできない。
+`:'を押すと、(もしあるなら)確認なしで詳細情報が表示される。
+場所を選ぶ時に ESC キーを押すことによってこのコマンドを中断でき、
+`?'を押すとどのように動作するかの簡単な説明が表示される。
+.\"O Specifying a name rather than a location
+.\"O always gives any additional information available about that name.
+場所でなく名前を指定した場合は、
+常にその名前に対する追加情報が表示される。
+.lp &
+.\"O Tell what a command does.
+コマンドの動作を示す。
+.lp <
+.\"O Go up to the previous level (if you are on a staircase or ladder).
+上の階へ行く(階段やはしごにいるとき)。
+.lp >
+.\"O Go down to the next level (if you are on a staircase or ladder).
+下の階へ行く(階段やはしごにいるとき)。
+.lp [yuhjklbn]
+.\"O Go one step in the direction indicated (see Figure 2).  If you sense
+.\"O or remember
+.\"O a monster there, you will fight the monster instead.  Only these
+.\"O one-step movement commands cause you to fight monsters; the others
+.\"O (below) are ``safe.''
+指定した方向へ一歩進む(図 2 参照)。その方向に怪物がいると感じているか
+覚えているときは、
+移動するのではなく怪物と戦うことになる。
+怪物と戦うことになるのはこの一歩移動のコマンドだけである。
+その他のコマンド(後述)は「安全」である。
+.sd
+.TS S
+center;
+c c.
+y  k  u	7  8  9
+\e | /	\e | /
+h- . -l	4- . -6
+/ | \e	/ | \e
+b  j  n	1  2  3
+.\"O 	(if \fBnumber_pad\fP is set)
+	(\fBnumber_pad\fP がオンのとき)
+.TE
+.ed
+.ce 1
+Figure 2
+
+.lp [YUHJKLBN]
+.\"O Go in that direction until you hit a wall or run into something.
+壁に突き当たるか何かに衝突するまで指定した方向に進む。
+.lp m[yuhjklbn]
+.\"O Prefix:  move without picking up objects or fighting (even if you remember
+.\"O a monster there)
+プレフィックス: 物を拾ったり、
+(たとえそこに怪物がいると思っていても)戦ったりせずに移動する。
+.lp F[yuhjklbn]
+.\"O Prefix:  fight a monster (even if you only guess one is there)
+プレフィックス: (そこに怪物がいると予想しているだけでも)怪物と戦う
+.lp M[yuhjklbn]
+.\"O Prefix:  move far, no pickup.
+プレフィックス: 物を拾わずに遠くへ移動する。
+.lp "g[yuhjklbn]
+.\"O Prefix:  move until something interesting is found.
+プレフィックス: 何かが見つかるまで移動する。
+.lp "G[yuhjklbn] or <CONTROL->[yuhjklbn]
+.\"O Prefix:  same as `g', but forking of corridors is not considered interesting.
+プレフィックス: 'g' と同じ。ただし通路の分岐点では止まらない。
+.lp _
+.\"O Travel to a map location via a shortest-path algorithm.  The shortest path
+.\"O is computed over map locations the hero knows about (e.g. seen or
+.\"O previously traversed).  If there is no known path, a guess is made instead.
+指定された位置まで、最短距離アルゴリズムを用いて移動する。
+最短距離は、あなたが知っている(見た、または以前に通った)地図配置を
+基に計算される。
+知っている道がない場合、代わりに推測が行われる。
+.\"マウスに対応している版では、現在位置以外の位置を
+.\"マウスでクリックしたときにもこのコマンドが発動する。
+.\"O Stops on most of
+.\"O the same conditions as the `G' command, but without picking up
+.\"O objects, similar to the `M' command.  For ports with mouse 
+`G'コマンドとほぼ同じ条件で停止するが、
+`M'コマンドと同様に物を拾わないで移動する。
+.lp .
+.\"O Rest, do nothing for one turn.
+休憩する。1 ターン何もしない。
+.lp a
+.\"O Apply (use) a tool (pick-axe, key, lamp...).
+道具(つるはし、鍵、ランプ…)を用いる(使う)。
+.lp A
+.\"O Remove one or more worn items, such as armor.
+.\"O Use `T' (take off) to take off only one piece of armor 
+.\"O or `R' (remove) to take off only one accessory.
+1 つまたは複数の身につけているもの(防具など)をはずす。防具を1 
+つだけはずすときには 'T'(take off: 防具をはずす)を、アクセサリを
+1 つだけはずすときは 'R'(remove: アクセサリをはずす)を使用せよ。
+.lp ^A
+.\"O Redo the previous command.
+1 つ前のコマンドを繰り返す。
+.lp c
+.\"O Close a door.
+扉を閉じる。
+.lp C
+.\"O Call (name) an individual monster.
+個々の怪物に名前を付ける。
+.lp ^C
+.\"O Panic button.  Quit the game.
+パニックボタン。ゲームを放棄する。
+.lp d
+.\"O Drop something.  Ex. ``d7a'' means drop seven items of object \fIa\fP.
+何かを下に置く。例:「d7a」は a という物を 7 個下に置くことを意味する。
+.lp D
+.\"O Drop several things.  In answer to the question
+.\"O ``What kinds of things do you want to drop? [!%= BUCXaium]''
+.\"O you should type zero or more object symbols possibly followed by 
+.\"O `a' and/or `i' and/or `u' and/or `m'.  In addition, one or more of
+.\"O the blessed/uncursed/cursed groups may be typed.
+いくつかの物を下に置く。``What kinds of things do you want to drop?[!%= BUCXaium]''
+(どの種類のものを置きますか?)
+の質問に対して、0 個以上の物のシンボルを入力することで答える。
+さらに`a', `i', `m', `u' をその後に入力することもできる。
+加えて、祝福された(B)/呪われていない(U)/呪われた(C)アイテムを指定することもできる。
+.sd
+.si
+.\"O DB  - drop all objects known to be blessed.
+.\"O DU  - drop all objects known to be uncursed.
+.\"O DC  - drop all objects known to be cursed.
+.\"O DX  - drop all objects of unknown B/U/C status.
+.\"O Da  - drop all objects, without asking for confirmation.
+.\"O Di  - examine your inventory before dropping anything.
+.\"O Du  - drop only unpaid objects (when in a shop).
+.\"O Dm  - use a menu to pick which object(s) to drop.
+.\"O D%u - drop only unpaid food.
+DB  - 祝福されていると判明している物全てを下に置く。
+DU  - 呪われていないと判明している物全てを下に置く。
+DC  - 呪われていると判明している物全てを下に置く。
+DX  - 祝福/呪いが判明していない物全てを下に置く。
+Da - 確認なしにすべての物を下に置く。
+Di - 物を置く前に持ち物を確認する。
+Du - (店にいるとき)代金未払の物だけを下に置く。
+Dm - 置く物を選ぶのにメニューを用いる。
+D%u - 代金未払の食料だけを下に置く。
+.ei
+.ed
+.lp ^D
+.\"O Kick something (usually a door).
+何か(普通は扉)を蹴る。
+.lp e
+.\"O Eat food.
+食料を食べる。
+.\"O .\" Make sure Elbereth is not hyphenated below, the exact spelling matters
+.hw Elbereth
+.lp E
+.\"O Engrave a message on the floor.
+.\"O Engraving the word ``Elbereth'' will cause most monsters to not attack
+.\"O you hand-to-hand (but if you attack, you will rub it out); this is
+.\"O often useful to give yourself a breather.  (This feature may be compiled out
+.\"O of the game, so your version might not have it.)
+床にメッセージを刻み込む。``Elbereth'' という語を刻み込むと、
+たいていの怪物はあなたに白兵戦を挑んで来なくなる
+(しかしあなたが攻撃をすると文字は消えてしまう)。
+これは、一息いれたいときになかなか便利である。
+(この機能はコンパイル時に削除されているかも知れないので、
+あなたのバージョンで必ずしも機能するとは限らない。)
+.sd
+.si
+.\"O E- - write in the dust with your fingers.  
+E- - ほこりの中に指で書く。
+.ei
+.ed
+.lp f
+.\"O Fire one of the objects placed in your quiver.  You may select
+.\"O ammunition with a previous `Q' command, or let the computer pick
+.\"O something appropriate if
+.\"O .op autoquiver
+.\"O is true.
+矢筒に入れてあるものを発射する。
+発射するものは予め`Q'コマンドで選択することも出来るし、
+.op autoquiver
+オプションが設定されている場合は、コンピューターに
+自動的に適当なものを設定させることもできる。
+.lp i
+.\"O List your inventory (everything you're carrying).
+持物の目録(持っている物すべて)を表示する。
+.lp I
+.\"O List selected parts of your inventory.
+持物の目録のうち指定した一部を表示する。
+.sd
+.si
+.\"O I* - list all gems in inventory;
+.\"O Iu - list all unpaid items;
+.\"O Ix - list all used up items that are on your shopping bill;
+.\"O I$ - count your money.
+I* - 持物のうち宝石をすべて表示する。
+Iu - 代金未払いの物をすべて表示する。
+Ix - 代金未払いだが使ってしまった物をすべて表示する。
+I$ - お金を数える。
+.ei
+.ed
+.lp o
+.\"O Open a door.
+扉を開ける。
+.lp O
+.\"O Set options.  A menu showing the current option values will be
+.\"O displayed.  You can change most values simply by selecting the menu
+.\"O entry for the given option (ie, by typing its letter or clicking upon
+.\"O it, depending on your user interface).  For the non-boolean choices,
+.\"O a further menu or prompt will appear once you've closed this menu.
+オプションを設定する。
+現在のオプションの値の一覧が表示される。
+(見出し文字をタイプするかクリックすることによって)変更したいオプションを選んで、
+ほとんどの値を変更することができる。
+ブール値でないオプションの場合は、さらにメニューが出るか、プロンプトが出る。
+.\"O The available options
+.\"O are listed later in this Guidebook.  Options are usually set before the
+.\"O game rather than with the `O' command; see the section on options below.
+設定可能なオプションはこのガイドブックの後ほどに一覧がある。
+オプションは通常は `O' コマンドではなく、ゲームを始める前に設定する。
+後述のオプションの項を参照のこと。
+.lp p
+.\"O Pay your shopping bill.
+代金を払う。
+.lp P
+.\"O Put on a ring or other accessory (amulet, blindfold).
+指輪、あるいはその他の装飾品（魔除け、目隠し）を身につける。
+.lp ^P
+.\"O Repeat previous message.  Subsequent ^P's repeat earlier messages.
+.\"O The behavior can be varied via the msg_window option.
+1 つ前のメッセージをもう一度表示する。
+続けて ^P を入力するとさらに前のメッセージが順に表示される。
+この振る舞いは msg_windows オプションによって変化する。
+.lp q
+.\"O Quaff (drink) something (potion, water, etc).
+何か(水薬，水など)を飲む。
+.lp Q
+.\"O Select an object for your quiver.  You can then throw this using
+.\"O the `f' command.  (In versions prior to 3.3 this was the command to quit
+.\"O the game, which has now been moved to `#quit'.)
+矢筒に入れるものを選択する。
+ここで選択したものは`f'コマンドで発射することができる。
+(バージョン 3.3 以前ではこのコマンドはゲームを放棄するものだったが、
+その機能は`#quit'に移動した)
+.lp r
+.\"O Read a scroll or spellbook.
+巻物や魔法書を読む。
+.lp R
+.\"O Remove an accessory (ring, amulet, etc).
+装飾品（指輪、魔除けなど）をはずす。
+.lp ^R
+.\"O Redraw the screen.
+画面を描き直す。
+.lp s
+.\"O Search for secret doors and traps around you.  It usually takes several
+.\"O tries to find something.
+周囲の隠し扉や罠を探す。何かを見つけるには普通何回も探す必要がある。
+.lp S
+.\"O Save (and suspend) the game.  The game will be restored automatically the
+.\"O next time you play.
+ゲームをセーブして、中断する。ゲームは次回プレイ時に自動的に復旧される。
+.lp t
+.\"O Throw an object or shoot a projectile.
+物を投げる。または矢などを発射する。
+.lp T
+.\"O Take off armor.
+防具をはずす。
+.lp ^T
+.\"O Teleport, if you have the ability.
+テレポート能力があればテレポートする。
+.lp v
+.\"O Display version number.
+バージョン番号を表示する。
+.lp V
+.\"O Display the game history.
+このゲームの履歴を表示する。
+.lp w
+.\"O Wield weapon.
+武器を持つ。
+.sd
+.si
+.\"O w- - wield nothing, use your bare hands.
+w- - 武器として何も持たず素手になる。
+.ei
+.ed
+.lp W
+.\"O Wear armor.
+.lp x
+.\"O Exchange your wielded weapon with the item in your alternate
+.\"O weapon slot.  The latter is used as your secondary weapon when engaging in
+.\"O two-weapon combat.  Note that if one of these slots is empty,
+.\"O the exchange still takes place.
+装備している武器を予備の武器と交換する。
+予備の武器は二刀流攻撃で用いられる。
+予備の武器がなくても交換は実行される(今持っているものを予備にして、
+素手になる)ことに注意。
+.lp X
+.\"O Enter explore (discovery) mode, explained in its own section later.
+後述する探検(発見)モードに入る。
+.lp ^X
+.\"O Display your name, role, race, gender, and alignment as well as
+.\"O the various deities in your game.
+あなたの名前、職業、種族、性別、属性および、今回のゲームにおける
+さまざまな神の名前を表示する。
+.lp z
+.\"O Zap a wand.  To aim at yourself, use `.' for the direction.
+杖を振る。自分に振る場合は、方向に`.'を使う。
+.lp Z
+.\"O Zap (cast) a spell.  To cast at yourself, use `.' for the direction.
+呪文を唱える。自分に呪文を唱えたいときは、方向として`.'を使う。
+.lp ^Z
+.\"O Suspend the game
+.\"O .ux " versions with job control only)." (
+ゲームを一時中止する(ジョブコントロール機能のある 
+.ux
+バージョンのみ)。
+.lp :
+.\"O Look at what is here.
+足元に何があるか見る。
+.lp ;
+.\"O Show what type of thing a visible symbol corresponds to.
+見えているシンボルが何を示すかを表示する。
+.lp ,
+.\"O Pick up some things. May be preceded by `m' to force a selection menu.
+何かを拾う。`m'の後に押すことによって、設定に関わらず選択メニューを表示する。
+.lp @
+.\"O Toggle the
+.\"O .op autopickup
+.\"O option on and off.
+.op autopickup
+オプションのオン・オフを切り替える。
+.lp ^
+.\"O Ask for the type of a trap you found earlier.
+今までに発見した罠の種類を調べる。
+.lp )
+.\"O Tell what weapon you are wielding.
+持っている武器を表示する。
+.lp [
+.\"O Tell what armor you are wearing.
+付けている防具を表示する。
+.lp =
+.\"O Tell what rings you are wearing.
+はめている指輪を表示する。
+.lp """
+.\"O Tell what amulet you are wearing.
+付けている魔除けを表示する。
+.lp (
+.\"O Tell what tools you are using.
+使っている道具を表示する。
+.lp *
+.\"O Tell what equipment you are using; combines the preceding five type-specific
+.\"O commands into one.
+装備しているものを表示する。上の 5 つのコマンドを一つにしたもの。
+.lp $
+.\"O Count your gold pieces.
+持っている金貨を数える。
+.lp +
+.\"O List the spells you know.  Using this command, you can also rearrange
+.\"O the order in which your spells are listed.  They are shown via a menu,
+.\"O and if you select a spell in that menu, you'll be re-prompted for
+.\"O another spell to swap places with it, and then have opportunity to
+.\"O make further exchanges.
+知っている呪文の一覧を表示する。
+このコマンドによって、呪文の表示される順番を変えることもできる。
+呪文をメニュー形式で表示させ、まず一つ目の呪文を選択し、
+さらに入れ替えたい呪文を選択することによって順番が入れ替わる。
+さらに入れ替えたい場合はこの操作を繰り返す。
+.lp "\e
+.\"O Show what types of objects have been discovered.
+今までにどんな種類の物を見つけたかを表示する。
+.lp !
+.\"O Escape to a shell.
+シェルに抜ける。
+.lp #
+.\"O Perform an extended command.  As you can see, the authors of NetHack
+.\"O used up all the letters, so this is a way to introduce the less frequently
+.\"O used commands.
+.\"O What extended commands are available depends on what features the game was
+.\"O compiled with.
+拡張コマンドを実行する。以上から分かるように 
+NetHack の作者たちはすべての文字を使い果たしてしまったので、
+あまり頻繁に使われないコマンドはこのようにして導入された。
+どの拡張コマンドが使用可能かは、
+ゲームのコンパイル時にどの機能が有効にされたかによる。
+.lp #adjust
+.\"O Adjust inventory letters (most useful when the
+.\"O .op fixinv
+.\"O option is ``on'').
+持物の目録記号を変更する(
+.op fixinv
+オプションが「オン」の時に非常に便利である)。
+.lp #chat
+.\"O Talk to someone.
+誰かと話をする。
+.lp #conduct
+.\"O List which challenges you have adhered to.  See the section below entitled
+.\"O ``Conduct'' for details.
+どの挑戦がまだ守られているかを表示する。詳しくは後述する「制限プレイ」の章を
+参照すること。
+.lp #dip
+.\"O Dip an object into something.
+物を何かに浸す。
+.lp #enhance
+.\"O Advance or check weapons and spell skills.
+武器の技量を高めたり、調べたりする。
+.lp #force
+.\"O Force a lock.
+錠をこじ開ける。
+.lp #invoke
+.\"O Invoke an object's special powers.
+物が持つ特別な能力を発動する。
+.lp #jump
+.\"O Jump to another location.
+別の場所へジャンプする。
+.lp #loot
+.\"O Loot a box or bag on the floor beneath you, or the saddle 
+.\"O from a horse standing next to you.
+あなたのそばにある床に置いてある箱や鞄、またはあなたの隣に立っている馬の
+鞍の中身を調べる。
+.lp #monster
+.\"O Use a monster's special ability (when polymorphed into monster form).
+(怪物の姿に変化している時に)怪物の特殊能力を使う。
+.lp #name
+.\"O Name an item or type of object.
+物や物の種類に名前を付ける。
+.lp #offer
+.\"O Offer a sacrifice to the gods.
+神にいけにえを捧げる。
+.lp #pray
+.\"O Pray to the gods for help.
+神に祈って助けを求める。
+.lp #quit
+.\"O Quit the program without saving your game.
+ゲームをセーブせずにプログラムを終了する。
+.lp #ride
+.\"O Ride (or stop riding) a monster.
+怪物に乗る(あるいは乗るのをやめる)。
+.lp #rub
+.\"O Rub a lamp or a stone.
+ランプや石をこする。
+.lp #sit
+.\"O Sit down.
+座る。
+.lp #turn
+.\"O Turn undead.
+不死の怪物を追い払う。
+.lp #twoweapon
+.\"O Toggle two-weapon combat on or off.  Note that you must
+.\"O use suitable weapons for this type of combat, or it will
+.\"O be automatically turned off.
+二刀流戦闘のオン・オフを切り替える。
+二刀流に適切な武器を使うこと。
+さもなければ自動的にオフになる。
+.lp #untrap
+.\"O Untrap something (trap, door, or chest).
+何か(罠、扉、宝箱)の罠をはずす。
+.lp #version
+.\"O Print compile time options for this version of NetHack.
+このバージョンの NetHack をコンパイルしたときのオプションを表示する。
+.lp #wipe
+.\"O Wipe off your face.
+顔を拭う。
+.lp #?
+.\"O Help menu:  get the list of available extended commands.
+ヘルプメニュー: 利用可能な拡張コマンドの一覧を表示する。
+.pg
+.\"O If your keyboard has a meta key (which, when pressed in combination
+.\"O with another key, modifies it by setting the `meta' [8th, or `high']
+.\"O bit), you can invoke many extended commands by meta-ing the first
+.\"O letter of the command.
+.\"O .\" In {\it NT, OS/2, PC\/ {\rm and} ST NetHack},
+.\"O .\" the `Alt' key can be used in this fashion;
+.\"O .\" on the Amiga set the {\it altmeta\/} option to get this behavior.
+.\"O In NT, OS/2, and PC NetHack, the `Alt' key
+.\"O can be used in this fashion.
+もしあなたのキーボードにメタキー
+(別のキーと一緒に押すことによって
+そのキーの`メタ'[第 8、または`上位']ビットをセットする)があれば、
+コマンドの頭文字をメタキーと一緒に押すことによって多くの
+拡張コマンドを起動することができる。
+.\" NT, OS/2, PC および ST NetHack では 'Alt' キーがこの目的に使われる.
+NT, OS/2, PC NetHack では 'Alt' キーがこの目的に使われる.
+.\" (Amiga ではこれを用いるには altmetaオプションをセットする。)
+.lp M-?
+.\"O #? (not supported by all platforms)
+#? (対応していないプラットホームもある)
+.lp M-2
+.\"O #twoweapon (unless the number_pad option is enabled)
+#twoweapon (number_pad がオフの場合)
+.lp M-a
+#adjust
+.lp M-c
+#chat
+.lp M-d
+#dip
+.lp M-e
+#enhance
+.lp M-f
+#force
+.lp M-i
+#invoke
+.lp M-j
+#jump
+.lp M-l
+#loot
+.lp M-m
+#monster
+.lp M-n
+#name
+.lp M-o
+#offer
+.lp M-p
+#pray
+.lp M-q
+#quit
+.lp M-r
+#rub
+.lp M-s
+#sit
+.lp M-t
+#turn
+.lp M-u
+#untrap
+.lp M-v
+#version
+.lp M-w
+#wipe
+.pg
+.\"O If the
+.\"O .op number_pad
+.\"O option is on, some additional letter commands are available:
+.op number_pad
+オプションがオンのときは、これらに加えいくつかの文字コマンドが有効になる。
+.lp h
+.\"O Help menu:  display one of several help texts available, like ``?''.
+ヘルプメニュー: ``?'' と同様にヘルプメニューを表示する。
+.lp j
+.\"O Jump to another location.  Same as ``#jump'' or ``M-j''.
+別の場所へジャンプする。「#jump」や「M-j」と同じ。
+.lp k
+.\"O Kick something (usually a door).  Same as `^D'.
+何か(通常は扉)を蹴る。'^D' と同じ。
+.lp l
+.\"O Loot a box or bag on the floor beneath you, or the saddle 
+.\"O from a horse standing next to you.  Same as ``#loot'' or ``M-l''.
+あなたのそばにある床に置いてある箱や鞄、またはあなたの隣に立っている馬の
+鞍の中身を調べる。「#loot」や「M-l」と同じ。
+.lp N
+.\"O Name an item or type of object.  Same as ``#name'' or ``M-n''.
+物や物の種類に名前を付ける。「#name」や「M-n」と同じ。
+.lp u
+.\"O Untrap a trap, door, or chest.  Same as ``#untrap'' or ``M-u''.
+罠、扉、宝箱などの仕掛けられた罠をはずす。「#untrap」や「M-u」と同じ。
+
+.hn 1
+.\"O Rooms and corridors
+部屋と通路
+.pg
+.\"O Rooms and corridors in the dungeon are either lit or dark.
+.\"O Any lit areas within your line of sight will be displayed;  
+.\"O dark areas are only displayed if they are within one space of you.
+.\"O Walls and corridors remain on the map as you explore them.
+洞窟内の部屋や通路は明りがついていることもあるし、ついていないこともある。
+明りのついている部分で自分の視野に入る部分は画面に表示される。
+暗いところでは周囲 1 つ分の空間だけが見える。
+壁や通路は画面に表示されたままになる。
+.pg
+.\"O Secret corridors are hidden.  You can find them with the `s' (search)
+.\"O command.
+隠し通路は表示されない。これらは `s'(search: 探す) コマンドで
+発見することができる。
+.hn 2
+.\"O Doorways
+出入口
+.pg
+.\"O Doorways connect rooms and corridors.  Some doorways have no doors;
+.\"O you can walk right through.  Others have doors in them, which may be
+.\"O open, closed, or locked.  To open a closed door, use the `o' (open)
+.\"O command; to close it again, use the `c' (close) command.
+出入口は部屋と通路を接続するものである。出入口の中には扉のないものがある。
+このときにはそのまま通り抜けることができる。その他の出入口には扉があるが、
+その扉は開いているか、閉じているか、錠がかかっているかのいずれかである。
+閉じている扉を開けるには `o'(open: 扉を開ける) コマンドを
+用いる。再び扉を閉じるには `c'(close: 扉を閉じる) コマンドを用いる。
+.pg
+.\"O You can get through a locked door by using a tool to pick the lock
+.\"O with the `a' (apply) command, or by kicking it open with the `^D'
+.\"O (kick) command.
+扉に錠がかかっているときは `a'(apply: 道具を用いる) コマンドで錠をはずす
+道具を使うか、`^D'(kick: 蹴る) コマンドで扉を蹴破ることで
+通ることができる。
+.pg
+.\"O Open doors cannot be entered diagonally; you must approach them
+.\"O straight on, horizontally or vertically.  Doorways without doors are
+.\"O not restricted in this fashion.
+開いた扉に斜めから入ることはできない。水平あるいは垂直方向から真っ直ぐに
+近付かなければならない。扉のない出入口にはこのような制限はない。
+.pg
+.\"O Doors can be useful for shutting out monsters.  Most monsters cannot
+.\"O open doors, although a few don't need to (ex. ghosts can walk through
+.\"O doors).
+扉は怪物を締め出すのに役に立つ。たいていの怪物は扉を開けることができない。
+けれどもいくつかの怪物にとっては扉を開ける必要などない(例: 亡霊は
+扉を通り抜けることができる)。
+.pg
+.\"O Secret doors are hidden.  You can find them with the `s' (search)
+.\"O command.  Once found they are in all ways equivalent to normal doors.
+隠し扉は表示されない。これらは `s'(search: 探す) コマンドで発見する
+ことができる。一度発見すると普通の扉と同様になる。
+.hn 2
+.\"O Traps (`^')
+罠 (`^')
+.pg
+.\"O There are traps throughout the dungeon to snare the unwary delver.
+.\"O For example, you may suddenly fall into a pit and be stuck for a few
+.\"O turns trying to climb out.  Traps don't appear on your map until you
+.\"O see one triggered by moving onto it, see something fall into it, or you
+.\"O discover it with the `s' (search) command.  Monsters can fall prey to
+.\"O traps, too, which can be a very useful defensive strategy.
+そそっかしい冒険者を陥れようとする罠が洞窟のあちこちにある。
+例えば落し穴に落ちると上り出るのに数ターンの間その場から動けなくなるであろう。
+そこに誰かが足を踏み入れて引っかかるか、`s'(search: 探す) コマンドで見つけるか
+して初めて罠は表示される。怪物も罠の餌食になることがある。これは非常に有効な
+防御戦術である。
+.\"O .pg
+.\"O There is a special pre-mapped branch of the dungeon based on the
+.\"O classic computer game ``Sokoban.''  The goal is to push the boulders
+.\"O into the pits or holes.  With careful foresight, it is possible to
+.\"O complete all of the levels according to the traditional rules of
+.\"O Sokoban.  Some allowances are permitted in case the player gets stuck;
+.\"O however, they will lower your luck.
+古典的コンピュータゲームである「倉庫番」を基にした特別なダンジョンへの
+分かれ道も存在する。
+このダンジョンでの目的は大岩を落し穴に入れることである。
+慎重に先読みすれば、全ての階は倉庫番の伝統のルールでクリアできる。
+行き詰まってしまった冒険者のためにいくつかの助け舟が用意されているが、
+これらは運を低下させてしまう。
+.hn 2
+.\"O Stairs (`<', `>')
+階段 (`<', `>')
+.pg
+.\"O In general, each level in the dungeon will have a staircase going up
+.\"O (`<') to the previous level and another going down (`>') to the next
+.\"O level.  There are some exceptions though.  For instance, fairly early
+.\"O in the dungeon you will find a level with two down staircases, one
+.\"O continuing into the dungeon and the other branching into an area
+.\"O known as the Gnomish Mines.  Those mines eventually hit a dead end,
+.\"O so after exploring them (if you choose to do so), you'll need to
+.\"O climb back up to the main dungeon.
+一般的に洞窟の各階には、前の階への上り階段('<')と、
+次の階への下り階段('>')がひとつずつある。
+しかし、例外もある。
+例えば、洞窟の比較的浅い階であなたは二つの下り階段がある階を発見するだろう。
+ひとつは洞窟の続きであり、
+もうひとつはノームの坑道として知られる地帯に続いている。
+この坑道は最後には行き止まりになっていて、
+ここを探検した(あなたがそうすることを選択した場合)後、
+元の洞窟にまで戻って来る必要がある。
+.pg
+.\"O When you traverse a set of stairs, or trigger a trap which sends you
+.\"O to another level, the level you're leaving will be deactivated and
+.\"O stored in a file on disk.  If you're moving to a previously visited
+.\"O level, it will be loaded from its file on disk and reactivated.  If
+.\"O you're moving to a level which has not yet been visited, it will be
+.\"O created (from scratch for most random levels, from a template for
+.\"O some ``special'' levels, or loaded from the remains of an earlier game
+.\"O for a ``bones'' level as briefly described below).  Monsters are only
+.\"O active on the current level; those on other levels are essentially
+.\"O placed into stasis.
+階段を使うか、あるいは他の階に移動する罠に引っ掛かった場合、
+いままでいた階は非活性化されて、ディスク上のファイルに貯えられる。
+昔訪れた階に再び訪れた場合、ディスク上のファイルが読み込まれて再活性化される。
+初めて訪れる階に移動した場合、その階は(ほとんどの階は一から、
+「特別な」階はテンプレートから、「骨の」階(後述)の場合はファイルから読み込んで)
+新たに作成される。
+怪物は現在の階にいるものだけが行動する。
+他の階にいるものは止まっている。
+.pg
+.\"O Ordinarily when you climb a set of stairs, you will arrive on the
+.\"O corresponding staircase at your destination.  However, pets (see below)
+.\"O and some other monsters will follow along if they're close enough when
+.\"O you travel up or down stairs, and occasionally one of these creatures
+.\"O will displace you during the climb.  When that occurs, the pet or other
+.\"O monster will arrive on the staircase and you will end up nearby.
+普通、あなたが階段を使うと、あなたは目的地で対応する階段の上に現れる。
+しかし、ペット(後述)といくつかの怪物はあなたが階段を上り降りした時についてきて、
+時々それらの一体があなたと入れ替わることがある。
+こうなった場合、ペットやその他の怪物が階段の上に現れ、
+あなたはそのそばに現れる。
+.hn 2
+.\"O Ladders (`<', `>')
+はしご (`<', `>')
+.pg
+.\"O Ladders serve the same purpose as staircases, and the two types of
+.\"O inter-level connections are nearly indistinguishable during game play.
+はしごは階段と同じ役目であり、階を繋ぐこの二つの種類は
+ゲーム中ほとんど区別ができない。
+.hn 2
+.\"O Shops and shopping
+店と買い物
+.pg
+.\"O Occasionally you will run across a room with a shopkeeper near the door
+.\"O and many items lying on the floor.  You can buy items by picking them
+.\"O up and then using the `p' command.  You can inquire about the price
+.\"O of an item prior to picking it up by using the ``#chat'' command
+.\"O while standing on it.  Using an item prior to paying for it will incur a
+.\"O charge, and the shopkeeper won't allow you to leave the shop until you
+.\"O have paid any debt you owe.
+時々ドアのそばに店主がいて、床にたくさんの物が置いてある部屋に
+行き当たることがある．物を拾って、`p'コマンドを使うことで
+物を買うことができる．
+物を拾う前に、物の上に立って``#chat''コマンドを使うことで値段を確認できる．
+支払いをする前に物を使うと借金になり、店主は債務を支払うまでは
+店の外に出してくれなくなる．
+.pg
+.\"O You can sell items to a shopkeeper by dropping them to the floor while
+.\"O inside a shop.  You will either be offered an amount of gold and asked
+.\"O whether you're willing to sell, or you'll be told that the shopkeeper
+.\"O isn't interested (generally, your item needs to be compatible with the
+.\"O type of merchandise carried by the shop).
+店の中にいるときに物を落すことで物を店主に売ることができる．
+売却価格を提示され、売るかどうかを確認されるか、
+単に店主が興味がないことを知らされる(一般的に、
+店で売っている物と同じ種類の物が買い取り対象である)。
+.pg
+.\"O If you drop something in a shop by accident, the shopkeeper will usually
+.\"O claim ownership without offering any compensation.  You'll have to buy
+.\"O it back if you want to reclaim it.
+偶然で物を店の中に落してしまうと、店主は普通代償なしに所有権を主張する．
+物を取り戻すためには買い戻す必要がある．
+.pg
+.\"O Shopkeepers sometimes run out of money.  When that happens, you'll be
+.\"O offered credit instead of gold when you try to sell something.  Credit
+.\"O can be used to pay for purchases, but it is only good in the shop where
+.\"O it was obtained; other shopkeepers won't honor it.  (If you happen to
+.\"O find a "credit card" in the dungeon, don't bother trying to use it in
+.\"O shops; shopkeepers will not accept it.)
+店主は資金不足になることがある。こうなった場合、何かを売ろうとすると
+現金の代わりに信用貸しを提案される。
+信用貸しは物を買うときに使えるが、同じ店でだけ有効である。
+他の店主は引き受けない。
+(迷宮で「クレジットカード」を手に入れることがあるが、
+これを店で使おうとしてはいけない。店主は受け入れない。)
+.pg
+.\"O The `$' command, which reports the amount of gold you are carrying
+.\"O (in inventory, not inside bags or boxes), will also show current shop
+.\"O debt or credit, if any.  The `Iu' command lists unpaid items
+.\"O (those which still belong to the shop) if you are carrying any.
+.\"O The `Ix' command shows an inventory-like display of any unpaid
+.\"O items which have been used up, along with other shop fees, if any.
+`$'コマンドを使うと、今持ち運んでいる金貨の数(かばんや箱に入っているものは
+除く)とともに、負債や信用貸しがあれば表示される。
+`Iu'コマンドは未払いの物(まだ店が所有する物)の一覧(あれば)を表示する。
+`Ix'コマンドは使ってしまった物の代金の一覧(あれば)が表示される。
+.hn 3
+.\"O Shop idiosyncracies
+店の特殊な性質
+.pg
+.\"O Several aspects of shop behavior might be unexpected.
+.\"O .\" note: using * instead of \(bu is better for plain text output
+店のいくつかの性質は意外なものかもしれない。
+.lp * 2
+.\"O The price of a given item can vary due to a variety of factors.
+アイテムの値段は色々な要素によって様々に変化する。
+.lp * 2
+.\"O A shopkeeper treats the spot immediately inside the door as if it were
+.\"O outside the shop.
+店主はドアの一つ内側の場所は店の外として扱う。
+.lp * 2
+.\"O While the shopkeeper watches you like a hawk, he will generally ignore
+.\"O any other customers.
+店主はあなたを鷹のように注意深く見張っているが、
+一般的にその他の消費者については無視する。
+.lp * 2
+.\"O If a shop is "closed for inventory", it will not open of its own accord.
+店が"closed for inventory"(「棚卸のため閉店」)の場合、
+待っていても開店はしない。
+.lp * 2
+.\"O Shops do not get restocked with new items, regardless of inventory depletion.
+店は例え品物が枯渇しても新しいアイテムが入荷することはない。
+
+.hn 1
+.\"O Monsters
+怪物
+.pg
+.\"O Monsters you cannot see are not displayed on the screen.  Beware!
+.\"O You may suddenly come upon one in a dark place.  Some magic items can
+.\"O help you locate them before they locate you (which some monsters can do
+.\"O very well).
+画面上にはあなたから見える怪物しか表示されないが、ひょっとすると闇の
+中で怪物とばったり出くわすことになるかもしれないので注意が必要である。
+魔法のアイテムの中には、怪物があなたを発見するよりも前にあなたが怪物を
+発見するのに役立つ物もある(しかしこの能力に大変優れている怪物もいる。)
+.pg
+.\"O The commands `/' and `;' may be used to obtain information about those
+.\"O monsters who are displayed on the screen.  The command `C' allows you
+.\"O to assign a name to a monster, which may be useful to help distinguish
+.\"O one from another when multiple monsters are present.  Assigning a name
+.\"O which is just a space will remove any prior name.
+`/' コマンドと `;' コマンドが画面上に表示されている怪物に関する情報を得るのに用いられる。
+`C' コマンドは怪物に名前をつけるのに用いられ、
+複数の怪物がいる時に、ある怪物を他のものと見分けたいときに便利である。
+名前としてスペースを指定すると、以前につけた名前を消すことになる。
+.pg
+.\"O The extended command ``#chat'' can be used to interact with an adjacent
+.\"O monster.  There is no actual dialog (in other words, you don't get to
+.\"O choose what you'll say), but chatting with some monsters such as a
+.\"O shopkeeper or the Oracle of Delphi can produce useful results.
+拡張コマンド「#chat」によって、隣接する怪物と交流できる。
+実際の台詞は選択できない(言い換えると、あなたが何をしゃべるかは選べない)が、
+店主や Oracle of Delphi(デルファイの神殿)といった相手と話をすることは、
+有益な結果をもたらす。
+
+.hn 2
+.\"O Fighting
+戦闘
+.pg
+.\"O If you see a monster and you wish to fight it, just attempt to walk
+.\"O into it.  Many monsters you find will mind their own business unless
+.\"O you attack them.  Some of them are very dangerous when angered.
+.\"O Remember:  discretion is the better part of valor.
+発見した怪物と戦いたいときには、
+単にその怪物に向かって移動するようにすればよい。
+多くの怪物はあなたが戦いを挑まない限り、
+他のことを気にすることはない。
+腹を立てると大変危険な怪物もいる。
+「三十六計逃げるにしかず」ということわざを忘れずに。
+.pg
+.\"O If you can't see a monster (if it is invisible, or if you are blinded),
+.\"O the symbol `I' will be shown when you learn of its presence.
+.\"O If you attempt to walk into it, you will try to fight it just like
+.\"O a monster that you can see; of course,
+.\"O if the monster has moved, you will attack empty air.  If you guess
+.\"O that the monster has moved and you don't wish to fight, you can use the `m'
+.\"O command to move without fighting; likewise, if you don't remember a monster
+.\"O but want to try fighting anyway, you can use the `F' command.
+怪物が見えない(怪物が透明、またはあなたが目が見えない)場合、
+怪物がいるとあなたが思った位置に`I'の文字が表示される。
+その区画に歩こうとすると、見えている時と同じようにあなたは怪物に攻撃しようとする。
+もちろん、もし怪物が移動してしまっていたら、あなたの攻撃は空を切ることになる。
+もし怪物がすでに移動してしまっていると考え、戦いたくない場合は、
+`m'コマンドを使うことで戦うことなく移動できる。
+逆に、そこに怪物がいるかどうかわからないけれどもとにかく戦って見たい場合は、
+`F'コマンドが使える。
+.hn 2
+.\"O Your pet
+ペット
+.pg
+.\"O You start the game with a little dog (`d'), cat (`f'), or pony (`u'), which
+.\"O follows you about the dungeon and fights monsters with you.  Like you, your
+.\"O pet needs food to survive.  It usually feeds itself on fresh carrion
+.\"O and other meats.  If you're worried about it or want to train it, you
+.\"O can feed it, too, by throwing it food.  A properly trained pet can be
+.\"O very useful under certain circumstances.
+あなたは仔犬(`d')、子猫(`f')、ポニー(`u')のいずれかとともにゲームを始める。
+あなたのペットはあなたとともに洞窟をさまよい、怪物と戦う。
+ペットはあなたと同様に生きのびるための食料を必要とする。
+ペットは新鮮な死肉やその他の肉をえさにしている。
+もしもペットのことが気がかりであったり、ペットを飼い慣らしておきたいと思うなら、
+あなたが直接えさを与えることもできる。
+そのためには食料をペットに向かって投げてやればよい。
+きちんと訓練されたペットはある種の状況のもとで極めて利用価値が高い。
+.pg
+.\"O Your pet also gains experience from killing monsters, and can grow
+.\"O over time, gaining hit points and doing more damage.  Initially, your
+.\"O pet may even be better at killing things than you, which makes pets
+.\"O useful for low-level characters.
+ペットも怪物を倒していくにつれて経験を積んでいく。
+また時間とともに成長もし、体力や相手に与えるダメージも増加する。
+初めのうちはあなたよりもペットの方が強いだろうから、
+レベルの低いキャラクタにとっては役に立つだろう。
+.pg
+.\"O Your pet will follow you up and down staircases if it is next to you
+.\"O when you move.  Otherwise your pet will be stranded and may become
+.\"O wild.  Similarly, when you trigger certain types of traps which alter
+.\"O your location (for instance, a trap door which drops you to a lower
+.\"O dungeon level), any adjacent pet will accompany you and any non-adjacent
+.\"O pet will be left behind.  Your pet may trigger such traps itself; you
+.\"O will not be carried along with it even if adjacent at the time.
+あなたが他の階へ移動するとき、隣にペットを連れていればペットもあなた
+について移動する。置き去りにすると野生化してしまうかもしれない。
+同様に、もしあなたが自分の位置が変わるような罠にかかった場合
+(例えば、トラップドアで下の階に落ちた場合)、
+隣にいたペットはついていき、隣にいなかったペットは取り残される。
+ペットが自分でそのような罠にかかることもある。
+あなたはたとえその時にペットの隣にいても一緒に移動することはない。
+.hn 2
+.\"O Steeds
+軍馬
+.pg
+.\"O Some types of creatures in the dungeon can actually be ridden if you
+.\"O have the right equipment and skill.  Convincing a wild beast to let
+.\"O you saddle it up is difficult to say the least.  Many a dungeoneer 
+.\"O has had to resort to magic and wizardry in order to forge the alliance.
+ダンジョンにいるある種の生物は、あなたが正しい装備と能力を
+持っていれば、乗ることができる。
+野生の生物にあなたが乗ることを納得させるのは困難である。
+多くの洞窟の主は協力関係をでっち上げるのに魔法の力に頼らなければならない。
+.\"O Once you do have the beast under your control however, you can 
+.\"O easily climb in and out of the saddle with the `#ride' command.  Lead
+.\"O the beast around the dungeon when riding, in the same manner as 
+.\"O you would move yourself.  It is the beast that you will see displayed
+.\"O on the map.
+しかし、一旦動物をあなたの支配下に置いたなら、
+`#ride'コマンドで乗り降りすることができる。
+動物に乗って洞窟を移動する方法は、自分自身が移動するのと同じである。
+地図に表示されるのはあなたが乗っている動物である。
+.pg
+.\"O Riding skill is managed by the `#enhance' command.  See the section
+.\"O on Weapon proficiency for more information about that.
+乗馬技術は`#enhance'コマンドで管理することができる。
+詳しくは後述する武器の技術の章を参照すること。
+.hn 2
+.\"O Bones levels
+骸骨の階
+.pg
+.\"O You may encounter the shades and corpses of other adventurers (or even
+.\"O former incarnations of yourself!) and their personal effects.  Ghosts
+.\"O are hard to kill, but easy to avoid, since they're slow and do little
+.\"O damage.  You can plunder the deceased adventurer's possessions;
+.\"O however, they are likely to be cursed.  Beware of whatever killed the
+.\"O former player; it is probably still lurking around, gloating over its
+.\"O last victory.
+冒険者の幽霊とその死体(あるいはそれは生まれ変わる前のあなた自身であ
+ることさえある)や、その所持品に出くわすかもしれない。
+幽霊を殺すことは難しいが、
+動きがのろくほとんどダメージを受けないので簡単に逃げることができる。
+あなたは死んだ冒険者の所持品を奪うこともできる。
+しかしそれらは呪われていることが多い。
+以前の冒険者を死に到らしめたものにはすべて注意を払わねばならない。
+それはあたりを徘徊し、その直前の勝利に酔いしれているからだ。
+
+.hn 1
+.\"O Objects 
+物
+.pg
+.\"O When you find something in the dungeon, it is common to want to pick
+.\"O it up.  In NetHack, this is accomplished automatically by walking over
+.\"O the object (unless you turn off the
+.\"O .op autopickup
+.\"O option (see below), or move with the `m' prefix (see above)), or
+.\"O manually by using the `,' command.
+洞窟の中で何かを見つけた場合、それを拾いたいと思うのはよくあることである。
+NetHack ではその物の上を通ることによって自動的に拾うことができ(
+.op autopickup
+オプション(後述)がオフになっているときや `m' プレフィックス
+(前述)を用いて移動するときはこの限りではない)、
+または `,' コマンドを使って手動で拾うことができる。
+.pg
+.\"O If you're carrying too many items, NetHack will tell you so and you won't 
+.\"O be able to pick
+.\"O up anything more.  Otherwise, it will add the object(s) to your pack and tell
+.\"O you what you just picked up.
+持物が多すぎるときには、NetHack はあなたにそのように告げ、
+それ以上拾うことはできなくなる。
+そうでなければ NetHack はその物をあなたの荷物に加え、何を拾ったかが表示される。
+.pg
+.\"O As you add items to your inventory, you also add the weight of that object
+.\"O to your load.  The amount that you can carry depends on your strength and
+.\"O your constitution.  The
+.\"O stronger you are, the less the additional load will affect you.  There comes
+.\"O a point, though, when the weight of all of that stuff you are carrying around
+.\"O with you through the dungeon will encumber you.  Your reactions
+.\"O will get slower and you'll burn calories faster, requiring food more frequently
+.\"O to cope with it.  Eventually, you'll be so overloaded that you'll either have
+.\"O to discard some of what you're carrying or collapse under its weight.
+持ち物が増えるに連れて、荷物の重さが重くなる。
+どれだけの重さの物を運べるかは筋力と耐久力による。
+力が強いほど、荷物の重さの影響は小さくなる。
+しかしそれでも、洞窟の中を持ち歩いている荷物の重さがあなたに負担になるときがくる。
+反応は鈍くなり、カロリー消費が早くなってより多くの食料が必要となる。
+そして最終的には荷物が重すぎて何かを捨てないと動けなくなってしまう。
+.pg
+.\"O NetHack will tell you how badly you have loaded yourself.  The symbols
+.\"O `Burdened', `Stressed', `Strained', `Overtaxed' and `Overloaded' are
+.\"O displayed on the bottom line display to indicate your condition.
+NetHack では荷物の重さがどれくらい悪影響を与えるかを教えてくれる。
+最下行に表示される`Burdened', `Stressed', `Strained', `Overtaxed',`Overloaded'
+の表示があなたの状態を示している。
+.pg
+.\"O When you pick up an object, it is assigned an inventory letter.  Many
+.\"O commands that operate on objects must ask you to find out which object
+.\"O you want to use.  When NetHack asks you to choose a particular object
+.\"O you are carrying, you are usually presented with a list of inventory
+.\"O letters to choose from (see Commands, above).
+物を拾ったとき、その物には目録記号が割り当てられる。
+物に関する多くのコマンドはあなたがどの物を使いたいのかを尋ねてくる。
+持物のうち特定の物を選ぶように NetHack が尋ねてきたときは、
+普通目録記号の一覧が表示されてその中から選ぶ(前述のコマンドの項を参照のこと)。
+.pg
+.\"O Some objects, such as weapons, are easily differentiated.  Others, like
+.\"O scrolls and potions, are given descriptions which vary according to
+.\"O type.  During a game, any two objects with the same description are
+.\"O the same type.  However, the descriptions will vary from game to game.
+いくつかの物、例えば武器類のような物は、どんなものか簡単に区別が付けられる。
+この他の物、例えば巻物や水薬はその種類に応じていろいろな名前が付けられている。
+1 回のゲームの間は同じ名前を持った物は同じ種類の物である。
+しかし物に付けられる名前はゲームごとに違うものになる。
+.pg
+.\"O When you use one of these objects, if its effect is obvious, NetHack
+.\"O will remember what it is for you.  If its effect isn't extremely
+.\"O obvious, you will be asked what you want to call this type of object
+.\"O so you will recognize it later.  You can also use the ``#name''
+.\"O command for the same purpose at any time, to name all objects of a
+.\"O particular type or just an individual object.
+.\"O When you use ``#name'' on an object which has already been named,
+.\"O specifying a space as the value will remove the prior name instead
+.\"O of assigning a new one.
+このような物を使った時、もしその効果が明らかな場合は NetHack がそれが
+何であるかを憶えていてくれる。
+その効果があまり明らかでない場合はその物の種類を何と名付けるか尋ねてくる。
+このため後になってそれを思い出すことができる。
+またいつでも``#name''コマンドを使って同様のことができ、
+ある種類の物すべてに名前を付けたり個々の物に名前を付けたりできる。
+すでに名前をつけているものに``#name''を使う場合、
+新しい名前としてスペースを指定することによって、
+以前つけていた名前を消すことができる。
+.hn 2
+.\"O Curses and Blessings
+呪いと祝福
+.pg
+.\"O Any object that you find may be cursed, even if the object is
+.\"O otherwise helpful.  The most common effect of a curse is being stuck
+.\"O with (and to) the item.  Cursed weapons weld themselves to your hand
+.\"O when wielded, so you cannot unwield them.  Any cursed item you wear
+.\"O is not removable by ordinary means.  In addition, cursed arms and armor
+.\"O usually, but not always, bear negative enchantments that make them
+.\"O less effective in combat.  Other cursed objects may act poorly or
+.\"O detrimentally in other ways.
+あなたが発見したいろいろな物は、たとえそれが役に立つものであったとしても
+呪いがかけられているかも知れない。呪いがかけられている物を使うと
+それが張り付いてしまうことは最もよく見られる結果である。
+呪いがかけられている武器を持つとそれは手に張り付いてしまって取れなくなる。
+呪いがかけられている物を身につけると普通の方法でははずすことができない。
+さらに、呪いがかけられている武器や防具には必ずと言うわけではないが
+たいていの場合負の魔力が与えられていて、そうでない物よりも戦闘時の効力が劣る。
+その他の呪いがかけられている物は、あまり役に立たなかったり
+またはその他の点で害を及ぼしたりするだろう。
+.pg
+.\"O Objects can also be blessed.  Blessed items usually work better or
+.\"O more beneficially than normal uncursed items.  For example, a blessed
+.\"O weapon will do more damage against demons.
+また祝福されている物もある。祝福されている物は
+呪いがかけられていない普通の物に比べて具合良く働き役に立つ。
+例えば祝福された武器は悪魔たちに一層のダメージを与えることができるだろう。
+.pg
+.\"O There are magical means of bestowing or removing curses upon objects,
+.\"O so even if you are stuck with one, you can still have the curse
+.\"O lifted and the item removed.  Priests and Priestesses have an innate
+.\"O sensitivity to this property in any object, so they can more easily avoid
+.\"O cursed objects than other character roles.
+魔法を使うと物に呪いをかけたり呪いを解いたりすることができる。
+このためたとえ物が張り付いてしまっても、
+呪いを解いてはずすことができる。
+僧侶は生来呪いや祝福に敏感なので、
+他の職業の冒険者よりも容易に呪われているものを避けることができる。
+.pg
+.\"O An item with unknown status will be reported in your inventory with no prefix.
+.\"O An item which you know the state of will be distinguished in your inventory
+.\"O by the presence of the word ``cursed'', ``uncursed'' or ``blessed'' in the
+.\"O description of the item.
+あなたの持物の目録の中で呪いがかけられているかどうか分からない物は
+目録のなかで特に何の説明もない。どんな状態にあるか知っている物は
+目録一覧で「cursed(呪われた)」「uncursed(呪われていない)」「blessed(祝福された)」などの
+言葉が物の説明に与えられる。
+.hn 2
+.\"O Weapons (`)')
+武器 (`)')
+.pg
+.\"O Given a chance, most monsters in the Mazes of Menace will gratuitously try to
+.\"O kill you.  You need weapons for self-defense (killing them first).  Without a
+.\"O weapon, you do only 1-2 hit points of damage (plus bonuses, if any).
+.\"O Monk characters are an exception; they normally do much more damage with
+.\"O bare hands than they do with weapons.
+恐怖の迷宮に住むほとんどすべての怪物は、チャンスと見れば見境なくあなたを
+殺そうとするだろう。自分の身を守る(先に怪物を殺してしまう)ために
+あなたは武器を必要とする。武器なしではポイントにして 1 〜 2 のダメージ
+(いくらかの加算があるかも知れないが)を与えることしかできない。
+但し、モンクは例外である。モンクは武器を使って攻撃するよりも
+素手で攻撃した方が遥かに大きなダメージを与えることができる。
+.pg
+.\"O There are wielded weapons, like maces and swords, and thrown weapons,
+.\"O like arrows and spears.  To hit monsters with a weapon, you must wield it and
+.\"O attack them, or throw it at them.  You can simply elect to throw a spear.
+武器には鎚矛や剣のような振り回すためのものと、矢や槍のような投げつけるためのものがある。
+武器で怪物に打撃を与えるためには、武器を手にもって怪物を攻撃するか
+武器を怪物に投げなければならない。投げるには、単純に槍を投げるように選択するだけでよい。
+.\"O To shoot an arrow, you should first wield a bow, then throw the arrow.
+.\"O Crossbows shoot crossbow bolts.  Slings hurl rocks and (other) stones
+.\"O (like gems).
+弓から矢を発射するには、まず弓を手に持ってから矢を投げればよい。クロスボウは
+crossbow bolt(クロスボウ用の太矢)を発射するためのものである。
+投石器は岩や(宝石のような)その他の石を投げつけるために用いる。
+.pg
+.\"O Enchanted weapons have a ``plus'' (or ``to hit enhancement'' which can be
+.\"O either positive or negative) that adds to your chance to
+.\"O hit and the damage you do to a monster.  The only way to determine a weapon's
+.\"O enchantment is to have it magically identified somehow.
+魔力のある武器には「追加能力」(攻撃能力と言うことで正と負の両方を取り得る)が
+付けられており、
+攻撃が怪物に当たる可能性と与えるダメージに追加される。
+武器の魔力を測定するには、なんらかの方法で魔法を使って鑑定するしかない。
+.\"O Most weapons are subject to some type of damage like rust.  Such
+.\"O ``erosion'' damage can be repaired.
+多くの武器は錆のようなある種のダメージを受けやすい。このような
+「腐食」ダメージは修復可能である。
+.pg
+.\"O The chance that an attack will successfully hit a monster, and the amount
+.\"O of damage such a hit will do, depends upon many factors.  Among them are:
+.\"O type of weapon, quality of weapon (enchantment and/or erosion), experience
+.\"O level, strength, dexterity, encumbrance, and proficiency (see below).  The
+.\"O monster's armor class - a general defense rating, not necessarily due to
+.\"O wearing of armor - is a factor too; also, some monsters are particularly
+.\"O vulnerable to certain types of weapons.
+攻撃がうまく怪物に命中するかと、命中した時にどれくらいのダメージを与えるかは、
+多くの要素によって決定される。それらには以下のものがある:
+武器の種類、武器の品質(魔力や腐食)、経験レベル、筋力、敏捷性、荷物の重さ、
+技量(後述)。
+怪物の防御値(一般的な防御率。防具を着ることによるとは限らない)も要素の一つである。
+また、ある種の武器に対して特に耐性を持つ怪物もいる。
+.pg
+.\"O Many weapons can be wielded in one hand; some require both hands.
+.\"O When wielding a two-handed weapon, you can not wear a shield, and
+.\"O vice versa.  When wielding a one-handed weapon, you can have another
+.\"O weapon ready to use by setting things up with the `x' command, which
+.\"O exchanges your primary (the one being wielded) and alternate weapons.
+多くの武器は片手持ちであるが、両手が必要な武器もある。
+両手持ちの武器と盾を同時に持つことはできない。
+片手持ちの武器を持っている場合、
+もうひとつの武器を予備として準備しておいて、
+`x'コマンドで今使っている武器と交換することができる。
+.\"O And if you have proficiency in the ``two weapon combat'' skill, you
+.\"O may wield both weapons simultaneously as primary and secondary; use the
+.\"O `#twoweapon' extended command to engage or disengage that.  Only
+.\"O some types of characters (barbarians, for instance) have the necessary
+.\"O skill available.  Even with that skill, using two weapons at once incurs
+.\"O a penalty in the chance to hit your target compared to using just one
+.\"O weapon at a time.
+さらに「二刀流戦闘」技能の技量がある場合、二つの武器を同時に使うことができる。
+`#twoweapon' 拡張コマンドで二刀流戦闘をするかどうかを切り替えられる。
+一部のキャラクター(例えば野蛮人)だけがこの技能を持っている。
+たとえこの技能を持っていても、一度に二つの武器を使うと
+ひとつしか使わない時に比べて敵に命中する確率にペナルティを受ける。
+.pg
+.\"O There might be times when you'd rather not wield any weapon at all.
+.\"O To accomplish that, wield `-', or else use the `A' command which
+.\"O allows you to unwield the current weapon in addition to taking off
+.\"O other worn items.
+全く何の武器も装備したくない時もあるかもしれない。
+そうするためには、装備するものを選ぶ時に`-'を選ぶか、あるいは`A'コマンドで
+その他の身につけているものを外すのと同時に現在使っている武器を外すことができる。
+.pg
+.\"O Those of you in the audience who are AD&D players, be aware that each
+.\"O weapon which existed in AD&D does roughly the same damage to monsters in
+.\"O NetHack.  Some of the more obscure weapons (such as the \fIaklys\fP,
+.\"O \fIlucern hammer\fP, and \fIbec-de-corbin\fP) are defined in an
+.\"O appendix to \fIUnearthed Arcana\fP, an AD&D supplement.
+AD&D をプレイしたことのある読者はお気付きだろうが、AD&D に登場した武器は
+NetHack においても怪物にだいたい同じダメージを与える。
+あまり良く知られていない武器(
+\fIaklys\fP(アキリス), \fIlucern hammer\fP(ルッツェンハンマー),
+\fIbec-de-corbin\fP(ベッグ・デ・コルビン) など)のいくつかは AD&D の
+追加ルールである \fIUnearthed Arcana\fP の付録で詳しく説明されている。
+.pg
+.\"O The commands to use weapons are `w' (wield), `t' (throw),
+.\"O `f' (fire, an alternative way of throwing), `Q' (quiver),
+.\"O `x' (exchange), `#twoweapon', and `#enhance' (see below).
+武器を使うコマンドは `w'(wield: 武器を持つ)、 `t'(throw: 投げる)、
+`f' (fire: 武器を発射するもうひとつの方法), `Q'(quiver: 矢筒)、
+`x' (exchange: 武器を交換する)、`#twoweapon'、`#enhance'(後述) である。
+.hn 3
+.\"O Throwing and shooting
+ものを投げることと発射すること
+.pg
+.\"O You can throw just about anything via the `t' command.  It will prompt
+.\"O for the item to throw; picking `?' will list things in your inventory
+.\"O which are considered likely to be thrown, or picking `*' will list
+.\"O your entire inventory.  After you've chosen what to throw, you will
+.\"O be prompted for a direction rather than for a specific target.  The
+.\"O distance something can be thrown depends mainly on the type of object
+.\"O and your strength.  Arrows can be thrown by hand, but can be thrown
+.\"O much farther and will be more likely to hit when thrown while you are
+.\"O wielding a bow.
+`t'コマンドを使うことによって、どんな物でも投げることができる。
+このコマンドを指定すると、投げる物を尋ねてくる。
+`?'を押すと、持ち物の中で投げるのに向いていそうな物の一覧が表示され、
+`*'を押すと、全ての持ち物の一覧が表示される。
+何を投げるかを指定した後、(どの目標に投げるかではなく)どの方向に投げるかを尋ねられる。
+投げることができる距離は、主に物の種類と筋力による。
+矢は手で投げることもできるが、弓を持って投げた方が遥かに遠くまで飛び、
+目標にも当たりやすい。
+.pg
+.\"O You can simplify the throwing operation by using the `Q' command to
+.\"O select your preferred ``missile'', then using the `f' command to
+.\"O throw it.  You'll be prompted for a direction as above, but you don't
+.\"O have to specify which item to throw each time you use `f'.  There is
+.\"O also an option,
+.\"O .op autoquiver,
+.\"O which has NetHack choose another item to automatically fill your
+.\"O quiver when the inventory slot used for `Q' runs out.
+`Q'コマンドで予め好みの「発射物」を選択しておき、
+`f'コマンドで投げることによって、投げる操作を簡単にすることが出来る。
+先程と同様に投げる方向は尋ねられるが、
+`f'コマンドを使うたびに何を投げるかを指定する必要はない。
+.op autoquiver
+オプションをオンにすると、
+`Q'コマンドで設定した物がなくなった時に、
+NetHack が自動的に矢筒に他の物を入れてくれる。
+.pg
+---
+.\"O Some characters will throw multiple items in a single action.  Rangers,
+.\"O for instance, or anyone who achieves a high level of proficiency in
+.\"O the relevant weapon skill (in bow skill if you're wielding one to
+.\"O shoot arrows, or in sling skill if you're wielding one to shoot stones).
+.\"O There is little you can do
+.\"O to control this; if NetHack decides that you'll be shooting 3 arrows
+.\"O on the current shot, then three arrows will travel in the direction
+.\"O you've indicated, even if the first or second succeeds in killing the
+.\"O target.  You can explicitly limit the number of shots by using a numeric
+.\"O prefix before the `t' or `f' command.
+---
+.\"O Some characters have the ability to fire a volley of multiple items in a
+.\"O single turn.  Knowing how to load several rounds of ammunition at
+.\"O once -- or hold several missiles in your hand -- and still hit a
+.\"O target is not an easy task.  Rangers are among those who are adept
+.\"O at this task, as are those with a high level of proficiency in the
+.\"O relevant weapon skill (in bow skill if you're wielding one to
+.\"O shoot arrows, in crossbow skill if you're wielding one to shoot bolts,
+.\"O or in sling skill if you're wielding one to shoot stones).
+.\"O The number of items that the character has a chance to fire varies from
+.\"O turn to turn.  You can explicitly limit the number of shots by using a
+.\"O numeric prefix before the `t' or `f' command.
+一度に複数の物を投げることができるキャラクターもいる。
+一度に複数の矢を装填し(あるいは一度に複数の物を持ち)、
+それを目標に当てることはたやすい仕事ではない。
+レンジャーはこの技能に優れているし、適切な武器の技能
+(弓を持って矢を射るなら弓の技能、クロスボゥを使うならクロスボゥの技能、
+スリングを持って石を投げるならスリングの技能)
+において高いレベルの技量があれば他の職業でも可能である。
+あなたがいくつのアイテムを同時に投げることができるかは
+毎ターン変化する。
+`t'コマンドや`f'コマンドの前に数字を指定することによって、
+発射する数を明示的に制限することもできる。
+.\"O For example, ``2f'' (or ``n2f'' if using
+.\"O .op number_pad
+.\"O mode) would ensure that at most 2 arrows are shot
+.\"O even if you could have fired 3.  If you specify
+.\"O a larger number than would have been shot (``4f'' in this example),
+.\"O you'll just end up shooting the same number (3, here) as if no limit
+.\"O had been specified.  Once the volley is in motion, all of the items
+.\"O will travel in the same direction; if the first ones kill a monster,
+.\"O the others can still continue beyond that spot.
+例えば、``2f''(
+.op number_pad
+オプションがオンの時には``n2f'')と指定すると、
+たとえ 3 本発射可能でも最大 2 本しか発射されない。
+もし、実際に発射できる数よりも大きい数を指定した場合
+(この例では ``4f'')は、
+特に数字を指定しなかった場合と同様、
+実際に発射可能な数(ここでは 3 本)しか発射されない。
+一旦動作を開始したなら、全てのアイテムは同じ方向に飛ぶ。
+もし 1 本目で怪物を倒したなら、残りはその先まで飛んでいくことになる。
+.hn 3
+.\"O Weapon proficiency
+武器の技量
+.pg
+.\"O You will have varying degrees of skill in the weapons available.
+.\"O Weapon proficiency, or weapon skills, affect how well you can use
+.\"O particular types of weapons, and you'll be able to improve your skills
+.\"O as you progress through a game, depending on your role, your experience
+.\"O level, and use of the weapons.
+利用できる武器の技能はさまざまに異なっている。
+武器の技量(技能)はある種の武器をどれくらいうまく扱えるかに影響する。
+技能はゲームを通じて向上させることが出来るが、
+それは職業や経験レベルや武器の使用回数による。
+.pg
+.\"O For the purposes of proficiency, weapons have
+.\"O been divided up into various groups such as daggers, broadswords, and
+.\"O polearms.  Each role has a limit on what level of proficiency a character
+.\"O can achieve for each group.  For instance, wizards can become highly
+.\"O skilled in daggers or staves but not in swords or bows.
+技量を示すために、武器は daggers 、 broadswords 、 polearms といった風に
+いくつかのグループに分けられている。
+それぞれのグループで技量レベルをどこまで高めることが出来るかは職業毎に決まっている。
+例えば魔法使いは daggers や staves に対しては高いレベルに達することが出来るが、
+swords や bows に対してはそうではない。
+.pg
+.\"O The `#enhance' extended command is used to review current weapons proficiency
+.\"O (also spell proficiency) and to choose which skill(s) to improve when
+.\"O you've used one or more skills enough to become eligible to do so.  The
+.\"O skill rankings are ``none'' (sometimes also referred to as ``restricted'',
+.\"O because you won't be able to advance), ``unskilled'', ``basic'', ``skilled'',
+.\"O and ``expert''.  Restricted skills simply will not appear in the list
+.\"O shown by `#enhance'.  (Divine intervention might unrestrict a particular
+.\"O skill, in which case it will start at unskilled and be limited to basic.)
+.\"O Some characters can enhance their barehanded combat or martial arts skill
+.\"O beyond expert to ``master'' or ``grand master''.
+`#enhance'拡張コマンドで現在の武器(と呪文)の技量を見ることができる。
+さらに、ひとつまたは複数の技能を向上させることができる状態なら、
+どの技能を向上させるかを選択することができる。
+技能のランクは"none" (技能を向上させることができないという意味で
+"restricted"(制限された) と呼ばれることもある)、 "unskilled"(初心者),
+"basic"(入門者), "skilled"(熟練者), "expert"(エキスパート)である。
+制限された技能は単に`#enhance'コマンドで一覧に表示されない。
+(神の介入によりある種の技能の制限が解除されることもある。
+その時には技能は"unskilled"となり、限界は"basic"までとなる)
+キャラクターによっては、素手での戦闘やマーシャルアーツの技能を
+``master''(マスター)や``grand master''(グランドマスター)にまで向上させる
+ことができる。
+.pg
+.\"O Use of a weapon in which you're restricted or unskilled
+.\"O will incur a modest penalty in the chance to hit a monster and also in
+.\"O the amount of damage done when you do hit; at basic level, there is no
+.\"O penalty or bonus; at skilled level, you receive a modest bonus in the
+.\"O chance to hit and amount of damage done; at expert level, the bonus is
+.\"O higher.  A successful hit has a chance to boost your training towards
+.\"O the next skill level (unless you've already reached the limit for this
+.\"O skill).  Once such training reaches the threshold for that next level,
+.\"O you'll be told that you feel more confident in your skills.  At that
+.\"O point you can use `#enhance' to increase one or more skills.  Such skills
+.\"O are not increased automatically because there is a limit to your total
+.\"O overall skills, so you need to actively choose which skills to enhance
+.\"O and which to ignore.
+技能レベルが"restricted"や"unskilled"の武器を使うと、怪物への命中率や
+命中した時に与えるダメージにペナルティがある。
+"basic"ではペナルティもボーナスもない。
+"skilled"では命中率と与えるダメージにささやかなボーナスがある。
+"expert"ではボーナスは大きくなる。
+攻撃が命中すると、使っている武器に関する技能を(もし最大に達していないなら)
+向上させるための訓練度を増やすチャンスがある。
+この訓練度が次のレベルに必要な値に達すると、
+自分の技能により自信を持てるように感じたことが告げられる。
+この時点で`#enhance'コマンドを使うことによってひとつまたは複数の技能を
+向上させることができる。
+技能は自動的には向上しない。
+なぜなら全ての技能レベルの合計には制限があるので、
+どの技能を向上させて、どれを無視するかを決める必要があるからである。
+.hn 2
+.\"O Armor (`[')
+防具 (`[')
+.pg
+.\"O Lots of unfriendly things lurk about; you need armor to protect
+.\"O yourself from their blows.  Some types of armor offer better
+.\"O protection than others.  Your armor class is a measure of this
+.\"O protection.  Armor class (AC) is measured as in AD&D, with 10 being
+.\"O the equivalent of no armor, and lower numbers meaning better armor.
+.\"O Each suit of armor which exists in AD&D gives the same protection in
+.\"O NetHack.  Here is an (incomplete) list of the armor classes provided by
+.\"O various suits of armor:
+多くの非友好的なものが洞窟には潜んでいる。
+そういったものからの攻撃から我が身を守るには防具が必要である。
+防具の中には他の種類の防具よりも防御効果に優れた物がある。
+Armor class(AC)(防御値)はこの防御効果の尺度である。
+防御値 (AC)は AD&D での場合と同じように評価される。
+10 が防具なしの状態と等しく、数値が小さいほど優れた防具であることを示す。
+AD&D に存在する鎧はいずれも NetHack においても同じ防御効果を示す。
+以下に(不完全ではあるが) 各種の鎧ごとに規定される防御値の一覧を示す。
+
+.TS S
+center;
+a n.
+dragon scale mail(ドラゴンの鱗鎧)	1
+plate mail(鋼鉄の鎧)	3
+crystal plate mail(水晶の鎧)	3
+bronze plate mail(青銅の鎧)	4
+splint mail(鉄片の鎧)	4
+banded mail(帯金の鎧)	4
+dwarvish mithril-coat(ドワーフのミスリル服)	4
+elven mithril-coat(エルフのミスリル服)	5
+chain mail(鎖かたびら)	5
+orcish chain mail(オークの鎖かたびら)	6
+scale mail(鱗の鎧)	6
+studded leather armor(鋲付き皮鎧)	7
+ring mail(鉄環の鎧)	7
+orcish ring mail(オークの鉄環の鎧)	8
+leather armor(皮鎧)	8
+leather jacket(皮ジャケット)	9
+no armor(鎧なし)	10
+.TE
+.pg
+.\"O You can also wear other pieces of armor (ex. helmets, boots, shields, cloaks)
+.\"O to lower your armor class even further, but you can only wear one item
+.\"O of each category (one suit of armor, one cloak, one helmet, one
+.\"O shield, and so on) at a time.
+さらに他の防具(例: 兜、靴、楯、クローク) を身につけ、
+防御値の値を小さくすることもできる。
+ただし同じ範疇に入る物は 1 つしか身につけることはできない
+(鎧は一式、クロークは 1 着、兜は 1 個、楯は 1 枚など)。
+.pg
+.\"O If a piece of armor is enchanted, its armor protection will be better
+.\"O (or worse) than normal, and its ``plus'' (or minus) will subtract from
+.\"O your armor class.  For example, a +1 chain mail would give you
+.\"O better protection than normal chain mail, lowering your armor class one
+.\"O unit further to 4.  When you put on a piece of armor, you immediately
+.\"O find out the armor class and any ``plusses'' it provides.  Cursed
+.\"O pieces of armor usually have negative enchantments (minuses) in
+.\"O addition to being unremovable.
+防具に魔力があればその防具の防御効果は通常の物よりも良く(もしくは悪く)なっており、
+それに付いている「＋記号」(あるいは−記号)の分だけ防御値の値が小さくなる。
+例えば +1 鎖かたびらは、通常の鎖かたびらよりも防御効果が高く、
+防御値は 1 単位分小さくなって 4 になる。
+防具を身につけると直ちに防御値と「＋記号」の値が分かる。
+呪いがかけられた防具は通常負の魔力(−記号)を持っており、取りはずすことはできない。
+.pg
+.\"O Many types of armor are subject to some kind of damage like rust.  Such
+.\"O damage can be repaired.  Some types of armor may inhibit spell casting.
+多くの鎧は錆のようなある種のダメージを受けやすい。
+このようなダメージは修復可能である。
+魔法を唱えるのを妨げる防具もある。
+.pg
+.\"O The commands to use armor are `W' (wear) and `T' (take off).
+鎧を使うためのコマンドは `W'(wear: 防具を付ける) と 
+`T'(take off: 防具をはずす) である。 
+.\"O The `A' command can also be used to take off armor as well as other
+.\"O worn items.
+`A'(remove all: 全てをはずす)もまた他の身につけるもの同様、
+防具をはずすのに使用できる。
+.hn 2
+.\"O Food (`%')
+食料 (`%')
+.pg
+.\"O Food is necessary to survive.  If you go too long without eating you
+.\"O will faint, and eventually die of starvation.  Some types of food will
+.\"O spoil, and become unhealthy to eat, if not protected.  Food stored in
+.\"O ice boxes or tins (``cans'') will usually stay fresh, but
+.\"O ice boxes are heavy, and tins take a while to open.
+生きのびるには食料が不可欠である．長い間食料を口にしないままでいると
+やがて昏倒し、徐々に餓死への道をたどることになる。
+保存の処置を取ってないと傷んでしまい、食べるには不衛生になる食料もある。
+アイスボックスや缶に入っている食料は通常はいつまでも傷まないが、
+アイスボックスは重く、缶は開けるのに少しばかり時間が必要である。
+.pg
+.\"O When you kill monsters, they usually leave corpses which are also
+.\"O ``food.''  Many, but not all, of these are edible; some also give you
+.\"O special powers when you eat them.  A good rule of thumb is ``you are
+.\"O what you eat.''
+怪物を殺すと通常はその死体が残るが、これは「食料」にもなる。
+すべてと言うわけではないが多くは食べられるし、
+中には食べると特別な力がつくものもある。
+大ざっぱに言えば「食べたものになる」ということである。
+.pg
+.\"O Some character roles and some monsters are vegetarian.  Vegetarian monsters
+.\"O will typically never eat animal corpses, while vegetarian players can,
+.\"O but with some rather unpleasant side-effects.
+菜食主義の職業や怪物もいる。
+菜食主義の怪物は決して動物の死体を食べない。
+一方菜食主義のプレイヤーは動物の死体を食べることができるが、
+なんらかのありがたくない副作用がある。
+.pg
+.\"O You can name one food item after something you like to eat with the
+.\"O .op fruit
+.\"O option.
+.op furit
+オプションによってあなたの好物の食料にちなんで
+その名前を 1 つ設定することができる。
+
+.pg
+.\"O The command to eat food is `e'.
+食料を食べるためのコマンドは `e' である。
+.hn 2
+.\"O Scrolls (`?')
+巻物 (`?')
+.pg
+.\"O Scrolls are labeled with various titles, probably chosen by ancient wizards
+.\"O for their amusement value (ex. ``READ ME,'' or ``THANX MAUD'' backwards).
+.\"O Scrolls disappear after you read them (except for blank ones, without
+.\"O magic spells on them).
+巻物にはいろいろな表題が付けられているが、
+これはおそらくいにしえの魔術師たちが暇潰しとして選んだのであろう
+(例:``READ ME'' とか ``THANX MAUD'' の逆さ読みとか)。
+巻物は読むと消滅する(ただし魔法の呪文の書かれていない白紙は消滅しない)。
+.pg
+.\"O One of the most useful of these is the \fIscroll of identify\fP, which
+.\"O can be used to determine what another object is, whether it is cursed or
+.\"O blessed, and how many uses it has left.  Some objects of subtle
+.\"O enchantment are difficult to identify without these.
+これらの中で最も利用価値の高いものは\fIscroll of identify(識別の巻物)\fPである。
+これは他の物についてそれが何であるか、
+呪いがかけられているか祝福されているか、
+あと何回効力を発揮できるかを確定できる。
+得体の知れない魔力を持つ物の中にはこの巻物なしでは何であるか鑑定し難いものもある。
+.pg
+.\"O A mail daemon may run up and deliver mail to you as a
+.\"O \fIscroll of mail\fP (on versions compiled with this feature).
+メイルデーモンが走ってきてあなたに\fIscroll of mail(手紙の巻物)\fPを渡してくれることもある
+(この機能を有効にしてコンパイルされているバージョンの場合)。
+.\"O To use this feature on versions where NetHack mail delivery is triggered
+.\"O by electronic mail appearing in your system mailbox,
+.\"O you must let NetHack know where to look for new mail by setting
+.\"O the ``MAIL'' environment variable to the file name of your mailbox.
+NetHack のメール配達機能はシステムのメールボックスに電子メールが
+やってきた場合に起動される。
+この機能を使用するには環境変数``MAIL''にあなたのメールボックスの
+ファイル名を設定して NetHack に新しいメールを探す場所を知らせる必要が
+ある。
+.\"O You may also want to set the ``MAILREADER'' environment
+.\"O variable to the file name of your favorite reader, so NetHack can shell to it
+.\"O when you read the scroll.
+また望むならば環境変数``MAILREADER''に使いたいメール受信プログラ
+ムのファイル名を設定することもできる。
+このとき NetHack からそのプログラムを起動してその巻物を読むことができる。
+.\"O On versions of NetHack where mail is randomly generated internal to the game,
+.\"O these environment variables are ignored.
+メールがゲーム内においてランダムに生成されるバージョンの NetHack では
+これらの環境変数は無視される。
+.\"O You can disable the mail daemon by turning off the
+.\"O .op mail
+.\"O option.
+メイルデーモンは
+.op mail
+オプションでオフにできる。
+.pg
+.\"O The command to read a scroll is `r'.
+巻物を読むためのコマンドは `r' である。
+.hn 2
+.\"O Potions (`!')
+水薬 (`!')
+.pg
+.\"O Potions are distinguished by the color of the liquid inside the flask.
+.\"O They disappear after you quaff them.
+水薬は小びんに入っている液体の色によって区別される。
+水薬は飲むと消滅してしまう。
+.pg
+.\"O Clear potions are potions of water.  Sometimes these are blessed or cursed,
+.\"O resulting in holy or unholy water.  Holy water is the bane of the undead, so
+.\"O potions of holy water are good things to throw (`t') at them.  It is also
+.\"O sometimes very useful to dip (``#dip'') an object into a potion.
+透明な水薬は水である。これらはしばしば祝福されていたり呪いがかけられていたりして、
+聖水や不浄な水になったりする。不死の怪物にとって聖水は有害なので、
+聖水を不死の怪物に投げつける(`t')と有効である。
+聖水に他の物を浸す(``#dip'')のもたいへん有益である。
+.pg
+.\"O The command to drink a potion is `q' (quaff).
+水薬を飲むためのコマンドは `q'(quaff: 飲む) である。
+.hn 2
+.\"O Wands (`/')
+杖 (`/')
+.pg
+.\"O Magic wands usually have multiple magical charges.  Some wands are
+.\"O directional\(emyou must give a direction in which to zap them.  You can also
+.\"O zap them at yourself (just give a `.' or `s' for the direction). Be warned,
+.\"O however, for this is often unwise.  Other wands are nondirectional\(emthey
+.\"O don't require a direction.  The number of charges in a wand is random and
+.\"O decreases by one whenever you use it.
+魔法の杖は通常何回も魔力を発揮する．杖の中には方向性のあるものがあり、
+この場合杖を振る方向を指示しなくてはならない。
+杖を自分に向けて振ることもできる(方向として `.' か `s' を入力する)が、
+これはしばしば愚かな行為となる。
+その他の杖には方向性がなく、杖を振る方向を尋ねてこない。
+杖が効力を発揮する回数は杖ごとに不定で、杖を使う度にその回数は 1 ずつ減る。
+.pg
+.\"O When the number of charges left in a wand becomes zero, attempts to use the
+.\"O wand will usually result in nothing happening.  Occasionally, however, it may
+.\"O be possible to squeeze the last few mana points from an otherwise spent wand,
+.\"O destroying it in the process.  A wand may be recharged by using suitable
+.\"O magic, but doing so runs the risk of causing it to explode.  The chance
+.\"O for such an explosion starts out very small and increases each time the
+.\"O wand is recharged.
+杖の魔法の量がなくなると、通常は杖を使用しても何も起きない。
+しかしながら時折、最後の一握りの魔力を使いきった杖から搾り取ることが可能である。
+しかしこれをすると杖は壊れてしまう。
+杖は適切な魔法によって再充填することができるが、
+そうすると杖が爆発してしまう可能性がある。
+爆発する可能性は最初は非常に小さく、同じ杖に何度も再充填するごとに大きくなる。
+.pg
+.\"O In a truly desperate situation, when your back is up against the wall, you
+.\"O might decide to go for broke and break your wand.  This is not for the faint
+.\"O of heart.  Doing so will almost certainly cause a catastrophic release of
+.\"O magical energies.
+自暴自虐なな行為ではあるが、どうにもならなくなったときには杖を壊すという手もある。
+これは弱気な行為ではない。それを行うことにより、
+破壊的な魔法のエネルギーが解放されるからである。
+.pg
+.\"O When you have fully identified a particular wand, inventory display will
+.\"O include additional information in parentheses: the number of times it has
+.\"O been recharged followed by a colon and then by its current number of charges.
+ある杖を完全に鑑定した場合、持ち物の一覧では括弧の中に追加の情報が表示される。
+それは再充填された回数、コロン、現在の使用可能な回数である。
+.\"O A current charge count of -1 is a special case indicating that the wand
+.\"O has been cancelled.
+杖が無効化された場合には使用可能な回数は -1 になる。
+.pg
+.\"O The command to use a wand is `z' (zap).  To break one, use the `a' (apply)
+.\"O command.
+杖を使うためのコマンドは `z'(zap: 杖を振る) である。壊すには `a'
+(apply: 道具を使う)である。
+.hn 2
+.\"O Rings (`=')
+指輪 (`=')
+.pg
+.\"O Rings are very useful items, since they are relatively permanent
+.\"O magic, unlike the usually fleeting effects of potions, scrolls, and
+.\"O wands.
+指輪は大変役に立つ物である。
+というのも水薬や巻物や杖のように魔力が一過性にしか働かないものと違い、
+指輪の魔力は比較的恒久的であるからだ。
+.pg
+.\"O Putting on a ring activates its magic.  You can wear only two
+.\"O rings, one on each ring finger.
+指輪をはめることによってその魔力は発揮される。
+指輪は両手の薬指に 1 つずつ、計 2 つしかはめることはできない。
+.pg
+.\"O Most rings also cause you to grow hungry more rapidly, the rate
+.\"O varying with the type of ring.  
+またたいていの指輪は身につけると腹の減り方が速くなる。
+減り方は指輪の種類によって異なる。
+.pg
+.\"O The commands to use rings are `P' (put on) and `R' (remove).
+指輪を使うためのコマンドは `P'(put on: 指輪をはめる) と
+`R'(remove: 指輪をはずす) である。
+.hn 2
+.\"O Spellbooks (`+')
+魔法書 (`+')
+.pg
+.\"O Spellbooks are tomes of mighty magic.  When studied with the `r' (read)
+.\"O command, they transfer to the reader the knowledge of a spell (and
+.\"O therefore eventually become unreadable) \(em unless the attempt backfires.
+魔法書は強力な魔法を記した大きな本である。`r'(read: 読む) コマンドで
+学ぶと呪文の知識が読み手に転送される(したがって最後には読めなくなる)か、
+さもなくばその試みは不測の結果に終る。
+.\"O Reading a cursed spellbook or one with mystic runes beyond
+.\"O your ken can be harmful to your health!
+呪いがかけられた魔法書や知識の及ばない神秘の古代文字で記された魔法書を
+読むと健康状態に害が及ぶ可能性がある！
+.pg
+.\"O A spell (even when learned) can also backfire when you cast it.  If you
+.\"O attempt to cast a spell well above your experience level, or if you have
+.\"O little skill with the appropriate spell type, or cast it at
+.\"O a time when your luck is particularly bad, you can end up wasting both the
+.\"O energy and the time required in casting.
+呪文を唱えたとき(学んでいる時も)にも魔力が逆流することもある。
+あなたの経験レベルでは遠く及ばない高度な呪文を唱えようと試みたり、
+対応する呪文タイプに関する技能が低かったり、
+ひどくついてないときに呪文を唱えたりすると、
+呪文を唱えるのに必要なエネルギーと時間を浪費しただけに終わってしまうこともある。
+.pg
+.\"O Casting a spell calls forth magical energies and focuses them with
+.\"O your naked mind.  Some of the magical energy released comes from within
+.\"O you, and casting several spells in a row may tire you.
+.\"O Casting of spells also requires practice.  With practice, your
+.\"O skill in each category of spell casting will improve.  Over time, however,
+.\"O your memory of each spell will dim, and you will need to relearn it.
+呪文を唱えることは、魔法のエネルギーを呼び起こしてそれを精神そのもの
+に集中させることである。
+あなた自身の内部から出る魔法のエネルギーが開放され、
+連続して呪文を唱えると疲れてしまう。
+呪文を唱えるには練習が必要である。
+練習していれば、それぞれの呪文領域の技能は向上していく。
+しかしながら、時間が経つにつれてそれぞれの呪文に関する記憶は薄れ、
+もう一度呪文を学ぶ必要がでてくるだろう。
+.pg
+.\"O Some spells are
+.\"O directional\(emyou must give a direction in which to cast them.  You can also
+.\"O cast them at yourself (just give a `.' or `s' for the direction). Be warned,
+.\"O however, for this is often unwise.  Other spells are nondirectional\(emthey
+.\"O don't require a direction.
+指向性のある呪文の場合、呪文を唱える方向を指定する必要がある。
+方向として`.'または`s'を指定することで自分自身に対して呪文を唱えることもできる。
+しかし、これはしばしば愚かな行為である。
+指向性のない呪文の場合、方向を指定する必要はない。
+.pg
+.\"O Just as weapons are divided into groups in which a character can become
+.\"O proficient (to varying degrees), spells are similarly grouped.
+.\"O Successfully casting a spell exercises the skill group; sufficient skill
+.\"O may increase the potency of the spell and reduce the risk of spell failure.
+.\"O Skill slots are shared with weapons skills.  (See also the section on
+.\"O ``Weapon proficiency''.)
+武器が習熟度の面でグループ分けされているのと同様、呪文もグループ分けされている。
+呪文を唱えるのに成功すると、そのグループを訓練したことになる。
+十分な技能があれば呪文の効果を高め、失敗の可能性を低めることができる。
+技能スロットは武器スキルと共有する。(``武器の技量''の項も参照のこと)
+.pg
+.\"O Casting a spell also requires flexible movement, and wearing various types
+.\"O of armor may interfere with that.
+魔法を唱えるには自由に移動できなければならない。また、いくつかの種類の鎧を
+着ていると魔法を唱えるのを妨げるだろう。
+.pg
+.\"O The command to read a spellbook is the same as for scrolls, `r'
+.\"O (read).  The `+' command lists your current spells, their levels,
+.\"O categories, and chances for failure.  
+.\"O The `Z' (cast) command casts a spell.
+魔法書を読むためのコマンドは巻物を読むときと同じく `r'(read: 読む) である。
+`+' コマンドにより、知っている呪文とそのレベル，分野，成功率が一覧表示される。
+`Z'(cast: 呪文を唱える) コマンドにより呪文を唱える。
+.hn 2
+.\"O Tools (`(')
+道具 (`(')
+.pg
+.\"O Tools are miscellaneous objects with various purposes.  Some tools
+.\"O have a limited number of uses, akin to wand charges.  For example, lamps burn
+.\"O out after a while.  Other tools are containers, which objects can
+.\"O be placed into or taken out of.
+道具はいろいろな目的に使う種々雑多な物である。杖などと同じように使用
+回数に制限のある物もある。例えばランプはしばらくたつと燃え尽きてしまう。
+その他の道具の中には容器も含まれており、物を出し入れすることができる。
+.pg
+.\"O The command to use tools is `a' (apply).
+道具を使うためのコマンドは `a'(apply: 道具を用いる) である。
+.hn 3
+.\"O Containers
+箱
+.pg
+.\"O You may encounter bags, boxes, and chests in your travels.  A tool of
+.\"O this sort can be opened with the ``#loot'' extended command when
+.\"O you are standing on top of it (that is, on the same floor spot),
+.\"O or with the `a' (apply) command when you are carrying it.  However,
+.\"O chests are often locked, and are in any case unwieldy objects.
+冒険の途中で鞄や箱やひつに出くわすこともあるであろう。
+これらは置いてある場所に立っている場合には
+拡張コマンド「#loot」によって、
+また持っているときには `a'(apply: 道具を用いる) コマンドで開けることができる。
+しかしながらひつにはしばしば錠がかかっており、大抵は重くて運びにくい物体である。
+.\"O You must set one down before unlocking it by
+.\"O using a key or lock-picking tool with the `a' (apply) command,
+.\"O by kicking it with the `^D' command,
+.\"O or by using a weapon to force the lock with the ``#force'' extended command.
+ひつは手に持つことはできない物なので、
+錠をはずす(`a'(apply: 道具を用いる) コマンドで鍵や錠をはずす道具を使ったり、
+`^D'コマンドで蹴とばしたり、
+拡張コマンド``#force''により武器を使ってこじ開けるなどの方法による)には
+床に置かなくてはならない。
+.pg
+.\"O Some chests are trapped, causing nasty things to happen when you
+.\"O unlock or open them.  You can check for and try to deactivate traps
+.\"O with the ``#untrap'' extended command.
+ひつには罠が仕掛けられているものもあり、錠をはずしたりふたを開けたり
+したときに不快な出来事が起きる。拡張コマンド``#untrap''によってチェックを
+して罠が無効になるよう試みることができる。
+.hn 2
+.\"O Amulets (`"')
+魔除け (`"')
+.pg
+.\"O Amulets are very similar to rings, and often more powerful.  Like
+.\"O rings, amulets have various magical properties, some beneficial,
+.\"O some harmful, which are activated by putting them on.
+魔除けは指輪と大変よく似ており、しばしばもっと大きな効力を持っている。
+指輪と同じように魔除けにはいろいろな魔法の特性があり、有益なものも有害
+なものもあって、身につけることにより効力を発揮する。
+.pg
+.\"O Only one amulet may be worn at a time, around your neck.
+魔除けは一つだけしか首にかけることができない。
+.pg
+.\"O The commands to use amulets are the same as for rings, `P' (put on)
+.\"O and `R' (remove).
+魔除けを使うためのコマンドは指輪の場合と同じく `P'(put on: 指輪を
+はめる) と `R'(remove: 指輪をはずす) である。
+.hn 2
+.\"O Gems (`*')
+宝石 (`*')
+.pg
+.\"O Some gems are valuable, and can be sold for a lot of gold.  They are also
+.\"O a far more efficient way of carrying your riches.  Valuable gems increase
+.\"O your score if you bring them with you when you exit.
+宝石の中には価値のあるものもあり、高値で売れる。
+宝石は財産を持ち歩く方法としてとして極めて効果的なやり方である。
+価値のある宝石を脱出時に所持していれば得点に加算される。
+.pg
+.\"O Other small rocks are also categorized as gems, but they are much less
+.\"O valuable.  All rocks, however, can be used as projectile weapons (if you
+.\"O have a sling).  In the most desperate of cases, you can still throw them
+.\"O by hand.
+他の小さな石も宝石に分類されるが、その価値はほとんどない。
+しかし、全ての石は(もしスリングを持っているなら)弾として有効である。
+窮余に陥いったら手で投げることも可能である。
+.hn 2
+.\"O Large rocks (`\`')
+大きな岩 (`\`')
+.pg
+.\"O Statues and boulders are not particularly useful, and are generally
+.\"O heavy.  It is rumored that some statues are not what they seem.
+彫像や巨石は特に有用ではないし、一般的に重いものである。
+見かけとは異なった彫像もあるという噂である。
+.pg
+.\"O Very large humanoids (giants and their ilk) have been known to use boulders
+.\"O as weapons.
+巨大なヒューマノイド(巨人やその仲間)は巨石を武器として用いることができる。
+.hn 2
+.\"O Gold (`$')
+金 (`$')
+.pg
+.\"O Gold adds to your score, and you can buy things in shops with it.
+金は得点に加算され、また店では金で物を買うことができる。
+.\"O There are a number
+.\"O of monsters in the dungeon that may be influenced by the amount of gold
+.\"O you are carrying (shopkeepers aside).
+迷宮にはあなたの持つお金に影響されるかもしれない数多くの怪物が
+いる(店主は別として)。
+
+.hn 1
+.\"O Conduct
+制限プレイ
+.pg
+.\"O As if winning NetHack were not difficult enough, certain players
+.\"O seek to challenge themselves by imposing restrictions on the
+.\"O way they play the game.  The game automatically tracks some of
+.\"O these challenges, which can be checked at any time with the #conduct
+.\"O command or at the end of the game.  When you perform an action which
+.\"O breaks a challenge, it will no longer be listed.  This gives
+.\"O players extra ``bragging rights'' for winning the game with these
+.\"O challenges.  Note that it is perfectly acceptable to win the game
+.\"O without resorting to these restrictions and that it is unusual for
+.\"O players to adhere to challenges the first time they win the game.
+単に NetHack に勝利するだけでは満足できない一部のプレイヤーは、
+プレイに制限を設けることに挑戦している。
+これらの挑戦の一部はゲームによって自動的に記録され、
+ゲーム中いつでも #conduct コマンドで確認できる。
+またゲーム終了時にも表示される。
+挑戦に反するような行動を取ると、もはやその挑戦は表示されない。l
+これらの挑戦に勝利することによって、プレイヤーは追加の``自慢する権利''を
+得られる。
+なお、これらの制限に従うことなくゲームに勝利することも
+完全に有効であり、最初にゲームに勝利するときは普通これらの挑戦は関係ない。
+.pg
+.\"O Several of the challenges are related to eating behavior.  The most
+.\"O difficult of these is the foodless challenge.  Although creatures
+.\"O can survive long periods of time without food, there is a physiological
+.\"O need for water; thus there is no restriction on drinking beverages,
+.\"O even if they provide some minor food benefits.
+.\"O Calling upon your god for help with starvation does
+.\"O not violate any food challenges either.
+挑戦のいくつかは食べ物に関するものである。
+最も困難な挑戦は食料なしの挑戦である。
+生物は食料なしでも長い間生存できるが、水は必要である。
+従って、飲み物に対しては何の制限もない。例え栄養分があってもである。
+神に祈って飢えをしのぐことはいかなる食べ物に関する挑戦にも違反しない。
+.pg
+.\"O A strict vegan diet is one which avoids any food derived from animals.
+.\"O The primary source of nutrition is fruits and vegetables.  The
+.\"O corpses and tins of blobs (`b'), jellies (`j'), and fungi (`F') are
+.\"O also considered to be vegetable matter.  Certain human
+.\"O food is prepared without animal products; namely, lembas wafers, cram
+.\"O rations, food rations (gunyoki), K-rations, and C-rations.
+.\"O Metal or another normally indigestible material eaten while polymorphed
+.\"O into a creature that can digest it is also considered vegan food.
+.\"O Note however that eating such items still counts against foodless conduct.
+厳密な菜食主義者は動物から作られた食べ物を食べない。
+基本的な栄養源は果物と野菜である。
+ブロッブ(`b')、ゼリー(`j')、細菌(`F')も野菜とみなされる。
+人間の食料にも動物を使っていないものがある。
+レンバス、クラム、「食料」(丸薬)、Ｋレーション、Ｃレーションがそうである。
+他の生物に変化しているときは、金属などの普通消化できない物質も
+厳密な菜食主義者用の食料として扱われる。
+しかし、これらの物も食料なしの挑戦には反することに注意すること。
+.pg
+.\"O Vegetarians do not eat animals;
+.\"O however, they are less selective about eating animal byproducts than vegans.
+.\"O In addition to the vegan items listed above, they may eat any kind
+.\"O of pudding (`P') other than the black puddings,
+.\"O eggs and food made from eggs (fortune cookies and pancakes),
+.\"O food made with milk (cream pies and candy bars), and lumps of
+.\"O royal jelly.  Monks are expected to observe a vegetarian diet.
+菜食主義者は動物を食べない。
+しかし、動物からの副生産物を食べることは厳密な菜食主義者ほどは厳しくない。
+上記の厳密な菜食主義者が食べられるものに追加して、
+ブラックプリン以外のプリン(`P')、卵、卵から作られた食べ物
+(占いクッキーとパンケーキ)、牛乳から造られた食べ物
+(クリームパイとキャンディーバー)、ロイヤルゼリーを食べることができる。
+モンクは菜食主義者とみなされる。
+.pg
+.\"O Eating any kind of meat violates the vegetarian, vegan, and foodless
+.\"O conducts.  This includes tripe rations, the corpses or tins of any
+.\"O monsters not mentioned above, and the various other chunks of meat
+.\"O found in the dungeon.  Swallowing and digesting a monster while polymorphed
+.\"O is treated as if you ate the creature's corpse.
+.\"O Eating leather, dragon hide, or bone items while
+.\"O polymorphed into a creature that can digest it, or eating monster brains
+.\"O while polymorphed into a mind flayer, is considered eating
+.\"O an animal, although wax is only an animal byproduct.
+肉を食べることは厳密な菜食主義者、菜食主義者、食料なしの挑戦に反する。
+これにはほし肉、上記以外の怪物の死体や缶詰、迷宮で見つかる
+その他の肉のかたまりを含む。
+変化中に「飲み込んで消化」攻撃をかけるのはその怪物の死体を
+食べたものとみなす。
+皮、竜鱗、骨でできた物体を、これらを消化できる怪物に変化して食べたり、
+マインドフレイヤーに変化して脳を食べることは動物を食べたとみなす。
+ただし、蜜蝋は動物の副生成物とみなす。
+.pg
+.\"O Regardless of conduct, there will be some items which are indigestible,
+.\"O and others which are hazardous to eat.  Using a swallow-and-digest
+.\"O attack against a monster is equivalent to eating the monster's corpse.
+.\"O Please note that the term ``vegan'' is used here only in the context of
+.\"O diet.  You are still free to choose not to use or wear items derived
+.\"O from animals (e.g. leather, dragon hide, bone, horns, coral), but the
+.\"O game will not keep track of this for you.  Also note that ``milky''
+.\"O potions may be a translucent white, but they do not contain milk,
+.\"O so they are compatible with a vegan diet.  Slime molds or
+.\"O player-defined ``fruits'', although they could be anything
+.\"O from ``cherries'' to ``pork chops'', are also assumed to be vegan.
+挑戦に関わらず、消化不可能な物もあり、食べると危険なものもある。
+怪物に対して「飲み込んで消化」攻撃をかけることは、
+その怪物の死体を食べたものとみなす。
+「厳格な菜食主義者(``vegan'')」という言葉は食べ物に関する文脈でのみ
+用いられることに注意してほしい。
+動物から作られた物(皮、竜の鱗、骨、角、さんご)を使ったり身につけたり
+することは制限に違反しない。
+また、「ミルク色の」水薬は不透明な白色ではあるが、牛乳を含んでいるわけ
+ではないので、厳密な菜食主義者の制限に違反しない。
+スライムモルドやプレイヤーが定義した``fruits''は、
+例え「さくらんぼ」であろうが「ポークチョップ」であろうが、
+厳密な菜食主義者の制限に違反しない。
+.pg
+.\"O An atheist is one who rejects religion.  This means that you cannot
+.\"O #pray, #offer sacrifices to any god, #turn undead, or #chat with a priest.
+.\"O Particularly selective readers may argue that playing Monk or Priest
+.\"O characters should violate this conduct; that is a choice left to the
+.\"O player.  Offering the Amulet of Yendor to your god is necessary to
+.\"O win the game and is not counted against this conduct.  You are also
+.\"O not penalized for being spoken to by an angry god, priest(ess), or
+.\"O other religious figure; a true atheist would hear the words but
+.\"O attach no special meaning to them.
+無神論者は宗教を否定する。つまり、#pray(祈る), #offer(いけにえを捧げる),
+#turn (不死のものを戻す), 僧侶に対する #chat(話す)ことはできない。
+一部の読者はモンクや僧侶でプレイするのもこの制限に反していると主張するかもしれないが、
+ここではプレイヤーの選択の余地を残してある。
+イェンダーの魔除けを神に捧げるのはゲームに勝利するために必要なので
+制限には反しないものとする。
+また、怒った神や僧侶やその他の宗教的存在が話す言葉を聞いても制限には反しない。
+真の無神論者は言葉は聞くが，そこになんら特別な意味を見出さない。
+.pg
+.\"O Most players fight with a wielded weapon (or tool intended to be
+.\"O wielded as a weapon).  Another challenge is to win the game without
+.\"O using such a wielded weapon.  You are still permitted to throw,
+.\"O fire, and kick weapons; use a wand, spell, or other type of item;
+.\"O or fight with your hands and feet.
+ほとんどのプレイヤーは武器(あるいは武器として装備することを
+考慮している道具)を手に戦う。
+挑戦の一つはこのような武器を手にして使わずにゲームに勝利することである。
+武器を投げたり、発射したり、蹴ったりするのは許される。
+また、杖、呪文、あるいはその他のアイテムを使ったり、
+素手や脚で戦うことも許される。
+.pg
+.\"O In NetHack, a pacifist refuses to cause the death of any other monster
+.\"O (i.e. if you would get experience for the death).  This is a particularly
+.\"O difficult challenge, although it is still possible to gain experience
+.\"O by other means.
+NetHack において、平和主義者は他の怪物を殺してはならない(言い換えると、
+怪物の死によって経験値を得てはならない)。
+これは特に難しい挑戦であるが、他の手段によって経験値を得ることは可能である。
+.pg
+.\"O An illiterate character cannot read or write.  This includes reading
+.\"O a scroll, spellbook, fortune cookie message, or t-shirt; writing a
+.\"O scroll; or making an engraving of anything other than a single ``x'' (the
+.\"O traditional signature of an illiterate person).  Reading an engraving,
+.\"O or any item that is absolutely necessary to win the game, is not counted
+.\"O against this conduct.  The identity of scrolls and spellbooks (and
+.\"O knowledge of spells) in your starting inventory is assumed to be
+.\"O learned from your teachers prior to the start of the game and isn't
+.\"O counted.
+文盲者は読み書きができない。これには以下の行為が含まれる。
+巻き物を読む、魔法書を読む、占いクッキーのメッセージを読む、Tシャツの文字を読む、
+巻き物を書く、``x''一文字(文盲者の伝統的なサイン)以外の文字を刻む。
+刻んである文字を読むことと、ゲームに勝利するために絶対に必要なアイテムを
+読むことは制限には反しないものとする。
+ゲーム開始時に持っている巻き物と魔法書の内容を知っていることおよび
+呪文の知識は、ゲーム開始以前に教師から教わったものとみなし、
+制限には反しないものとする。
+.pg
+.\"O There are several other challenges tracked by the game.  It is possible
+.\"O to eliminate one or more species of monsters by genocide; playing without
+.\"O this feature is considered a challenge.  When the game offers you an
+.\"O opportunity to genocide monsters, you may respond with the monster type
+.\"O ``none'' if you want to decline.  You can change the form of an item into
+.\"O another item of the same type (``polypiling'') or the form of your own
+.\"O body into another creature (``polyself'') by wand, spell, or potion of
+.\"O polymorph; avoiding these effects are each considered challenges.
+.\"O Polymorphing monsters, including pets, does not break either of these
+.\"O challenges.
+.\"O Finally, you may sometimes receive wishes; a game without an attempt to
+.\"O wish for an object is a challenge, as is a game without wishing for
+.\"O an artifact (even if the artifact immediately disappears).
+.\"O wish for any items is a challenge, as is a game without wishing for
+.\"O an artifact (even if the artifact immediately disappears).  When the
+.\"O game offers you an opportunity to make a wish for an item, you may
+.\"O choose ``nothing'' if you want to decline.
+その他にいくつかの細かいゲームとして記録される挑戦がある。
+怪物は虐殺することが可能である。これをせずにプレイするのも挑戦とみなす。
+怪物を虐殺する機会が与えられたとき、
+``none''(または``なし'')と答えると、虐殺しないままにすることができる。
+あなたはアイテムを同じグループの他のアイテムに変化させたり (``polypiling'')、
+変化の杖・呪文・薬で自分の体を他の生物に変えたり(``polyself'')できる。
+これらの効果を用いないことはそれぞれ挑戦とみなす。
+最後に、あなたはときどき願いをかなえてもらうことがある。
+なんのアイテムも願わずにプレイするのは一つの挑戦であり、
+聖器を願わない(たとえ直ちに消滅したとしても)でプレイするのも一つの挑戦である。
+アイテムを願う機会を与えられたとき、
+``nothing''または``なし''と答えると、願わないままにすることができる。
+
+.hn 1
+.\"O Options
+オプション
+.pg
+.\"O Due to variations in personal tastes and conceptions of how NetHack
+.\"O should do things, there are options you can set to change how NetHack
+.\"O behaves.
+人にはそれぞれいろいろな好みがあり NetHack の遊び方もそれぞれ異なっているの
+で、NetHack の振る舞いを変更するため設定できるオプションがある。
+.hn 2
+.\"O Setting the options
+オプションの設定
+.pg
+.\"O Options may be set in a number of ways.  Within the game, the `O'
+.\"O command allows you to view all options and change most of them.
+.\"O You can also set options automatically by placing them in the
+.\"O NETHACKOPTIONS environment variable or in a configuration file.
+.\"O Some versions of NetHack also have front-end programs that allow
+.\"O you to set options before starting the game.
+オプションを設定する方法にはいくつかある。ゲーム中に `O' コマンドを
+使うことによって全てのオプションを見ることができ、そのほとんどを変更で
+きる。また、環境変数``NETHACKOPTIONS''や設定ファイルで自動的に設定する
+こともできる。NetHack のバージョンによってはゲーム開始前にオプションを設
+定することができるプログラムがついていることもある。
+.hn 2
+.\"O Using the NETHACKOPTIONS environment variable
+環境変数 NETHACKOPTIONS を使う
+.pg
+.\"O The NETHACKOPTIONS variable is a comma-separated list of initial
+.\"O values for the various options.  Some can only be turned on or off.
+.\"O You turn one of these on by adding the name of the option to the list,
+.\"O and turn it off by typing a `!' or ``no'' before the name.  Others take a 
+.\"O character string as a value.  You can set string options by typing
+.\"O the option name, a colon or equals sign, and then the value of the string.
+.\"O The value is terminated by the next comma or the end of string.
+環境変数 NETHACKOPTIONS にはいろいろなオプションの初期値をカンマで区
+切って列挙し設定する。オプションのうちのいくつかのものは単にオンかオフ
+の選択ができるだけである。そのオプション名をリストに入れるとオンになり、
+オプション名の前に `!' か``no''をつけるとオフになる。その他のオプショ
+ンでは設定値として文字列が必要である。これらのオプションを設定するには
+オプション名、コロンまたはイコール記号、設定値の順で入力すればよい。
+設定値は次のカンマもしくは文字列の最後までとなる。
+.pg
+.\"O For example, to set up an environment variable so that ``autoquiver'' is on,
+.\"O ``autopickup'' is off, the name is set to ``Blue Meanie'', and the fruit
+.\"O is set to ``papaya'', you would enter the command
+例えば``autoquiver''をオン、``autopickup''をオフ、名前が``Blue Meanie'' 
+に、フルーツが``papaya''になるように環境変数を設定するには \fIcsh\fP では次の
+コマンドを入力すればよい。
+(!は特殊文字なのでエスケープしてやる必要があることに注意)
+.sd
+% \fBsetenv NETHACKOPTIONS "autoquiver,\e!autopickup,name:Blue Meanie,fruit:papaya"\fP
+.ed
+.\"O in \fIcsh\fP (note the need to escape the ! since it's special to the shell), or
+\fBsh\fP または \fBksh\fP では
+.sd
+$ \fBNETHACKOPTIONS="autoquiver,!autopickup,name:Blue Meanie,fruit:papaya"\fP
+$ \fBexport NETHACKOPTIONS\fP
+.ed
+.\"O in \fIsh\fP or \fIksh\fP.
+とすればよい。
+.hn 2
+.\"O Using a configuration file
+設定ファイルを使う
+.pg
+.\"O Any line in the configuration file starting with `#' is treated as a comment.
+.\"O Any line in the configuration file starting with ``OPTIONS='' may be
+.\"O filled out with options in the same syntax as in NETHACKOPTIONS.
+設定ファイルの中の`#'で始まる行はコメントとして扱われる。
+設定ファイルの中の``OPTION=''で始まる行は環境変数``NETHACKOPTIONS''
+と同じ文法でオプションが記述されているものと見なす。
+.\"O Any line starting with ``DUNGEON='', ``EFFECTS='', ``MONSTERS='',
+.\"O ``OBJECTS='', ``TRAPS='', or ``BOULDER=''
+.\"O is taken as defining the corresponding
+.\"O .op dungeon,
+.\"O .op effects,
+.\"O .op monsters,
+.\"O .op objects
+.\"O .op traps
+.\"O or
+.\"O .op boulder
+.\"O option in a different syntax,
+.\"O a sequence of decimal numbers giving the character position
+.\"O in the current font to be used in displaying each entry.
+``DUNGEON=''、``EFFECTS=''、``MONSTERS=''、``OBJECTS=''、``TRAPS=''、``BOULDER=''で
+始まる行はそれぞれ
+.op dungeon
+、
+.op effects
+、
+.op monsters
+、
+.op objects
+、
+.op traps
+、
+.op boulder
+ オプションとして扱われるが、その指定方法は、
+現在使われているフォントのかわりに使われるキャラクタコードを示す 10 進数の列である。
+.\"O A zero in any entry in such a sequence leaves the display of that
+.\"O entry unchanged; this feature is not available using the option syntax.
+この列に 0 を指定すると、その項目は変更されない。
+この機能はオプションの文法では利用できない。
+.\"O Such a sequence can be continued to multiple lines by putting a `\e'
+.\"O at the end of each line to be continued.
+この列は各行の最後に`\e'をつけることによって複数行に渡ることができる。
+.pg
+.\"O If your copy of the game included the compile time AUTOPICKUP_EXCEPTIONS
+.\"O option, then any line starting with ``AUTOPICKUP_EXCEPTION='' is taken
+.\"O as defining an exception to the 
+.\"O .op pickup_types
+.\"O option. 
+.\"O There is a section of this Guidebook that discusses that.
+コンパイル時に AUTOPICKUP_EXCEPTIONS オプションが設定されていると、
+``AUTOPICKUP_EXCEPTION=''で始まる行によって
+.op pickup_type
+オプションの例外を定義できる。
+.pg
+.\"O The default name of the configuration file varies on different
+.\"O operating systems, but NETHACKOPTIONS can also be set to
+.\"O the full name of a file you want to use (possibly preceded by an `@').
+標準設定の設定ファイル名は OS によって異なるが、
+環境変数``NETHACKOPTIONS''で
+（先頭に`@'を付けることで）使用したい設定ファイル名を指定することができる。
+.hn 2
+.\"O Customization options
+カスタマイズオプション
+.pg
+.\"O Here are explanations of what the various options do.
+.\"O Character strings that are too long may be truncated.
+.\"O Some of the options listed may be inactive in your dungeon.
+以下にいろいろなオプションの役割を説明する。
+あまりに長すぎる文字列の部分は無視される。
+以下のオプションのうち実装によっては無効となっているオプションもある。
+.lp align
+.\"O Your starting alignment (align:lawful, align:neutral,
+.\"O or align:chaotic).  You may specify just the first letter.
+.\"O The default is to randomly pick an appropriate alignment.
+.\"O Cannot be set with the `O' command.
+スタート時の属性(align:lawful, align:neutral, align:chaotic)。
+最初の一文字で指定することもできる。
+標準設定ではランダムに選択される。
+`O' コマンドで設定することはできない。
+.lp autodig
+.\"O Automatically dig if you are wielding a digging tool and moving into a place
+.\"O that can be dug (default false).
+掘るための道具を手にしていて、掘ることができる地形に移動しようとしたとき、
+自動的に掘る（標準設定はオフ）。
+.lp "autopickup  "
+.\"O Automatically pick up things onto which you move (default on). 
+.\"O See
+.\"O .op pickup_types
+.\"O to refine the behavior.
+移動先にあるものを自動的に拾う（標準設定はオン）。
+この振る舞いをカスタマイズするためには
+.op pickup_types
+を参照すること。
+.lp "autoquiver  "
+.\"O This option controls what happens when you attempt the `f' (fire)
+.\"O command with an empty quiver.  When true, the computer will fill
+.\"O your quiver with some suitable weapon.  Note that it will not take
+.\"O into account the blessed/cursed status, enchantment, damage, or
+.\"O quality of the weapon; you are free to manually fill your quiver with
+.\"O the `Q' command instead.  If no weapon is found or the option is
+.\"O false, the `t' (throw) command is executed instead.  (default false)
+このオプションは矢筒が空の時に`f'(fire:矢筒の中にあるものを発射する)コマンドを
+実行した時にどうするかを決める。
+オンなら、コンピューターは適当な武器を矢筒に入れる。
+この時、呪い、祝福、魔法、劣化、武器の数などは考慮されないので注意すること。
+代わりに`Q'コマンドを使って自分の好きな物を矢筒に入れる。
+入れる武器がないか、このオプションがオフの時は
+代わりに`t'(throw:物を投げる)コマンドが実行される。
+(標準設定はオフ)
+.lp boulder
+.\"O Set the character used to display boulders (default is rock class symbol).
+巨岩を表示するのに用いるキャラクタ（標準設定は岩を表すキャラクタ）。
+.lp catname
+.\"O Name your starting cat (ex. ``catname:Morris'').
+.\"O Cannot be set with the `O' command.
+スタート時の猫の名前(例: catname:Morris)。
+`O' コマンドで設定することはできない。
+.lp character
+.\"O Pick your type of character (ex. ``character:Monk'');
+.\"O synonym for ``role''.  See ``name'' for an alternate method
+.\"O of specifying your role.  Normally only the first letter of
+.\"O the value is examined; the string ``random'' is an exception.
+キャラクターのタイプを設定する(例:``character:Monk'')。
+``role''オプションと同じである。
+職業を設定するその他の方法については``name''オプションを参照のこと。
+``random''以外の文字列は最初の 1 文字だけで判別される。
+.lp checkpoint
+.\"O Save game state after each level change, for possible recovery after
+.\"O program crash (default on).
+プログラムがクラッシュした時に復旧できるように
+階を移動する毎に状態をセーブする（標準設定はオン）。
+.lp "color   "
+.\"O Use color for different monsters, objects, and dungeon features
+.\"O (default on for microcomputers).
+色々な怪物や物や洞窟の地形をカラーで表示する
+(マイクロコンピュータでは標準設定はオン)。
+.lp checkspace
+.\"O Check free disk space before writing files to disk (default on).
+.\"O You may have to turn this off if you have more than 2 GB free space
+.\"O on the partition used for your save and level files.
+.\"O Only applies when MFLOPPY was defined during compilation.
+ファイルを書き込む前にディスクの空き容量をチェックする(標準設定はオン)。
+セーブファイルやレベルファイルのために使うパーティションに2GB以上の
+空き容量がある場合、このオプションをオフをしなければならないかもしれない。
+このオプションはコンパイル時にMFLOPPYが定義されているときのみ適用される。
+.lp cmdassist
+.\"O Have the game provide some additional command assistance for 
+.\"O new players if it detects some anticipated mistakes (default on).
+ありがちなミスを検出したときに新規プレイヤーのために
+追加のコマンド補助メッセージを表示する(標準設定はオン)。
+.lp "confirm "
+.\"O Have user confirm attacks on pets, shopkeepers, and other
+.\"O peaceable creatures (default on).
+ペット、店主、その他の攻撃してこない生物を
+攻撃しようとしたときに確認をする(標準設定はオン)。
+.lp DECgraphics
+.\"O Use a predefined selection of characters from the DEC VT-xxx/DEC
+.\"O Rainbow/ANSI line-drawing character set to display the dungeon/effects/traps
+.\"O instead of having to define a full graphics set yourself (default off).
+.\"O This option also sets up proper handling of graphics
+.\"O characters for such terminals, so you should specify it when appropriate
+.\"O even if you override the selections with your own graphics strings.
+洞窟の表示に用いる文字をあなた自身ですべて定義する代わりに、
+DEC VT-xxx/DEC Rainbow/ANSI 罫線文字セットから
+あらかじめ用意された設定を使用する(標準設定はオフ)。
+このオプションはまたターミナルが適切なグラフィックキャラクターを扱えるよう設定する。
+すなわち、あなたが自分でグラフィック文字を上書き設定するときにも
+明示しなくてはいけない。
+.lp disclose
+.\"O Controls options for disclosing various information when the game ends (defaults
+.\"O to all possibilities being disclosed).
+.\"O The possibilities are:
+.\"O .sd
+.\"O .si
+.\"O i - disclose your inventory.
+.\"O a - disclose your attributes.
+.\"O v - summarize monsters that have been vanquished.
+.\"O g - list monster species that have been genocided.
+.\"O c - display your conduct.
+.\"O .ei
+.\"O .ed
+ゲーム終了時に表示する情報を制御する(標準設定は、全てを表示する)。
+設定できるものは以下の通り。
+.sd
+.si
+i - 持ち物の鑑定
+a - 属性の公開
+v - 退治した怪物の一覧
+g - 抹殺した怪物種
+c - 挑戦
+.ei
+.ed
+.\"O Each disclosure possibility can optionally be preceded by a prefix which
+.\"O let you refine how it behaves. Here are the valid prefixes:
+.\"O .sd
+.\"O .si
+.\"O y - prompt you and default to yes on the prompt.
+.\"O n - prompt you and default to no on the prompt.
+.\"O + - disclose it without prompting.
+.\"O - - do not disclose it and do not prompt.
+.\"O .ei
+.\"O .ed
+それぞれの表示に対して、その前にどのように振舞うかを指示する文字を
+つけることができる。文字の意味は以下のとおり。
+.sd
+.si
+y - 確認するが、標準設定はイエスにする。
+n - 確認するが、標準設定はノーにする。
++ - 確認なしに表示する。
+- - 確認なしで非表示とする。
+.ei
+.ed
+.\"O (ex. ``disclose:yi na +v -g -c'')
+(例: ``disclose:yi na +v -g -c'')
+.\"O The example sets 
+.\"O .op inventory
+.\"O to prompt and default to yes,
+.\"O .op attributes
+.\"O to prompt and default to no,
+.\"O .op vanquished
+.\"O to disclose without prompting,
+.\"O .op genocided
+.\"O to not disclose and not to prompt,
+.\"O .op conduct
+.\"O to not disclose and not to prompt.
+このように設定した場合、
+.op 持ち物
+は確認する(標準設定はイエス)。
+.op 属性
+は確認する(標準設定はノー)。
+.op 退治した怪物
+は確認なしに表示する。
+.op 抹殺した怪物
+は確認せずに非表示とする。
+.op 挑戦
+は確認せずに非表示とする。
+.\"O Note that the vanquished monsters list includes all monsters killed by
+.\"O traps and each other as well as by you.
+退治した怪物の一覧は罠や同士討ちによって死んだ怪物も含むことに注意。
+.lp dogname
+.\"O Name your starting dog (ex. ``dogname:Fang'').
+.\"O Cannot be set with the `O' command.
+スタート時の犬の名前(例: dogname:Fang)。
+`O' コマンドで設定することはできない。
+.lp dungeon
+.\"O Set the graphics symbols for displaying the dungeon
+.\"O (default \&``\ |--------||.-|++##.##<><>_|\e\e#{}.}..##\ #}'').
+迷宮表示のためのグラフィックシンボルを設定する
+(標準設定は \&``\ |--------||.-|++##.##<><>_|\e\e#{}.}..##\ #}'')
+.\"O The
+.\"O .op dungeon
+.\"O option should be followed by a string of 1-41
+.\"O characters to be used instead of the default map-drawing characters.
+.op dungeon
+オプションは標準設定の文字の代わりに地図を描くのに使用する 1 から 41 文字の
+文字列を書く。
+.\"O The dungeon map will use the characters you specify instead of the
+.\"O default symbols, and default symbols for any you do not specify.
+.\"O Remember that you may need to escape some of these characters
+.\"O on a command line if they are special to your shell.
+標準設定の文字の代わりにここで設定した文字を使って洞窟の地図が
+表示され、標準設定の文字は使われない。
+もしあなたのシェルが特別扱いする文字を使うなら、
+それらのキャラクタをエスケープする必要があるかもしれないことに注意。
+
+.\"O Note that NetHack escape-processes this option string in conventional C
+.\"O fashion.  This means that `\e' is a prefix to take the following
+.\"O character literally.  Thus `\e' needs to be represented as `\e\e'.
+.\"O The special escape
+.\"O form `\em' switches on the meta bit in the following character, and the `^'
+.\"O prefix causes the following character to be treated as a control
+.\"O character.
+このオプションで設定される文字列は、現在では通常の C 言語で使
+われる方式でエスケープ処理されることに注意しなくてはならない。
+`\e' の後の文字はその文字そのものとして取り扱われ、
+特別なプレフィックスとしては扱われないということである。
+従って、`\e' は `\e\e' とする必要がある。
+特殊なエスケープ形式である `\em' は後ろの文字のメタビットをオンにし、
+'^' プレフィックスは後ろの文字をコントロールキャラクタとみなすようにする。
+
+.\"O The order of the symbols is:  solid rock, vertical wall, horizontal
+.\"O wall, upper left corner, upper right corner, lower left corner, lower
+.\"O right corner, cross wall, upward T wall, downward T wall, leftward T
+.\"O wall, rightward T wall, no door, vertical open door, horizontal open
+.\"O door, vertical closed door, horizontal closed door, iron bars, tree,
+.\"O floor of a room, dark corridor, lit corridor, stairs up, stairs down,
+.\"O ladder up, ladder down, altar, grave, throne, kitchen sink, fountain, pool or moat,
+.\"O ice, lava, vertical lowered drawbridge, horizontal lowered drawbridge,
+.\"O vertical raised drawbridge, horizontal raised drawbridge, air, cloud,
+.\"O under water.
+シンボルは以下の順序である：
+堅い岩、壁(縦)、壁(横)、左上の角、右上の角、左下の角、右下の角,
+壁の交差、T 字状の壁、逆 T 字状の壁、左向きの T字状の壁,
+右向きの T 字状の壁、扉のない出入口、開いた扉(縦)、開いた扉(横),
+閉じた扉(縦)、閉じた扉(横)、鉄の棒、木、部屋の床、暗い通路、明るい通路,
+上への階段、下への階段、上へのはしご、下へのはしご、祭壇、墓, 玉座、
+流し台、泉、水たまりまたは堀、氷、溶岩、降りている跳ね橋(縦)、
+降りている跳ね橋(横)、上がっている跳ね橋(縦)、上がっている跳ね橋(横)、
+空気、雲、水中
+
+.\"O You might want to use `+' for the corners and T walls for a more
+.\"O aesthetic, boxier display.  Note that in the next release, new symbols
+.\"O may be added, or the present ones rearranged.
+より美しく四角の表示を得るためには角と T 字状の壁に '+' を使った
+方がよいかも知れない。
+次のリリースでは新しいシンボルが加わったり、
+現在のものが再構成される可能性があるので注意。
+
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp effects
+.\"O Set the graphics symbols for displaying special effects
+.\"O (default \&``|-\e\e/*!)(0#@*/-\e\e||\e\e-//-\e\e|\ |\e\e-/'').
+効果表示のためのグラフィックシンボルを設定する
+(標準設定は\&``|-\e\e/*!)(0#@*/-\e\e||\e\e-//-\e\e|\ |\e\e-/'').
+.\"O The
+.\"O .op effects
+.\"O option should be followed by a string of 1-29
+.\"O characters to be used instead of the default special-effects characters.
+.op effects
+オプションは標準設定の文字の代わりに地図を描くのに使用する 1-29 文字の
+文字列を書く。
+.\"O This string is subjected to the same processing as the
+.\"O .op dungeon
+.\"O option.
+この文字列は
+.op dungeon
+オプションと同様に処理される。
+
+.\"O The order of the symbols is:  vertical beam, horizontal beam, left slant,
+.\"O right slant, digging beam, camera flash beam, left boomerang, right boomerang,
+.\"O four glyphs giving the sequence for magic resistance displays,
+.\"O the eight surrounding glyphs for swallowed display,
+.\"O nine glyphs for explosions.
+シンボルは以下の順序である：
+光線(縦)、光線(横)、光線(左上から右下)、光線(右上から左下)、
+掘削光線、カメラのフラッシュ、ブーメラン(左)、ブーメラン(右)、
+魔法防御に用いる 4 つの記号、飲み込まれたときに使われる 8 つの記号、
+爆発に用いる 9 つの記号。
+.\"O An explosion consists of three rows (top, middle, and bottom) of three
+.\"O characters.  The explosion is centered in the center of this 3 by 3
+.\"O array.
+爆発は 3 キャラクタ 3 列からなり、
+爆発の中心はこの 3 × 3 の配列の中心になる。
+
+.\"O Note that in the next release, new symbols may be added,
+.\"O or the present ones rearranged.
+次のリリースでは新しいシンボルが加わったり、
+現在のものが再構成される可能性があるので注意。
+
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp extmenu
+.\"O Changes the extended commands interface to pop-up a menu of available commands.  
+.\"O It is keystroke compatible with the traditional interface except that it does
+.\"O not require that you hit Enter. It is implemented only by the tty port 
+.\"O (default off), when the game has been compiled to support tty graphics.
+拡張コマンドインターフェースを、有効なコマンドの一覧メニューが出るように変更する。
+キー入力は、最後に Enter を押す必要がないこと以外は伝統的なインターフェースと互換性がある。
+tty インターフェースにだけ実装されている。(標準設定はオフ)
+.lp female
+.\"O An obsolete synonym for ``gender:female''.
+``gender:female'' の古い別名。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp fixinv
+.\"O An object's inventory letter sticks to it when it's dropped (default on).
+.\"O If this is off, dropping an object shifts all the remaining inventory letters.
+持物の目録記号と物との対応はその物を下に置いても
+変化しない(標準設定はオン)。
+オフにしたときは物を下に置くとその物の目録記号以降の記号と
+物との対応が 1 つずつずれる。
+.lp "fruit   "
+.\"O Name a fruit after something you enjoy eating (ex. ``fruit:mango'')
+.\"O (default ``slime mold'').  Basically a nostalgic whimsy that NetHack uses
+.\"O from time to time.  You should set this to something you find more
+.\"O appetizing than slime mold.  Apples, oranges, pears, bananas, and melons
+.\"O already exist in NetHack, so don't use those.
+あなたの好物の果物にちなんでその名前を設定する(例:fruit:mango)
+(標準設定は「slime mold」)。
+元来 NetHack で時々使われる懐古趣味的な妙な言葉である。
+slime mold(ネバネバかび)よりももっと食欲のわく食べ物にするべきであろう。
+apples(リンゴ)、oranges(オレンジ)、 pears(洋なし)、 bananas(バナナ)、
+melons (メロン) は NetHack にはもう存在しているので、設定してはならない。
+.lp gender
+.\"O Your starting gender (gender:male or gender:female).
+.\"O You may specify just the first letter.  Although you can
+.\"O still denote your gender using the ``male'' and ``female''
+.\"O options, the ``gender'' option will take precedence.
+.\"O The default is to randomly pick an appropriate gender.
+開始時の性別(gender:male または gender:female).
+最初の一文字で指定することもできる。
+``male'' と ``female'' オプションを指定していても、
+``gender'' オプションが優先される。
+標準設定では適切な性別がランダムに選択される。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp "help    "
+.\"O If more information is available for an object looked at
+.\"O with the `/' command, ask if you want to see it (default on). Turning help
+.\"O off makes just looking at things faster, since you aren't interrupted with the
+.\"O ``More info?'' prompt, but it also means that you might miss some
+.\"O interesting and/or important information.
+`/' コマンドを使って調べている物について何らかの情報がある場合、
+それを見るかどうかを尋ねる(標準設定はオン)。
+ヘルプが出ないようにすれば ``More info?'' というプロンプトに煩わされなくなるので、
+素早く物を調べることができる。
+しかしそれは興味深く重要な情報を見逃してしまうかも知れないことを意味する。
+.lp hilite_pet
+.\"O Visually distinguish pets from similar animals (default off).
+.\"O In text windowing, use text highlighting when color is turned off;
+.\"O with X tiles, display a heart symbol near pets.
+ペットを同種の動物から視覚的に区別する(標準設定はオフ)。
+テキストウィンドウ表示では color がオフのときに強調表示する。
+Xのタイルを使用するときは、ハートの記号をペットにつける。
+.lp horsename
+.\"O Name your starting horse (ex. ``horsename:Trigger'').
+開始時の馬の名前をつける (例:``horsename:Trigger'').
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp IBMgraphics
+.\"O Use a predefined selection of IBM extended ASCII characters to display the
+.\"O dungeon/effects/traps instead of having to define a full graphics set
+.\"O yourself (default off).
+洞窟、効果、罠の表示に用いる文字をあなた自身ですべて定義する代わりに、
+IBM 拡張 ASCII 文字セットからあらかじめ用意された設定を使用する
+(標準設定はオフ)。
+.\"O This option also sets up proper handling of graphics
+.\"O characters for such terminals, so you should specify it when appropriate
+.\"O even if you override the selections with your own graphics strings.
+このオプションはまたターミナルが適切なグラフィックキャラクターを扱えるよう設定する。
+すなわち、あなたが自分のグラフィック文字で上書き設定するときにも
+明示しなくてはいけない。
+.lp ignintr
+.\"O Ignore interrupt signals, including breaks (default off).
+ブレークを含む割り込み信号を無視する(標準設定はオフ)。
+.lp legacy
+.\"O Display an introductory message when starting the game (default on).
+ゲーム開始時に説明メッセージを表示する(標準設定はオン)。
+.lp lit_corridor
+.\"O Show corridor squares seen by night vision or a light source held by your
+.\"O character as lit (default off).
+夜目やあなたのキャラクタが持っている光源によって見える通路を
+表示する (標準設定はオフ)。
+.lp lootabc
+.\"O Use the old `a', `b', and `c' keyboard shortcuts when
+.\"O looting, rather than the mnemonics `o', `i', and `b' (default off).
+箱を開けるときに`o', `i', `b'ではなく`a', `b', `c'のキーを使う
+(標準設定はオフ)。
+.lp "mail    "
+.\"O Enable mail delivery during the game (default on).
+ゲーム中にメールを配達するようにする(標準設定はオン)。
+.lp "male    "
+.\"O An obsolete synonym for ``gender:male''.
+``gender:male'' の古くなった別名。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp menustyle
+.\"O Controls the interface used when you need to choose various objects (in
+.\"O response to the Drop command, for instance).  The value specified should
+.\"O be the first letter of one of the following:  traditional, combination,
+.\"O partial, or full.  Traditional was the only interface available for
+.\"O earlier versions; it consists of a prompt for object class characters,
+.\"O followed by an object-by-object prompt for all items matching the selected
+.\"O object class(es).  Combination starts with a prompt for object class(es)
+.\"O of interest, but then displays a menu of matching objects rather than
+.\"O prompting one-by-one.  Partial skips the object class filtering and
+.\"O immediately displays a menu of all objects.  Full displays a menu of
+.\"O object classes rather than a character prompt, and then a menu of matching
+.\"O objects for selection.
+いろいろなオブジェクトを指定するとき(たとえば Dropコマンド)に用
+いるインタフェースの制御。値は tradional, combination, partial, full
+の 4 つのタイプの最初の一文字を指定する。
+``tradional''は古いバージョンで唯一利用できたもので、
+物の種類を示す文字の入力、次に選んだ種類に当てはまる全ての物を一つずつ
+確認する。
+``combination''は選択したい物の種類を示す文字を入力するが、
+次に当てはまる物を一つずつ確認で選択するのではなく、メニュー形式で選択する。
+``partial''は物の種類を選ぶことをせず、
+直ちに全ての物が表示されたメニューを表示する。
+``full''は物の種類の文字入力のかわりに、最初に物の種類のメニューを表示し、
+それから選択した種類に当てはまる物のメニューを表示する。
+.lp menu_deselect_all
+.\"O Menu character accelerator to deselect all items in a menu.
+.\"O Implemented by the Amiga, Gem, X11 and tty ports.
+.\"O Default '-'.
+メニューの全ての項目を非選択にするキー。
+Amiga, Gem, X11, ttyで実装されている。(標準設定は `-')
+.lp menu_deselect_page
+.\"O Menu character accelerator to deselect all items on this page of a menu.
+.\"O Implemented by the Amiga, Gem and tty ports.
+.\"O Default '\e'.
+メニューのうち、現在表示されている全ての項目を非選択にするキー。
+Amiga, Gem, tty で実装されている。(標準設定は `\e')
+.lp menu_first_page
+.\"O Menu character accelerator to jump to the first page in a menu.
+.\"O Implemented by the Amiga, Gem and tty ports.
+.\"O Default '^'.
+メニューの最初のページへ移動するキー。
+Amiga, Gem, tty で実装されている。(標準設定は `^')
+.lp menu_headings
+.\"O Controls how the headings in a menu are highlighted.
+.\"O Values are 'bold', 'inverse', or 'underline'.
+.\"O Not all ports can actually display all three types.
+メニューのうち注目している部分をどのように表示するかを指定する。
+値は 'bold'(太字), 'inverse'(反転), 'underline'(下線)のいずれかである。.
+全てのポートで実際に三つ全てのタイプを表示できるわけではない。
+.lp menu_invert_all
+.\"O Menu character accelerator to invert all items in a menu.
+.\"O Implemented by the Amiga, Gem, X11 and tty ports.
+.\"O Default '@'.
+メニューの全ての項目の選択状態を反転するキー。
+Amiga, Gem, X11, tty で実装されている。(標準設定は `@')
+.lp menu_invert_page
+.\"O Menu character accelerator to invert all items on this page of a menu.
+.\"O Implemented by the Amiga, Gem and tty ports.
+.\"O Default '~'.
+メニューの現在のページの全ての項目の選択状態を反転するキー。
+Amiga, Gem, tty で実装されている。(標準設定は `~')
+.lp menu_last_page
+.\"O Menu character accelerator to jump to the last page in a menu.
+.\"O Implemented by the Amiga, Gem and tty ports.
+.\"O Default '|'.
+メニューの最後のページへ移動するキー。
+Amiga, Gem, tty で実装されている。(標準設定は '|')
+.lp menu_next_page
+.\"O Menu character accelerator to goto the next menu page.
+.\"O Implemented by the Amiga, Gem and tty ports.
+.\"O Default '>'.
+メニューの次のページへ移動するキー。
+Amiga, Gem, tty で実装されている。(標準設定は `>')
+.lp menu_previous_page 
+.\"O Menu character accelerator to goto the previous menu page.
+.\"O Implemented by the Amiga, Gem and tty ports.
+.\"O Default '<'.
+メニューの前のページへ移動するキー。
+Amiga, Gem, tty で実装されている。(標準設定は `<')
+.lp menu_search
+.\"O Menu character accelerator to search for a menu item.
+.\"O Implemented by the Amiga, Gem and X11 ports.
+.\"O Default ':'.
+メニューで検索を行うキー。
+Amiga, Gem, X11 で実装されている。(標準設定は `:')
+.lp menu_select_all
+.\"O Menu character accelerator to select all items in a menu.
+.\"O Implemented by the Amiga, Gem, X11 and tty ports.
+.\"O Default '.'.
+メニューの全ての項目を選択にするキー。
+Amiga, Gem, X11, tty で実装されている。(標準設定は `.')
+.lp menu_select_page
+.\"O Menu character accelerator to select all items on this page of a menu.
+.\"O Implemented by the Amiga, Gem and tty ports.
+.\"O Default ','.
+メニューのうち、現在表示されている全ての項目を選択にするキー。
+Amiga, Gem, tty で実装されている。(標準設定は `,')
+.lp monsters
+.\"O Set the characters used to display monster classes (default
+.\"O ``abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@\ \'&;:~]'').
+怪物の種類を表示するのに使用するキャラクタを指定する。
+(標準設定は
+``abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@\ \'&;:~]'').
+.\"O This string is subjected to the same processing as the
+.\"O .op dungeon
+.\"O option.
+この文字列は
+.op dungeon
+オプションと同様に処理される。
+.\"O The order of the symbols is
+シンボルの順序は、
+ant or other insect(蟻あるいはその他の昆虫),
+blob(ブロッブ),
+cockatrice(コカトリス),
+dog or other canine(犬またはその他のイヌ科の動物),
+eye or sphere(目または球体),
+feline(猫),
+gremlin(グレムリン),
+humanoid(人間),
+imp or minor demon(インプまたは低級悪魔),
+jelly(ゼリー),
+kobold(コボルド),
+leprechaun(レプラコーン),
+mimic(ミミック),
+nymph(ニンフ),
+orc(オーク),
+piercer(突き刺すもの),
+quadruped(四つ足動物),
+rodent(鼠),
+arachnid or centipede(くもまたはムカデ),
+trapper or lurker above(トラッパーまたは天井に潜むもの),
+horse or unicorn(馬またはユニコーン),
+vortex(渦巻き),
+worm(ワーム),
+xan or other mythical/fantastic insect(ザンまたはその他の不思議な昆虫),
+light(ライト),
+zruty(ズルティ),
+angelic being(天使のような存在),
+bat or bird(コウモリまたは鳥),
+centaur(ケンタウルス),
+dragon(龍),
+elemental(エレメンタル),
+fungus or mold(カビやコケ),
+gnome(ノーム),
+giant humanoid(大型人類),
+invisible monster(見えない怪物),
+jabberwock(ジャバーウォック),
+Keystone Kop(キーストーンコップ),
+lich(リッチ),
+mummy(ミイラ),
+naga(ナーガ),
+ogre(オーガ),
+pudding or ooze(スライム),
+quantum mechanic(量子力学),
+rust monster(錆の怪物),
+snake(蛇),
+troll(トロール),
+umber hulk(アンバーハルク),
+vampire(バンパイア),
+wraith(レイス),
+xorn(ゾーン),
+apelike creature(猿のような生き物),
+zombie(ゾンビ),
+human(人間),
+ghost(幽霊),
+golem(ゴーレム),
+demon(悪魔),
+sea monster(海の怪物),
+lizard(トカゲ),
+long worm tail(ロングワームの尻尾),
+mimic(ミミック)
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp msghistory
+.\"O The number of top line messages to save (and recall with ^P) (default 20).
+後で ^P で呼び出すために保存しておく最上行のメッセージの数(標準設定は 20)。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp msg_window
+.\"O Allows you to change the way recalled messages are displayed.
+.\"O (It is currently implemented for tty only.)
+.\"O The possible values are:
+.\"O .sd
+.\"O .si
+.\"O s - single message (default, this was the behavior before 3.4.0).
+.\"O c - combination, two messages as `single', then as `full'.
+.\"O f - full window, oldest message first.
+.\"O r - full window, newest message first.
+.\"O .ei
+.\"O .ed
+.\"O For backward compatibility, no value needs to be specified (which
+.\"O defaults to `full'), or it can be negated (which defaults to `single').
+過去のメッセージの表示方法を変更する(現時点では tty にのみ実装されている)。
+指定できる値は以下のとおり。
+.sd
+.si
+s - `single': 1 メッセージだけ (標準設定。これは 3.4.0 以前での振る舞いである)
+c - `conbination': 最初の 2 メッセージは `single'、その後は `full'。
+f - `full': 全画面。古いメッセージが先。
+r - 全画面。新しいメッセージが先。
+.ei
+.ed
+過去との互換性のために、値なしにもできる(`full'とみなす)し、
+否定もできる(`single'とみなす)。
+.lp "name    "
+.\"O Set your character's name (defaults to your user name).  You can also
+.\"O set your character's role by appending a dash and one or more letters of
+.\"O the role (that is, by suffixing one of
+.\"O .op "-A -B -C -H -K -M -P -Ra -Ro -S -T -V -W" ).
+あなたのキャラクタの名前を設定する(標準設定はあなたの ユーザー名)。
+-記号とキャラクタの職業の頭文字を付け加える(つまり
+.op "-A -B -C -H -K -M -P -Ra -Ro -S -T -V -W"
+のどれかを後に付ける)ことによって職業を設定することもできる。
+.\"O If
+.\"O .op "-@"
+.\"O is used for the role, then a random one will be automatically chosen.
+職業として
+.op "-@"
+を使用すると、ランダムなひとつが自動的に選択される。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp "news    "
+.\"O Read the NetHack news file, if present (default on).
+.\"O Since the news is shown at the beginning of the game, there's no point
+.\"O in setting this with the `O' command.
+NetHack のニュースファイルがあればそれを読む(標準設定はオン)。
+ニュースはゲームの最初に表示されるので、
+`O' コマンドでこれを設定するのは無意味である。
+.lp "null    "
+.\"O Send padding nulls to the terminal (default off).
+端末にパディングのためのナルキャラクタを送る(標準設定はオフ)。
+.lp number_pad
+.\"O Use the number keys to move instead of [yuhjklbn] (default 0 or off).
+.\"O (number_pad:2 invokes the old DOS behavior where `5' means `g', meta-`5'
+.\"O means `G',  and meta-`0' means `I'.)
+移動のために[yuhjklbn]のかわりに数字キーを使用する(標準設定は 0 またはオフ)。
+(number_pad:2 は昔の DOS 版の振る舞いにする。
+`5'は`g'、meta-`5'は`G'、meta-`0'は`I'となる。)
+.lp objects
+.\"O Set the characters used to display object classes
+.\"O (default ``])[="(%!?+/$*`0_.'').
+物の種類を表示する時に使う文字を設定する
+(標準設定は ``])[="(%!?+/$*`0_.'')
+.\"O This string is subjected to the same processing as the
+.\"O .op dungeon
+.\"O option.
+この文字列は
+.op dungeon
+オプションと同様に処理される。
+.\"O The order of the symbols is
+.\"O illegal-object (should never be seen), weapon, armor, ring, amulet, tool,
+.\"O food, potion, scroll, spellbook, wand, gold, gem or rock, boulder or statue,
+.\"O iron ball, chain, and venom.
+シンボルの順番は
+（見たこともないような）おかしな物体、武器、防具、指輪、魔除け、工具、
+食料、水薬、巻物、魔法書、杖、金貨、宝石または石、巨石または彫像、
+鉄球、鎖、毒液。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp packorder
+.\"O Specify the order to list object types in (default ``")[%?+!=/(*`0_'')
+.\"O The value of this option should be a string containing the
+.\"O symbols for the various object types.  Any omitted types are filled in
+.\"O at the end from the previous order.
+物の種類を表示するときの順番を指定する(標準設定は
+``")[%?+!=/(*`0_'').
+このオプションにはいろいろな物の種類を表す文字の列を設定する。
+設定されなかった種類は以前の順序で最後に表示される。
+.lp perm_invent
+.\"O If true, always display your current inventory in a window.  This only
+.\"O makes sense for windowing system interfaces that implement this feature.
+もしオンならば、現在の持ち物一覧を常にウィンドウに表示しておく。
+この機能が実装されているウィンドウシステムでのみ有効。
+.lp pettype
+.\"O Specify the type of your initial pet, if you are playing a character class
+.\"O that uses multiple types of pets; or choose to have no initial pet at all.
+.\"O Possible values are ``cat'', ``dog'' and ``none''.
+プレイするキャラクタクラスが複数のタイプのペットを使用できる時に
+初期のペットを指定する、または初期のペットを全く指定しない。
+指定出来るのは``cat'', ``dog'', ``none'' である。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp pickup_burden
+.\"O When you pick up an item that would exceed this encumbrance
+.\"O level (Unburdened, Burdened, streSsed, straiNed, overTaxed,
+.\"O or overLoaded), you will be asked if you want to continue.
+.\"O (Default `S').
+物を拾った時にここで指定した荷物の重さレベル
+(Unburdened, Burdened, streSsed, straiNed, overTaxed, overLoaded)
+以上になると、続行するかどうかを確認する。
+(標準設定は `S').
+.lp pickup_types
+.\"O Specify the object types to be picked up when
+.\"O .op autopickup
+.\"O is on.  Default is all types.  If your copy of the game has the experimental
+.\"O compile time option AUTOPICKUP_EXCEPTIONS included, you may be able to use 
+.\"O .op autopickup_exception
+.\"O configuration file lines to further refine
+.\"O .op autopickup
+.\"O behavior.
+.op autopickup
+オプションが設定されている時に拾う物の種類を指定する(標準設定は全ての種類)。
+実験的コンパイル時オプションである AUTOPICKUP_EXCEPTIONS が指定されていると、
+.op autopickup_exception
+行を使うことで
+.op autopickup
+の振る舞いをより細かく制御できる。
+.lp prayconfirm
+.\"O Prompt for confirmation before praying (default on).
+神に祈る前に確認する(標準設定はオン)。
+.lp preload_tiles
+.\"O For the protected mode MSDOS version, control whether tiles
+.\"O get pre-loaded into RAM at the start of the game.  Doing so
+.\"O enhances performance of the tile graphics, but uses more memory. (default on).
+MSDOSのプロテクトモードで、タイルをゲームの始めにあらかじめ RAM に
+読み込んでおくかどうかを制御する。
+オンにすると、タイルグラフィックのパフォーマンスが高まるが、
+より多くのメモリを使用する(標準設定はオン)。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp pushweapon
+.\"O Using the `w' (wield) command when already wielding
+.\"O something pushes the old item into your alternate weapon slot (default off).
+既に武器を持っている時に `w' (wield: 武器を持つ) コマンドを使ったとき、
+既に持っていた武器を予備の武器に設定する(標準設定はオフ)。
+.lp "race    "
+.\"O Selects your race (for example, ``race:human'').  Default is random.
+種族を選択する(例: ``race:human'')。標準設定はランダムである。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp rest_on_space
+.\"O Make the space bar a synonym for the `.' (rest) command (default off).
+スペースキーを `.'(rest: 休憩する) コマンドとして使用する
+(標準設定はオフ)。
+.lp "role    "
+.\"O Pick your type of character (ex. ``role:Samurai'');
+.\"O synonym for ``character''.  See ``name'' for an alternate method
+.\"O of specifying your role.  Normally only the first letter of the
+.\"O value is examined; `r' is an exception with ``Rogue'', ``Ranger'',
+.\"O and ``random'' values.
+キャラクターのタイプを設定する (例:``role:Samurai'')。
+``character''オプションと同じである。
+職業を設定するその他の方法については``name''オプションを参照のこと。
+普通は先頭の 1 文字だけで判別されるが、
+`r'は例外である。``Rogue''、``Ranger''、``random''があるからである。
+.lp runmode
+.\"O Controls the amount of screen updating for the map window when engaged
+.\"O in multi-turn movement (running via shift+direction or control+direction
+.\"O and so forth, or via the travel command or mouse click).
+「まとめて移動」する(shift+方向やcontrol+方向で移動するか、
+旅行コマンドやマウスのクリックを使った場合)
+ときにどれくらいの頻度で地図を更新するかを制御する。
+.\"O The possible values are:
+.\"O .sd
+.\"O .si
+.\"O teleport - update the map after movement has finished;
+.\"O run - update the map after every seven or so steps;
+.\"O walk - update the map after each step;
+.\"O crawl - like walk, but pause briefly after each step.
+.\"O .ei
+.\"O .ed
+設定可能な値は以下の通り。
+.sd
+.si
+teleport - 移動が完了してから地図を更新する。
+run - 7 歩ぐらい毎に地図を更新する。
+walk - 1 歩毎に地図を更新する。
+crawl - ``walk'' と同様だが、一歩毎にしばらく停止する。
+.ei
+.ed
+.\"O This option only affects the game's screen display, not the actual
+.\"O results of moving.  The default is `run'; versions prior to 3.4.1 
+.\"O used `teleport' only.  Whether or not the effect is noticeable will
+.\"O depend upon the window port used or on the type of terminal.
+このオプションは画面表示にのみ影響し、実際の移動結果には影響しない。
+標準設定は `run' である。バージョン 3.4.1 以前は `teleport' のみであった。
+効果が確認できるかどうかは使っている版や端末の種類に依存する。
+.lp safe_pet
+.\"O Prevent you from (knowingly) attacking your pets (default on).
+ペットを(ペットと知りつつ)攻撃してしまうのを防ぐ(標準設定はオン)。
+.lp scores
+.\"O Control what parts of the score list you are shown at the end (ex.
+.\"O ``scores:5 top scores/4 around my score/own scores'').  Only the first
+.\"O letter of each category (`t', `a', or `o') is necessary.
+最後にスコアリストのどの部分を見るかを制御する
+(例：``scores:5 top scores/4 around my score/own scores'')。
+それぞれの分野の最初の文字 (`t', `a', `o')のみが必要である。
+.lp showexp
+.\"O Show your accumulated experience points on bottom line (default off).
+最下行に現在の経験点を表示する(標準設定はオフ)。
+.lp showrace
+.\"O Display yourself as the glyph for your race, rather than the glyph
+.\"O for your role (default off).  Note that this setting affects only
+.\"O the appearance of the display, not the way the game treats you.
+あなたを表示するときに、職業に対応するマークではなく、
+種族に対応するマークで表示する(標準設定はオフ)。
+この設定は表示にだけ用いられ、ゲームとしては何も変わらないことに注意。
+.lp showscore
+.\"O Show your approximate accumulated score on bottom line (default off).
+最下行に現在のスコアを表示する(標準設定はオフ)。
+.lp "silent  "
+.\"O Suppress terminal beeps (default on).
+端末のビープ音を鳴らさない(標準設定はオン)。
+.lp sortpack
+.\"O Sort the pack contents by type when displaying inventory (default on).
+持物の目録を表示するとき種類毎に荷物の内容を並べ替える
+(標準設定はオン)。
+.lp sound
+.\"O Enable messages about what your character hears (default on).
+.\"O Note that this has nothing to do with your computer's audio capabilities.
+.\"O This option is only partly under player control.  The game toggles it
+.\"O off and on during and after sleep, for example.
+あなたのキャラクターが聞いたものに関するメッセージを表示する(標準設定はオン)。
+これはコンピューターの音声出力機能とは何の関係もないことに注意すること。
+このオプションは部分的にだけプレイヤーの制御下にある。
+例えば、眠っている間はこのオプションは自動的にオフにされ、
+目覚めるとオンになる。
+.lp sparkle
+.\"O Display a sparkly effect when a monster (including yourself) is hit by an
+.\"O attack to which it is resistant (default on).
+怪物(やあなた)が攻撃を受け、それに抵抗した場合に画面効果を表示する
+(標準設定はオン)。
+.lp standout
+.\"O Boldface monsters and ``\fB--More--\fP'' (default off).
+怪物と``\fB--More--\fP''を太字で表示する(標準設定はオフ)。
+.lp suppress_alert
+.\"O This option may be set to a NetHack version level to suppress
+.\"O alert notification messages about feature changes for that 
+.\"O and prior versions (ex. ``suppress_alert:3.3.1'').
+前のバージョンから変更された機能に対して注意を促すメッセージを
+表示しないようにする NetHack のバージョンを設定する。
+(例: ``suppress_alert:3.3.1'')
+例のように指定すると 3.3.1 以前に変更された機能に対する注意メッセージは表示されない。
+.lp "time    "
+.\"O Show the elapsed game time in turns on bottom line (default off).
+最下行にゲームで経過した時間をターン数で表示する(標準設定はオフ)。
+.lp timed_delay
+.\"O When pausing momentarily for display effect, such as with explosions and
+.\"O moving objects, use a timer rather than sending extra characters to the
+.\"O screen.  (Applies to ``tty'' interface only; ``X11'' interface always
+.\"O uses a timer based delay.  The default is on if configured into the
+.\"O program.)
+爆発や物体の移動など、効果を表示するためにちょっと時間待ちするとき、
+特殊なキャラクタを画面に送るかわりにタイマーを使用する。
+(tty インタフェースにのみ適用される。
+X11 インタフェースは常にタイマーを使用する。
+標準設定はタイマーによる時間待ちが組み込まれているならばオン)
+.lp tombstone
+.\"O Draw a tombstone graphic upon your death (default on).
+死んだとき墓石を表示する(標準設定はオン)。
+.lp toptenwin
+.\"O Put the ending display in a NetHack window instead of on stdout (default off).
+.\"O Setting this option makes the score list visible when a windowing version
+.\"O of NetHack is started without a parent window, but it no longer leaves
+.\"O the score list around after game end on a terminal or emulating window.
+ゲーム終了時の表示を標準出力のかわりにNetHackのウィンドウに表示する
+(標準設定はオフ)。
+このオプションを設定すると
+ウィンドウを使うバージョンの NetHack では
+起動した親ウィンドウとは別のウィンドウにスコアリストが表示される。
+しかし、スコアリストはゲームが終了したあとターミナルやウィンドウには残らない。
+.lp traps
+.\"O Set the graphics symbols for displaying traps
+.\"O (default \&``^^^^^^^^^^^^^^^^^"^^^^'').
+罠の種類を表示するのに使用するキャラクタを指定する。(標準設定は
+\&``^^^^^^^^^^^^^^^^^"^^^^'').
+.\"O The
+.\"O .op traps
+.\"O option should be followed by a string of 1-22
+.\"O characters to be used instead of the default traps characters.
+.op traps
+オプションは標準設定の文字の代わりに罠を描くのに使用する 
+1 から 22 文字の文字列を書く。
+この文字列は dungeon
+オプションと同じ処理をする。
+.\"O This string is subjected to the same processing as the
+.\"O .op dungeon
+.\"O option.
+この文字列は
+.op dungeon
+オプションと同様に処理される。
+
+.\"O The order of the symbols is: 
+シンボルの順序は、
+arrow trap(矢の罠),
+dart trap(投げ矢の罠),
+falling rock trap(岩落しの罠),
+squeaky board(きしむ板),
+bear trap(熊の罠),
+land mine(地雷),
+rolling boulder trap(落岩の罠),
+sleeping gas trap(睡眠ガスの罠),
+rust trap(腐食の罠),
+fire trap(火の罠),
+pit(落し穴),
+spiked pit(トゲだらけの落し穴),
+hole(穴),
+trap door(落し扉),
+teleportation trap(瞬間移動の罠),
+level teleporter(別の階への瞬間移動の罠),
+magic portal(魔法の入口),
+web(くもの巣),
+statue trap(彫像の罠),
+magic trap(魔法の罠),
+anti-magic field(反魔法空間の罠),
+polymorph trap(変化の罠)。
+
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp travel
+.\"O Allow the travel command (default on).  Turning this option off will
+.\"O prevent the game from attempting unintended moves if you make inadvertent
+.\"O mouse clicks on the map window.
+トラベルコマンドを有効にする(標準設定はオン)。
+このオプションをオフにすることによって、うっかり地図ウィンドウを
+クリックすることによって、望まない移動をしようとすることを防ぐことができる。
+.lp verbose
+.\"O Provide more commentary during the game (default on).
+ゲーム中のコメントを詳細に表示する(標準設定はオン)。
+.lp windowtype
+.\"O Select which windowing system to use, such as ``tty'' or ``X11''
+.\"O (default depends on version).
+ウインドウシステムを使用するかどうかを「tty」または「X11」で選択する
+（標準設定はバージョンによる）。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.hn 2
+.\"O Window Port Customization options
+ウインドウシステム版専用カスタマイズオプション
+.pg
+.\"O Here are explanations of the various options that are
+.\"O used to customize and change the characteristics of the
+.\"O windowtype that you have chosen.
+以下はあなたが選択したウィンドゥタイプの特性をカスタマイズして
+変更するために用いる様々なオプションの説明である。
+.\"O Character strings that are too long may be truncated.
+.\"O Not all window ports will adjust for all settings listed
+.\"O here.  You can safely add any of these options to your config
+.\"O file, and if the window port is capable of adjusting to
+.\"O suit your preferences, it will attempt to do so. If it
+.\"O can't it will silently ignore it.  You can find out if an
+.\"O option is supported by the window port that you are currently
+.\"O using by checking to see if it shows up in the Options list.
+.\"O Some options are dynamic and can be specified during the game
+.\"O with the `O' command.
+長すぎる文字列は適当に切り詰められる。
+全てのウィンドゥタイプに対してこれら全てのオプションが有効というわけではない。
+これらのオプションが設定されたとき、もしウィンドゥタイプがその設定を
+受け付けるなら、そうされる。もし受け付けられないなら、単に無視される。
+現在のウィンドゥタイプで対応しているオプションは、オプション一覧表示
+(`O')で表示される。
+一部のオプションは`O'コマンドで動的に変更できる。
+.lp align_message
+.\"O Where to align or place the message window (top, bottom, left, or right)
+メッセージウィンドウをどこに置くか(top, bottom, left, right)
+.lp align_status
+.\"O Where to align or place the status window (top, bottom, left, or right).
+ステータスウィンドウをどこに置くか(top, bottom, left, right)
+.lp ascii_map
+.\"O NetHack should display an ascii character map if it can.
+可能ならASCIIキャラクタマップを表示する
+.lp color		
+.\"O NetHack should display color if it can for different monsters, 
+.\"O objects, and dungeon features
+怪物、物体、洞窟の構成要素をカラーで表示する
+.lp eight_bit_tty	
+.\"O NetHack should pass eight-bit character values (for example, specified with the
+.\"O .op traps
+.\"O option) straight through to your terminal (default off).
+8ビットキャラクタ(例えば
+.op traps
+オプションで指定したもの)をそのままターミナルに表示する(標準設定はオフ)。
+.lp font_map	
+.\"O NetHack should use a font by the chosen name for the map window.
+マップウィンドウを表示するフォント名
+.lp font_menu	
+.\"O NetHack should use a font by the chosen name for menu windows.
+メニューを表示するフォント名
+.lp font_message	
+.\"O NetHack should use a font by the chosen name for the message window.
+メッセージを表示するフォント名
+.lp font_status	
+.\"O NetHack should use a font by the chosen name for the status window.
+ステータスを表示するフォント名
+.lp font_text	
+.\"O NetHack should use a font by the chosen name for text windows.
+テキストを表示するフォント名
+.lp font_size_map	
+.\"O NetHack should use this size font for the map window.
+マップウィンドウを表示するフォントサイズ
+.lp font_size_menu	
+.\"O NetHack should use this size font for menu windows.
+メニューウィンドウを表示するフォントサイズ
+.lp font_size_message 
+.\"O NetHack should use this size font for the message window.
+メッセージウィンドウを表示するフォントサイズ
+.lp font_size_status
+.\"O NetHack should use this size font for the status window.
+ステータスウィンドウを表示するフォントサイズ
+.lp font_size_text	
+.\"O NetHack should use this size font for text windows.
+テキストウィンドウを表示するフォントサイズ
+.lp fullscreen
+.\"O NetHack should try and display on the entire screen rather than in a window.
+ウィンドウでなく画面全体で表示しようと試みる
+.lp hilite_pet
+.\"O Visually distinguish pets from similar animals (default off).
+.\"O The behavior of this option depends on the type of windowing you use.
+.\"O In text windowing, text highlighting or inverse video is often used;
+.\"O with tiles, generally displays a heart symbol near pets.
+ペットを目立つように表示する(標準設定はオフ)。
+このオプションの振る舞いは使っているウィンドウシステムに依存する。
+テキストウィンドウの場合、高輝度か反転が主に用いられる。
+タイルの場合、一般的にはペットの近くにハートマークが表示される。
+.lp large_font	
+.\"O NetHack should use a large font.
+大きいフォントを使う。
+.lp map_mode	
+.\"O NetHack should display the map in the manner specified.
+指定された方法でマップを表示する。
+.lp mouse_support
+.\"O Allow use of the mouse for input and travel.
+入力と移動にマウスを使えるようにする。
+.lp player_selection
+.\"O NetHack should pop up dialog boxes, or use prompts for character selection.
+キャラクター選択時にダイアログボックスや確認画面を用いる
+.lp popup_dialog	
+.\"O NetHack should pop up dialog boxes for input.
+入力時にポップアップダイアログボックスを用いる
+.lp preload_tiles
+.\"O NetHack should preload tiles into memory.
+.\"O For example, in the protected mode MSDOS version, control whether tiles
+.\"O get pre-loaded into RAM at the start of the game.  Doing so
+.\"O enhances performance of the tile graphics, but uses more memory. (default on).
+.\"O Cannot be set with the `O' command.
+タイルをメモリに予め読み込んでおく。
+例えば、プロテクトモードMSDOS版の場合、ゲーム開始時にタイルを
+RAM に予め読み込むかどうかを制御する。
+予め読み込むとタイルグラフィックの性能は向上するが、より多くのメモリを消費する
+(標準設定はオン)。
+`O' コマンドで設定することはできない。
+.lp scroll_amount
+.\"O NetHack should scroll the display by this number of cells
+.\"O when the hero reaches the scroll_margin.
+scroll_margin オプションで指定された位置に来たときに、
+どれだけの数スクロールさせるかを指定する。
+.lp scroll_margin
+.\"O NetHack should scroll the display when the hero or cursor
+.\"O is this number of cells away from the edge of the window.
+ウィンドウの端からここで指定されたマス数にあなたまたはカーソルが
+移動したときに、画面をスクロールさせる。
+.lp softkeyboard
+.\"O Display an onscreen keyboard.  Handhelds are most likely to support this option.
+.lp splash_screen
+.\"O NetHack should display an opening splash screen when it starts up (default yes).
+起動時にスプラッシュスクリーンを表示する(標準設定はオン)
+.lp tiled_map	
+.\"O NetHack should display a tiled map if it can.
+可能ならタイルマップを表示する
+.lp tile_file
+.\"O Specify the name of an alternative tile file to override the default.
+標準設定を上書きする別のタイルファイルの名前
+.lp tile_height
+.\"O Specify the preferred height of each tile in a tile capable port.
+タイルが表示できる環境でのタイルの高さ
+.lp tile_width
+.\"O Specify the preferred width of each tile in a tile capable port
+タイルが表示できる環境でのタイルの幅
+.lp use_inverse
+.\"O NetHack should display inverse when the game specifies it.
+ゲームが指定したときに画面を反転する
+.lp vary_msgcount
+.\"O NetHack should display this number of messages at a time in
+.\"O the message window.
+メッセージウィンドウに一度に表示するメッセージの数
+.lp windowcolors
+.\"O NetHack should display windows with the specified foreground/background
+.\"O colors if it can.
+可能ならウィンドウを指定した前景色/背景色で表示する
+.lp wraptext
+.\"O NetHack port should wrap long lines of text if they don't fit in 
+.\"O the visible area of the window.
+.hn 2
+.\"O Platform-specific Customization options
+プラットフォーム固有の設定オプション
+.pg
+.\"O Here are explanations of options that are used by specific platforms or ports 
+.\"O to customize and change the port behavior.
+以下は特定のプラットフォームでカスタマイズや振る舞いの変更をするために
+用いられるオプションの説明である。
+.lp altkeyhandler
+.\"O Select an alternate keystroke handler dll to load (Win32 tty NetHack only).
+.\"O The name of the handler is specified without the .dll extension and without any
+.\"O path information.
+.\"O Cannot be set with the `O' command.
+キー入力を扱う DLL を選択する(Win32 tty NetHack のみ)。
+DLL の名前は、.dll の拡張子やパス抜きで指定する。
+`O' コマンドで設定することはできない。
+.lp altmeta
+.\"O (default on, AMIGA NetHack only).
+(標準設定はオン。 AMIGA NetHack のみ)。
+.lp "BIOS    "
+.\"O Use BIOS calls to update the screen
+.\"O display quickly and to read the keyboard (allowing the use of arrow
+.\"O keys to move) on machines with an IBM PC compatible BIOS ROM (default off,
+.\"O OS/2, PC, and ST NetHack only).
+高速に画面を書き換え、移動にカーソルキーを使えるようにキーボードを読むために、
+IBM-PC 互換の BIOS ROM を使用しているマシンで BIOS コールを使用する。
+(標準設定はオフ。OS/2 , PC, および ST NetHack のみ)
+.lp flush
+.\"O (default off, AMIGA NetHack only).
+(標準設定はオフ。 AMIGA NetHack のみ)。
+.lp "MACgraphics"
+.\"O (default on, Mac NetHack only).
+(標準設定はオン。 Mac NetHack のみ)。
+.lp page_wait
+.\"O (default on, Mac NetHack only).
+(標準設定はオン。 Mac NetHack のみ)。
+.lp "rawio   "
+.\"O Force raw (non-cbreak) mode for faster output and more
+.\"O bulletproof input (MS-DOS sometimes treats `^P' as a printer toggle
+.\"O without it) (default off, OS/2, PC, and ST NetHack only).
+.\"O Note:  DEC Rainbows hang if this is turned on.
+.\"O Cannot be set with the `O' command.
+raw(cbreak でない) モードを使用して、
+より高速な出力と問題の起こらない入力を実現する
+(MS-DOS ではプリンタがないにも関わらず `^P' をプリンタ出力の
+トグルとみなしてしまうことがある)
+(標準設定はオフ)。
+注意: DEC Rainbow ではこれがオンのときはハングアップしてしまう。
+`O' コマンドで設定することはできない。
+.lp soundcard
+.\"O (default on, PC NetHack only).
+.\"O Cannot be set with the `O' command.
+(標準設定はオン。 PC NetHack のみ)。
+`O' コマンドで設定することはできない。
+.lp subkeyvalue
+.\"O (Win32 tty NetHack only).
+.\"O May be used to alter the value of keystrokes that the operating system
+.\"O returns to NetHack to help compensate for international keyboard issues.
+.\"O OPTIONS=subkeyvalue:171/92
+.\"O will return 92 to NetHack, if 171 was originally going to be returned.
+.\"O You can use multiple subkeyvalue statements in the config file if needed.
+.\"O Cannot be set with the `O' command.
+(Win32 tty NetHack のみ)。
+国際キーボードの問題を補正するのを助けるために、
+OS が NetHack に返すキー入力の値を変更するために使用する。
+OPTIONS=subkeyvalue:171/92
+とすると、もともと 171 が返されようとしていた場合、
+NetHack に 92 を返す。
+必要なら、複数の subkeyvalue 行を設定ファイルに書いてもよい。
+`O' コマンドで設定することはできない。
+.lp video
+.\"O Set the video mode used (PC NetHack only).
+.\"O Values are `autodetect', `default', or `vga'.
+.\"O Setting `vga' (or `autodetect' with vga hardware present) will cause
+.\"O the game to display tiles. 
+.\"O Cannot be set with the `O' command.
+使用するビデオモードを設定する(PC NetHack のみ)。
+値は `autodetect', `default', `vga' のいずれかである。
+`vga' (または VGA ハードウェアがあるときに`autodetect')に設定すると、
+表示にタイルを用いる。
+`O' コマンドで設定することはできない。
+.lp videocolors
+.\"O Set the color palette for PC systems using NO_TERMS
+.\"O (default 4-2-6-1-5-3-15-12-10-14-9-13-11, (PC NetHack only).
+NO_TERMを使用しているPCシステムのカラーパレットをセットする
+(標準設定は「4-2-6-1-5-3-15-12-10-14-9-13-11」)(PC NetHack のみ)。
+.\"O The order of colors is red, green, brown, blue, magenta, cyan,
+.\"O bright.white, bright.red, bright.green, yellow, bright.blue,
+.\"O bright.magenta, and bright.cyan.
+シンボルの順番は、赤・緑・茶色・青・マゼンタ・シアン・輝く白・
+輝く赤・輝く緑・黄色・輝く青・輝くマゼンタ・輝くシアン。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.lp videoshades
+.\"O Set the intensity level of the three gray scales available
+.\"O (default dark normal light, PC NetHack only).
+.\"O If the game display is difficult to read, try adjusting these scales;
+.\"O if this does not correct the problem, try !color.
+3 段階の利用可能なグレイスケールを設定する
+(標準設定は ``dark normal light'' PC Nethackのみ)。
+もしゲーム画面が見にくい場合は、
+３つのスケールを調整してみること。
+もしこれでうまくいかなかったら、!colorを試してみること。
+.\"O Cannot be set with the `O' command.
+`O' コマンドで設定することはできない。
+.hn 2
+.\"O Configuring autopickup exceptions
+自動拾い例外の設定
+.pg
+.\"O There is an experimental compile time option called AUTOPICKUP_EXCEPTIONS.  
+.\"O If your copy of the game was built with that option defined, you can 
+.\"O further refine the behavior of the
+.\"O .op autopickup
+.\"O option beyond what is available through the 
+.\"O .op pickup_types
+.\"O option. 
+実験的コンパイル時オプションとして AUTOPICKUP_EXCEPTIONS がある。
+このオプションを定義してコンパイルされたバイナリの場合、
+.op autopickup
+オプションの振る舞いを
+.op pickup_types
+オプションを使ってより洗練させることができる。
+.pg
+.\"O By placing 
+.\"O .op autopickup_exception
+.\"O lines in your configuration
+.\"O file, you can define patterns to be checked when the game is about to
+.\"O autopickup something.
+.op autopickup_exception
+行を設定ファイルに書くことで、
+何かを拾おうとするときにチェックするべきパターンを定義できる。
+.lp autopickup_exception
+.\"O Sets an exception to the 
+.\"O .op pickup_types
+.\"O option.
+.op pickup_types
+オプションの例外を設定する。
+.\"O The
+.\"O .op autopickup_exception
+.\"O option should be followed by a string of 1-80 characters to be used as a 
+.\"O pattern to match against the singular form of the description of an 
+.\"O object at your location.
+.op autopickup_exception
+オプションはあなたの位置にある物体の説明の単数形に一致するパターンを
+指定する。これは 1-80 文字の文字列であるべきである。
+.pg
+.\"O You may use the following special characters in a pattern:
+パターンでは以下の特殊文字が使える。
+.sd
+.si
+.\"O   *--- matches 0 or more characters.
+.\"O   ?--- matches any single character.
+  *--- 0 以上の文字にマッチする。
+  ?--- 任意の 1 文字にマッチする。
+.ei
+.ed
+.pg
+.\"O In addition, some characters are treated specially if they occur as the first 
+.\"O character in the string pattern, specifically:
+さらに、文字列パターンの先頭に置いた場合に特別扱いされる文字もある。
+.sd
+.si
+.\"O < - always pickup an object that matches the pattern that follows.
+.\"O > - never pickup an object that matches the pattern that follows.
+< - 以下のパターンに一致する物体は常に拾う。
+> - 以下のパターンに一致する物体は決して拾わない。
+.ei
+.ed
+.pg
+.\"O Can be set with the `O' command, but the setting is not preserved
+.\"O across saves and restores.
+`O' オプションで設定することもできるが、設定はセーブ・ロードしたときには
+保存されない。
+.pg
+.\"O Here's a couple of examples of autopickup_exceptions:
+以下は autopickup_exceptions の例である。
+.sd
+.si
+.\"O autopickup_exception="<*arrow"
+.\"O autopickup_exception=">*corpse"
+.\"O autopickup_exception=">* cursed*"
+.ei
+.ed
+.\"O The first example above will result in autopickup of any type of arrow.
+.\"O The second example results in the exclusion of any corpse from autopickup.
+.\"O The last example results in the exclusion of items known to be cursed from autopickup.
+.\"O A `never pickup' rule takes precedence over an `always pickup' rule if both match.
+上記の例の最初のものは、全ての矢を自動的に拾う。
+二番目の例は、死体は自動拾いの例外とする。
+最後の例は、呪われているとわかっているものは自動拾いの例外とする。
+`決して拾わない'ルールは`常に拾う'ルールに優先する。
+.hn 2
+.\"O Configuring User Sounds
+音声の設定
+.pg
+.\"O Some platforms allow you to define sound files to be played when a message 
+.\"O that matches a user-defined pattern is delivered to the message window.
+.\"O At this time the Qt port and the win32tty and win32gui ports support the
+.\"O use of user sounds.
+メッセージウィンドウに表示されたメッセージが
+ユーザー定義のパターンと一致したときに
+特定の音声ファイルを鳴らすことができるプラットフォームもある。
+現在のところ、Qt, win32tty, win32gui がユーザー音声に対応している。
+.pg
+.\"O The following config file entries are relevant to mapping user sounds
+.\"O to messages:
+ユーザー音声とメッセージの関連付けに関する設定ファイル項目は
+以下のとおりである。
+.lp SOUNDDIR
+.\"O The directory that houses the sound files to be played.
+音声ファイルのあるディレクトリ
+.lp SOUND
+.\"O An entry that maps a sound file to a user-specified message pattern.
+.\"O Each SOUND entry is broken down into the following parts:
+.\"O .sd
+.\"O .si
+.\"O MESG       - message window mapping (the only one supported in 3.4).
+.\"O pattern    - the pattern to match.
+.\"O sound file - the sound file to play.
+.\"O volume     - the volume to be set while playing the sound file.
+.\"O .ei
+.\"O .ed
+音声ファイルとユーザーが指定するメッセージパターンを関連付ける項目。
+各 SOUND 項目は以下の項目に分解される。
+.sd
+.si
+MESG       - メッセージウィンドウ指定 (3.4 ではただ一つだけに対応している)
+pattern    - マッチするパターン
+sound file - 鳴らす音声ファイル
+volume     - 音声ファイルを鳴らすときの音量
+.ei
+.ed
+.pg
+.\"O The exact format for the pattern depends on whether the platform is
+.\"O built to use ``regular expressions'' or NetHack's own internal pattern 
+.\"O matching facility. The ``regular expressions'' matching can be much more 
+.\"O sophisticated than the internal NetHack pattern matching, but requires 
+.\"O 3rd party libraries on some platforms.  There are plenty of references 
+.\"O available elsewhere for explaining ``regular expressions''. You can verify 
+.\"O which pattern matching is used by your port with the #version command.  
+パターンの正確な書式はプラットフォームが ``正規表現'' を用いるか
+NetHack の内蔵パターンマッチング機能を用いるかによって変わる。
+``正規表現'' マッチングは NetHack 内蔵パターンマッチングより洗練されているが、
+サードパーティライブラリが必要なプラットフォームもある。
+``正規表現'' に関する説明はどこか他のところを参照のこと。
+どちらのパターンマッチングが用いられているかは #version コマンドで確認できる。
+.pg
+.\"O NetHack's internal pattern matching routine uses the following
+.\"O special characters in its pattern matching:
+.\"O .sd
+.\"O .si
+.\"O   *--- matches 0 or more characters.
+.\"O   ?--- matches any single character.
+.\"O .ei
+.\"O .ed
+NetHack の内蔵パターンマッチングルーチンは以下の特殊文字を用いる。
+.sd
+.si
+  *--- 0 個以上の文字にマッチする。
+  ?--- 任意の 1 文字にマッチする。
+.ei
+.ed
+.pg
+.\"O Here's an example of a sound mapping using NetHack's internal
+.\"O pattern matching facility:
+.\"O .sd
+.\"O     SOUND=MESG "*chime of a cash register*" "gong.wav" 50
+.\"O .ed
+.\"O specifies that any message with "chime of a cash register" contained
+.\"O in it will trigger the playing of "gong.wav".  You can have multiple
+.\"O SOUND entries in your config file.
+.\"O .sd
+.\"O     SOUND=MESG "*chime of a cash register*" "gong.wav" 50
+.\"O .ed
+以下は NetHack 内蔵パターンマッチング機能を用いた例である。
+.sd
+    SOUND=MESG "*chime of a cash register*" "gong.wav" 50
+.ed
+ここでは "chime of a cash register" を含むメッセージに反応して
+"gong.wav" を鳴らす。
+設定ファイルには複数の SOUND 設定を書くことができる。
+.pg
+.hn 2
+.\"O Configuring NetHack for Play by the Blind
+視覚障害者がNetHackをプレイするための設定
+.pg
+.\"O NetHack can be set up to use only standard ASCII characters for making
+.\"O maps of the dungeons. This makes the MS-DOS versions of NetHack completely
+.\"O accessible to the blind who use speech and/or Braille access technologies.
+NetHack は洞窟の地図を作るのに標準の ASCII キャラクターだけを使うように
+設定することもできる。これにより、 MS-DOS 版の NetHack は
+音声合成または点字技術を用いれば目の不自由な人でも完全にプレイ可能である。
+.\"O Players will require a good working knowledge of their screen-reader's
+.\"O review features, and will have to know how to navigate horizontally and
+.\"O vertically character by character. They will also find the search
+.\"O capabilities of their screen-readers to be quite valuable. Be certain to
+.\"O examine this Guidebook before playing so you have an idea what the screen
+.\"O layout is like. You'll also need to be able to locate the PC cursor. It is
+.\"O always where your character is located. Merely searching for an @-sign will
+.\"O not always find your character since there are other humanoids represented
+.\"O by the same sign. Your screen-reader should also have a function which
+.\"O gives you the row and column of your review cursor and the PC cursor.
+.\"O These co-ordinates are often useful in giving players a better sense of the
+.\"O overall location of items on the screen.
+プレイヤーはこれらの画面読み取りシステムに関する十分な知識が必要で、
+上下左右に一文字ずつ移動する方法を知らなければならないだろう。
+画面読み取りシステムの検索能力を知ることもかなり価値がある。
+プレイする前にこのガイドブックを十分に読めば、
+画面のレイアウトがどんな感じかがわかるだろう。
+また、 PC カーソルの位置を突き止めることができる必要がある。
+これは自分のキャラクターの位置を示している。
+`@'は他のヒューマノイドを表わすのにも用いられるので、
+自分の位置を探すのに`@'を検索するだけでは不十分である。
+さらに、あなたが見ている位置と PC カーソルの位置の物理的な行と桁を知らせる機能が
+必要だろう。この機能はスクリーン全体にどのようなアイテムがあるかを判別するのに
+便利である。
+.pg
+.\"O While it is not difficult for experienced users to edit the \fBdefaults.nh\fP
+.\"O file to accomplish this, novices may find this task somewhat daunting.
+慣れたユーザーなら \fBdefaults.nh\fPを修正することは難しくないだろうが、
+初心者は少しひるんでしまう仕事かもしれない。
+.\"O Included in all official distributions of NetHack is a file called
+.\"O \fBNHAccess.nh\fP.  Replacing \fBdefaults.nh\fP with this file will cause
+.\"O the game to run in a manner accessible to the blind. After you have gained
+.\"O some experience with the game and with editing files, you may want to alter
+.\"O settings to better suit your preferences. Instructions on how to do this
+.\"O are included in the \fBNHAccess.nh\fP file itself. The most crucial settings to
+.\"O make the game accessible are:
+NetHack の全ての公式配布には \fBNHAccess.nh\fPというファイルが含まれている。
+\fBdefault.nh\fPファイルをこのファイルと入れ替えることにより、
+目の不自由な人がプレイできるような設定になる。
+ファイルを修正することやゲームそのものに慣れたなら、
+より好みに合うように設定を変更したいと思うことだろう。
+そのための説明は \fBNHAccess.nh\fP そのものに含まれている。
+ゲームのアクセシビリティに最も影響を与える設定は以下のものである:
+.pg
+.lp IBMgraphics
+.\"O Disable IBMgraphics by commenting out this option.
+このオプションをコメントアウトすることによって IBM グラフィックを無効にする。
+.lp menustyle:traditional
+.\"O This will assist in the interface to speech synthesizers.
+これは音声合成システムを利用する助けになる。
+.lp number_pad
+.\"O A lot of speech access programs use the number-pad to review the screen.
+.\"O If this is the case, disable the number_pad option and use the traditional
+.\"O Rogue-like commands.
+多くの発声プログラムは number-pad を画面の確認に用いる。
+この場合、 number_pad オプションをオフにして、伝統的な Rogue 風コマンドを使うこと。
+.lp "Character graphics"
+.\"O Comment out all character graphics sets found near the bottom of the
+.\"O \fBdefaults.nh\fP file.  Most of these replace \fBNetHack\fP's
+.\"O default representation of the dungeon using standard ASCII characters
+.\"O with fancier characters from extended character sets, and these fancier
+.\"O characters can annoy screen-readers.
+\fBdefaults.nh\fP ファイルの下の方にある全てのキャラクターグラフィック設定を
+コメントアウトする。これらのほとんどは \fBNetHack\fP の
+標準である、標準 ASCII キャラクターを用いた洞窟の表現を
+拡張キャラクターセットのより凝ったキャラクターで置き換える。
+これらのキャラクターは画面読み取りシステムを煩わせるだろう。
+.hn 1
+.\"O Scoring
+得点
+.pg
+.\"O NetHack maintains a list of the top scores or scorers on your machine,
+.\"O depending on how it is set up.  In the latter case, each account on
+.\"O the machine can post only one non-winning score on this list.  If
+.\"O you score higher than someone else on this list, or better your
+.\"O previous score, you will be inserted in the proper place under your
+.\"O current name.  How many scores are kept can also be set up when
+.\"O NetHack is compiled.
+NetHack は設定によって、あなたの機械における高得点の一覧または高得点
+者の一覧を作成する。後者の設定になっている場合、ゲームを最後まで終えた
+場合を除きそのマシンの 1 つのアカウントにつき 1 つだけしかこの一覧には
+載らない。あなたがこの一覧に載っている他の誰かより高い得点を取ったとき、
+もしくはあなたの前の得点より高い得点を取ったときにのみ、その一覧のしか
+るべき位置にあなたの名前が載る。得点が何個まで載るかもコンパイル時に設
+定できる。
+.pg
+.\"O Your score is chiefly based upon how much experience you gained, how
+.\"O much loot you accumulated, how deep you explored, and how the game
+.\"O ended.  If you quit the game, you escape with all of your gold intact.
+.\"O If, however, you get killed in the Mazes of Menace, the guild will
+.\"O only hear about 90% of your gold when your corpse is discovered
+.\"O (adventurers have been known to collect finder's fees).  So, consider
+.\"O whether you want to take one last hit at that monster and possibly
+.\"O live, or quit and stop with whatever you have.  If you quit, you keep
+.\"O all your gold, but if you swing and live, you might find more.
+得点は主に経験値、戦利品、到達した階とゲームの終わり方に基づいている。
+ゲームを放棄した場合には持っている金を全額手にして脱出できる。
+しかし恐怖の迷宮の中で殺された場合には、亡骸が発見されると持っている金の 90% 
+だけがギルドに伝えられる(冒険者は亡骸を発見した場合には手数料を取るこ
+とが知られている)。従って怪物にさらに一撃を加えて運あらば生き残らんと
+するか、放棄してその時点で持っている物で終了するかはあなたが決めること
+である。放棄した場合はすべての金を手にすることができる。しかし戦って生
+き残ればさらに多くを得ることができるかも知れない。
+.pg
+.\"O If you just want to see what the current top players/games list is, you
+.\"O can type \fBnethack -s all\fP on most versions.
+単に現時点での高得点者・高得点の一覧を見たい場合にはほとんどの
+バージョンでは \fBnethack -s all\fP と入力すればよい。
+
+.hn 1
+.\"O Explore mode
+探検モード
+.pg
+.\"O NetHack is an intricate and difficult game.  Novices might falter
+.\"O in fear, aware of their ignorance of the means to survive.  Well, fear
+.\"O not.  Your dungeon may come equipped with an ``explore'' or ``discovery''
+.\"O mode that enables you to keep old save files and cheat death, at the
+.\"O paltry cost of not getting on the high score list.
+NetHack は複雑で難しいゲームである。初心者は生き残るすべを知らないこ
+とに気づき、恐怖におじけづいてしまうかもしれない。しかし恐れることはな
+い。冒険する洞窟に「探検」もしくは「発見」モードがある場合には、高得点
+の一覧に載らないというとるに足らないデメリットと引き替えに前のセーブファ
+イルを残しておけたり不死身となれたりするのである。
+.pg
+.\"O There are two ways of enabling explore mode.  One is to start the game
+.\"O with the
+.\"O .op -X
+.\"O switch.  The other is to issue the `X' command while already playing
+.\"O the game.  The other benefits of explore mode are left for the trepid
+.\"O reader to discover.
+探検モードに入るには 2 通りの方法がある。1 つはゲームの開始時に
+.op -X 
+スイッチを付けることである。もう 1 つはゲームのプレイ中に `X' コマンド
+を入力することである。探検モードで得られる他の利点は大胆な読者諸君自ら
+確かめて欲しい。
+
+.hn
+.\"O Credits
+クレジット
+.pg
+.\"O The original \fIhack\fP game was modeled on the Berkeley 
+.\"O .ux
+.\"O \fIrogue\fP game.  Large portions of this paper were shamelessly
+.\"O cribbed from \fIA Guide to the Dungeons of Doom\fP, by Michael C. Toy
+.\"O and Kenneth C. R. C. Arnold.  Small portions were adapted from
+.\"O \fIFurther Exploration of the Dungeons of Doom\fP, by Ken Arromdee.
+最初の hack というゲームは、バークレイ版
+.ux
+のゲーム \fIrogue\fP をモデルとしている。
+このドキュメントの大部分は Michael C. Toy と Kenneth C. R. C. Arnold の手になる
+\fIA Guide to the Dungeons of Doom(運命の洞窟への招待)\fP を図々しくも盗用したものである。
+また一部は Ken Arromdee による 
+\fIFurther Exploration of the Dungeons of Doom(運命の洞窟の深部への探検)\fP
+から採っている。
+.pg
+.\"O NetHack is the product of literally dozens of people's work.
+.\"O Main events in the course of the game development are described below:
+NetHack は文字どおり何十人もの人々の手によって完成された。
+以下はゲームの開発の過程での主な出来事である。
+
+.pg
+.\"O \fBJay Fenlason\fP wrote the original Hack, with help from
+.\"O \fBKenny Woodland\fP, \fBMike Thome\fP and \fBJon Payne\fP.
+\fBJay Fenlason\fP は \fBKenny Woodland\fP, \fBMike Thome\fP, \fBJon Payne\fP
+らの助けを得て、最初の Hack を書いた。
+.pg
+.\"O \fBAndries Brouwer\fP did a major re-write, transforming Hack into a
+.\"O very different game, and published (at least) three versions (1.0.1,
+.\"O 1.0.2, and 1.0.3) for
+.\"O .ux
+.\"O machines to the Usenet.
+\fBAndries Brouwer\fP はプログラムを大幅に書き換えて Hack を元とはかなり異
+なったゲームに仕立て上げ、
+.ux
+マシン用の(少なくとも)3 バージョン(1.0.1、1.0.2、1.0.3)を Usenet で発表した。
+.pg
+.\"O \fBDon G. Kneller\fP ported Hack 1.0.3 to Microsoft C and MS-DOS, producing PC
+.\"O HACK 1.01e, added support for DEC Rainbow graphics in version 1.03g, and went
+.\"O on to produce at least four more versions (3.0, 3.2, 3.51, and 3.6).
+\fBDon G. Kneller\fP は Hack 1.0.3 を Microsoft C を使用して MS-DOS へ移植
+し PC HACK 1.01e を作成した。バージョン 1.03g では DEC Rainbow のグラ
+フィックをサポートし、続いて少なくともあと 4 つのバージョン(3.0、3.2、
+3.51、3.6)を作成した。
+.pg
+.\"O \fBR. Black\fP ported PC HACK 3.51 to Lattice C and the Atari 520/1040ST,
+.\"O producing ST Hack 1.03.
+\fBR. Black\fP は PC HACK 3.51 を Lattice C を使用して Atari 520/1040ST へ
+移植し ST Hack 1.03 を作成した。
+.pg
+.\"O \fBMike Stephenson\fP merged these various versions back together,
+.\"O incorporating many of the added features, and produced NetHack 1.4.
+.\"O He then coordinated a cast of thousands in enhancing and debugging
+.\"O NetHack 1.4 and released NetHack versions 2.2 and 2.3.
+\fBMike Stephenson\fP はこれらのいろいろなバージョンを再び 1 つに統合し、
+多くの追加要素と合わせて NetHack バージョン 1.4 を作成した。さらに彼は
+何千人もの人々に作業を分担して NetHack 1.4 の拡張とデバッグを行い、
+NetHack バージョン 2.2 と 2.3 を発表した。
+.pg
+.\"O Later, Mike coordinated a major rewrite of the game, heading a
+.\"O team which included \fBKen Arromdee\fP, \fBJean-Christophe Collet\fP, \fBSteve
+.\"O Creps\fP, \fBEric Hendrickson\fP, \fBIzchak Miller\fP, \fBJohn Rupley\fP,
+.\"O \fBMike Threepoint\fP, and \fBJanet Walz\fP, to produce NetHack 3.0c.
+さらにその後、Mike は \fBKen Arromdee\fP, \fBJean-Christophe Collet\fP,
+\fBSteve Creps\fP, \fBEric Hendrickson\fP、\fBIzchak Miller\fP、\fBJohn Rupley\fP、
+\fBMike Threepoint\fP、\fBJanet Walz\fP 
+を含むチームを率いてゲームの大幅な書き直しを行ない、
+NetHack 3.0c を作成した。
+.pg
+.\"O NetHack 3.0 was ported to the Atari by \fBEric R. Smith\fP, to OS/2 by
+.\"O \fBTimo Hakulinen\fP, and to VMS by \fBDavid Gentzel\fP.  The three of them
+.\"O and \fBKevin Darcy\fP later joined the main development team to produce
+.\"O subsequent revisions of 3.0.
+NetHack 3.0 は \fBEric R. Smith\fP によって Atari へ、
+\fBTimo Hakulinen\fP によって OS/2 へ、
+\fBDavid Gentzel\fP によって VMS へ移植された。
+この 3 人と \fBKevin Darcy\fP はその後主力開発チームに加わり、
+3.0 のその後のいくつかの改訂版を作成した。
+.pg
+.\"O \fBOlaf Seibert\fP ported NetHack 2.3 and 3.0 to the Amiga.
+.\"O \fBNorm Meluch\fP, \fBStephen Spackman\fP and \fBPierre Martineau\fP designed
+.\"O overlay code for PC NetHack 3.0.  \fBJohnny Lee\fP ported
+.\"O NetHack 3.0 to the Macintosh.  Along with various other Dungeoneers, they
+.\"O continued to enhance the PC, Macintosh, and Amiga ports through the later
+.\"O revisions of 3.0.
+\fBOlaf Seibert\fP は NetHack 2.3 と 3.0 を Amiga へ移植した。
+\fBNorm Meluch、\fBStephen Spackman\fP、\fBPierre Martineau\fP は
+PC NetHack 3.0 のためのオーバーレイルーチンを設計した。
+\fBJohnny Lee\fP は NetHack 3.0 を Macintosh へ移植した。
+彼らは他のさまざまな洞窟の主たちとともに PC、Macintosh、Amiga 
+の移植版の拡張を続け、 3.0 のその後のいくつかの改訂版を作成した。
+.pg
+.\"O Headed by \fBMike Stephenson\fP and coordinated by \fBIzchak Miller\fP and
+.\"O \fBJanet Walz\fP, the development team which now included \fBKen Arromdee\fP,
+.\"O \fBDavid Cohrs\fP, \fBJean-Christophe Collet\fP, \fBKevin Darcy\fP,
+.\"O \fBMatt Day\fP, \fBTimo Hakulinen\fP, \fBSteve Linhart\fP, \fBDean Luick\fP,
+.\"O \fBPat Rankin\fP, \fBEric Raymond\fP, and \fBEric Smith\fP undertook a radical
+.\"O revision of 3.0.  They re-structured the game's design, and re-wrote major
+.\"O parts of the code.  They added multiple dungeons, a new display, special
+.\"O individual character quests, a new endgame and many other new features, and
+.\"O produced NetHack 3.1.
+\fBMike Stephenson\fPをリーダーとし、\fBIzchak Miller\fPと\fBJanet Walz\fPの助けによって
+\fBKen Arromdee\fP, \fBDavid Cohrs\fP, \fBJean-Christophe Collet\fP, \fBKevin Darcy\fP,
+\fBMatt Day\fP, \fBTimo Hakulinen\fP, \fBSteve Linhart\fP, \fBDean Luick\fP, 
+\fBPat Rankin\fP, \fBEric Raymond\fP, \fBEric Smith\fP を含む制作チームが
+3.0の徹底的な見直しを行なった。
+彼らはゲームデザインを再構築し、コードの大部分を書き直した。
+複合ダンジョン、新しいディスプレイ、それぞれのキャラクター毎の特別のクエスト、
+新しいエンドゲームとその他の多くの新しい要素を追加し、
+NetHack 3.1を制作した。
+.pg
+.\"O \fBKen Lorber\fP, \fBGregg Wonderly\fP and \fBGreg Olson\fP, with help
+.\"O from \fBRichard Addison\fP, \fBMike Passaretti\fP, and \fBOlaf Seibert\fP,
+.\"O developed NetHack 3.1 for the Amiga.
+\fBKen Lorber\fP, \fBGregg Wonderly\fP, \fBGreg Olson\fP は
+\fBRichard Addison\fP, \fBMike Passaretti\fP, \fBOlaf Seibert\fP の助けを借りて
+Amiga 用 NetHack 3.1 を作成した。
+.pg
+.\"O \fBNorm Meluch\fP and \fBKevin Smolkowski\fP, with help from
+.\"O \fBCarl Schelin\fP, \fBStephen Spackman\fP, \fBSteve VanDevender\fP,
+.\"O and \fBPaul Winner\fP, ported NetHack 3.1 to the PC.
+\fBNorm Meluch\fP と \fBKevin Smolkowski\fP は 
+\fBCarl Schelin\fP, \fBStephen Spackman\fP, \fBSteve VanDevender\fP,
+\fBPaul Winner\fP の助けを借りて NetHack 3.1 を PC に移植した。
+.pg
+.\"O \fBJon W{tte\fP and \fBHao-yang Wang\fP, with help from \fBRoss Brown\fP,
+.\"O \fBMike Engber\fP, \fBDavid Hairston\fP, \fBMichael Hamel\fP,
+.\"O \fBJonathan Handler\fP, \fBJohnny Lee\fP, \fBTim Lennan\fP, \fBRob Menke\fP,
+.\"O and \fBAndy Swanson\fP, developed NetHack 3.1 for the Macintosh,
+.\"O porting it for MPW.  Building on their development, \fBBarton House\fP
+.\"O added a Think C port.
+\fBJon Watte\fP と \fBHao-yang Wang\fP は \fBRoss Brown\fP,
+\fBMike Engber\fP, \fBDavid Hairston\fP, \fBMichael Hamel\fP,
+\fBJonathan Handler\fP, \fBJohnny Lee\fP, \fBTim Lennan\fP, \fBRob Menke\fP,
+\fBAndy Swanson\fP の助けを借りて MPW 用の Macintosh 用 NetHack 3.1 を作成した。
+その作成中に、\fBBarton House\fP は Think C 用を加えた。
+.pg
+.\"O \fBTimo Hakulinen\fP ported NetHack 3.1 to OS/2.  \fBEric Smith\fP
+.\"O ported NetHack 3.1 to the Atari.  \fBPat Rankin\fP, with help from
+.\"O \fBJoshua Delahunty\fP, was responsible for the VMS version of NetHack 3.1.
+.\"O \fBMichael Allison\fP ported NetHack 3.1 to Windows NT.
+\fBTimo Hakulinen\fP は NetHack 3.1 を OS/2 に移植した。
+\fBEric Smith\fP は NetHack 3.1 を Atari に移植した。
+\fBPat Rankin\fP は \fBJoshua Delahunty\fP の助けを借りて VMS 版 NetHack 3.1 を作成した。
+\fBMichael Allison\fP は NetHack 3.1 を Windows NT に移植した。
+.pg
+.\"O \fBDean Luick\fP, with help from \fBDavid Cohrs\fP, developed NetHack
+.\"O 3.1 for X11.
+.\"O \fBWarwick Allison\fP wrote a tiled version of NetHack for the Atari;
+.\"O he later contributed the tiles to the DevTeam and tile support was
+.\"O then added to other platforms.
+\fBDean Luick\fP は \fBDavid Cohrs\fP の助けを借りて X11 用 NetHack3.1 を作成した。
+\fBWarwick Allison\fP は Atari 用に NetHack のタイルバージョンを作成した。
+彼は後にタイルを開発チームに寄贈し、タイルサポートは他のプラットフォームにも追加された。
+.pg
+.\"O The 3.2 development team, comprised of \fBMichael Allison\fP, \fBKen
+.\"O Arromdee\fP, \fBDavid Cohrs\fP, \fBJessie Collet\fP, \fBSteve Creps\fP,
+.\"O \fBKevin Darcy\fP, \fBTimo Hakulinen\fP, \fBSteve Linhart\fP, \fBDean
+.\"O Luick\fP, \fBPat Rankin\fP, \fBEric Smith\fP, \fBMike Stephenson\fP,
+.\"O \fBJanet Walz\fP, and \fBPaul Winner\fP, released version 3.2 in April of
+.\"O 1996.
+\fBMichael Allison\fP, \fBKen
+Arromdee\fP, \fBDavid Cohrs\fP, \fBJessie Collet\fP, \fBSteve Creps\fP,
+\fBKevin Darcy\fP, \fBTimo Hakulinen\fP, \fBSteve Linhart\fP, \fBDean
+Luick\fP, \fBPat Rankin\fP, \fBEric Smith\fP, \fBMike Stephenson\fP,
+\fBJanet Walz\fP, and \fBPaul Winner\fP
+からなる 3.2の開発チームは バージョン 3.2 を 1996 年 4 月にリリースした。
+.pg
+.\"O Version 3.2 marked the tenth anniversary of the formation of the development
+.\"O team.  In a testament to their dedication to the game, all thirteen members
+.\"O of the original development team remained on the team at the start of work
+.\"O on that release.  During the interval between the release of 3.1.3
+.\"O and 3.2, one of the founding members of the development team, \fBDr. Izchak
+.\"O Miller\fP, was diagnosed with cancer and passed away.  That release of the
+.\"O game was dedicated to him by the development and porting teams.
+バージョン 3.2 は開発チームが結成されてから 10 周年のものであった。
+彼らのゲームへの貢献について記すと、13 人の初期の開発チーム全員は
+このリリースの開始時の最初の時点までチームに残っていた。
+が、 3.1.3 から 3.2 の間に、開発チームの創始者の一人である
+\fBIzchak Miller博士\fPが癌と診断され、亡くなった。
+このリリースは開発チームおよび移植チームから彼に捧げられた。
+.pg
+.\"O During the lifespan of NetHack 3.1 and 3.2, several enthusiasts
+.\"O of the game added
+.\"O their own modifications to the game and made these ``variants'' publicly
+.\"O available:
+NetHack 3.1 と 3.2 の時代に、ゲームに熱狂した何人かが
+ゲームに自分自身の変更を加えた「亜種」を公に発表した。
+.pg
+.\"O \fBTom Proudfoot\fP and \fBYuval Oren\fP created NetHack++,
+.\"O which was quickly renamed NetHack--.
+\fBTom Proudfoot\fP と \fBYuval Oren\fP は NetHack++ を作成し、
+これはすぐに NetHack-- に改名された。
+.\"O Working independently, \fBStephen White\fP wrote NetHack Plus.
+これとは独立に、\fBStephen White\fP は NetHack Plus を作成した。
+.\"O \fBTom Proudfoot\fP later merged NetHack Plus
+.\"O and his own NetHack-- to produce SLASH.
+\fBTom Proudfoot\fP は後に NetHack Plus と NetHack-- を統合し、
+SLASH を作成した。
+.\"O \fBLarry Stewart-Zerba\fP and \fBWarwick Allison\fP improved the spell
+.\"O casting system with the Wizard Patch.
+\fBLarry Stewart-Zerba\fP と \fBWarwick Allison\fP は呪文詠唱システムを改良した
+Wizard Patch を作成した。
+.\"O \fBWarwick Allison\fP also ported NetHack to use the Qt interface.
+\fBWarwick Allison\fP は NetHack を Qt インターフェースを使うように変更した。
+.pg
+.\"O \fBWarren Cheung\fP combined SLASH with the Wizard Patch to produce Slash'em,
+.\"O and with the help of \fBKevin Hugo\fP, added more features.
+\fBWarren Cheung\fP は SLASH と Wizard Patch を統合して Slash'em を作成し、
+\fBKevin Hugo\fP の力を借りて、多くの要素を追加した。
+.\"O Kevin later joined the
+.\"O DevTeam and incorporated the best of these ideas in NetHack 3.3.
+Kevin は後に開発チームに加わり、これらのアイデアを NetHack 3.3 に統合した。
+.pg
+.\"O The final update to 3.2 was the bug fix release 3.2.3, which was released
+.\"O simultaneously with 3.3.0 in December 1999 just in time for the Year 2000.
+3.2 の最終バージョンはバグ修正版である 3.2.3 である。
+これは 2000 年問題対策のために 3.3.0 と同時に 1999 年 12 月に発表された。
+.pg
+.\"O The 3.3 development team, consisting of \fBMichael Allison\fP, \fBKen Arromdee\fP, 
+.\"O \fBDavid Cohrs\fP, \fBJessie Collet\fP, \fBSteve Creps\fP, \fBKevin Darcy\fP, 
+.\"O \fBTimo Hakulinen\fP, \fBKevin Hugo\fP, \fBSteve Linhart\fP, \fBKen Lorber\fP, 
+.\"O \fBDean Luick\fP, \fBPat Rankin\fP, \fBEric Smith\fP, \fBMike Stephenson\fP, 
+.\"O \fBJanet Walz\fP, and \fBPaul Winner\fP, released 3.3.0 in 
+.\"O December 1999 and 3.3.1 in August of 2000.
+\fBMichael Allison\fP, \fBKen Arromdee\fP, 
+\fBDavid Cohrs\fP, \fBJessie Collet\fP, \fBSteve Creps\fP, \fBKevin Darcy\fP, 
+\fBTimo Hakulinen\fP, \fBKevin Hugo\fP, \fBSteve Linhart\fP, \fBKen Lorber\fP, 
+\fBDean Luick\fP, \fBPat Rankin\fP, \fBEric Smith\fP, \fBMike Stephenson\fP, 
+\fBJanet Walz\fP, \fBPaul Winner\fP
+からなる 3.3 の開発チームは 1999 年 12 月に 3.3.0を、
+2000 年 8 月に 3.3.1 をリリースした。
+.pg
+.\"O Version 3.3 offered many firsts. It was the first version to separate race 
+.\"O and profession. The Elf class was removed in preference to an elf race, 
+.\"O and the races of dwarves, gnomes, and orcs made their first appearance in 
+.\"O the game alongside the familiar human race.  Monk and Ranger roles joined 
+.\"O Archeologists, Barbarians, Cavemen, Healers, Knights, Priests, Rogues, Samurai, 
+.\"O Tourists, Valkyries and of course, Wizards.  It was also the first version
+.\"O to allow you to ride a steed, and was the first version to have a publicly 
+.\"O available web-site listing all the bugs that had been discovered.  Despite 
+.\"O that constantly growing bug list, 3.3 proved stable enough to last for
+.\"O more than a year and a half.
+バージョン 3.3 は多くの新要素を提供した。
+まず、種族と職業を分離した最初のバージョンである。
+職業としてのエルフは削除され、種族の一つとなった。
+また、ドワーフ、ノーム、オークが種族として追加された。
+モンクとレンジャーの二つが職業として追加された。
+さらに、動物に乗ることが出来る最初のバージョンでもあり、
+発見された全てのバグをウェブサイトで公表した最初のバージョンでもある。
+バグリストが順調に伸びていったにも関わらず、
+3.3 は 1 年半続いたことで十分安定していたことを証明した。
+.pg
+.\"O The 3.4 development team initially consisted of
+.\"O \fBMichael Allison\fP, \fBKen Arromdee\fP,
+.\"O \fBDavid Cohrs\fP, \fBJessie Collet\fP, \fBKevin Hugo\fP, \fBKen Lorber\fP,
+.\"O \fBDean Luick\fP, \fBPat Rankin\fP, \fBMike Stephenson\fP, 
+.\"O \fBJanet Walz\fP, and \fBPaul Winner\fP, with \fB Warwick Allison\fP joining 
+.\"O just before the release of NetHack 3.4.0 in March 2002.
+3.4 開発チームは \fBMichael Allison\fP, \fBKen Arromdee\fP,
+\fBDavid Cohrs\fP, \fBJessie Collet\fP, \fBKevin Hugo\fP, \fBKen Lorber\fP,
+\fBDean Luick\fP, \fBPat Rankin\fP, \fBMike Stephenson\fP, 
+\fBJanet Walz\fP, and \fBPaul Winner\fP で開始され、
+NetHack 3.4.0 リリース直前の 2002 年 3 月に \fB Warwick Allison\fP が加わった。
+.pg
+.\"O As with version 3.3, various people contributed to the game as a whole as
+.\"O well as supporting ports on the different platforms that NetHack runs on:
+バージョン 3.3 と同様に、様々な人々が NetHack の色々なプラットフォームへの
+移植を行なってくれた。
+.pg
+.\"O \fBPat Rankin\fP maintained 3.4 for VMS.
+\fBPat Rankin\fP は 3.4 の VMS への移植を担当した。
+.pg
+.\"O \fBMichael Allison\fP maintained NetHack 3.4 for the MS-DOS platform.  \fBPaul Winner\fP
+.\"O and \fBYitzhak Sapir\fP provided encouragement.
+\fBMichael Allison\fP は MS-DOS 版の NetHack 3.4 を管理している。
+\fBPaul Winner\fP と \fBYitzhak Sapir\fP が手伝っている。
+.pg
+.\"O \fBDean Luick\fP, \fBMark Modrall\fP, and \fBKevin Hugo\fP maintained and enhanced the
+.\"O Macintosh port of 3.4.
+\fBDean Luick\fP, \fBMark Modrall\fP, \fBKevin Hugo\fP は
+3.4 の Macintosh への移植と拡張を担当した。
+.pg
+.\"O \fBMichael Allison\fP, \fBDavid Cohrs\fP, \fBAlex Kompel\fP, \fBDion Nicolaas\fP, and 
+.\"O \fBYitzhak Sapir\fP maintained and enhanced 3.4 for the Microsoft Windows platform.
+.\"O \fBAlex Kompel\fP contributed a new graphical interface for the Windows port. 
+.\"O \fBAlex Kompel\fP also contributed a Windows CE port for 3.4.1.
+\fBMichael Allison\fP, \fBDavid Cohrs\fP, \fBAlex Kompel\fP, \fBDion Nicolaas\fP,
+\fBYitzhak Sapir\fP は 3.4 の Microsoft Windows プラットフォームへの移植と拡張を担当した。
+\fBAlex Kompel\fP は Windows 版への新しいグラフィックインターフェースを提供した。
+\fBAlex Kompel\fP はまた、3.4.1 の Windows CE 版を提供した。
+.pg
+.\"O \fBRon Van Iwaarden\fP maintained 3.4 for OS/2.
+\fBRon Van Iwaarden\fP は 3.4 の OS/2 版を管理している。
+.pg
+.\"O \fBJanne Salmijarvi\fP and \fBTeemu Suikki\fP maintained and 
+.\"O enhanced the Amiga port of 3.4 after \fBJanne Salmijarvi\fP resurrected 
+.\"O it for 3.3.1.
+3.3.1 で復活した Amiga への移植と拡張は \fBJanne Salmijarvi\fP と \fBTeemu Suikki\fP が
+行っている。
+.pg
+.\"O \fBChristian ``Marvin'' Bressler\fP maintained 3.4 for the Atari after he 
+.\"O resurrected it for 3.3.1.
+3.3.1 で復活した Atari 版は \fBChristian ``Marvin'' Bressler\fP が管理している。
+.pg
+.\"O There is a NetHack web site maintained by \fBKen Lorber\fP at http://www.nethack.org/.
+\fBKen Lorber\fP によって管理されている NetHack のウェブサイトが http://www.nethack.org/ にある。
+.pg
+			   - - - - - - - - - -
+.pg
+.\"O From time to time, some depraved individual out there in netland sends a
+.\"O particularly intriguing modification to help out with the game.  The Gods of
+.\"O the Dungeon sometimes make note of the names of the worst of these miscreants
+.\"O in this, the list of Dungeoneers:
+.\"O 
+時々ネットワークの世界のどうしようもない連中が、
+ゲームの改良の手助けをしようとしてとりわけ興味をそそるような修正を送ってよこす。
+洞窟の神々は、ときにはこういった悪党のうちでも最も邪悪な連中の名前を
+洞窟の主たちの一覧としてここに記すのだ。
+.sd
+.TS S
+center;
+c c c.
+.\"TABLE_START
+Adam Aronow	Izchak Miller	Mike Stephenson
+Alex Kompel	J. Ali Harlow	Norm Meluch
+Andreas Dorn	Janet Walz	Olaf Seibert
+Andy Church	Janne Salmijarvi	Pasi Kallinen
+Andy Swanson	Jean-Christophe Collet	Pat Rankin
+Ari Huttunen	Jochen Erwied	Paul Winner
+Barton House	John Kallen	Pierre Martineau
+Benson I. Margulies	John Rupley	Ralf Brown
+Bill Dyer	John S. Bien	Ray Chason
+Boudewijn Waijers	Johnny Lee	Richard Addison
+Bruce Cox	Jon W{tte	Richard Beigel
+Bruce Holloway	Jonathan Handler	Richard P. Hughey
+Bruce Mewborne	Joshua Delahunty	Rob Menke
+Carl Schelin	Keizo Yamamoto	Robin Johnson
+Chris Russo	Ken Arnold	Roderick Schertler
+David Cohrs	Ken Arromdee	Roland McGrath
+David Damerell	Ken Lorber	Ron Van Iwaarden
+David Gentzel	Ken Washikita	Ronnen Miller
+David Hairston	Kevin Darcy	Ross Brown
+Dean Luick	Kevin Hugo	Sascha Wostmann
+Del Lamb	Kevin Sitze	Scott Bigham
+Deron Meranda	Kevin Smolkowski	Scott R. Turner
+Dion Nicolaas	Kevin Sweet	Stephen Spackman
+Dylan O'Donnell	Lars Huttar	Stephen White
+Eric Backus	Malcolm Ryan	Steve Creps
+Eric Hendrickson	Mark Gooderum	Steve Linhart
+Eric R. Smith	Mark Modrall	Steve VanDevender
+Eric S. Raymond	Marvin Bressler	Teemu Suikki
+Erik Andersen	Matthew Day	Tim Lennan
+Frederick Roeber	Merlyn LeRoy	Timo Hakulinen
+Gil Neiger	Michael Allison	Tom Almy
+Greg Laskin	Michael Feir	Tom West
+Greg Olson	Michael Hamel	Warren Cheung
+Gregg Wonderly	Michael Sokolov	Warwick Allison
+Hao-yang Wang	Mike Engber	Yitzhak Sapir
+Helge Hafting	Mike Gallop
+Irina Rempt-Drijfhout	Mike Passaretti
+.\"TABLE_END  Do not delete this line.
+.TE
+.ed
+
+.\"O .\"Microsoft and MS-DOS are registered trademarks of Microsoft Corporation.
+.\"O .\"Lattice is a trademark of Lattice, Inc.
+.\"O .\"Atari and 1040ST are trademarks of Atari, Inc.
+.\"O .\"AMIGA is a trademark of Commodore-Amiga, Inc.
+.\"O .sm "Brand and product names are trademarks or registered trademarks \
+.\"O of their respective holders."
+.sm ブランドと製品名は各社の商標または登録商標である。

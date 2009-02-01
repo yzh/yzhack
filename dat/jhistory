@@ -1,0 +1,109 @@
+
+見よ，死すべきものよ，NetHackの起源を．．．
+
+Jay Fenlasonが最初のHackを Kenny Woodland, Mike Thome および Jon Payne
+の助けのもと書いた．
+
+Andries Brouwerはこれを大きく書き直し，Hackをまったく違うゲームに仕立て，
+UNIX(tm)で動く(少なくとも)3つのバージョン(1.0.1, 1.0.2 および 1.0.3)を
+Usenetで公開した．
+
+Don G. Knellerは Hack 1.0.3を Microsoft(tm) C および MS-DOS(tm)へ移植し，
+PC HACK 1.01eを制作した．加えて DEC Rainbowグラフィックを 1.03gでサ
+ポートし，少なくとも4つ以上のバージョンを制作した．(3.0, 3.2, 3.51
+および 3.6)．
+
+P. Blackは PC HACK 3.51を Lattice(tm) Cおよび，Atari 520/1040STへ移植し，
+ST Hack 1.03を開発した．
+
+Mike Stephensonはこれら色々なバージョンを一緒に統合し，新な機能を加え，
+Nethackバージョン1.4を制作した．彼はその後1000にも及ぶ，NetHack 1.4の
+改良やデバッグを重ね整え，NetHackバージョン 2.2および 2.3をリリースした．
+ 
+その後，Mikeはゲームを大幅に書き換え，調整し，Ken Arromdee,
+Jean-Christophe Collet, Steve Creps, Eric Hendrickson, Izchak Miller,
+Eric S. Raymond, John Rupley, Mike Threepoint および Janet Walzを含む
+チームの先頭に立ち，NetHack 3.0cを制作した．同じグループがその後10のリ
+ビジョンパッチをリリースし，3.0をアプデートした．
+
+NetHack 3.0は Eric R. Smithによって Atariに移植され，Timo Hakulinenによって
+OS/2に移植され， Dabvid Gentzelによって VMSに移植された．彼ら3人および，
+Kevi Darcyは後に 3.0のリビジョンを制作したメイン開発チームに合流した．
+
+Olaf Seibertは NetHack 2.3および 3.0を Amigaに移植した． Norm Meluch,
+Stephen Spackman および Pierre Martineauは PC NetHack 3.0のオーバレイ
+コードをデザインした．Johnny Leeは NetHack 3.0を Macintoshに移植した．
+沢山の他のダンジョナーにより，彼らは，PC, Macintosh および Amigaに
+3.0後のリビジョンを移植した．
+ 
+Mike Stephensonを先頭に，Izchak Millerおよび Janet Walzが調整し，
+今や Ken Arromdee, David Cohrs, Jean-Christophe Collet, Kevin Darcy, 
+Matt Day, Timo Hakulinen, Steve Linhart, Dean Luick, Pat Rankin, 
+Eric Raymond および， Eric Smithを含む開発チームは3.0の抜本的なリビジョン
+に着手した．彼らはゲームをデザインしなおし，コードの大きな改良を行なった．
+彼らはマルチプルダンジョン，新しいディスプレイ，キャラクター毎のクエスト，
+新しい最終試練および沢山の新しい機能を加え，NetHack 3.1を制作した．
+
+Ken Lorber, Gregg Wonderlyおよび Grag Olsonは Richard Addison,
+Mike Passaretti および Olaf Seibertの手を借り Amigaの NetHack 3.1を開発
+した．
+
+Norm Meluch および Kevin Smolkowskiは Carl Schelin, Stephen Spackman
+Steve VanDevenderおよび Paul Winnerの手を借り NetHack 3.1をPCに移植した．
+
+Jon W{tte および Hao-yang Wangは Ross Brown, Mike Engber, David Hairston,
+Micheal Hamel, Jonathan Handler, Johnny Lee, Tim Lennan, Rob Menke
+および Andy Swansonの手を借り Macintoshの Nethack 3.1を開発し，MPW用に
+移植した．それの開発の際，Barton Houseは Think Cに移植した．
+
+Timo Hakulinenは NetHack 3.1を OS/2に移植した． Eric Smithは NetHack 3.1
+を Atariに移植した． Pat Rankinは Joshua Delahuntyの手を借り，NetHack 3.1
+のVMSバージョンに応じている．Michael Allisonは NetHack3.1を Windows NTに
+移植した．
+
+Dean Luickは David Cohrsの手を借り，X11のNetHack 3.1を開発した．
+
+                           - - - - - - - - - -
+ 
+時々，堕落した人物が彼らのネットランドからゲームの手助けとなるような興
+味をそそる改良案を送ってくる．ダンジョンの神はこれら堕ちるところまで堕
+ちた人間たちの名前をきまぐれでひかえている．そのダンジョンナーたちは以
+下である:
+
+    Adam Aronow               Izchak Miller             Mike Stephenson
+    Alex Kompel               J. Ali Harlow             Norm Meluch
+    Andreas Dorn              Janet Walz                Olaf Seibert
+    Andy Church               Janne Salmijarvi          Pasi Kallinen
+    Andy Swanson              Jean-Christophe Collet    Pat Rankin
+    Ari Huttunen              Jochen Erwied             Paul Winner
+    Barton House              John Kallen               Pierre Martineau
+    Benson I. Margulies       John Rupley               Ralf Brown
+    Bill Dyer                 John S. Bien              Ray Chason
+    Boudewijn Waijers         Johnny Lee                Richard Addison
+    Bruce Cox                 Jon W{tte                 Richard Beigel
+    Bruce Holloway            Jonathan Handler          Richard P. Hughey
+    Bruce Mewborne            Joshua Delahunty          Rob Menke
+    Carl Schelin              Keizo Yamamoto            Robin Johnson
+    Chris Russo               Ken Arnold                Roderick Schertler
+    David Cohrs               Ken Arromdee              Roland McGrath
+    David Damerell            Ken Lorber                Ron Van Iwaarden
+    David Gentzel             Ken Washikita             Ronnen Miller
+    David Hairston            Kevin Darcy               Ross Brown
+    Dean Luick                Kevin Hugo                Sascha Wostmann
+    Del Lamb                  Kevin Sitze               Scott Bigham
+    Deron Meranda             Kevin Smolkowski          Scott R. Turner
+    Dion Nicolaas             Kevin Sweet               Stephen Spackman
+    Dylan O'Donnell           Lars Huttar               Stephen White
+    Eric Backus               Malcolm Ryan              Steve Creps
+    Eric Hendrickson          Mark Gooderum             Steve Linhart
+    Eric R. Smith             Mark Modrall              Steve VanDevender
+    Eric S. Raymond           Marvin Bressler           Teemu Suikki
+    Erik Andersen             Matthew Day               Tim Lennan
+    Frederick Roeber          Merlyn LeRoy              Timo Hakulinen
+    Gil Neiger                Michael Allison           Tom Almy
+    Greg Laskin               Michael Feir              Tom West
+    Greg Olson                Michael Hamel             Warren Cheung
+    Gregg Wonderly            Michael Sokolov           Warwick Allison
+    Hao-yang Wang             Mike Engber               Yitzhak Sapir
+    Helge Hafting             Mike Gallop               
+    Irina Rempt-Drijfhout     Mike Passaretti           

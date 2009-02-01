@@ -1,0 +1,201 @@
+#
+# The guild of disgruntled adventurers.
+#
+
+LEVEL: "guild1"
+
+ROOM: "ordinary", lit, random, random, (12,6)
+NAME: "central"
+# stuff for them to use on you...
+OBJECT: '?',random,random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+# MONSTER: '@', "archeologist", random, hostile
+MONSTER: '@', "caveman", random, hostile
+# MONSTER: '@', "healer", random, hostile
+# MONSTER[25%]: '@', "knight", random, hostile
+MONSTER[25%]: '@', "medium", random, hostile
+# MONSTER[25%]: '@', "monk", random, hostile
+# MONSTER: '@', "priest", random, hostile
+# MONSTER: '@', "tourist", random, hostile
+MONSTER[50%]: '@', "valkyrie", random, hostile
+MONSTER[50%]: '@', "wizard", random, hostile
+  
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, up
+OBJECT: random,random,random
+
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, down
+OBJECT: random, random, random
+TRAP: random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+
+RANDOM_CORRIDORS
+
+
+LEVEL: "guild2"
+
+ROOM: "ordinary", lit, random, random, (12,6)
+NAME: "central"
+# stuff for them to use on you...
+OBJECT: '?',random,random
+OBJECT: '?',random,random
+OBJECT: '?',random,random
+OBJECT: '?',random,random
+OBJECT: '/',random,random
+OBJECT: '/',random,random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',random,random
+OBJECT: '!',random,random
+OBJECT: '!',random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+MONSTER: '@', "archeologist", random, hostile
+MONSTER: '@', "barbarian", random, hostile
+# MONSTER[50%]: '@', "caveman", random, hostile
+# MONSTER: '@', "fighter", random, hostile
+# MONSTER: '@', "healer", random, hostile
+MONSTER[50%]: '@', "knight", random, hostile
+MONSTER: '@', "medium", random, hostile
+MONSTER: '@', "monk", random, hostile
+# MONSTER: '@', "priest", random, hostile
+# MONSTER: '@', "rogue", random, hostile
+MONSTER[50%]: '@', "samurai", random, hostile
+# MONSTER[50%]: '@', "tourist", random, hostile
+MONSTER: '@', "valkyrie", random, hostile
+MONSTER: '@', "wizard", random, hostile
+  
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, up
+OBJECT: random,random,random
+
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, down
+OBJECT: random, random, random
+TRAP: random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+
+RANDOM_CORRIDORS
+
+###
+#
+##
+LEVEL: "guild3"
+
+ROOM: "ordinary", lit, random, random, (12,6)
+NAME: "central"
+# stuff for them to use on you...
+OBJECT: '?',random,random
+OBJECT: '?',random,random
+OBJECT: '?',random,random
+OBJECT: '?',random,random
+OBJECT: '/',random,random
+OBJECT: '/',random,random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',"booze",random
+OBJECT: '!',random,random
+OBJECT: '!',random,random
+OBJECT: '!',random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+MONSTER: '@', "archeologist", random, hostile
+MONSTER: '@', "archeologist", random, hostile
+MONSTER: '@', "barbarian", random, hostile
+MONSTER: '@', "barbarian", random, hostile
+MONSTER: '@', "caveman", random, hostile
+MONSTER: '@', "cavewoman", random, hostile
+MONSTER: '@', "fighter", random, hostile
+MONSTER: '@', "fighter", random, hostile
+MONSTER: '@', "healer", random, hostile
+MONSTER: '@', "healer", random, hostile
+MONSTER: '@', "knight", random, hostile
+MONSTER: '@', "knight", random, hostile
+MONSTER: '@', "medium", random, hostile
+MONSTER: '@', "medium", random, hostile
+MONSTER: '@', "monk", random, hostile
+MONSTER: '@', "monk", random, hostile
+MONSTER: '@', "priest", random, hostile
+MONSTER: '@', "priestess", random, hostile
+MONSTER: '@', "rogue", random, hostile
+MONSTER: '@', "rogue", random, hostile
+MONSTER: '@', "samurai", random, hostile
+MONSTER: '@', "samurai", random, hostile
+MONSTER: '@', "tourist", random, hostile
+MONSTER: '@', "tourist", random, hostile
+MONSTER: '@', "valkyrie", random, hostile
+MONSTER: '@', "valkyrie", random, hostile
+MONSTER: '@', "wizard", random, hostile
+MONSTER: '@', "wizard", random, hostile
+  
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, up
+OBJECT: random,random,random
+
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, down
+OBJECT: random, random, random
+TRAP: random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+
+RANDOM_CORRIDORS

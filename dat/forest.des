@@ -1,0 +1,209 @@
+# deep forest 3-5
+# 
+# forest 1
+MAZE:"frst1",' '
+FLAGS: arboreal,shortsighted
+INIT_MAP:'.','T',true,true,unlit,false
+MESSAGE:"あなたは薄暗い森に入りこんだ。"
+NOMAP
+STAIR:random,up
+STAIR:random,down
+OBJECT:')',"axe",random
+MONSTER:'d',"wolf",random
+MONSTER:'s',"cave spider",random
+MONSTER:'s',"cave spider",random
+MONSTER:'s',"cave spider",random
+MONSTER:'s',"centipede",random
+MONSTER:'s',random,random
+MONSTER:'S',"garter snake",random
+MONSTER:'S',"garter snake",random
+MONSTER:'S',"garter snake",random
+MONSTER:'F',"lichen",random
+MONSTER:'F',"lichen",random
+MONSTER:'F',"lichen",random
+MONSTER:'F',"lichen",random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+OBJECT:')',random,random
+OBJECT:')',random,random
+OBJECT:'[',random,random
+OBJECT:'[',random,random
+OBJECT:'?',random,random
+OBJECT:'?',random,random
+OBJECT:'=',random,random
+OBJECT:'/',random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+FOUNTAIN:random
+FOUNTAIN:random
+FOUNTAIN:random
+FOUNTAIN:random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"bear",random
+TRAP:"bear",random
+TRAP:"bear",random
+TRAP:"bear",random
+
+# forest 2
+MAZE:"frst2",' '
+FLAGS: arboreal,shortsighted
+INIT_MAP:'.','T',true,true,unlit,false
+GEOMETRY:center,center
+MAP
+TTTTTT.TTT.
+.TT...W...T
+T...W...TT.
+.TTWWW...T.
+T.WW..TTT.T
+.TT.W..T.T.
+.T.WWTTTTTT
+..WWTWWTTTT
+.TTWWWT.TTT
+T..TWW.TTT.
+.T..TW...TT
+T.T...WW..T
+.T.TTWWWW..
+T...WW..WW.
+.T.W....WW.
+..WW...W...
+.TWW....WW.
+T..W..T..WW
+.TTT.T..WWW
+ENDMAP
+NOMAP
+STAIR:random,up
+STAIR:random,down
+MONSTER:'n',"wood nymph",random
+MONSTER:'n',"wood nymph",random
+MONSTER:'n',"wood nymph",random
+MONSTER:'n',"wood nymph",random
+MONSTER:'n',"wood nymph",random
+MONSTER:'n',"wood nymph",random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+OBJECT:'[',random,random
+OBJECT:'[',random,random
+OBJECT:')',random,random
+OBJECT:')',random,random
+OBJECT:'!',random,random
+OBJECT:'!',random,random
+OBJECT:'?',random,random
+OBJECT:'/',random,random
+OBJECT:'+',random,random
+OBJECT:'(',random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"bear",random
+TRAP:"bear",random
+TRAP:"bear",random
+TRAP:"bear",random
+
+# forest end
+MAZE:"frsted-1",' '
+FLAGS: arboreal,shortsighted
+INIT_MAP:'.','T',true,true,unlit,false
+GEOMETRY:half-left,center
+MAP
+---T---
+|.....T
+T.T..TT
+TT..T.|
+TTT----
+ENDMAP
+OBJECT:'"',"amulet of reflection",(3,2)
+MONSTER:'C',"forest centaur", (3,2), hostile
+NOMAP
+STAIR:random,up
+MONSTER:'d',"wolf",random
+MONSTER:'d',"wolf",random
+MONSTER:'d',"wolf",random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+OBJECT:'[',random,random
+OBJECT:')',random,random
+OBJECT:'!',random,random
+OBJECT:'!',random,random
+OBJECT:'?',random,random
+OBJECT:'?',random,random
+OBJECT:'/',random,random
+OBJECT:'/',random,random
+OBJECT:'=',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+
+MAZE:"frsted-2",' '
+FLAGS: arboreal,shortsighted
+INIT_MAP:'.','T',true,true,unlit,false
+GEOMETRY:half-right,center
+MAP
+---T---
+T.....T
+T.T..TT
+T..T.TT
+--T--T-
+ENDMAP
+OBJECT: '"',"amulet of drain resistance",random
+MONSTER:'C',"forest centaur", (3,2), hostile
+NOMAP
+STAIR:random,up
+MONSTER:'d',"wolf",random
+MONSTER:'d',"wolf",random
+MONSTER:'d',"wolf",random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+MONSTER:'F',random,random
+OBJECT:'[',random,random
+OBJECT:')',random,random
+OBJECT:'!',random,random
+OBJECT:'!',random,random
+OBJECT:'?',random,random
+OBJECT:'?',random,random
+OBJECT:'/',random,random
+OBJECT:'/',random,random
+OBJECT:'=',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:"arrow",random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random

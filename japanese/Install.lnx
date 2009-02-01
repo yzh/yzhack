@@ -1,0 +1,171 @@
+
+	Linux 用 jnethack 3.4.3 のコンパイル例
+
+
+0) はじめに
+
+Plamo Linux 3.2 で tty / X11 版をコンパイルした例です。
+この文書は sys/unix/README.linux から設定を抜き出して書かれています。
+
+
+1) アーカイブの展開・パッチ当て
+
+$ tar zxvf nethack-343.tgz
+$ cd nethack-3.4.3
+$ zcat jnethack-3.4.3-x.x.diff.gz | patch -p1
+$ sh sys/unix/setup.sh
+ 
+
+2) ファイルの編集
+
+2-1) Makefile の該当行を編集
+
+GAMEGRP = games
+GAMEPERM = 02755
+FILEPERM = 0644
+EXEPERM = 755
+DIRPERM = 775
+
+X11 版もコンパイルする場合は以下の設定も必要。
+
+VARDATND = x11tiles pet_mark.xbm rip.xpm
+
+
+2-2) src/Makefile の該当行を編集
+
+CFLAGS = -O2 -fomit-frame-pointer -I../include
+LFLAGS =
+
+X11 版もコンパイルする場合は以下の設定も必要。
+
+LFLAGS =  -L/usr/X11R6/lib
+WINSRC = $(WINTTYSRC) $(WINX11SRC)
+WINOBJ = $(WINTTYOBJ) $(WINX11OBJ)
+WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11
+WINLIB = $(WINTTYLIB) $(WINX11LIB)
+
+
+2-3) util/Makefile の該当行を編集
+
+CFLAGS = -O2 -fomit-frame-pointer -I../include
+LFLAGS =
+
+
+2-4) include/unixconf.h の該当行を編集
+
+コメントアウトされている Linux の定義を有効にします。
+
+#define SYSV
+#define LINUX
+#define TERMINFO
+#define TIMED_DELAY
+
+
+2-5) include/config.h の該当行を編集
+
+#define DLB
+
+X11 版もコンパイルする場合は以下の設定も必要。
+
+#define X11_GRAPHICS
+#define USE_XPM
+#define AUTOPICKUP_EXCEPTIONS
+
+
+2-6) win/X11/JNetHack.ad の該当行を編集(X11 版のみ)
+
+JNetHack*font: -misc-fixed-medium-r-*--12-*
+JNetHack*display_file*font: -misc-fixed-medium-r-*--12-*
+JNetHack*tombstone*font: -misc-fixed-medium-r-*--12-*
+JNetHack*rip*font: -misc-fixed-medium-r-*--12-*
+JNetHack*menu*font: -misc-fixed-medium-r-*--12-*
+JNetHack*text*font: -misc-fixed-medium-r-*--12-*
+JNetHack*map*font: -misc-fixed-medium-r-*--14-*
+JNetHack*fontSet: -misc-fixed-medium-r-*--12-*
+
+タイル表示する場合は以下の設定をします。
+
+JNetHack.tile_file: x11tiles
+JNetHack.tile_width: 16
+JNetHack.tile_height: 16
+
+タイルを使用しない場合はタイル設定の行頭に "!" をつけます。
+
+
+3) コンパイル
+
+$ make all
+
+
+4) インストール
+
+4-1) はじめてインストールする場合
+
+# make install
+
+X11 版の場合はリソースファイルもコピーします。
+
+# cp win/X11/JNetHack.ad /usr/X11R6/lib/X11/app-defaults/JNetHack
+
+
+4-2) 上書きする場合(セーブデータが保護されます)
+
+# make update
+
+
+5) エラーメッセージ
+
+5-1) インストール時に chgrp: invalid group name `games'
+
+システムに games グループが登録されていません。
+新しく games グループを作るか Makefile の GAMEGRP を変更してインストールしてください。
+
+
+5-2) 起動時に Warning: cannot write scoreboard file record
+
+record ファイルのパーミッションが設定されていない場合表示されます。
+
+# chmod g+w /usr/games/lib/jnethackdir/record
+
+上記のように書き込み権限を有効にします。
+
+
+5-3) 終了時に Cannot open log file!
+
+logfile ファイルのパーミッションが設定されていない場合表示されます。
+
+# chmod g+w /usr/games/lib/jnethackdir/logfile
+
+上記のように書き込み権限を有効にします。
+
+
+5-4) セーブ時に No such file or directory Exec to compress save/[キャラクター名] failed.
+
+compress もしくは gzip が存在しないか設定が間違っています。
+include/config.h の COMPRESS の設定が正しいかどうか確認してください。
+
+#define COMPRESS "/usr/bin/gzip" /* FSF gzip compression */
+
+
+6) 環境設定
+
+6-1) 設定ファイル
+
+ホームディレクトリに ~/.jnethackrc ファイルを作成してプレイヤー名などの設定を
+することができます。
+設定ファイルの書き方は doc/jGuidebook.txt を参照してください。
+
+tty 版と X11 版の切り替えは以下の通りです。
+
+OPTIONS=windowtype:tty # tty 版の場合
+OPTIONS=windowtype:x11 # X11 版の場合
+
+JNetHack 1.x 系で追加されたスコア送信機能や Radar パッチは 3.4.x 系では
+分離されているので report や radar オプションを設定しても有効にはなりません。
+
+
+6-2) X11 版のウインドウサイズ
+
+起動時に -g オプションをつけるとメインウインドウの大きさを設定できます。
+
+$ jnethack -g 640x480

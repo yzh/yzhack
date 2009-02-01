@@ -1,0 +1,87 @@
+#LEVEL:		"testbed" "none" @ (2,0)
+MAZE:"testbed",' '
+# FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+#0        1         2         3         4         5         6         7   
+#12345678901234567890123456789012345678901234567890123456789012345678901234
+MAP
+--------------------------------------
+|....................................|
+|....................................|
+|....................................|
+|....................................|
+|....................................|
+|....................................|
+|....................................|
+|....................................|
+--------------------------------------
+ENDMAP
+REGION:(01,01,36,8),lit,"ordinary"
+STAIR:random, up
+STAIR:random, down
+ALTAR:(05,05),noalign,altar
+ENGRAVING:(03,05),burn,"Elbereth"
+ENGRAVING:(02,05),burn,"ENTER DISCOVER MODE NOW"
+ENGRAVING:(04,05),burn,"ENTER DISCOVER MODE NOW"
+ENGRAVING:(03,04),burn,"ENTER DISCOVER MODE NOW"
+ENGRAVING:(03,06),burn,"ENTER DISCOVER MODE NOW"
+CONTAINER:'(',"chest",(03,05)
+OBJECT:'/',"wishing",contained
+OBJECT:'/',"wishing",contained
+OBJECT:'/',"wishing",contained
+OBJECT:'/',"create monster",contained
+OBJECT:'/',"create monster",contained
+OBJECT:'/',"create monster",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"gain level",contained
+OBJECT:'!',"water",contained, blessed, 0
+OBJECT:'!',"water",contained, blessed, 0
+OBJECT:'!',"water",contained, blessed, 0
+OBJECT:'!',"water",contained, blessed, 0
+OBJECT:'!',"water",contained, blessed, 0
+OBJECT:'!',"water",contained, blessed, 0
+OBJECT:'!',"water",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"identify",contained, blessed, 0
+OBJECT:'?',"charging",contained, blessed, 0
+OBJECT:'?',"charging",contained, blessed, 0
+OBJECT:'?',"charging",contained, blessed, 0
+OBJECT:'(',"skeleton key", (3,5)
