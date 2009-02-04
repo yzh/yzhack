@@ -583,6 +583,13 @@ giveback:
 */
 	pline("流し台は一瞬規則正しく噴出する間欠泉のように見えた。");
 		    break;
+		case RIN_CLAIRVOYANCE:
+/*JP
+		You("see the sink from all sides.");
+*/
+	pline("流し台が各方面から見えた。");
+		    break;
+
 	    }
 	}
 	if(ideed)

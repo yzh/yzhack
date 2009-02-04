@@ -613,7 +613,8 @@ int thrown;
 	      tmp += rnd(20);
 	      silvermsg = TRUE;
 	      silverobj = TRUE;
-	      Strcpy(saved_oname, "gloves");
+	      /*	      Strcpy(saved_oname, "gloves"); */
+	      Strcpy(saved_oname, "グローブ");
 	    }
 	    /* Blessed gloves give bonuses when fighting 'bare-handed'.
              * Only one of the silver/blessed bonuses applies.
@@ -1167,7 +1168,7 @@ int thrown;
 		    pline("%s %s from your powerful strike!", Monnam(mon),
 			  makeplural(stagger(mon->data, "stagger")));
 #else
-		    pline("%sはあなたの会心の一撃でよろめいた！",
+		    pline("%sはあなたの強烈な一撃でよろめいた！",
 			  Monnam(mon));
 #endif
 		/* avoid migrating a dead monster */

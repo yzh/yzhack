@@ -863,6 +863,7 @@ register struct obj *obj;
 	case RIN_FREE_ACTION:                
 	case RIN_SLOW_DIGESTION:
 	case RIN_SUSTAIN_ABILITY:
+	case RIN_CLAIRVOYANCE:
 	case MEAT_RING:
 		break;
 	case RIN_WARNING:
