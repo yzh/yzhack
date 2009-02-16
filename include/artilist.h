@@ -64,7 +64,7 @@ A("Mjollnir",			WAR_HAMMER,		/* Mjo:llnir */
 
 A("Grimtooth",			ORCISH_DAGGER,
 	SPFX_RESTR, 0, 0,
-	PHYS(8,14),	NO_DFNS,	NO_CARY,	0, A_CHAOTIC, NON_PM, PM_ORC, 300L ),
+	PHYS(8,14),	NO_DFNS,	NO_CARY,	0, A_CHAOTIC, PM_ROGUE, PM_ORC, 300L ),
 /*
  *	Orcrist and Sting have same alignment as elves.
  */
@@ -90,13 +90,21 @@ A("Magicbane",			ATHAME,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
 	STUN(3,4),	DFNS(AD_MAGM),	NO_CARY,	0, A_NEUTRAL, PM_WIZARD, NON_PM, 3500L ),
 
-/*A("Frost Brand",		LONG_SWORD,
+A("Deep Freeze",                ATHAME,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
-	COLD(5,0),	COLD(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),*/
+	COLD(5,5),      COLD(0,0),      NO_CARY,        0, A_CHAOTIC, NON_PM, NON_PM, 400L ),
 
-/*A("Fire Brand",			LONG_SWORD,
+A("Firewall",                  ATHAME,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
-	FIRE(5,0),	FIRE(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),*/
+	FIRE(4,4),      FIRE(0,0),      NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 400L ),
+
+A("Frost Brand",		LONG_SWORD,
+	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
+	COLD(5,0),	COLD(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),
+
+A("Fire Brand",			LONG_SWORD,
+	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
+	FIRE(5,0),	FIRE(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),
 
 /*A("Dragonslayer",			BROADSWORD,
 	(SPFX_RESTR|SPFX_DCLAS), 0, S_DRAGON,
