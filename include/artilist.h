@@ -90,14 +90,6 @@ A("Magicbane",			ATHAME,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
 	STUN(3,4),	DFNS(AD_MAGM),	NO_CARY,	0, A_NEUTRAL, PM_WIZARD, NON_PM, 3500L ),
 
-A("Deep Freeze",                ATHAME,
-	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
-	COLD(5,5),      COLD(0,0),      NO_CARY,        0, A_CHAOTIC, NON_PM, NON_PM, 400L ),
-
-A("Firewall",                  ATHAME,
-	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
-	FIRE(4,4),      FIRE(0,0),      NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 400L ),
-
 A("Frost Brand",		LONG_SWORD,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
 	COLD(5,0),	COLD(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),
@@ -176,6 +168,31 @@ A("Mirrorbright",               SHIELD_OF_REFLECTION,
 	(SPFX_RESTR|SPFX_HALRES|SPFX_REFLECT), 0, 0,
 	NO_ATTK,      NO_DFNS,        NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 5000L ),
 
+A("Deep Freeze",                ATHAME,
+	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
+	COLD(5,5),      COLD(0,0),      NO_CARY,        0, A_CHAOTIC, NON_PM, NON_PM, 400L ),
+
+A("Firewall",                  ATHAME,
+	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
+	FIRE(4,4),      FIRE(0,0),      NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 400L ),
+
+/*A("Thunderforce",			LONG_SWORD,
+	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
+	ELEC(5,0),	ELEC(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),*/
+
+A("Disrupter",                  MACE,
+	(SPFX_RESTR|SPFX_DFLAG2), 0, M2_UNDEAD,
+	PHYS(5,30),     NO_DFNS,        NO_CARY,        0, A_NEUTRAL, PM_PRIEST, NON_PM, 500L ),
+
+/*A("Quick Blade",                ELVEN_SHORT_SWORD,
+	SPFX_RESTR, 0, 0,
+	PHYS(9,2),      NO_DFNS,        NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 1000L ),*/
+
+A("Ebony Lacquered Bow",         YUMI,
+	(SPFX_RESTR|SPFX_SEARCH), 0, 0,
+	PHYS(5,0),	NO_DFNS,	NO_CARY,
+	CREATE_AMMO, A_LAWFUL, PM_MEDIUM, NON_PM, 2000L ),
+
 
 /*
  *	The artifacts for the quest dungeon, all self-willed.
@@ -218,7 +235,7 @@ A("The Magic Mirror of Merlin", MIRROR,
 A("The Holy Dagger",			ATHAME,
 	(SPFX_NOGEN|SPFX_RESTR|SPFX_REFLECT|SPFX_INTEL|SPFX_DFLAG2), SPFX_HPHDAM, M2_UNDEAD,
 	PHYS(3,4),	NO_DFNS,	CARY(AD_MAGM),
-	CREATE_AMMO,	A_LAWFUL, PM_MEDIUM, NON_PM, 1500L ),
+	0,	A_LAWFUL, PM_MEDIUM, NON_PM, 1500L ),
 
 A("The Eyes of the Overworld",	LENSES,
 	(SPFX_NOGEN|SPFX_RESTR|SPFX_INTEL|SPFX_XRAY), 0, 0,
