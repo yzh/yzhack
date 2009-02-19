@@ -151,7 +151,7 @@ dosounds()
 		"smell marsh gas!",	/* so it's a smell...*/
 		"hear Donald Duck!",
 #else
-		"蚊の羽音を聞いた。",
+		"蚊の羽音を聞いた！",
 		"腐った匂いがした！",	/* so it's a smell...*/
 		"ドナルドダックの声を聞いた！",
 #endif
@@ -362,7 +362,7 @@ dosounds()
 		    "Neiman and Marcus arguing!",
 #else
 		    "誰かが泥棒をののしる声を聞いた。",
-		    "レジのチーンという音を聞いた。",
+		    "レジスターの音を聞いた。",
 		    "イトーとヨーカドーの議論を聞いた！",
 #endif
 	    };

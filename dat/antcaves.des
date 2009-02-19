@@ -120,10 +120,10 @@ MONSTER: 'a', "soldier ant", random, hostile
 MONSTER: 'a', "soldier ant", random, hostile
 MONSTER: 'a', "soldier ant", random, hostile
 MONSTER: 'a', "soldier ant", random, hostile
-MONSTER: 'a', "soldier ant", random, hostile
-MONSTER: 'a', "soldier ant", random, hostile
-MONSTER: 'a', "soldier ant", random, hostile
-MONSTER: 'a', "soldier ant", random, hostile
+MONSTER: 'a', "fire ant", random, hostile
+MONSTER: 'a', "fire ant", random, hostile
+MONSTER: 'a', "ice ant", random, hostile
+MONSTER: 'a', "ice ant", random, hostile
 MONSTER: 'a', "queen ant", random, hostile
 #
 TRAP: "spiked pit", random
