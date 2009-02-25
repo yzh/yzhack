@@ -1,0 +1,59 @@
+MAZE: "drgncave" , ' '
+GEOMETRY: center,center
+#0        1         2         3         4         5         6
+#1234567890123456789012345678901234567890123456789012345678901234567890
+MAP
+           ----             ------                                  
+           |LL--          --|LLLL-----------                        
+     ----- --LL---------- |L|---LLLL|......|            ----        
+    --...------LL-|.....---L-- ----LLL------           --LL|        
+    |..|...------L|.----.|L..----..--LL|    ------------LL-------   
+   --.-----......-L-----LLL--.....--------- |.......--LL-----...|   
+   |LLL--.....---..L||LLLLLL--.....--  |LL---.........L.---...LL|   
+   ---.LL.---..----L||L-LL..L..LL--.| ---LL..------.|L|..|..---L|   
+     --....---.....L--LL-LL-L---LLL.---...|LL-- --.------.-----L|   
+    --...|..L.....-LL.|LLLLLL.----LL...-----LL---.--    |.| |LLL--  
+   --..-----LL---...----.-L|.|.....LL--|.....LLL..|     |.| ---LL|  
+ ---..--   ---L..--..--|...L.----.|.LL-|.---.--L---     |.----..L|  
+ |..----    |.LL----..----.L...|---.|LL--- |.---- --------.|-..---  
+ |.....|    ---LL| ---....|LL-----.---LL-- --.--- |LLLLL|.-|.---    
+ -------      --L--  -------L......| ---L-- --..-------L|.||LL--    
+               --L--       |L-------   --L-- ---..-----..----LL|    
+                --L--      ---          --L--  ---......--  ----    
+                 |LL|                    --L|    --------           
+                 ----                     ---                       
+
+ENDMAP
+RANDOM_MONSTERS: 'D','d'
+STAIR:(48,06),up
+BRANCH:(48,06,48,06),(0,0,0,0)
+#
+# the stuff to find here
+OBJECT: '!',"full healing",random
+OBJECT: '!',"full healing",random
+OBJECT: '/',"digging",random
+OBJECT: '"',"amulet versus poison",random
+OBJECT: '[',"speed boots",random
+OBJECT: '=',"conflict",random
+OBJECT: '%',"egg",random
+OBJECT: '%',"egg",random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+#
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+#
+TRAP: "spiked pit", random
+TRAP: "spiked pit", random
+TRAP: "pit", random
+TRAP: "pit", random
