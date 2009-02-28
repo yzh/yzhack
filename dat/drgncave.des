@@ -9,15 +9,15 @@ MAP
     --...------LL-|.....---L-- ----LLL------           --LL|        
     |..|...------L|.----.|L..----..--LL|    ------------LL-------   
    --.-----......-L-----LLL--.....--------- |.......--LL-----...|   
-   |LLL--.....---..L||LLLLLL--.....--  |LL---.........L.---...LL|   
-   ---.LL.---..----L||L-LL..L..LL--.| ---LL..------.|L|..|..---L|   
-     --....---.....L--LL-LL-L---LLL.---...|LL-- --.------.-----L|   
-    --...|..L.....-LL.|LLLLLL.----LL...-----LL---.--    |.| |LLL--  
-   --..-----LL---...----.-L|.|.....LL--|.....LLL..|     |.| ---LL|  
- ---..--   ---L..--..--|...L.----.|.LL-|.---.--L---     |.----..L|  
- |..----    |.LL----..----.L...|---.|LL--- |.---- --------.|-..---  
- |.....|    ---LL| ---....|LL-----.---LL-- --.--- |LLLLL|.-|.---    
- -------      --L--  -------L......| ---L-- --..-------L|.||LL--    
+   |LLL--.....---..L||LLLLLL--.........|LL---.........L.---...LL|   
+   ---.LL.---..----L|-L-LL..L..LL--.|..--LL..------.|L...L..---L|   
+     --....---.....L-.LL-LL-L---LLL.--.....LL-- --.------.-----L|   
+    --...|..L.....-LL.|LLLLLL.----LL...-----LL---.--....|.| |LLL--  
+   --..-----LL--L...----.-L........LL--|.....LLL..L.....|.| ---LL|  
+ ---..--   ---L..--..--|...L.----.|.LL-|.---.--L----....|.----..L|  
+ |...---    |.LL----..----.L...|---.|LL--- |.---- -------..--..---  
+ |.....|    ---LL| ---....|LL-----.---LL-- --.--- |LLLLL|.L..---    
+ -------      --L--  -------L......| ---L-- --..-------L|..|LL--    
                --L--       |L-------   --L-- ---..-----..----LL|    
                 --L--      ---          --L--  ---......--  ----    
                  |LL|                    --L|    --------           
@@ -31,18 +31,40 @@ BRANCH:(48,06,48,06),(0,0,0,0)
 # the stuff to find here
 OBJECT: '!',"full healing",random
 OBJECT: '!',"full healing",random
-OBJECT: '/',"digging",random
-OBJECT: '"',"amulet versus poison",random
-OBJECT: '[',"speed boots",random
-OBJECT: '=',"conflict",random
-OBJECT: '%',"egg",random
-OBJECT: '%',"egg",random
+OBJECT: '*',"diamond",random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '*',random,random
+OBJECT: '=',"adornment",random
+OBJECT: '=',"adornment",random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
+GOLD: random, random
 GOLD: random, random
 GOLD: random, random
 GOLD: random, random
 GOLD: random, random
 GOLD: random, random
 #
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
+MONSTER: 'D', random, random, hostile
 MONSTER: 'D', random, random, hostile
 MONSTER: 'D', random, random, hostile
 MONSTER: 'D', random, random, hostile

@@ -109,6 +109,7 @@ spec_levs: ../util/lev_comp \
 	../util/lev_comp antcaves.des
 	../util/lev_comp bigroom.des
 	../util/lev_comp castle.des
+	../util/lev_comp drgncave.des
 	../util/lev_comp endgame.des
 	../util/lev_comp forest.des
 	../util/lev_comp guild.des

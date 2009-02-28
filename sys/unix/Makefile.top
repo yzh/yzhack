@@ -78,7 +78,7 @@ DATHELP = jhelp jhh jcmdhelp jhistory jopthelp jwizhelp
 SPEC_LEVS = asmodeus.lev baalz.lev bigrm-?.lev castle-?.lev fakewiz?.lev guild?.lev \
 	juiblex.lev knox.lev mall-?.lev mall.lev medusa-?.lev minend-?.lev minefill.lev \
 	mineking.lev minetn-?.lev oracle.lev orcus.lev sanctum.lev sea.lev soko?-?.lev \
-	frst?.lev frsted-?.lev abdcstl?.lev antcaves.lev \
+	frst?.lev frsted-?.lev abdcstl?.lev antcaves.lev drgncave.lev \
 	tower?.lev valley.lev wizard?.lev \
 	astral.lev air.lev earth.lev fire.lev water.lev
 QUEST_LEVS = ???-goal.lev ???-fil?.lev ???-loca.lev ???-strt.lev

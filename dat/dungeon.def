@@ -35,6 +35,7 @@ BRANCH:		"The Abandoned Castle" @ (21, 2)
 LEVEL:		"guild2" "none" @ (23, 0) 75
 BRANCH:         "The Sunless Sea" @ (25, 2)
 LEVEL:	        "guild3" "none" @ (33, 0) 75
+BRANCH:		"The Dragon Cave" @ (30, 2)
 RNDLEVEL:	"medusa" "none" @ (-2, 1) 4
 LEVALIGN:	chaotic
 RNDLEVEL:	"castle" "none" @ (-1, 0) 3
@@ -139,6 +140,12 @@ DUNGEON:        "The Sunless Sea" "none" (1, 0)
 ALIGNMENT:      chaotic
 DESCRIPTION:    mazelike
 LEVEL:          "sea" "none" @ (1, 0)
+
+### THe Dragon Cave ###
+DUNGEON:       "The Dragon Cave" "none" (1, 0)
+ALIGNMENT:     chaotic
+DESCRIPTION:   mazelike
+LEVEL:	       "drgncave" "none" @ (1, 0)
 
 #
 #	The Central Vault of Croesus.
