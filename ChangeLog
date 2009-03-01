@@ -1,0 +1,279 @@
+2009-03-01  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/monst.c (]): ice ant 追加
+
+	* include/artilist.h : アーティファクト追加（ディープフリーズ、ファイアウォール、ディスラプター、烏漆の弓）
+
+	* dat/drgncave.des : 竜の巣
+
+	* patch: orb of light パッチ（修正）
+
+2009-01-26  yzh  <yuzuha.tomo@gmail.com>
+
+	* patch: auto-thrust パッチ
+
+	* src/u_init.c (]): F初期装備変更
+
+	* src/objects.c (]): メイド服異常強化
+
+	* src/makemon.c (m_initweap): 上位コボルトにジャベリン
+
+	* include/artilist.h (]): ミラーブライト追加
+
+	* dat/jtrnsobj.dat: アイテム追加
+
+	* dat/guild.des (OBJECT): モンスター修正
+
+	* dat/Fighter.des: マップ修正
+
+2008-12-21  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/Fighter.des (MONSTER): マップ修正
+
+2007-10-13  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/uhitm.c (hmon_hitmon): racial hit penalty
+
+2007-10-05  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/do_wear.c (find_ac): racial ac bonus
+
+	* src/uhitm.c (hmon_hitmon): racial hit bonus
+
+2007-10-03  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/castle.des : 城追加
+
+2007-09-27  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/mplayer.c (mk_mplayer): medium
+
+2007-09-26  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/shk.c (shk_move): つるはしOK
+
+	* src/uhitm.c (hmon_hitmon): medium
+
+	* src/mthrowu.c (thrwmu): medium
+
+2007-09-21  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/monst.c : エルフとオークの射手
+
+	* dat/sokoban.des : 動物園と墓場
+
+2007-09-17  yzh  <yuzuha.tomo@gmail.com>
+
+	* rev.119: 巫女完成
+
+	* src/pray.c (dopurify): みそぎ
+
+	* src/monst.c (mons): triffid
+
+2007-09-14  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/pray.c (dopurify): 巫女みそぎ
+
+	* include/skills.h (martial_bonus): みこマーシャルアーツ
+
+	* src/attrib.c (acurr): wiz cornuthaum
+
+	* src/makemon.c (makemon): uは巫女に友好的
+
+2007-09-13  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/dothrow.c (throw_obj): 巫女は弓連射
+
+2007-09-09  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/objects.c: skill
+
+2007-09-08  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/jquest.txt: medium quest
+
+	* src/monst.c (_mons2): 巫女リーダー
+
+	* src/objects.c: iron saber
+
+2007-09-07  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/role.c: ステータス修正
+
+2007-09-03  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/shk.c: つるはしを持って店に入れる
+
+	* dat/Medium.des : med-goal
+
+2007-08-30  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/monst.c (mons): skeleton dragon
+
+	* src/makemon.c (m_initinv): vampire opera cloak
+
+2007-08-28  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/artifact.c (artifact_hit): butterfly knife behead
+
+2007-08-27  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/fountain.c (dipfountain): 秩序騎士lv.7のみエクスカリバー入手
+
+	* src/artifact.c (artifact_hit): grimtooth poison
+
+2007-08-26  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/attrib.c (adjabil): miko
+
+	* src/dog.c (makedog): miko
+
+	* src/role.c: miko
+
+	* src/u_init.c : miko
+
+2007-08-25  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/artifact.c (artifact_light): sunsword
+
+	* include/artilist.h: butterfly knife
+
+	* src/monst.c, src/mondata.c: ユニコーンの子ども
+
+	* include/artilist.h: いろいろ削除
+
+2007-08-19  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/monst.c, dat/jtrnsmons.dat: モンスターarcherfish追加
+
+	* src/weapon.c, src/u_init.c: fighter修正
+
+	* src/u_init.c : Wは守りのクローク
+
+2007-08-18  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/do.c (goto_level): ゲヘナの奇妙な力廃止
+
+	* src/exper.c (newuexp): 経験値テーブル変更
+
+2007-08-17  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/apply.c (use_lamp): bug? %s_ランプ_の灯りは消えた
+
+2007-08-15  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/drawing.c, src/monst.c, include/monsym.h, dat/jtrnsmon.dat: killer coins
+
+2007-08-14  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/role.c, src/u_init.c: fighter調整
+
+2007-08-13  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/role.c, src/makemon.c, src/monst.c, dat/Fighter.des, dat/jtrnsmon.dat, dat/jquest.txt: Fighter変更
+
+	* include/artilist.h, src/role.c, src/monst.c, dat/jtrnsmon.dat, dat/jtrnsobj.dat, dat/jquest.txt: Fighter変更
+
+2007-08-12  yzh  <yuzuha.tomo@gmail.com>
+
+	* include/artilist.h, src/role.c, src/attrib.c, src/makemon.c, src/monst.c, src/mplayer.c, src/u_init.c, src/weapon.c, dat/Fighter.des, dat/jtrnsmon.dat, dat/jtrnsobj.dat, dat/jquest.txt, util/makedefs.c, sys/unix/Makefile.dat: Figher patch
+
+	* all: 訳修正(dokick.cまで)
+
+2007-08-11  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/botl.c: hpmon brass準拠
+
+	* all: en2jp、訳修正(dig.cまで)
+
+2007-08-10  yzh  <yuzuha.tomo@gmail.com>
+
+	* invent.c: 通貨単位をzorkmidに
+
+	* src/shk.c, src/shknam.c, include/eshk.h, src/invent.c: 店のサービス (brass)
+
+	* src/shknam.c: 訳修正
+
+	* dat/dungeon.def: 迷宮を42+-5階に
+
+	* include/dgn_file.h (LEV_LIMIT): 99
+
+	* include/global.h (MAXLEVEL): 迷宮の階層上限を50に
+
+	* dat/guild.des: 追加
+
+	* dat/dungeon.def : mall 100%、guild1追加
+
+2007-08-07  yzh  <yuzuha.tomo@gmail.com>
+
+	* patch: armory
+
+2007-08-06  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/forest.des: アイテム追加
+
+	* src/makemon.c (makemon): メイドは鏡か飾りの指輪
+
+2007-08-05  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/jtrnsobj.dat: 訳語修正
+
+	* src/objects.c, src/zap.c, src/spell.c: spellbook of lightning 
+
+	* patch: new medusa
+
+	* src/monst.c, src/makemon.c, src/sounds.c, include/mondata.h, dat/mall-?.des: maid追加
+
+	* dat/forest.des, sys/unix/Makefile.dat: 森名前修正
+
+2007-08-04  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/forest.des: 報酬は軽量化と反射のどちらか
+
+	* src/makemon.c (m_initweap): ドワーフはオイルランプ持ち
+
+	* src/objects.c, dat/jtrnsobj.dat: amulet of drain resistance
+
+	* src/u_init.c, src/zap.c, src/makemon.c: 女性Healerと看護婦の初期装備を看護婦セットに
+
+	* src/objects.c, src/objnam.c, src/do_wear.c: maid dress, frilled apron, kachusha, nurse cap, nurse uniform
+
+	* src/objects.c, src/objnam.c, dat/jtrnsobj.dat: silver short sword, silver long sword, sword mace
+
+	* src/objects.c, src/makemon.c: 金属鎧AC調節、ミスリル服出現率低下
+
+	* dat/dungeon.def, dat/jtrnsobj.dat : antcaves、forest追加
+
+	* src/monst.c : queen ant追加
+
+	* dat/antcaves.des : 蟻地獄
+
+	* dat/medusa.des : メデューサは床掘り禁止
+
+	* src/monst.c, include/mondata.h : ルッゴ、発光キノコ追加
+
+	* dat/mines.des, dat/newmall.des: mineking、newmall追加
+
+2007-08-03  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/sounds.c, src/hack.c: garden JP
+
+	* src/u_init.c : 初期装備変更(slash'em)
+
+	* include/config.h, src/bones.c: NO_BONES
+
+	* patch: merssene twister, moonphase, menucolors, underground river, garden
+
+	* rev.62: vanilla JNetHack
+
+	* sys/unix/Makefile.top : Linux用config
+
+	* sys/unix/Makefile.src : Linux用config
+
+	* include/config.h: default config
+
+	* include/unixconf.h : Linux用config
+
+	* dat/jtrnsobj.dat: 名称修正
+
+	* yzhack.txt : init
