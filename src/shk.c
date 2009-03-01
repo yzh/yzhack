@@ -4781,6 +4781,7 @@ boolean altusage; /* some items have an "alternate" use with different cost */
 	} else if(otmp->otyp == CRYSTAL_BALL ||		 /* 1 - 5 */
 		  otmp->otyp == OIL_LAMP ||		 /* 1 - 10 */
 		  otmp->otyp == BRASS_LANTERN ||
+		  otmp->otyp == ORB_OF_LIGHT ||
 		 (otmp->otyp >= MAGIC_FLUTE &&
 		  otmp->otyp <= DRUM_OF_EARTHQUAKE) ||	 /* 5 - 9 */
 		  otmp->oclass == WAND_CLASS) {		 /* 3 - 11 */

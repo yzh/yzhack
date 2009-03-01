@@ -995,6 +995,7 @@ register const char *let,*word;
 		    (!otmp->oartifact && !objects[otyp].oc_unique &&
 		     (otyp != FAKE_AMULET_OF_YENDOR || otmp->known) &&
 		     otyp != CRYSTAL_BALL &&	/* #invoke synonym for apply */
+		     otyp != ORB_OF_LIGHT &&
 		   /* note: presenting the possibility of invoking non-artifact
 		      mirrors and/or lamps is a simply a cruel deception... */
 		     otyp != MIRROR && otyp != MAGIC_LAMP &&

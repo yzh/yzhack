@@ -1917,6 +1917,7 @@ boolean in_view;
 		case LENSES:
 		case MIRROR:
 		case CRYSTAL_BALL:
+		case ORB_OF_LIGHT:
 #ifdef TOURIST
 		case EXPENSIVE_CAMERA:
 #endif

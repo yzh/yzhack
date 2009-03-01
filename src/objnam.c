@@ -1185,6 +1185,7 @@ plus:
 #endif
 			break;
 		} else if (obj->otyp == OIL_LAMP || obj->otyp == MAGIC_LAMP ||
+			obj->otyp == ORB_OF_LIGHT ||
 			obj->otyp == BRASS_LANTERN || Is_candle(obj)) {
 			if (Is_candle(obj) &&
 			    obj->age < 20L * (long)objects[obj->otyp].oc_cost)
@@ -3416,6 +3417,7 @@ typfnd:
 
 	if (islit &&
 		(typ == OIL_LAMP || typ == MAGIC_LAMP || typ == BRASS_LANTERN ||
+		 typ == ORB_OF_LIGHT ||
 		 Is_candle(otmp) || typ == POT_OIL)) {
 	    place_object(otmp, u.ux, u.uy);  /* make it viable light source */
 	    begin_burn(otmp, FALSE);

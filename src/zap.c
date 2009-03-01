@@ -973,6 +973,7 @@ register struct obj *obj;
 	       obj->otyp != WAN_CANCELLATION &&
 		 /* can't cancel cancellation */
 		 obj->otyp != MAGIC_LAMP &&
+		 obj->otyp != ORB_OF_LIGHT &&
 		 obj->otyp != CANDELABRUM_OF_INVOCATION) {
 		costly_cancel(obj);
 		obj->spe = (obj->oclass == WAND_CLASS) ? -1 : 0;

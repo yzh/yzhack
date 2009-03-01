@@ -1450,6 +1450,7 @@ struct obj *obj;
 	    if (obj->otyp == CANDELABRUM_OF_INVOCATION && obj->cursed)
 		return FALSE;
 	    if ((obj->otyp == OIL_LAMP || obj->otyp == MAGIC_LAMP ||
+		 obj->otyp == ORB_OF_LIGHT ||
 		 obj->otyp == BRASS_LANTERN) && obj->cursed && !rn2(2))
 		return FALSE;
 	    if (obj->where == OBJ_MINVENT ? cansee(x,y) : !Blind)
@@ -1495,6 +1496,11 @@ struct obj *obj;
 		    pline("%s lamp is now off.", Shk_Your(buf, obj));
 */
 		    pline("%sランプの灯りは消えた。", Shk_Your(buf, obj));
+		else if (obj->otyp = ORB_OF_LIGHT)
+/*JP
+		    pline ("%s orb's light fades.", Shk_Your(buf, obj));
+*/
+		    pline("%sオーブの灯りは弱まった。", Shk_Your(buf, obj));
 		else
 /*JP
 		    You("snuff out %s.", yname(obj));
@@ -1533,6 +1539,14 @@ struct obj *obj;
 		    pline("%s lamp is now on.", Shk_Your(buf, obj));
 */
 		    pline("%sランプに灯が灯った。", Shk_Your(buf, obj));
+		} else if (obj->otyp == ORB_OF_LIGHT) {
+		    check_unpaid(obj);
+/*JP
+		    pline("%s orb glows with magical light.",
+*/
+		    pline("%sオーブは魔法の光を放った。",
+			  Shk_Your(buf, obj));
+		    makeknown(ORB_OF_LIGHT);
 		} else {	/* candle(s) */
 #if 0 /*JP*/
 		    pline("%s flame%s %s%s",
@@ -3954,6 +3968,7 @@ doapply()
 	case OIL_LAMP:
 	case MAGIC_LAMP:
 	case BRASS_LANTERN:
+	case ORB_OF_LIGHT:
 		use_lamp(obj);
 		break;
 	case POT_OIL:

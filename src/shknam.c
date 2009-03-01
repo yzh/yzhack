@@ -225,7 +225,7 @@ const struct shclass shtypes[] = {
 */
 	{"ø©… ≈π", FOOD_CLASS, 5, D_SHOP,
 	    {{83, FOOD_CLASS}, {5, -POT_FRUIT_JUICE}, {4, -POT_BOOZE},
-	     {5, -POT_WATER}, {3, -ICE_BOX}}, shkfoods},
+	     {5, -POT_WATER}, {3, -ICE_BOX}, {0, 0}}, shkfoods},
 /*JP
 	{"jewelers", RING_CLASS, 3, D_SHOP,
 */
@@ -260,8 +260,8 @@ const struct shclass shtypes[] = {
 	{"lighting store", TOOL_CLASS, 0, D_SHOP,
 */
 	{"æ»Ã¿¥Ô∂Ò≈π", TOOL_CLASS, 0, D_SHOP,
-	    {{32, -WAX_CANDLE}, {50, -TALLOW_CANDLE},
-	     {5, -BRASS_LANTERN}, {10, -OIL_LAMP}, {3, -MAGIC_LAMP}}, shklight},
+	    {{31, -WAX_CANDLE}, {48, -TALLOW_CANDLE}, {5, -BRASS_LANTERN},
+	     {10, -OIL_LAMP}, {3, -MAGIC_LAMP}, {3, -ORB_OF_LIGHT}}, shklight},
 	{(char *)0, 0, 0, 0, {{0, 0}, {0, 0}, {0, 0}}, 0}
 };
 

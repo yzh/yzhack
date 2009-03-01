@@ -481,6 +481,9 @@ boolean artif;
 					otmp->lamplit = 0;
 					blessorcurse(otmp, 2);
 					break;
+		case ORB_OF_LIGHT:	otmp->lamplit = 0;
+					blessorcurse(otmp, 5);
+					break;
 		case CHEST:
 		case LARGE_BOX:		otmp->olocked = !!(rn2(5));
 					otmp->otrapped = !(rn2(10));
