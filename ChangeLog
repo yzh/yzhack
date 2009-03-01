@@ -1,5 +1,17 @@
 2009-03-01  yzh  <yuzuha.tomo@gmail.com>
 
+	* dat/jtrnsobj.dat: pot_poison
+
+	* src/u_init.c (]): pot_poison
+
+	* src/potion.c (peffects): pot_poison
+
+	* src/objects.c (]): pot_poison
+
+	* src/apply.c (doapply): pot_poison
+
+	* src/makemon.c (m_initweap): ホビットは石をもつ
+
 	* src/monst.c (]): ice ant 追加
 
 	* include/artilist.h : アーティファクト追加（ディープフリーズ、ファイアウォール、ディスラプター、烏漆の弓）

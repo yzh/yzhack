@@ -513,7 +513,8 @@
 !full healing:		完全回復の薬:
 !polymorph:		変化の薬:
 !booze:			酔っぱらいの薬:
-!sickness:		毒薬:
+!sickness:		病気の薬:
+!poison:		毒薬:
 !fruit juice:		フルーツジュース:
 !water:			水:
 !oil:			油:
@@ -540,6 +541,7 @@
 !white:			白い:
 !brown:			茶色の:
 !fizzy:			発泡している:
+!hazy:			かすんだ:
 !dark:			陰気な色の:
 !clear:			無色の:
 !murky:			濃黒の:

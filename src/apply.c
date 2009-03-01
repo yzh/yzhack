@@ -4040,7 +4040,8 @@ doapply()
 			otmp = mkobj(POTION_CLASS, FALSE);
 			if (objects[otmp->otyp].oc_magic) do {
 			    otmp->otyp = rnd_class(POT_BOOZE, POT_WATER);
-			} while (otmp->otyp == POT_SICKNESS);
+			} while (otmp->otyp == POT_POISON
+				 || otmp->otyp == POT_SICKNESS);
 /*JP
 			what = "A potion";
 */

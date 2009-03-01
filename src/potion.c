@@ -886,11 +886,14 @@ peffects(otmp)
 			return(1);		/* nothing detected */
 		exercise(A_WIS, TRUE);
 		break;
-	case POT_SICKNESS:
+	case POT_POISON:
 /*JP
 		pline("Yecch!  This stuff tastes like poison.");
 */
 		pline("ウェー！毒のような味がする。");
+		char killerbuf[64];
+		sprintf(killerbuf, "有毒の%s",
+			(otmp->fromsink) ? "水道水" : fruitname(TRUE));
 		if (otmp->blessed) {
 #if 0 /*JP*/
 		    pline("(But in fact it was mildly stale %s.)",
@@ -899,24 +902,12 @@ peffects(otmp)
 		    pline("(しかし実際それは少し古くなった%s。)",
 			  fruitname(TRUE));
 #endif
-		    if (!Role_if(PM_HEALER)) {
-			/* NB: blessed otmp->fromsink is not possible */
-/*JP
-			losehp(1, "mildly contaminated potion", KILLED_BY_AN);
-*/
-			losehp(1, "病気に汚染された薬で", KILLED_BY_AN);
-		    }
+		    if (!Poison_resistance)
+			losehp(1, killerbuf, KILLED_BY);
 		} else {
-		    if(Poison_resistance)
-#if 0 /*JP*/
-			pline(
-			  "(But in fact it was biologically contaminated %s.)",
-			      fruitname(TRUE));
-#else
-			pline(
-			  "(しかし実際それは生物学的に汚染された%sだ。)",
-			      fruitname(TRUE));
-#endif
+		    if(Poison_resistance && !Role_if(PM_HEALER))
+                       pline("あなたは有毒の%sにあまり冒されない。",
+			    fruitname(TRUE));
 		    if (Role_if(PM_HEALER))
 /*JP
 			pline("Fortunately, you have been immunized.");
@@ -931,20 +922,9 @@ peffects(otmp)
 			    		Poison_resistance ? -1 : -rn1(4,3),
 			    		TRUE);
 			}
-			if(!Poison_resistance) {
-			    if (otmp->fromsink)
-				losehp(rnd(10)+5*!!(otmp->cursed),
-/*JP
-				       "contaminated tap water", KILLED_BY);
-*/
-				       "疫病に汚染された水で", KILLED_BY_AN);
-			    else
-				losehp(rnd(10)+5*!!(otmp->cursed),
-/*JP
-				       "contaminated potion", KILLED_BY_AN);
-*/
-				       "疫病に汚染された薬で", KILLED_BY_AN);
-			}
+			if(!Poison_resistance)
+			    losehp(rnd(10)+5*!!(otmp->cursed),
+				   killerbuf, KILLED_BY);
 			exercise(A_CON, FALSE);
 		    }
 		}
@@ -955,6 +935,23 @@ peffects(otmp)
 			You("五感に衝撃を受けた！");
 			(void) make_hallucinated(0L,FALSE,0L);
 		}
+		break;
+	case POT_SICKNESS:
+		pline("オェ！この%sは腐っている！",
+		      (otmp->fromsink) ? "水" : fruitname(TRUE));
+		if(Sick_resistance) {
+		    pline_The("生物学的に汚染された%sはあなたを病気にしない。",
+			      (otmp->fromsink) ? "水" : "ジュース");
+		    break;
+		}
+		long sick_time;
+		sprintf(killerbuf, "汚染された%s",
+			(otmp->fromsink) ? "流し" : "薬");
+		make_sick(Sick ? 1L :
+			  (otmp->blessed) ? 20L :
+			  (otmp->cursed) ? 10L :
+			  (long) rn1(10, 10),
+			  killerbuf, TRUE, SICK_VOMITABLE);
 		break;
 	case POT_CONFUSION:
 		if(!Confusion)
@@ -1421,16 +1418,23 @@ boolean your_fault;
     } else {
 	boolean angermon = TRUE;
 
+	/* GOTOs? We don't need no stinking GOTOs. */
+	short tmp_otyp = obj->otyp;
+	if (mon->data == &mons[PM_PESTILENCE]) {
+		if (obj->otyp == POT_HEALING ||
+		    obj->otyp == POT_EXTRA_HEALING ||
+		    obj->otyp == POT_FULL_HEALING)
+			tmp_otyp = POT_SICKNESS;
+		else if (obj->otyp == POT_SICKNESS)
+			tmp_otyp = POT_FULL_HEALING;
+	}
 	if (!your_fault) angermon = FALSE;
-	switch (obj->otyp) {
+	switch (tmp_otyp) {
 	case POT_HEALING:
 	case POT_EXTRA_HEALING:
 	case POT_FULL_HEALING:
-		if (mon->data == &mons[PM_PESTILENCE]) goto do_illness;
-		/*FALLTHRU*/
 	case POT_RESTORE_ABILITY:
 	case POT_GAIN_ABILITY:
- do_healing:
 		angermon = FALSE;
 		if(mon->mhp < mon->mhpmax) {
 		    mon->mhp = mon->mhpmax;
@@ -1440,12 +1444,40 @@ boolean your_fault;
 */
 			pline("%sは元気になったように見える。", Monnam(mon));
 		}
+	case POT_POISON:
+		if (resists_poison(mon)) {
+		    if (canseemon(mon))
+			pline("%sはなんともないようだ。", Monnam(mon));
+		    break;
+		}
+		/* Poisoned arrows cut the monster and introduce a small
+		 * amount of poison into the body.  The broken flask is also
+		 * likely to cut, and there's a lot more poison.  Thus we
+		 * will keep the 10% instakill.  Damage is no longer based
+		 * on mhpmax; poison should be potentially lethal.
+		 */
+		if(!rn2(10) && !resist(mon, POTION_CLASS, 0, NOTELL)) {
+			if (canseemon(mon)) {
+			    if (humanoid(mon->data) && !breathless(mon->data))
+				pline("%sはせきこみ、胸をかきむしった！",
+				      Monnam(mon));
+			    else pline("%sは卒倒した！", Monnam(mon));
+			}
+			killed(mon);
+			break;
+		}
+		int pain = d((resist(mon, POTION_CLASS, 0, NOTELL) ? 2:4),10);
+		mon->mhp -= pain;
+		mon->mhpmax -= pain / 2;
+		if (canseemon(mon))
+			pline("%sは病気っぽく見える。", Monnam(mon));
+		if (mon->mhp < 1) killed(mon);
 		break;
 	case POT_SICKNESS:
-		if (mon->data == &mons[PM_PESTILENCE]) goto do_healing;
-		if (dmgtype(mon->data, AD_DISE) ||
-			   dmgtype(mon->data, AD_PEST) || /* won't happen, see prior goto */
-			   resists_poison(mon)) {
+		if ((dmgtype(mon->data, AD_DISE) ||
+		    mon->data->mlet == S_FUNGUS ||
+		    is_undead(mon->data)) &&
+		    obj->otyp == POT_SICKNESS) { /* healing vs Pesty still hurts */
 		    if (canseemon(mon))
 #if 0 /*JP*/
 			pline("%s looks unharmed.", Monnam(mon));
@@ -1454,17 +1486,13 @@ boolean your_fault;
 #endif
 		    break;
 		}
- do_illness:
-		if((mon->mhpmax > 3) && !resist(mon, POTION_CLASS, 0, NOTELL))
-			mon->mhpmax /= 2;
-		if((mon->mhp > 2) && !resist(mon, POTION_CLASS, 0, NOTELL))
-			mon->mhp /= 2;
-		if (mon->mhp > mon->mhpmax) mon->mhp = mon->mhpmax;
+		pain = mon->mhpmax * ((obj->oeroded) ? 1 : 2)
+		       / (resist(mon, POTION_CLASS, 0, NOTELL) ? 6 : 3);
+		mon->mhp -= pain;
+		mon->mhpmax -= pain / 2;
 		if (canseemon(mon))
-/*JP
-		    pline("%s looks rather ill.", Monnam(mon));
-*/
-		    pline("%sは病気っぽく見える。", Monnam(mon));
+			pline("%sはひどい病気に見える！", Monnam(mon));
+		if (mon->mhp < 1) killed(mon);
 		break;
 	case POT_CONFUSION:
 	case POT_BOOZE:
@@ -1665,7 +1693,7 @@ register struct obj *obj;
 		if (u.uhp < u.uhpmax) u.uhp++, flags.botl = 1;
 		exercise(A_CON, TRUE);
 		break;
-	case POT_SICKNESS:
+	case POT_POISON:
 		if (!Role_if(PM_HEALER)) {
 			if (Upolyd) {
 			    if (u.mh <= 5) u.mh = 1; else u.mh -= 5;
@@ -1675,6 +1703,9 @@ register struct obj *obj;
 			flags.botl = 1;
 			exercise(A_CON, FALSE);
 		}
+		break;
+	case POT_SICKNESS:
+		if (!Role_if(PM_HEALER)) exercise(A_CON, FALSE);
 		break;
 	case POT_HALLUCINATION:
 /*JP
@@ -1831,6 +1862,7 @@ register struct obj *o1, *o2;
 			}
 		case UNICORN_HORN:
 			switch (o2->otyp) {
+			    case POT_POISON:
 			    case POT_SICKNESS:
 				return POT_FRUIT_JUICE;
 			    case POT_HALLUCINATION:
@@ -1862,6 +1894,8 @@ register struct obj *o1, *o2;
 			break;
 		case POT_FRUIT_JUICE:
 			switch (o2->otyp) {
+			    case POT_POISON:
+				return POT_POISON;
 			    case POT_SICKNESS:
 				return POT_SICKNESS;
 			    case POT_SPEED:
@@ -2247,7 +2281,7 @@ dodip()
 				break;
 			case 2:
 			case 3:
-				obj->otyp = POT_SICKNESS;
+				obj->otyp = POT_POISON;
 				break;
 			case 4:
 				{
@@ -2317,7 +2351,7 @@ dodip()
 #endif
 
 	if(is_poisonable(obj)) {
-	    if(potion->otyp == POT_SICKNESS && !obj->opoisoned) {
+	    if(potion->otyp == POT_POISON && !obj->opoisoned) {
 		char buf[BUFSZ];
 		if (potion->quan > 1L)
 /*JP

@@ -3718,9 +3718,9 @@ struct obj *cloak;
 	case KITCHEN_APRON:
 	case FRILLED_APRON:
 #if 0 /* JP */
-	    return "エプロン";
-#else
 	    return "apron";
+#else
+	    return "エプロン";
 #endif
 	case ROBE:
 #if 0 /*JP*/

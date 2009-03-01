@@ -308,6 +308,7 @@ register struct monst *mtmp;
 			    break;
 			case 2:
 			    (void)mongets(mtmp, SLING);
+			    m_initthrow(mtmp, ROCK, 6); /* sling needs slingstone :) [Sakusha]*/
 			    break;
 		      }
 		    if (!rn2(10)) (void)mongets(mtmp, rn2(10) ? LEATHER_JACKET : ELVEN_MITHRIL_COAT);
