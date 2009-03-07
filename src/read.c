@@ -1286,6 +1286,9 @@ register struct obj	*sobj;
 	case SCR_GOLD_DETECTION:
 		if (confused || sobj->cursed) return(trap_detect(sobj));
 		else return(gold_detect(sobj));
+	case SCR_TRAP_DETECTION:
+		trap_detect(sobj);
+		break;
 	case SCR_FOOD_DETECTION:
 	case SPE_DETECT_FOOD:
 		if (food_detect(sobj))
@@ -1674,11 +1677,16 @@ register struct obj	*sobj;
 						8+4*bcsign(sobj));
 		break;
 	}
+	case SCR_DESTRUCTION:
+		pline("ÇË²õ¤Î´¬Êª¤À¡£");
+		known = TRUE;
+		break;
 	default:
 		impossible("What weird effect is this? (%u)", sobj->otyp);
 	}
 	return(0);
 }
+
 
 static void
 wand_explode(obj)

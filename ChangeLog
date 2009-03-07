@@ -1,3 +1,17 @@
+2009-03-07  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/objects.c (]): scr_trap_detection
+
+	* src/write.c (cost): scr_trap_detection
+
+	* src/read.c (seffects): scr_trap_detection
+
+	* src/write.c (cost): scr_destruction (notyet)
+
+	* src/objects.c (]): scr_destruction (notyet)
+
+	* src/read.c (seffects): scr_destruction (notyet)
+
 2009-03-01  yzh  <yuzuha.tomo@gmail.com>
 
 	* dat/jtrnsobj.dat: pot_poison
