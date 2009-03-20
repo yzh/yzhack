@@ -86,7 +86,7 @@ int expltype;
 /*JP
 		case 0: str = "magical blast";
 */
-		case 0: str = "魔法の風";
+		case 0: str = "魔力の嵐";
 			adtyp = AD_MAGM;
 			break;
 #if 0 /*JP*/
@@ -110,8 +110,8 @@ int expltype;
 		case 4: str =  (olet == WAND_CLASS) ? "death field" :
 							"disintegration field";
 #else
-		case 4: str = (olet == WAND_CLASS) ? "死の風" :
-							"分解の風";
+		case 4: str = (olet == WAND_CLASS) ? "死のフィールド" :
+							"分解のフィールド";
 #endif
 			adtyp = AD_DISN;
 			break;

@@ -1678,7 +1678,8 @@ register struct obj	*sobj;
 		break;
 	}
 	case SCR_DESTRUCTION:
-		pline("ÇË²õ¤Î´¬Êª¤À¡£");
+		pline("¤³¤ì¤ÏÇË²õ¤Î´¬Êª¤À¡ª");
+		//do_destruction();
 		known = TRUE;
 		break;
 	default:
@@ -1686,7 +1687,6 @@ register struct obj	*sobj;
 	}
 	return(0);
 }
-
 
 static void
 wand_explode(obj)

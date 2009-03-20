@@ -193,6 +193,10 @@ A("Ebony Lacquered Bow",         YUMI,
 	PHYS(5,0),	NO_DFNS,	NO_CARY,
 	CREATE_AMMO, A_LAWFUL, PM_MEDIUM, NON_PM, 2000L ),
 
+A("Starring Inferno",		QUARTERSTAFF,
+	(SPFX_RESTR|SPFX_REFLECT), (SPFX_EREGEN|SPFX_HSPDAM), 0,
+	PHYS(3,0),	NO_DFNS,	CARY(AD_MAGM),
+	TAMING,		A_CHAOTIC, NON_PM, NON_PM, 2000L ),
 
 /*
  *	The artifacts for the quest dungeon, all self-willed.
