@@ -1,4 +1,6 @@
-2009-03-22  yzh <yuzuha.tomo@gmail.com>
+2009-03-22  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/pray.c (dosacrifice): アーティファクトもらえるレベルは7以上
 
 	* include/artilist.h : アーティファクト整理
 

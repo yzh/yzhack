@@ -1965,7 +1965,7 @@ verbalize("In return for thy service, I grant thee the gift of Immortality!");
 	    /* you were already in pretty good standing */
 	    /* The player can gain an artifact */
 	    /* The chance goes down as the number of artifacts goes up */
-	    if (u.ulevel > 2 && u.uluck >= 0 &&
+	    if (u.ulevel > 6 && u.uluck >= 0 &&
 		!rn2(10 + (2 * u.ugifts * nartifacts))) {
 		otmp = mk_artifact((struct obj *)0, a_align(u.ux,u.uy));
 		if (otmp) {

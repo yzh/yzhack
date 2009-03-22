@@ -102,9 +102,9 @@ A("Fire Brand",			LONG_SWORD,
 	(SPFX_RESTR|SPFX_DCLAS), 0, S_DRAGON,
 	PHYS(8,20),	NO_DFNS,	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 500L ),*/
 
-A("Demonbane",			SILVER_LONG_SWORD,
+/*A("Demonbane",			SILVER_LONG_SWORD,
 	(SPFX_RESTR|SPFX_DFLAG2), 0, M2_DEMON,
-	PHYS(8,20),	NO_DFNS,	NO_CARY,	0, A_LAWFUL, NON_PM, NON_PM, 2500L ),
+	PHYS(8,20),	NO_DFNS,	NO_CARY,	0, A_LAWFUL, NON_PM, NON_PM, 2500L ),*/
 
 /*A("Werebane",			SILVER_SABER,
 	(SPFX_RESTR|SPFX_DFLAG2), 0, M2_WERE,
@@ -149,14 +149,9 @@ A("Vorpal Blade",		LONG_SWORD,
 	(SPFX_RESTR|SPFX_DFLAG2), 0, M2_UNDEAD,
 	PHYS(8,20),	DFNS(AD_BLND),	NO_CARY,	0, A_LAWFUL, NON_PM, NON_PM, 1500L ),*/
 
-/*A("Peacemaker", BOW,
-	(SPFX_RESTR|SPFX_DEFN), SPFX_ESP, 0,
-	PHYS(5,0),	DRLI(0,0),	NO_CARY,
-	CREATE_AMMO, A_LAWFUL, PM_MEDIUM, NON_PM, 4000L ),*/
-
-A("Fist of Fury",	GAUNTLETS_OF_DEXTERITY,
+/*A("Fist of Fury",	GAUNTLETS_OF_DEXTERITY,
 	SPFX_RESTR, SPFX_HPHDAM, 0,
-	NO_ATTK,	NO_DFNS,	NO_CARY,	0, A_NEUTRAL, PM_MONK, NON_PM, 5000L ),
+	NO_ATTK,	NO_DFNS,	NO_CARY,	0, A_NEUTRAL, PM_MONK, NON_PM, 5000L ),*/
 
 /*A("The Palantir of Westernesse",	CRYSTAL_BALL,
 	(SPFX_RESTR|SPFX_INTEL),
@@ -176,17 +171,13 @@ A("Firewall",                  ATHAME,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
 	FIRE(4,4),      FIRE(0,0),      NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 400L ),
 
-A("Thundersteel",			TWO_HANDED_SWORD,
+/*A("Thundersteel",			TWO_HANDED_SWORD,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
-	ELEC(5,0),	ELEC(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),
+	ELEC(5,0),	ELEC(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),*/
 
 A("Disrupter",                  MACE,
 	(SPFX_RESTR|SPFX_DFLAG2), 0, M2_UNDEAD,
 	PHYS(5,30),     NO_DFNS,        NO_CARY,        0, A_NEUTRAL, PM_PRIEST, NON_PM, 500L ),
-
-/*A("Quick Blade",                ELVEN_SHORT_SWORD,
-	SPFX_RESTR, 0, 0,
-	PHYS(9,2),      NO_DFNS,        NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 1000L ),*/
 
 A("Ebony Lacquered Bow",         YUMI,
 	(SPFX_RESTR|SPFX_SEARCH), 0, 0,
@@ -196,7 +187,7 @@ A("Ebony Lacquered Bow",         YUMI,
 A("Starring Inferno",		QUARTERSTAFF,
 	(SPFX_RESTR|SPFX_REFLECT), (SPFX_EREGEN|SPFX_HSPDAM), 0,
 	PHYS(3,0),	NO_DFNS,	CARY(AD_MAGM),
-	TAMING,		A_CHAOTIC, NON_PM, NON_PM, 2000L ),
+	TAMING,		A_NONE, NON_PM, NON_PM, 2000L ),
 
 /*
  *	The artifacts for the quest dungeon, all self-willed.
