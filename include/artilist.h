@@ -158,15 +158,15 @@ A("Fist of Fury",	GAUNTLETS_OF_DEXTERITY,
 	SPFX_RESTR, SPFX_HPHDAM, 0,
 	NO_ATTK,	NO_DFNS,	NO_CARY,	0, A_NEUTRAL, PM_MONK, NON_PM, 5000L ),
 
-A("The Palantir of Westernesse",	CRYSTAL_BALL,
+/*A("The Palantir of Westernesse",	CRYSTAL_BALL,
 	(SPFX_RESTR|SPFX_INTEL),
 		(SPFX_ESP|SPFX_REGEN|SPFX_HSPDAM), 0,
 	NO_ATTK,	NO_DFNS,	NO_CARY,
-	TAMING,		A_CHAOTIC, NON_PM , PM_ELF, 8000L ),
+	TAMING,		A_CHAOTIC, NON_PM , PM_ELF, 8000L ),*/
 
-A("Mirrorbright",               SHIELD_OF_REFLECTION,
+/*A("Mirrorbright",               SHIELD_OF_REFLECTION,
 	(SPFX_RESTR|SPFX_HALRES|SPFX_REFLECT), 0, 0,
-	NO_ATTK,      NO_DFNS,        NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 5000L ),
+	NO_ATTK,      NO_DFNS,        NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 5000L ),*/
 
 A("Deep Freeze",                ATHAME,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
@@ -176,9 +176,9 @@ A("Firewall",                  ATHAME,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
 	FIRE(4,4),      FIRE(0,0),      NO_CARY,        0, A_LAWFUL, NON_PM, NON_PM, 400L ),
 
-/*A("Thunderforce",			LONG_SWORD,
+A("Thundersteel",			TWO_HANDED_SWORD,
 	(SPFX_RESTR|SPFX_ATTK|SPFX_DEFN), 0, 0,
-	ELEC(5,0),	ELEC(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),*/
+	ELEC(5,0),	ELEC(0,0),	NO_CARY,	0, A_NONE, NON_PM, NON_PM, 3000L ),
 
 A("Disrupter",                  MACE,
 	(SPFX_RESTR|SPFX_DFLAG2), 0, M2_UNDEAD,
