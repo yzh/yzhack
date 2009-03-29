@@ -1,3 +1,7 @@
+2009-03-29  yzh  <yuzuha.tomo@gmail.com>
+
+	* new branch: new_gehenna
+
 2009-03-22  yzh  <yuzuha.tomo@gmail.com>
 
 	* src/pray.c (dosacrifice): アーティファクトもらえるレベルは7以上
