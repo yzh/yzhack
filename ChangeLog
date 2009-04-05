@@ -1,3 +1,15 @@
+2009-04-05  yzh  <yuzuha.tomo@gmail.com>
+
+	* sys/unix/Makefile.top (SPEC_LEVS): new_gehenna (grunthack)
+
+	* src/mkmap.c (mkmap): new_gehenna (grunthack)
+
+	* src/mklev.c (makelevel): new_gehenna (grunthack)
+
+	* dat/yendor.des (GEOMETRY): new_gehenna (grunthack)
+
+	* dat/gehennom.des (MAZE): new_gehenna (grunthack)
+
 2009-03-29  yzh  <yuzuha.tomo@gmail.com>
 
 	* new branch: new_gehenna
