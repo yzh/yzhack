@@ -325,7 +325,8 @@ d_level *lev;
 	break;
     case LR_DOWNSTAIR:
     case LR_UPSTAIR:
-	mkstairs(x, y, (char)rtype, (struct mkroom *)0);
+        if (Invocation_lev(&u.uz) && !rtype) break;
+ 	mkstairs(x, y, (char)rtype, (struct mkroom *)0);
 	break;
     case LR_BRANCH:
 	place_branch(Is_branchlev(&u.uz), x, y);

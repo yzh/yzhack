@@ -1077,6 +1077,10 @@ struct mkroom	*croom;
 {
 	schar		x,y;
 
+	if (Invocation_lev(&u.uz) &&
+	    s->up == 0)
+	    return;
+
 	x = s->x; y = s->y;
 	get_free_room_loc(&x, &y, croom);
 	mkstairs(x,y,(char)s->up, croom);
@@ -2456,13 +2460,25 @@ dlb *fd;
 		Fread((genericptr_t)&tmpstair, 1, sizeof(tmpstair), fd);
 
 		xi = 0;
+		try_again:
 		do {
 		    x = tmpstair.x;  y = tmpstair.y;
 		    get_location(&x, &y, DRY);
 		} while(prevstair.x && xi++ < 100 &&
 			distmin(x,y,prevstair.x,prevstair.y) <= 8);
 		if ((badtrap = t_at(x,y)) != 0) deltrap(badtrap);
-		mkstairs(x, y, (char)tmpstair.up, (struct mkroom *)0);
+		//mkstairs(x, y, (char)tmpstair.up, (struct mkroom *)0);
+		if (tmpstair.up || !Invocation_lev(&u.uz))
+		  {
+		    mkstairs(x, y, (char)tmpstair.up, (struct mkroom *)0);
+		  }
+		else
+		  {
+		    if (x < 5 || x > COLNO-5 || y < 5 || y > COLNO - 5)
+		      goto try_again;
+		    inv_pos.x = x, inv_pos.y = y;
+		  }
+		
 		prevstair.x = x;
 		prevstair.y = y;
 	}

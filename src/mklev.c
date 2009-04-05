@@ -758,8 +758,9 @@ makelevel()
 
 	/* construct stairs (up and down in different rooms if possible) */
 	croom = &rooms[rn2(nroom)];
-	if (!Is_botlevel(&u.uz))
-	     mkstairs(somex(croom), somey(croom), 0, croom);	/* down */
+	//if (!Is_botlevel(&u.uz))
+	if (!Is_botlevel(&u.uz) && !Invocation_lev(&u.uz))
+ 	     mkstairs(somex(croom), somey(croom), 0, croom);	/* down */
 	if (nroom > 1) {
 	    troom = croom;
 	    croom = &rooms[rn2(nroom-1)];

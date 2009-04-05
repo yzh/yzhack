@@ -1,5 +1,9 @@
 2009-04-05  yzh  <yuzuha.tomo@gmail.com>
 
+	* src/sp_lev.c (load_maze): new_gehenna (grunthack)
+
+	* src/mkmaze.c (put_lregion_here): new_gehenna (grunthack)
+
 	* sys/unix/Makefile.top (SPEC_LEVS): new_gehenna (grunthack)
 
 	* src/mkmap.c (mkmap): new_gehenna (grunthack)
