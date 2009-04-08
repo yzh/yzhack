@@ -6,7 +6,7 @@
 
 # new gehennom
 MAZE: "hellfill" , ' '
-INIT_MAP: '.' , ' ' , false , true , unlit , false
+INIT_MAP: '.' , 'L' , false , true , unlit , false
 NOMAP
 #
 STAIR: random, up
@@ -474,7 +474,7 @@ MONSTER:random,random,random
 #
 MAZE:"asmodeus",random
 FLAGS: noteleport
-INIT_MAP: '.' , ' ' , false, true, unlit, false
+INIT_MAP: '.' , 'L' , false, true, unlit, false
 # First part
 GEOMETRY:half-left,center
 MAP
@@ -559,7 +559,7 @@ TRAP:"magic", random
 #
 MAZE:"baalz",random
 FLAGS: noteleport
-INIT_MAP: '.' , ' ' , false, true, unlit, false
+INIT_MAP: '.' , 'L' , false, true, unlit, false
 GEOMETRY:right,center
 MAP
 -------------------------------------------------

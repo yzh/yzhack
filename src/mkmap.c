@@ -468,7 +468,7 @@ mkmap(init_lev)
 	    join_map(bg_typ, fg_typ);
 
 	/* new gehenna */
-	if (!Is_sanctum(&u.uz) &&
+	if (!Is_sanctum(&u.uz) && In_hell(&u.uz) &&
 	    bg_typ != POOL && bg_typ != MOAT)
 	{
 	    int count = rn1(50, 25);

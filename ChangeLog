@@ -1,3 +1,11 @@
+2009-04-08  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/yendor.des (REGION): new gehenna
+
+	* src/mkmap.c (mkmap): new gehenna
+
+	* dat/gehennom.des (INIT_MAP): new gehenna
+
 2009-04-05  yzh  <yuzuha.tomo@gmail.com>
 
 	* src/sp_lev.c (load_maze): new_gehenna (grunthack)
