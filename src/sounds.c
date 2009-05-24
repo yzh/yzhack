@@ -201,7 +201,7 @@ dosounds()
 			    You_hear(!hallu ? "someone counting money." :
 				"the quarterback calling the play.");
 #else
-			    You_hear(!hallu ? "誰かがお金を数えている音を聞いた。" :
+			    You_hear(!hallu ? "誰かが金を数えている音を聞いた。" :
 				"クォータバックが指示をする声を聞いた。");
 #endif
 			else

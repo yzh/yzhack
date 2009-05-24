@@ -965,7 +965,7 @@ mpickgold(mtmp)
 		pline("%s picks up some %s.", Monnam(mtmp),
 			mat_idx == GOLD ? "gold" : "money");
 #else
-		pline("%sはお金を拾った。", Monnam(mtmp));
+		pline("%sは金を拾った。", Monnam(mtmp));
 #endif
 	    newsym(mtmp->mx, mtmp->my);
 	}

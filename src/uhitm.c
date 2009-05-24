@@ -1725,7 +1725,7 @@ register struct attack *mattk;
 /*JP
                             You("grab %s's gold, but find no room in your knapsack.", mon_nam(mdef));
 */
-                            You("%sのお金をつかんだが、持ち物袋に入らなかった。", mon_nam(mdef));
+                            You("%sの金をつかんだが、持ち物袋に入らなかった。", mon_nam(mdef));
 			    dropy(mongold);
 		        }
 		    }

@@ -379,11 +379,11 @@ fnd:
 /*JP
 		verbalize("You have hidden money.");
 */
-		verbalize("まだお金を隠してるな。");
+		verbalize("まだ金を隠してるな。");
 /*JP
 	    verbalize("Most likely all your money was stolen from this vault.");
 */
-	    verbalize("倉庫から盗んだお金があるだろう。");
+	    verbalize("倉庫から盗んだ金があるだろう。");
 /*JP
 	    verbalize("Please drop that money and follow me.");
 */
@@ -594,8 +594,8 @@ register struct monst *grd;
 					  "drop that hidden money and " :
 					  "drop that money and ") : "");
 #else
-					  "隠し持ってるお金を置いて" :
-					  "お金を置いて") : "");
+					  "隠し持ってる金を置いて" :
+					  "金を置いて") : "");
 #endif
 #endif
 		if(egrd->warncnt == 7) {

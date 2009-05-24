@@ -256,7 +256,7 @@ struct monst *mtmp;
 /*JP
 	getlin("How much will you offer?", buf);
 */
-	getlin("お金をいくら与える？", buf);
+	getlin("金をいくら与える？", buf);
 	if (sscanf(buf, "%ld", &offer) != 1) offer = 0L;
 
 	/*Michael Paddon -- fix for negative offer to monster*/
@@ -279,7 +279,7 @@ struct monst *mtmp;
 /*JP
 		You("give %s all your gold.", mon_nam(mtmp));
 */
-		You("%sにお金を全て与えた。", mon_nam(mtmp));
+		You("%sに金を全て与えた。", mon_nam(mtmp));
 		offer = u.ugold;
 	} else {
 /*JP
@@ -294,7 +294,7 @@ struct monst *mtmp;
 /*JP
 		You("give %s all your gold.", mon_nam(mtmp));
 */
-		You("%sにお金を全て与えた。", mon_nam(mtmp));
+		You("%sに金を全て与えた。", mon_nam(mtmp));
 		offer = umoney;
 	} else {
 /*JP

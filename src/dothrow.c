@@ -2007,7 +2007,7 @@ struct obj *obj;
 #if 0 /*JP*/
 			"The money disappears", mon_nam(u.ustuck));
 #else
-			"¤ª¶â", mon_nam(u.ustuck));
+			"¶â", mon_nam(u.ustuck));
 #endif
 		add_to_minv(u.ustuck, obj);
 #endif

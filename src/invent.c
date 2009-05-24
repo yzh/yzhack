@@ -1984,7 +1984,7 @@ long* out_cnt;
 /*JP
 	    pline("Not carrying anything%s.", u.ugold ? " except gold" : "");
 */
-	    pline("%s何も持っていない。", u.ugold ? "お金以外" : "");
+	    pline("%s何も持っていない。", u.ugold ? "金以外" : "");
 #else
 /*JP
 	    pline("Not carrying anything.");

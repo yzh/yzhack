@@ -310,7 +310,7 @@ boolean delphi;
 		          "The Oracle scornfully takes all your money and says:" :
 		          "The Oracle meditates for a moment and then intones:");
 #else
-		      "賢者は軽蔑したようにあなたの全てのお金を受けとり、述べた：" :
+		      "賢者は軽蔑したようにあなたの金すべてを受けとり、述べた：" :
 		      "賢者はしばらく冥想し、詠唱した：");
 #endif
 		else
@@ -369,7 +369,7 @@ register struct monst *oracl;
 /*JP
 		You("have no money.");
 */
-		You("お金がない。");
+		You("金がない。");
 		return 0;
 	}
 
@@ -392,7 +392,7 @@ register struct monst *oracl;
 /*JP
 		    You("don't even have enough money for that!");
 */
-		    You("これに払えるだけのお金すら持っていない！");
+		    You("これに払えるだけの金すら持っていない！");
 		    return 0;
 		}
 		u_pay = minor_cost;

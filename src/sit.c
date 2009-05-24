@@ -25,7 +25,7 @@ take_gold()
 /*JP
 		You("notice you have no gold!");
 */
-		You("お金を持ってないことに気がついた！");
+		You("金を持ってないことに気がついた！");
 		u.ugold = 0;
 		flags.botl = 1;
 	}
@@ -48,7 +48,7 @@ take_gold()
 /*JP
 		You("notice you have no money!");
 */
-		You("お金を持ってないことに気がついた！");
+		You("金を持ってないことに気がついた！");
 		flags.botl = 1;
 	}
 #endif
