@@ -1,5 +1,9 @@
 2009-05-24  yzh  <yuzuha.tomo@gmail.com>
 
+	* src/pray.c: 訳修正
+
+	* src/sounds.c: 訳修正
+
 	* src/vault.c, src/uhitm.c, src/sounds.c, src/sit.c, src/shk.c, src/rumors.c, src/mon.c, src/minion.c, src/invent.c, src/dothrow.c: 訳修正
 
 2009-04-08  yzh  <yuzuha.tomo@gmail.com>
