@@ -365,6 +365,7 @@ typedef unsigned char	uchar;
 
 #define MIKO	/* add new role Medium */ 
 #define HALFELF	/* add new race half-elf */
+#define DEATH_EXPLORE  /* define death expolore */
 
 /*
  * Section 5:  EXPERIMENTAL STUFF
