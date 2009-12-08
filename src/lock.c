@@ -344,7 +344,7 @@ pick_lock(pick) /* pick a lock with a given object */
 /*JP
 		You_cant("hold %s -- you have no hands!", doname(pick));
 */
-		You("%sをつかむことができない！手がないんだもの！", xname(pick));
+		You("%sをつかむことができない…手がないんだから！", xname(pick));
 		return(0);
 	}
 
@@ -703,7 +703,7 @@ doopen()		/* try to open a door */
 /*JP
 	    You_cant("open anything -- you have no hands!");
 */
-	    You("何も開けることができない！手がないんだもの！");
+	    You("何も開けることができない…手がないんだから！");
 	    return 0;
 	}
 
@@ -860,7 +860,7 @@ doclose()		/* try to close a door */
 /*JP
 	    You_cant("close anything -- you have no hands!");
 */
-	    You("閉めることができない！手がないんだもの！");
+	    You("閉めることができない…手がないんだから！");
 	    return 0;
 	}
 

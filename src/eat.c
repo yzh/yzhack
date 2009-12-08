@@ -175,7 +175,7 @@ static const struct { const char *txt; int nut; } tintxts[] = {
 #define ROTTEN_TIN 4
 	{"腐った",	-50},
 #define HOMEMADE_TIN 5
-	{"自家製の",	 50},
+	{"手作り",	 50},
 	{"の炒め物",     80},
 	{"の甘露煮",    100},
 	{"の煮物",         50},
@@ -1749,7 +1749,7 @@ struct obj *otmp;
 			  "That food really hit the spot!");
 #else
 			pline(Hallucination ? "まったりとして、それでいてしつこくない！これぞ究極のメニューだ！" :
-			       "この食べ物は本当に申し分ない！");
+			       "この食べ物は実に申し分ない！");
 #endif
 #if 0 /*JP:T*/
 		else if(u.uhunger <= 700) pline("That satiated your %s!",

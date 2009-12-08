@@ -1606,7 +1606,7 @@ int part;
 		"head", "rear region", "light headed", "neck", "length",
 		"rear scale", "scales", "blood", "lung", "forked tongue", "stomach" },
 #else
-	*snake_parts[] = { "退化した足", "目", "顔", "大きな鱗",
+	*snake_parts[] = { "足の痕跡", "目", "顔", "大きな鱗",
 		"大きな鱗の先", "後部分", "鱗の隙間", "鱗の隙間につける",
 		"頭", "後部分", "めまいがした", "首", "体",
 		"後部分の鎧", "鱗", "血", "肺", "舌", "胃"},

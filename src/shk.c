@@ -2200,7 +2200,7 @@ int croaked;
 /*JP
 			Strcat(takes, "wakes up and ");
 */
-			Strcat(takes, "目がさめると、");
+			Strcat(takes, "目をさますと、");
 		if (distu(shkp->mx, shkp->my) > 2)
 /*JP
 			Strcat(takes, "comes and ");
@@ -2845,7 +2845,7 @@ speak:
 		pline("%s; only %ld %s %s.\"", buf, ltmp,
 			(quan > 1L) ? "per" : "for this", xname(obj));
 #else
-		pline("%s、%sは%sたったの金貨%ld枚だ。」", buf, xname(obj),
+		pline("%s、%sは%sたったの金貨%ld枚です。」", buf, xname(obj),
 			(quan > 1L) ? "1つ" : "", ltmp);
 #endif
 		obj->quan = quan;

@@ -1496,7 +1496,7 @@ struct obj *obj;
 		    pline("%s lamp is now off.", Shk_Your(buf, obj));
 */
 		    pline("%sランプの灯りは消えた。", Shk_Your(buf, obj));
-		else if (obj->otyp = ORB_OF_LIGHT)
+		else if (obj->otyp == ORB_OF_LIGHT)
 /*JP
 		    pline ("%s orb's light fades.", Shk_Your(buf, obj));
 */

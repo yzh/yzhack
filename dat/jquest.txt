@@ -5095,7 +5095,7 @@
 %E
 %Cp Val 00027
 #"Use %o if you can.  It will protect you."
-「可能なら%oを使いなさい。あなたを守るてしょう。」
+「可能なら%oを使いなさい。あなたを守るでしょう。」
 %E
 %Cp Val 00028
 #"Magical cold is very effective against %n."
