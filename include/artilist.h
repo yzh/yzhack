@@ -132,7 +132,7 @@ A("Grayswandir",		SILVER_SABER,
  */
 A("Vorpal Blade",		LONG_SWORD,
 	(SPFX_RESTR|SPFX_BEHEAD), 0, 0,
-	PHYS(15,0),	NO_DFNS,	NO_CARY,	0, A_NEUTRAL, PM_FIGHTER, NON_PM, 4000L ),
+	PHYS(15,0),	NO_DFNS,	NO_CARY,	0, A_NEUTRAL, PM_FENCER, NON_PM, 4000L ),
 /*
  *	Ah, never shall I forget the cry,
  *		or the shriek that shrieked he,
@@ -209,12 +209,12 @@ A("The Sceptre of Might",	MACE,
 	PHYS(5,0),	NO_DFNS,	CARY(AD_MAGM),
 	CONFLICT,	A_LAWFUL, PM_CAVEMAN, NON_PM, 2500L ),
 
-/* Fighter */
+/* Fencer */
 A("The Fortune Sword",			SHORT_SWORD,
 	(SPFX_NOGEN|SPFX_RESTR|SPFX_INTEL|SPFX_LUCK),
 		(SPFX_ESP|SPFX_DBONUS), 0,
 	PHYS(3,4),	NO_DFNS,	CARY(AD_MAGM),
-	0,	A_NEUTRAL,	PM_FIGHTER, NON_PM, 10000L ),
+	0,	A_NEUTRAL,	PM_FENCER, NON_PM, 10000L ),
 
 A("The Staff of Aesculapius",	QUARTERSTAFF,
 	(SPFX_NOGEN|SPFX_RESTR|SPFX_ATTK|SPFX_INTEL|SPFX_DRLI|SPFX_REGEN), 0,0,

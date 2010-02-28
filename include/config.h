@@ -363,8 +363,9 @@ typedef unsigned char	uchar;
 /*# define USE_MAKESINGULAR */	/* Enable singularize */
 #endif
 
-#define MIKO	/* add new role Medium */ 
-#define HALFELF	/* add new race half-elf */
+#define MIKO     /* add new role Medium */ 
+#define HALFELF  /* add new race half-elf */
+#define FENCER   /* add new role Fencer */
 #define DEATH_EXPLORE  /* define death expolore */
 
 /*

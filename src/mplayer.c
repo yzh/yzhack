@@ -190,8 +190,8 @@ register boolean special;
 		    else if (rn2(2)) weapon = CLUB;
 		    if (helm == HELM_OF_BRILLIANCE) helm = STRANGE_OBJECT;
 		    break;
-		    /* FIGHTER */
-		case PM_FIGHTER:
+		    /* FENCER */
+		case PM_FENCER:
 		    weapon = SHORT_SWORD;
 		    break;
 		case PM_HEALER:

@@ -57,8 +57,8 @@ static struct trobj Cave_man[] = {
 	{ LEATHER_ARMOR, 0, ARMOR_CLASS, 1, UNDEF_BLESS },
 	{ 0, 0, 0, 0, 0 }
 };
-/* FIGHTER */
-static struct trobj Fighter[] = {
+/* FENCER */
+static struct trobj Fencer[] = {
 	{ SHORT_SWORD, 1, WEAPON_CLASS, 1, UNDEF_BLESS },
 	{ DAGGER, 0, WEAPON_CLASS, 5, UNDEF_BLESS },
 	{ LEATHER_ARMOR, 1, ARMOR_CLASS, 1, UNDEF_BLESS },
@@ -340,7 +340,7 @@ static const struct def_skill Skill_C[] = {
     { P_NONE, 0 }
 };
 
-/* FIGHTER */
+/* FENCER */
 static struct def_skill Skill_F[] = {
     { P_DAGGER, P_EXPERT },		/*{ P_KNIFE, P_SKILLED },*/
     { P_SHORT_SWORD, P_EXPERT },	/*{ P_BROAD_SWORD, P_SKILLED },*/
@@ -695,10 +695,10 @@ u_init()
 		ini_inv(Cave_man);
 		skill_init(Skill_C);
 		break;
-	/* FIGHTER */
-	case PM_FIGHTER:
+	/* FENCER */
+	case PM_FENCER:
 		u.uen = u.uenmax += rn1(4, 1);
-		ini_inv(Fighter);
+		ini_inv(Fencer);
 		skill_init(Skill_F);
 		knows_class(WEAPON_CLASS);
 		knows_class(ARMOR_CLASS);
@@ -944,7 +944,7 @@ int otyp;
      case PM_ARCHEOLOGIST:	skills = Skill_A; break;
      case PM_BARBARIAN:		skills = Skill_B; break;
      case PM_CAVEMAN:		skills = Skill_C; break;
-     case PM_FIGHTER:		skills = Skill_F; break; /* FIGHTER */
+     case PM_FENCER:		skills = Skill_F; break; /* FENCER */
      case PM_HEALER:		skills = Skill_H; break;
      case PM_KNIGHT:		skills = Skill_K; break;
      case PM_MEDIUM:		skills = Skill_Med; break;

@@ -68,7 +68,7 @@ const struct innate {
 		     {	15, &(HWarning), "敏感になった", "鈍感になった" },
 		     {	 0, 0, 0, 0 } },
 
-	fig_abil[] = { {	7, &(HFast),  "素早さを得た", "遅くなった" },
+	fen_abil[] = { {	7, &(HFast),  "素早さを得た", "遅くなった" },
 		     {	 0, 0, 0, 0 } },
 
 	hea_abil[] = { {	 1, &(HPoison_resistance), "", "" },
@@ -687,7 +687,7 @@ int oldlevel, newlevel;
 	case PM_ARCHEOLOGIST:   abil = arc_abil;	break;
 	case PM_BARBARIAN:      abil = bar_abil;	break;
 	case PM_CAVEMAN:        abil = cav_abil;	break;
-	case PM_FIGHTER:	abil = fig_abil;	break;
+	case PM_FENCER:         abil = fen_abil;	break;
 	case PM_HEALER:         abil = hea_abil;	break;
 	case PM_KNIGHT:         abil = kni_abil;	break;
 	case PM_MEDIUM:         abil = med_abil;	break;

@@ -173,10 +173,10 @@ const struct Role roles[] = {
 	{  1, 0,  0, 1,  0, 1 },10,	/* Energy */
 	0, 12, 0, 1,  8, A_INT, SPE_DIG,             -4
 },
-/* FIGHTER */
-{	{"Fighter", 0}, {
+/* FENCER */
+{	{"Fencer", 0}, {
 #if 1 /*JP*/
-	"¿ÔªŒ", 0}, {
+	"∑ıªŒ", 0}, {
 #endif
 #if 0 /*JP*/
 	{"Alcor",	0},
@@ -201,11 +201,11 @@ const struct Role roles[] = {
 #endif
 	"Sol", "Terra", "Luna",
 #if 0 /*JP*/
-	"Fig", "the Starry Rift", "Stella Maris",
+	"Fen", "the Starry Rift", "Stella Maris",
 #else
-	"Fig", "•Í•’•»", "¿±≥§",
+	"Fen", "•Í•’•»", "¿±≥§",
 #endif
-	PM_FIGHTER, NON_PM, NON_PM,
+	PM_FENCER, NON_PM, NON_PM,
 	PM_RIGIL, PM_SWORDSMAN, PM_TOLIMAN,
 	PM_AIR_ELEMENTAL, PM_SNAKE, S_SNAKE, S_ZOMBIE,
 	ART_FORTUNE_SWORD,

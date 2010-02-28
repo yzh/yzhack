@@ -1240,7 +1240,7 @@ struct obj *weapon;
 	skill = P_SKILL(P_TWO_WEAPON_COMBAT);
 	if (P_SKILL(wep_type) < skill) skill = P_SKILL(wep_type);
 
-if (Role_if(PM_FIGHTER)) {
+if (Role_if(PM_FENCER)) {
 	switch (skill) {
 	    default: impossible(bad_skill, skill);
 	    case P_ISRESTRICTED:
@@ -1323,7 +1323,7 @@ struct obj *weapon;
 	skill = P_SKILL(P_TWO_WEAPON_COMBAT);
 	if (P_SKILL(wep_type) < skill) skill = P_SKILL(wep_type);
 
-if (Role_if(PM_FIGHTER)) {
+if (Role_if(PM_FENCER)) {
 	switch (skill) {
 	    default:
 	    case P_ISRESTRICTED:
@@ -1410,8 +1410,8 @@ const struct def_skill *class_skill;
 		P_SKILL(P_ATTACK_SPELL) = P_BASIC;
 		P_SKILL(P_ENCHANTMENT_SPELL) = P_BASIC;
 	}
-	/* FIGHTER */
-	else if(Role_if(PM_FIGHTER)){
+	/* FENCER */
+	else if(Role_if(PM_FENCER)){
 		P_SKILL(P_CLERIC_SPELL) = P_BASIC;
 	}
 
