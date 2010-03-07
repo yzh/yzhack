@@ -2259,8 +2259,8 @@ long timeout;
 			You_feel("%s %s from your pack!", something,
 			    locomotion(mtmp->data,"drop"));
 #else
-			You_feel("%sがあなたの鞄から%s！", something,
-				 jpast(locomotion(mtmp->data,"落ちる")));
+			You_feel("%sがあなたの鞄から%sのを感じた！", something,
+				 locomotion(mtmp->data,"落ちる"));
 #endif
 		    else
 #if 0 /*JP*/
@@ -2268,7 +2268,7 @@ long timeout;
 			    monnambuf,
 			    locomotion(mtmp->data,"drop"));
 #else
-			You("%sがあなたの鞄から%s！",
+			pline("%sがあなたの鞄から%s！",
 			    monnambuf,
 			    jpast(locomotion(mtmp->data,"落ちる")));
 #endif
@@ -2279,7 +2279,7 @@ long timeout;
 /*JP
 			You("suddenly see a figurine transform into %s!",
 */
-			You("突然人形は%sになった！",
+			pline("突然人形は%sになった！",
 				monnambuf);
 			redraw = TRUE;	/* update figurine's map location */
 		    }
