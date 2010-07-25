@@ -1,3 +1,8 @@
+2010-07-24  yzh  <yuzuha.tomo@gmail.com>
+
+	* include/config.h, include/flag.h, src/objnam.c, src/options.c: bucprefix patch
+	#
+
 2010-03-04  yzh  <yuzuha.tomo@gmail.com>
 
 	* src/apply.c (fig_transform): メッセージ修正

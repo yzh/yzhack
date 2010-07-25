@@ -286,6 +286,9 @@ struct instance_flags {
 #define MAX_ALTKEYHANDLER 25
 	char	 altkeyhandler[MAX_ALTKEYHANDLER];
 #endif
+#ifdef BUCPREFIX
+	int bucprefix;
+#endif
 };
 
 /*

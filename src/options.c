@@ -242,6 +242,9 @@ static struct Comp_Opt
 	{ "boulder",  "巨岩を表示するシンボル文字",
 						1, SET_IN_GAME },
 #endif /*JP*/
+#ifdef BUCPREFIX
+	{ "bucprefix",  "祝呪表示を変更する", 1, SET_IN_GAME },
+#endif
 #if 0 /*JP*/
 	{ "catname",  "the name of your (first) cat (e.g., catname:Tabby)",
 						PL_PSIZ, DISP_IN_GAME },
@@ -1411,6 +1414,27 @@ boolean tinitial, tfrom_file;
 			nmcpy(horsename, op, PL_PSIZ);
 		return;
 	}
+
+#ifdef BUCPREFIX
+	fullname = "bucprefix";
+	if (match_optname(opts, fullname, 4, TRUE)) {
+		op = string_for_opt(opts, FALSE);
+		
+		if (negated) {
+		    bad_negation("bucprefix", TRUE);
+		    return;
+		}
+		
+		switch(*op - '0'){
+			case 0: case 1: case 2: case 3:
+				iflags.bucprefix = *op - '0';
+				break;
+			default:
+				break;
+		}
+		return;
+	}
+#endif
 
 	fullname = "number_pad";
 	if (match_optname(opts, fullname, 10, TRUE)) {
@@ -2937,6 +2961,30 @@ boolean setinitial,setfromfile;
      * Also takes care of interactive autopickup_exception_handling changes.
 #endif
      */
+#ifdef BUCPREFIX
+	if (!strcmp("bucprefix", optname)) {
+		static const char *bucpchoices[4] = 
+		{ "0 (普通)", "1 (旧brass風)", "2 (FHSpatch風)", "3 (旧brass改)" };
+		const char *bucpletters = "abcd";
+		menu_item *mode_pick = (menu_item *)0;
+		
+		tmpwin = create_nhwindow(NHW_MENU);
+		start_menu(tmpwin);
+		for (i = 0; i < SIZE(bucpchoices); i++) {
+			any.a_int = i + 1;
+			add_menu(tmpwin, NO_GLYPH, &any, bucpletters[i], 0,
+				ATR_NONE, bucpchoices[i], MENU_UNSELECTED);
+		}
+		
+		end_menu(tmpwin, "祝呪表示モードを選択してください：");
+		if (select_menu(tmpwin, PICK_ONE, &mode_pick) > 0) {
+			iflags.bucprefix = mode_pick->item.a_int - 1;
+			free((genericptr_t)mode_pick);
+		}
+	destroy_nhwindow(tmpwin);
+		retval = TRUE;
+	} else
+#endif
     if (!strcmp("menustyle", optname)) {
 	const char *style_name;
 	menu_item *style_pick = (menu_item *)0;
@@ -3469,6 +3517,13 @@ char *buf;
 	else if (!strcmp(optname, "boulder"))
 		Sprintf(buf, "%c", iflags.bouldersym ?
 			iflags.bouldersym : oc_syms[(int)objects[BOULDER].oc_class]);
+#ifdef BUCPREFIX
+	else if (!strcmp(optname, "bucprefix")){
+		static const char *bucpchoices[4] = {"0 (普通)", "1 (旧brass風)", "2 (FHSparch風)", "3 (旧brass改)"};
+		if (0 <= iflags.bucprefix && iflags.bucprefix < 4)
+			Sprintf(buf, "%s", bucpchoices[iflags.bucprefix]);
+	}
+#endif
 	else if (!strcmp(optname, "catname")) 
 		Sprintf(buf, "%s", catname[0] ? catname : none );
 	else if (!strcmp(optname, "disclose")) {

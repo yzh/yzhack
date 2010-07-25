@@ -1071,12 +1071,35 @@ register struct obj *obj;
 /*JP
 		Strcat(prefix, "cursed ");
 */
+#ifdef BUCPREFIX
+		switch(iflags.bucprefix){
+			case 1: Strcat(prefix, "{�嚗驁"); break;
+			case 2: Strcat(prefix, "{熱}"); break;
+			case 3: Strcat(prefix, "[�嚗醹"); break;
+			
+			case 0: /* fall through */
+			default: Strcat(prefix, "熱歹木凶"); break;
+		}
+#else
 		Strcat(prefix, "熱歹木凶");
+#endif
 	    else if (obj->blessed)
 /*JP
 		Strcat(prefix, "blessed ");
 */
+
+#ifdef BUCPREFIX
+		switch(iflags.bucprefix){
+			case 1: /* fall through */
+			case 2: Strcat(prefix, "{誼吽}"); break;
+			case 3: Strcat(prefix, "[誼吽]"); break;
+			
+			case 0: /* fall through */
+			default: Strcat(prefix, "誼吽今木凶"); break;
+		}
+#else
 		Strcat(prefix, "誼吽今木凶");
+#endif
 	    else if ((!obj->known || !objects[obj->otyp].oc_charged ||
 		      (obj->oclass == ARMOR_CLASS ||
 		       obj->oclass == RING_CLASS))
@@ -1099,7 +1122,18 @@ register struct obj *obj;
 /*JP
 		Strcat(prefix, "uncursed ");
 */
+#ifdef BUCPREFIX
+		switch(iflags.bucprefix){
+			case 1: /* fall through */
+			case 2: Strcat(prefix, "{忔騷}"); break;
+			case 3: Strcat(prefix, "[忔騷]"); break;
+			
+			case 0: /* fall through */
+			default: Strcat(prefix, "熱歹木化中卅中"); break;
+		}
+#else
 		Strcat(prefix, "熱歹木化中卅中");
+#endif
 	}
 
 /*JP

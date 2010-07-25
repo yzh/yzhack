@@ -368,6 +368,8 @@ typedef unsigned char	uchar;
 #define FENCER   /* add new role Fencer */
 #define DEATH_EXPLORE  /* define death expolore */
 
+#define BUCPREFIX	/* more visible blessed/uncursed/cursed prefix */
+
 /*
  * Section 5:  EXPERIMENTAL STUFF
  *
