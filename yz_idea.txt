@@ -1,0 +1,398 @@
+-*- mode: outline -*-
+
+*ready
+**yzh
+spell name
+item name
+発光キノコ glow fungus
+人間Ra 革クローク W 守りクローク
+メデューサは床掘り禁止
+アリジゴク ボスは女王アリ
+ドワーフはランプ持ち
+ソードメイス（メイス） sword mace 刃つきのメイス 1d8
+森(10-11、3)
+モンスター メイドさん 街にのみ出現 #chatで「掃除のジャマです」「なんで私こんなとこに？」
+メイドさん 鏡[50%] 飾りの指輪[20%]  メガネ？
+メイド服は自然生成されない
+メイドさん 流し台けると登場
+捨てられた城(21-24、2)
+魔除け入手後のレベルテレポ廃止
+モンスター ; テッポウウオ archerfish 酸ブレス
+ユニコーンの仔 unicorn foal
+バタフライナイフ: 短剣 1/10で首切り 盗賊のクエストアーティファクト
+骸骨ドラゴン 遅くする攻撃
+鉄のサーベル
+妖狐
+腐ったもの食ってなんで盲目になるか
+トリフィド F 麻痺攻撃 死体は毒 油をもってる？
+エルフ、オークの弓手
+盗賊も弓矢エキスパート
+ジャベリンは上位コボルトにもたせる
+銀の籠手 悪魔にダメージ 反射
+烏漆の弓
+罠探知
+ラピスラズリ lapis lazuli
+
+**brass
+ladies wear
+ミスリル鎧の出現率さげる+他の鎧強化
+H女性の初期装備 → 看護服セット
+hp color
+店のサービス（識別、解呪、強化）
+レベルアップの経験値
+・ 各Minetown に Weapon/Armor/Ring/Wand の店を追加
+・ つるはしを持っていても店に入れるようにした
+・ "You murderer!" の判定を is_human() から your_race() に変更した
+
+**slash'em
+Vの初期装備 長剣→槍
+no_bones
+商店街
+鉱山最下層
+耐レベルドレインの魔除け
+銀武器
+魔法ランプ1000円
+暗闇の海(28-31、1)
+lightningの魔法
+はぐれ冒険者のたまりば guild
+殺人コイン
+Vampireは常にオペラクローク所持
+アーティファクト
+
+**patch
+menucolor + hpmon http://f18.aaa.livedoor.jp/~jnethack/
+mersenne twister http://jnethack.sourceforge.jp/patch/
+Moon phase lighting http://www.cse.unsw.edu.au/~malcolmr/nethack/3.4.3/moonphase.diff
+Garden http://bilious.homelinux.org/?32
+new medusa
+Underground Rivers http://bilious.homelinux.org/~paxed/nethack/nh343-underground_rivers.diff
+armory
+ring of clairvoyance
+recolours the walls and floor http://www.greyfire.org/~l/glyphcolor.diff
+ice ant
+orb of light
+
+*NOT USED
+**patch
+Gem Power http://bilious.homelinux.org/~paxed/nethack/nh343-gempower.diff
+Owned artifacts  http://www.netsonic.fi/~walker/nh/ownedarti.diff
+Poisoned weapons http://www.cse.unsw.edu.au/~malcolmr/nethack/3.4.3/poison-patch.diff
+Terrain patch http://www.greyfire.org/~l/terrain.diff
+Touch of Death http://www.greyfire.org/~l/touch.diff
+Univirgin http://nethack.angband.pl/univirgin.patch
+hell patch
+**fhs
+jnh34308-Release-070127ez.diff -- bug fix patch
+**FHSとかぶるのは？
+Bag of Tricks Enhancement http://bilious.homelinux.org/?58
+Pet graves http://www.crash-override.net/uploads/media/pet_grave_v1.0.patch
+Improved Beartraps http://www.cse.unsw.edu.au/~malcolmr/nethack/3.4.3/beartraps.diff 罠にかかっている間に足が回復する
+アーティファクト特殊効果
+
+*idea
+雑貨屋で宝石は売らない
+アークワンド（六尺棒） arc wand 魔法使いの杖 知性の兜と同じ効果
+http://jnhbible.s6.xrea.com/storage/study.htm
+アイテムもっとたくさん出るように 貯蔵庫？ ギルド？
+アイテム入手手段を増やした上でポリパイル禁止
+カーバンクル(:) 必ずルビーをおとす
+非魔法職でも魔法使う機会増やせ 学習失敗のペナルティ緩和 スキル、失敗率緩和
+魔法書 粉々になってから名前つけろとかアホか
+魔除けもって魔法つかうと警告うざい
+呪い返しの魔除け マジックベーンとおなじ 邪悪なオーラを吸収
+モートモンスター（堀固定）
+店のサービス内容はぜんぶつねにできるように
+水晶玉なんで失敗するかな
+星のかけら star crumb（灰色の宝石→石）aで半径2の光源
+ドラゴン盾？
+軽めの鎧？
+モーンブレイド？
+種族の専用武器防具装備時ボーナス？まあ序盤に使えれば…
+メイドさん #chat でお金要求、lvlx1000でペットに
+メイドさんに名前? 咲夜、翡翠、琥珀、メルン
+ランタンの魔法
+精霊界うざすぎ
+アルコン死ね召喚大杉
+巻物 *破壊*
+落ちてる武器はある程度強化されてる
+
+**slashem
+lethe
+blackmarket
+
+**brass
+魔法書 torch、know enchantment
+オレンジドラゴンは麻痺ブレス
+メイド服、ナース服の特殊効果
+***審議中
+・ Wizard は cornuthaum 着用で helm of brilliance と同様のInt/Wiz修正を得るように
+・ polypileを事実上廃止
+・ 軽い武器を使っていてDexが高い場合、ランダムに２回攻撃が出るようにした。
+・ 職業/種族ごとに能力値の上限が異なるようにした
+・ 重い武器はそれなりに強くした
+・ blessed potion of see invisible を飲んでも恒久的なsee invisible を得ない
+・ Crushing/Flail系武器は5〜10%の確率で目標をstunするようにした
+・ Conf/Stun状態の敵は魔法を使えないようにした
+・ 弓の＋修正が矢のダメージに影響するようにした。
+・ 銃を試験的に導入
+・ 店でのアイテム買取値が定価の半額に固定だったのを、Charismaで変動するようにした
+・ Longbow of Dianaの強さを調整。
+・ water elementalに飲み込み(+窒息)攻撃と錆攻撃を追加
+・ 兵士が銃を撃つ
+・ 墓碑銘は r)ead で読む
+・ [NH+] deep dragon を追加
+・ 死体から得た炎・冷気・電撃耐性はダメージを無効化するのではなく、1/4に軽減するように
+・ 混乱した怪物は付近の怪物を攻撃することがあるように変更
+・ ゲヘナの迷路を何種類かのランダムマップに変更
+・ [NH+] Monkのクエストのマップ
+・ wand of make invisibleを自分に振ったときに永久に透明にならないように変更
+・ 弓矢などを持つ敵は中距離を保つ
+
+**分岐
+倉庫番 newsokoパッチ 食糧と巻物と薬を山積み 最上階に寺院？
+巨人の街(32-35、1)
+カメレオンの巣(1) 変化の杖or変化制御の指輪
+属性クエスト 秩序A 中立@ 混沌& ネメシスはなし？
+幻の図書館 フォートローディオスの巻物版
+
+**新職業
+***魔法戦士 旧Fをベース
+器用貧乏なデュアルクラスで
+エキスパートは小剣と予知領域魔法のみ、あとは熟練？
+種族:人間、エルフ、ノーム
+属性:中立、混沌
+
+Sol ソル(l) Terra テラ(n) Luna ルナ(c)
+Alcor Dubhe Merak Phecda Megrez Alioth Mizar Benetnash Polaris
+洞明 貪狼 巨門 禄存 文曲 廉貞 武曲 破軍 北辰
+リーダー Rigil リギル
+ネメシス Toliman トリマン
+故郷 Starry Rift リフト
+敵地 Stella Maris 星海
+ガード 剣士 swordsman
+アーティファクト Fortunesword フォーチュンソード short sword
+
+装備と魔法バランス 鉄鎧着たら魔法つかえね
+序盤に使える鉄以外の防具？
+守りの魔法でACを稼ぎつつ接近戦のスタイル？
+防御を捨てて攻撃魔法と遠距離武器主体のスタイル？
+魔法使い用ペナルティ緩和のいくつかを適用
+フォーチュンソードは魔力回復ボーナス+魔法防御
+invokeは？
+
+現状ではWが実質魔法戦士(攻撃魔法+マジックベーン攻撃)
+序盤は魔法で劇的にACかせげるわけないので遠距離攻撃主体にせざるをえん
+
+魔法戦士はあきらめてテッテ的に戦士にするか？
+VやSがいるから差別化を
+ソードマスター？
+二刀流専門とか
+アーティファクト二刀流許可？アーティファクト自体があまりないか…
+二刀流ペナルティなし？
+戦士の優先アーティファクト ボーパルブレード
+
+初期装備
++2命中の指輪
+
+***黒騎士 Dark Knight
+混沌のK
+ストームブリンガー
+
+***プリンセス Princess
+戦うお姫様
+プリンセス・ブライドつーかプリンセス・ブレイブ
+
+***巫女 Medium
+変愚蛮怒の巫女パッチ
+弓の使えるプリースト
+人間秩序女性のみ
+シンボルuが友好的
+神様はSと同じ
+弓と槍と長斧と短剣がエキスパート
+治癒、僧侶、予知魔法がエキスパート
+乗馬、二刀流は下手、マーシャルアーツはそこそこ
+初期装備は+2和弓、+0魔法防御クローク、聖水x4、+0銀の短剣、+2征矢x10、+0征矢x30
+#turn可能 呪い祝福判定可能？
+lv.1で忍び、lv.4で探索、lv.7で透明視
+クエストアーティファクトは破魔弓？破魔矢？矢のアーティファクトってあり？ 当たったら消えたー
+無垢な少女→御神馬の少女→朝霧の巫女→夕月の巫女→ 姫巫女→山神の巫女→龍神の巫女→神子→常乙女
+Pure Girl→Jinme'S Girl→Mist Maiden→Moon Maiden→ Princess Maiden→Hanuman Maiden→Ryujin Maiden→Kamiko→Eternal Maiden
+腕力:-5 知能:0 賢さ:3 器用さ:2 耐久力:-3 魅力:2
+みそぎ 泉の上で#purify 解呪効果
+ペットはwhite unicorn foal
+祝福のテクニック slash'em？
+whetstoneパッチとremove curse魔法を参考にちまちまやってみるか？
+
+ネメシス: 九尾の狐 Nine Tailed Fox 炎ブレス、とてもすばやい、不死？ 幻影？
+アーティファクト: 破魔の短剣 アサメ、反射、魔法ダメージ半減、警告、不死に追加ダメージ invokeで千里眼
+神社→森の迷路→洞窟入口→岩の迷路→狐の住処
+
+モンスター 妖狐
+
+ガーディアン 乙女 Maiden
+リーダー 神主
+
+和弓と征矢なら3連射 命中率ボーナス
+アーティファクトは破魔鏡？反射の魔除け
+矢の入手手段をなんとかしろ
+
+弓懸け？
+
+**新種族
+***種族フェルプール
+猫耳萌え ク・メル萌え
+http://hiroshima.cool.ne.jp/kotechan/r-felpurr.htm
+混沌のみ
+B F M P Ro
+ Str Agi Con Int Wis Cha
+18/50 20  16  15  16  18 暗視、毒耐性、忍び
+***種族ハーフエルフ Peredhil
+中立と混沌
+A B F H M P Ra Ro T V W
+ Str Agi Con Int Wis Cha
+18/50 18  17  18  19  18 暗視
+lv.7 眠り耐性
+
+弓の命中率+1
+
+*dungeon
+ 1f はじまり
+ 3f →ノーム鉱山 （幸せの石）
+ 5f 商店街
+ 7f オラクル
+ 8f →倉庫番
+ 9f →深い森 （反射or軽量化）
+11f →クエスト
+13f ギルド1
+18f →蟻地獄 （すばやさ、軽量化）
+20f →フォートローディオス
+21f →捨てられた城 （浮遊、力）
+23f ギルド2
+27f →暗闇の海 （魔法のランプ）
+33f ギルド3
+39f メデューサ
+40f 城
+
+分岐を作ってアイテム山積みしてもそこにたどりついてクリアできるころには不要なものばかり…
+
+*artifact
+種類と入手確率へらす
+クエストアーティファクトと優先アーティファクトのみにする
+offerで得られるのはfixedな武器防具、便利な魔法道具？
+いっそofferで下賜なしにしてもいいかも
+優先アーティファクトも強力すぎるのはどうかな
+四元素の代表武器のみ残して全削除とか
+全ての職業で使えるものを だったら防具のほうが
+使えないアーティファクトも出さざるを得んか
+称号でのみ得られるとか
+ 秩序: エクスカリバー
+ 中立: マジックベーン
+ 混沌: ストームブリンガー
+↑みっつを属性クエスト（slash'em）でのみ得られる？
+他のアーティファクトはarmg.desに放りこむ
+アーティファクト減らすなら通常武器だけで戦えるように
+強化、解呪、識別がかんたんにできるように
+
+アーティファクトは属性クエストでユニークが所持
+The Lawmaker (Excalibur) アーチリッチ
+The Wishmaster (/WoW) マスターマインドフレア
+The Breaker (Stormbringer) 電気ウナギ
+The Magicmaker (Magicbane) 吸魔の怪物
+
+城の願いの杖は廃止 虐殺の巻物か魔法防御クローク
+
+属性クエストは闘技場みたいに階層をつなげる？ なんかちがう…
+
+ヴラドにストームブリンガー持たせる？
+各分岐にユニーク配置？
+
+アーティファクト墓場つくっても着く前にwishしたら手にはいる…
+
+データそのものを消すとコード全体に類がおよぶのでメンドウ
+
+owned artifactパッチはおもしろい しかし苦労して入手したらスティングとか阿呆らしい
+offerで手にはいるのがそもそもダメか
+
+
+アーティファクト二刀流許可
+称号でアーティファクト得られないように
+全体を強化して入出確率へらす
+使えないものは使えないので消す
+すべてのアーティファクトは素武器より強いボーナス
+自然発生はすべて禁止
+名付け、泉にdipはすべて禁止
+入手による確率低下は廃止
+offerで得られる確率=1/100
+
+どうしようエクスカリバーとグレイスワンダーいれかえるか？
+名づけや泉でも入手できるようにしてもいいのでは？
+泉: 秩序Kのみ、lv.12以上
+名づけ: エルフのみ？
+
+NOGENをつけるとofferで手に入らない
+
+offerは+5fixed武器（職業にあわせる） たまにアーティファクト？
+
+スターリングインフェルノ 六尺棒
+魔法の矢
+魅了
+反射？
+魔法防御？
+
+
+**属性クエスト
+Lグレイスワンダー:
+Cストームブリンガー:
+Nマジックベーン:
+
+必ずユニークが所持して生成
+
+**弱体化して残す
+Lエクスカリバー:
+Nミュルニール:
+Nボーパルブレード:
+
+**強化して残す
+Lデーモンベーン: 銀の長剣
+Cスティング: すべての敵に追加ダメージ エルフの小剣 透明視
+Cグリムトゥース: 毒攻撃 毒耐性
+
+**捨てがたい。
+-ドラゴンベーン: 1/10で竜を必殺 ブロードソード ドラゴンスレイヤーに
+-フロストブランド: 
+-ファイアブランド:
+
+**けっきょく
+LKエクスカリバー 
+Lグレイスワンダー
+Lファイアウォール
+LM烏漆の弓
+NWマジックベーン
+NVミュルニール
+NFヴォーパルブレード
+Nディスラプター
+Cストームブリンガー
+Ceスティング
+Coグリムトゥース
+Cディープフリーズ
+
+フロストブランド
+ファイアブランド
+スターリングインフェルノ
+
+属性剣はinvokeでfireball/ice corn？
+
+*本家bug
+訳語の統一 ややこしい
+怪物を作る巻物 / 怪物を造る杖、魔法書
+仔猫 子犬 〜の子
+光の巻物 / 灯りの魔法書、杖
+
+ランプは消えた
+
+足チクッ
+
+気がした→感じた
+してた
+
+あなたはつまづいたくものすに
