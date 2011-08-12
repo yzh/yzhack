@@ -937,7 +937,7 @@ mattacku(mtmp)
 /*JP
 		    nomovemsg = "The combat suddenly awakens you.";
 */
-		    nomovemsg = "あなたは起こされた。";
+		    nomovemsg = "殴られて目がさめた。";
 		}
 	    }
 	    if(sum[i] == 2) return 1;		/* attacker dead */

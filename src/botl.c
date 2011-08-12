@@ -181,6 +181,74 @@ botl_score()
 }
 #endif
 
+#ifdef HPPWBAR
+static void
+hppwbar(bot, barmax)
+char *bot;
+int barmax;
+{
+  int hp, hpmax;
+  int hpbar, pwbar;
+  char c;
+
+  if (Upolyd)
+    hp = u.mh, hpmax = u.mhmax;
+  else
+    hp = u.uhp, hpmax = u.uhpmax;
+  if (hp <= 0)
+    hpbar = 0;
+  else if (hp >= hpmax)
+    hpbar = barmax;
+  else
+    hpbar = hp * barmax / hpmax;
+  if (u.uen <= 0)
+    pwbar = 0;
+  else if (u.uen >= u.uenmax)
+    pwbar = barmax;
+  else
+    pwbar = u.uen * barmax / u.uenmax;
+#ifdef JNETHACK
+  if (is_kanji2(bot, hpbar))
+    --hpbar;
+  if (is_kanji2(bot, pwbar))
+    --pwbar;
+#endif
+  curs(WIN_STATUS, 1, 0), putstr(WIN_STATUS, 0, "");
+  if (pwbar < hpbar) {
+    term_start_attr(ATR_INVERSE);
+    if (pwbar > 0) {
+      c = bot[pwbar], bot[pwbar] = 0;
+      curs(WIN_STATUS, 1, 0), putstr(WIN_STATUS, ATR_INVERSE, bot);
+      bot[pwbar] = c;
+    }
+    term_start_attr(ATR_ULINE);
+    c = bot[hpbar], bot[hpbar] = 0;
+    curs(WIN_STATUS, 1 + pwbar, 0), putstr(WIN_STATUS, ATR_INVERSE, bot + pwbar);
+    bot[hpbar] = c;
+    term_end_attr(ATR_ULINE);
+    term_end_attr(ATR_INVERSE);
+    curs(WIN_STATUS, 1 + hpbar, 0), putstr(WIN_STATUS, 0, bot + hpbar);
+  }
+  else {
+    if (hpbar > 0) {
+      term_start_attr(ATR_INVERSE);
+      c = bot[hpbar], bot[hpbar] = 0;
+      curs(WIN_STATUS, 1, 0), putstr(WIN_STATUS, ATR_INVERSE, bot);
+      bot[hpbar] = c;
+      term_end_attr(ATR_INVERSE);
+    }
+    if (hpbar < pwbar) {
+      term_start_attr(ATR_ULINE);
+      c = bot[pwbar], bot[pwbar] = 0;
+      curs(WIN_STATUS, 1 + hpbar, 0), putstr(WIN_STATUS, 0, bot + hpbar);
+      bot[pwbar] = c;
+      term_end_attr(ATR_ULINE);
+    }
+    curs(WIN_STATUS, 1 + pwbar, 0), putstr(WIN_STATUS, 0, bot + pwbar);
+  }
+}
+#endif
+
 STATIC_OVL void
 bot1()
 {
@@ -265,8 +333,12 @@ bot1()
 */
 	    Sprintf(nb = eos(nb), "%ldÅÀ", botl_score());
 #endif
+#ifdef HPPWBAR
+	hppwbar(newbot1, j - 2);
+#else
 	curs(WIN_STATUS, 1, 0);
 	putstr(WIN_STATUS, 0, newbot1);
+#endif
 }
 
 /* provide the name of the current level for display by various ports */

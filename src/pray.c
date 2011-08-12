@@ -303,7 +303,7 @@ register int trouble;
 /*JP
 		    pline_The("slime disappears.");
 */
-		    You("スライムは消えた。");
+		    Your("スライムは消えた。");
 		    Slimed = 0;
 		    flags.botl = 1;
 		    delayed_killer = 0;

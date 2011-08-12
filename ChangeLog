@@ -1,3 +1,31 @@
+2011-08-12  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/shk.c (shk_chat): メッセージ修正
+
+	* src/pray.c (fix_worst_trouble): メッセージ修正
+
+2011-05-22  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/timeout.c (slip_or_trip): メッセージ修正
+
+	* src/trap.c (float_down): メッセージ修正
+
+2011-05-18  yzh  <yuzuha.tomo@gmail.com>
+
+	* include/config.c, src/botl.c, : hppbw patch
+
+2011-04-28  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/trap.c (untrap): メッセージ修正
+
+2011-04-24  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/trap.c (chest_trap): メッセージ修正
+
+	* src/timeout.c (fall_asleep): メッセージ修正
+
+	* src/mhitu.c (hitmu): メッセージ修正
+
 2010-07-24  yzh  <yuzuha.tomo@gmail.com>
 
 	* include/config.h, include/flag.h, src/objnam.c, src/options.c: bucprefix patch

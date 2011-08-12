@@ -502,7 +502,7 @@ boolean wakeup_msg;
 /*JP
 	nomovemsg = wakeup_msg ? "You wake up." : You_can_move_again;
 */
-	nomovemsg = wakeup_msg ? "目を覚ました。" : You_can_move_again;
+	nomovemsg = wakeup_msg ? "目が覚めた。" : You_can_move_again;
 }
 
 /* Attach an egg hatch timeout to the given egg. */
@@ -835,7 +835,7 @@ slip_or_trip()
 /*JP
 		You("trip over %s.", what);
 */
-		You("%sにつまづいた。", what);
+		You("%sにつまずいた。", what);
 	    }
 	} else if (rn2(3) && is_ice(u.ux, u.uy)) {
 /*JP
@@ -859,7 +859,7 @@ slip_or_trip()
 			You("trip over your own %s.", Hallucination ?
 				"elbow" : makeplural(body_part(FOOT)));
 #else
-			You("自分の%sを踏んでつまづいた。", Hallucination ?
+			You("自分の%sを踏んでつまずいた。", Hallucination ?
 				"肘" : makeplural(body_part(FOOT)));
 #endif
 			break;

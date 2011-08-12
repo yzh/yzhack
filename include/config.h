@@ -324,6 +324,10 @@ typedef unsigned char	uchar;
 # endif
 #endif
 
+#ifdef TTY_GRAPHICS
+# define HPPWBAR	/* HP and Pw status bar */
+#endif
+
 /*
  * Section 4:  THE FUN STUFF!!!
  *

@@ -4739,8 +4739,7 @@ register boolean silent;
 	    pline_The("Kop%s (disappointed) vanish%s into thin air.",
 		      plur(cnt), cnt == 1 ? "es" : "");
 #else
-	    pline("警官%sは（がっかりして）どこへともなく消え失せた。",
-		      plur(cnt), cnt == 1 ? "隊" : "");
+	    pline("警官は（がっかりして）どこへともなく消え失せた。");
 #endif
 }
 #endif	/* KOPS */

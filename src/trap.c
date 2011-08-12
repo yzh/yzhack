@@ -3146,7 +3146,7 @@ long hmask, emask;     /* might cancel timeout */
 /*JP
 			    You("fall over.");
 */
-			    You("つまづいた。");
+			    You("つまずいた。");
 /*JP
 			    losehp(rnd(2), "dangerous winds", KILLED_BY);
 */
@@ -4643,8 +4643,8 @@ boolean force;
 	    You(trap_skipped ? "find no other traps here."
 			     : "know of no traps here.");
 #else
-	    You(trap_skipped ? "他の罠を見つけられなかった。"
-			     : "ここに罠がないことを知っている。");
+	    pline(trap_skipped ? "他の罠を見つけられなかった。"
+			       : "あなたが知っているかぎり、ここには罠はない。");
 #endif
 	    return(0);
 	}
@@ -4669,7 +4669,7 @@ boolean force;
 /*JP
 		You("know of no traps there.");
 */
-		You("そこに罠がないことを知っている。");
+		pline("あなたが知っているかぎり、そこには罠はない。");
 	    return(0);
 	}
 
@@ -4906,7 +4906,7 @@ boolean disarm;
 /*JP
 			You_feel("a needle prick your %s.",body_part(bodypart));
 */
-			You("%sにチクッという痛みを感じた。", body_part(bodypart));
+			You("%sにチクッと痛みを感じた。", body_part(bodypart));
 /*JP
 			poisoned("needle", A_CON, "poisoned needle",10);
 */
