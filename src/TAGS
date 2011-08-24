@@ -1,0 +1,4651 @@
+
+allmain.c,139
+moveloop(27,609
+stop_occupation(458,11591
+display_gamewindows(482,11973
+newgame(511,12750
+welcome(578,14234
+do_positionbar(627,15977
+
+alloc.c,403
+#define ALLOC_C	6,231
+#define EXTERN_H	10,417
+#undef alloc18,621
+#undef free19,634
+static FILE *heaplog heaplog23,720
+static boolean tried_heaplog 24,746
+extern void VDECL(28,827
+#  define MONITOR_PTR_FMT67,1806
+#  define PTR_FMT 71,1865
+#  define PTR_TYP 72,1888
+#  define PTR_FMT 74,1926
+#  define PTR_TYP 75,1952
+fmt_ptr(80,2079
+heapmon_init(95,2371
+nhalloc(105,2520
+nhfree(126,2960
+
+apply.c,2425
+static const char tools[tools17,457
+static const char tools_too[tools_too18,530
+static const char no_elbow_room[no_elbow_room59,2282
+use_camera(63,2381
+use_towel(113,3528
+its_dead(221,5856
+static const char hollow_str[hollow_str275,7579
+use_stethoscope(282,7961
+static char whistle_str[whistle_str437,11568
+use_whistle(440,11641
+use_magic_whistle(451,11830
+um_dist(487,12692
+number_leashed(494,12801
+o_unleash(505,12982
+m_unleash(517,13245
+unleash_all(543,13808
+#define MAXLEASHED	554,14084
+use_leash(558,14137
+get_mleash(671,16335
+next_to_u(689,16662
+check_leash(726,17476
+#define WEAK	798,19569
+static const char look_str[look_str803,19653
+use_mirror(806,19714
+use_bell(1042,25806
+use_candelabrum(1186,29098
+use_candle(1276,31059
+snuff_candle(1376,33726
+snuff_lit(1411,34769
+catch_lit(1436,35418
+use_lamp(1480,36783
+light_cocktail(1576,39234
+static NEARDATA const char cuddly[cuddly1643,40905
+dorub(1646,40978
+dojump(1697,42191
+jump(1704,42247
+tinnable(1948,47937
+use_tinning_kit(1957,48085
+use_unicorn_horn(2057,50740
+#define PROP_COUNT 2060,50781
+#define ATTR_COUNT 2061,50849
+#define prop2trbl(2098,51901
+#define attr2trbl(2099,51936
+#define prop_trouble(2100,51961
+#define attr_trouble(2101,52030
+#undef PROP_COUNT2208,54949
+#undef ATTR_COUNT2209,54967
+#undef prop2trbl2210,54985
+#undef attr2trbl2211,55002
+#undef prop_trouble2212,55019
+#undef attr_trouble2213,55039
+fig_transform(2220,55128
+figurine_location_checks(2337,57974
+use_figurine(2386,59025
+static NEARDATA const char lubricables[lubricables2430,60161
+static NEARDATA const char need_to_remove_outer_armor[need_to_remove_outer_armor2431,60236
+use_grease(2438,60412
+static struct trapinfo 2536,62644
+	struct obj *tobj;tobj2537,62669
+	xchar tx,2538,62688
+	xchar tx, ty;2538,62688
+	int time_needed;2539,62703
+	boolean force_bungle;2540,62721
+} trapinfo;2541,62744
+reset_trapset(2544,62762
+use_stone(2552,62881
+use_trap(2757,68044
+set_trap(2913,71877
+use_whip(2961,73078
+	not_enough_room[not_enough_room3298,81487
+	not_enough_room[not_enough_room3303,81727
+use_pole 3311,81973
+use_cream_pie(3392,83847
+use_grapple 3453,85280
+#define BY_OBJECT	3615,89424
+do_break_wand(3619,89540
+uhave_graystone(3808,95142
+add_class(3819,95311
+	char tmp[tmp3823,95356
+	tmp[tmp3824,95370
+	tmp[tmp3825,95387
+	Strcat(3826,95403
+doapply(3830,95428
+unfixable_trouble_count(4128,102051
+
+artifact.c,1522
+STATIC_DCL struct artifact artilist[artilist17,490
+#define get_artifact(28,833
+#define FATAL_DAMAGE_MODIFIER 44,1739
+STATIC_DCL int spec_dbon_applies;47,1787
+STATIC_DCL xchar artidisco[artidisco48,1821
+STATIC_OVL int spec_dbon_applies 51,1955
+static boolean artiexist[artiexist54,2058
+STATIC_OVL xchar artidisco[artidisco56,2167
+hack_artifacts(63,2385
+init_artifacts(87,3025
+save_artifacts(95,3197
+restore_artifacts(103,3348
+artiname(112,3562
+mk_artifact(130,4279
+artifact_name(179,6014
+exist_artifact(201,6411
+artifact_exists(216,6732
+nartifact_exist(238,7221
+spec_ability(252,7384
+confers_luck(263,7626
+arti_reflects(274,7901
+restrict_name(293,8258
+attacks(320,9034
+defends(332,9257
+protects(345,9504
+set_artifact_intrinsic(361,9850
+touch_artifact(503,13843
+spec_applies(578,16270
+spec_m2(635,18161
+spec_abon(646,18346
+spec_dbon(662,18737
+discover_artifact(682,19246
+undiscovered_artifact(701,19813
+disp_artifact_discoveries(718,20186
+#define MB_MAX_DIEROLL	769,21900
+static const char * const mb_verb[mb_verb770,21964
+#define MB_INDEX_PROBE	780,22253
+#define MB_INDEX_STUN	781,22279
+#define MB_INDEX_SCARE	782,22304
+#define MB_INDEX_CANCEL	783,22330
+Mb_hit(787,22429
+artifact_hit(994,29007
+static NEARDATA const char recharge_type[recharge_type1457,41340
+static NEARDATA const char invoke_types[invoke_types1458,41418
+doinvoke(1462,41545
+arti_invoke(1473,41771
+artifact_light(1748,49013
+arti_speak(1757,49201
+artifact_has_invprop(1784,49720
+arti_cost(1795,49986
+
+attrib.c,1414
+const char	* const plusattr[plusattr23,588
+		* const minusattr[minusattr29,746
+const struct innate 38,910
+	schar	ulevel;39,932
+	long	*ability;ability40,947
+	const char *gainstr,gainstr41,963
+	const char *gainstr, *losestr;losestr41,963
+}	arc_abil[arc_abil42,995
+	bar_abil[bar_abil50,1224
+	cav_abil[cav_abil64,1600
+	fen_abil[fen_abil71,1804
+	hea_abil[hea_abil74,1895
+	kni_abil[kni_abil84,2150
+	mon_abil[mon_abil87,2241
+	pri_abil[pri_abil127,3518
+	ran_abil[ran_abil134,3746
+	rog_abil[rog_abil142,3990
+	sam_abil[sam_abil149,4185
+	tou_abil[tou_abil159,4447
+	med_abil[med_abil166,4678
+	val_abil[val_abil171,4861
+	wiz_abil[wiz_abil182,5146
+	elf_abil[elf_abil193,5495
+	halfelf_abil[halfelf_abil200,5685
+	orc_abil[orc_abil204,5796
+static long next_check 207,5877
+adjattrib(213,6099
+gainstr(287,7980
+losestr(302,8287
+change_luck(322,8607
+stone_luck(331,8781
+set_moreluck(349,9285
+restore_attrib(362,9505
+#define AVAL	383,9863
+exercise(386,9922
+#define SATIATED	420,10783
+#define NOT_HUNGRY	421,10802
+#define HUNGRY	422,10823
+#define WEAK	423,10841
+#define FAINTING	424,10857
+#define FAINTED	425,10876
+#define STARVED	426,10895
+exerper(429,10931
+exerchk(490,12416
+reset_attribute_clock(593,15076
+init_attr(600,15164
+redist_attr(650,16023
+postadjabil(670,16522
+adjabil(679,16670
+newhp(778,19462
+acurr(822,20646
+acurrstr(856,21688
+adjalign(872,22039
+
+ball.c,474
+ballfall(20,575
+#define BCPOS_DIFFER	108,3205
+#define BCPOS_CHAIN	109,3270
+#define BCPOS_BALL	110,3319
+placebc(123,3683
+unplacebc(149,4261
+bc_order(174,4887
+set_bc(197,5478
+move_bc(255,7228
+drag_ball(384,11346
+#define CHAIN_IN_MIDDLE(420,12336
+#define IS_CHAIN_ROCK(422,12451
+#define SKIP_TO_DRAG 431,12922
+#undef SKIP_TO_DRAG573,17149
+#undef IS_CHAIN_ROCK574,17169
+#undef CHAIN_IN_MIDDLE575,17190
+drop_ball(678,19867
+litter(790,22351
+drag_down(814,22781
+
+bones.c,152
+no_bones_level(26,785
+goodfruit(50,1676
+resetobjs(64,1835
+drop_upon_death(129,3705
+can_make_bones(169,4700
+savebones(204,5589
+getbones(391,10992
+
+botl.c,396
+const char * const enc_stat[enc_stat17,491
+#define MAXCO 48,1097
+#define MAXCO 50,1121
+STATIC_DCL int mrank_sz;54,1167
+STATIC_OVL NEARDATA int mrank_sz 56,1209
+xlev_to_rank(65,1422
+rank_to_xlev(74,1616
+rank_of(82,1733
+rank(112,2419
+title_to_mon(118,2490
+max_rank_sz(149,3363
+botl_score(165,3678
+hppwbar(186,4195
+bot1(253,5866
+describe_level(346,8182
+bot2(380,8890
+bot(514,12018
+
+cmd.c,2969
+#define NR_OF_EOFS	21,700
+#define CMD_TRAVEL 24,730
+static int NDECL((*timed_occ_fn)timed_occ_fn111,3432
+static const char* readchar_queue=173,5764
+doprev_message(181,5922
+timed_occupation(188,6030
+reset_occupations(211,6677
+set_occupation(222,6871
+#define BSIZE 247,7481
+static char pushq[pushq248,7498
+static char pushq[BSIZE], saveq[saveq248,7498
+static NEARDATA int phead,249,7538
+static NEARDATA int phead, ptail,249,7538
+static NEARDATA int phead, ptail, shead,249,7538
+static NEARDATA int phead, ptail, shead, stail;249,7538
+popch(252,7599
+pgetchar(264,8021
+pushch(274,8181
+savech(288,8392
+doextcmd(305,8612
+doextlist(321,8939
+#define MAX_EXT_CMD 350,9666
+extcmd_via_menu(356,9841
+domonability(482,13150
+enter_explore_mode(528,14578
+dooverview_or_wiz_where(562,15362
+wiz_wish(578,15623
+wiz_identify(597,16030
+wiz_map(609,16260
+wiz_genesis(634,16786
+wiz_where(646,17007
+wiz_detect(658,17287
+wiz_level_tele(670,17494
+wiz_mon_polycontrol(682,17742
+wiz_level_change(697,18105
+wiz_panic(737,19057
+wiz_polyself(746,19242
+wiz_show_seenv(754,19340
+wiz_show_vision(796,20302
+wiz_show_wmodes(833,21086
+static winid en_win;867,21768
+	You_[You_870,21820
+	You_[You_875,21958
+	have_been[have_been883,22208
+#define enl_msg(888,22310
+#define enl_msg(891,22417
+#define you_are(894,22525
+#define you_have(895,22575
+#define you_can(896,22626
+#define you_have_been(898,22690
+#define you_have_never(899,22762
+#define you_have_X(900,22835
+#define you_are_ing(902,22917
+enlght_line(906,23000
+enlght_combatinc(921,23295
+enlightenment(972,24419
+minimal_enlightenment(1587,42502
+doattributes(1766,48721
+doconduct(1779,48919
+show_conduct(1786,48970
+#  define M(1957,52857
+#  define M(1959,52893
+#define C(1963,52959
+static const struct func_tab cmdlist[cmdlist1966,52994
+struct ext_func_tab extcmdlist[extcmdlist2106,56855
+static const struct ext_func_tab debug_extcmdlist[debug_extcmdlist2206,60939
+add_debug_extended_commands(2256,62983
+static const char 2277,63497
+static const char count_str[count_str2278,63548
+static const char separator[separator2279,63615
+count_obj(2282,63700
+obj_chain(2305,64201
+mon_invent_chain(2323,64567
+contained(2343,65014
+mon_chain(2370,65824
+wiz_show_stats(2395,66367
+sanity_check(2453,68005
+wiz_migrate_mons(2461,68108
+#define unctrl(2490,68775
+#define unmeta(2491,68830
+rhack(2495,68868
+xytod(2706,74289
+dtoxy(2718,74481
+movecmd(2728,74626
+int get_adjacent_loc(2762,75470
+getdir(2785,75815
+help_dir(2830,76771
+confdir(2933,79773
+isok(2945,79932
+static NEARDATA int last_multi;2952,80091
+click_to_cmd(2958,80192
+parse(3058,83224
+end_of_input(3133,84843
+readchar(3149,85100
+dotravel(3191,85975
+wiz_port_debug(3231,86780
+	struct menu_selection_struct 3238,86880
+		char *menutext;menutext3239,86912
+		void NDECL((*fn)fn3240,86930
+yn_function(3282,88103
+dovattack(3305,88746
+findtarget(3320,89089
+autotarget(3338,89627
+autothrust(3371,90625
+
+dbridge.c,898
+is_pool(45,1582
+is_lava(59,1879
+is_ice(73,2135
+is_drawbridge_wall(98,2581
+is_db_wall(129,3370
+find_drawbridge(141,3577
+get_wall_for_db(168,4026
+create_drawbridge(186,4400
+struct entity 235,5423
+	struct monst *emon;emon236,5439
+	struct permonst *edata;edata237,5492
+	int ex,238,5565
+	int ex, ey;238,5565
+#define ENTITIES 241,5582
+static NEARDATA struct entity occupants[occupants243,5602
+e_at(247,5681
+m_to_e(266,6084
+u_to_e(284,6427
+set_entity(294,6573
+#define is_u(306,6783
+#define e_canseemon(307,6828
+e_nam(317,7161
+Enam(332,7421
+E_phrase(348,7722
+e_survives_at(374,8226
+e_died(397,8876
+#define mk_message(444,10106
+#define mk_corpse(445,10161
+#undef mk_message459,10712
+#undef mk_corpse460,10730
+automiss(470,10845
+e_missed(482,11073
+e_jumps(523,11925
+do_entity(549,12531
+close_drawbridge(831,19601
+open_drawbridge(890,21022
+destroy_drawbridge(932,22077
+
+decl.c,4752
+int NDECL((*afternmv)afternmv15,467
+int NDECL((*occupation)occupation16,491
+const char *hname hname19,539
+int hackpid 20,604
+int locknum 22,681
+char *catmore catmore25,759
+NEARDATA int bases[bases28,807
+NEARDATA int multi 30,849
+NEARDATA int warnlevel 32,879
+NEARDATA int nroom 34,949
+NEARDATA int nsubroom 35,973
+NEARDATA int occtime 36,1000
+int x_maze_max,38,1027
+int x_maze_max, y_maze_max;38,1027
+int otg_temp;39,1099
+NEARDATA int in_doagain 42,1166
+struct dgn_topology dungeon_topology 49,1339
+struct q_score	quest_status 52,1407
+NEARDATA int smeq[smeq54,1445
+NEARDATA int doorindex 55,1488
+NEARDATA char *save_cm save_cm57,1517
+NEARDATA int killer_format 58,1545
+const char *killer killer59,1577
+const char *delayed_killer delayed_killer60,1601
+NEARDATA long done_money 62,1648
+char killer_buf[killer_buf64,1685
+const char *nomovemsg nomovemsg65,1717
+const char nul[nul66,1744
+NEARDATA char plname[plname67,1795
+NEARDATA char pl_character[pl_character68,1853
+NEARDATA char pl_race 69,1898
+NEARDATA char pl_fruit[pl_fruit71,1929
+NEARDATA int current_fruit 72,1970
+NEARDATA struct fruit *ffruit ffruit73,2002
+NEARDATA char tune[tune75,2054
+const char *occtxt occtxt77,2086
+const char quitchars[quitchars78,2114
+const char vowels[vowels79,2152
+const char ynchars[ynchars80,2188
+const char ynqchars[ynqchars81,2217
+const char ynaqchars[ynaqchars82,2248
+const char ynNaqchars[ynNaqchars83,2281
+NEARDATA long yn_number 84,2316
+const char disclosure_options[disclosure_options86,2347
+char hackdir[hackdir89,2428
+char levels[levels91,2503
+char permbones[permbones97,2602
+int ramdisk 98,2666
+int saveprompt 99,2733
+const char *alllevels alllevels100,2756
+const char *allbones allbones101,2792
+struct linfo level_info[level_info104,2835
+NEARDATA struct sinfo program_state;106,2871
+const char sdir[sdir109,2955
+const char ndir[ndir110,2989
+const schar xdir[xdir111,3045
+const schar ydir[ydir112,3103
+const schar zdir[zdir113,3161
+NEARDATA schar tbx 115,3220
+NEARDATA struct multishot m_shot 119,3408
+NEARDATA struct dig_info digging;121,3477
+NEARDATA dungeon dungeons[dungeons123,3512
+NEARDATA s_level *sp_levchn;sp_levchn124,3582
+NEARDATA stairway upstair 125,3611
+NEARDATA stairway upstair = { 0, 0 }, dnstair 125,3611
+NEARDATA stairway upladder 126,3669
+NEARDATA stairway upladder = { 0, 0 }, dnladder 126,3669
+NEARDATA stairway sstairs 127,3729
+NEARDATA dest_area updest 128,3767
+NEARDATA dest_area dndest 129,3823
+NEARDATA coord inv_pos 130,3879
+NEARDATA boolean in_mklev 132,3915
+NEARDATA boolean stoned 133,3950
+NEARDATA boolean unweapon 134,4017
+NEARDATA boolean mrg_to_wielded 135,4052
+NEARDATA struct obj *current_wand current_wand137,4144
+NEARDATA boolean in_steed_dismounting 139,4220
+NEARDATA coord bhitpos 141,4268
+NEARDATA coord doors[doors142,4300
+NEARDATA struct mkroom rooms[rooms144,4342
+NEARDATA struct mkroom* subrooms 145,4402
+struct mkroom *upstairs_room,upstairs_room146,4461
+struct mkroom *upstairs_room, *dnstairs_room,dnstairs_room146,4461
+struct mkroom *upstairs_room, *dnstairs_room, *sstairs_room;sstairs_room146,4461
+dlevel_t level;148,4523
+struct trap *ftrap ftrap149,4556
+NEARDATA struct monst youmonst 150,4595
+NEARDATA struct flag flags 151,4635
+NEARDATA struct instance_flags iflags 152,4671
+NEARDATA struct you u 153,4718
+NEARDATA struct monst *ulasttgt ulasttgt155,4750
+NEARDATA struct obj *invent invent157,4804
+const int zapcolors[zapcolors178,5496
+const int shield_static[shield_static190,5818
+NEARDATA struct spell spl_book[spl_book196,6039
+NEARDATA long moves 198,6096
+NEARDATA long wailmsg 200,6183
+NEARDATA struct obj *migrating_objs migrating_objs203,6267
+NEARDATA struct obj *billobjs billobjs205,6353
+NEARDATA struct obj zeroobj 208,6451
+NEARDATA char dogname[dogname211,6517
+NEARDATA char catname[catname212,6557
+NEARDATA char horsename[horsename213,6597
+char preferred_pet;214,6639
+NEARDATA struct monst *mydogs mydogs216,6741
+NEARDATA struct monst *migrating_mons migrating_mons218,6848
+NEARDATA struct mvitals mvitals[mvitals220,6908
+NEARDATA struct c_color_names c_color_names 222,6951
+const char *c_obj_colors[c_obj_colors236,7224
+struct menucoloring *menu_colorings menu_colorings275,8309
+struct c_common_strings c_common_strings 278,8358
+const char *materialnm[materialnm294,8960
+NEARDATA boolean vision_full_recalc 309,9431
+NEARDATA char	 **viz_array viz_array310,9472
+NEARDATA winid WIN_MESSAGE 313,9623
+NEARDATA winid WIN_MAP 314,9683
+char toplines[toplines315,9738
+struct tc_gbl_data tc_gbl_data 317,9837
+char *fqn_prefix[fqn_prefix319,9904
+char *fqn_prefix_names[fqn_prefix_names323,10068
+decl_init(330,10283
+
+detect.c,1504
+o_in(33,1135
+o_material(53,1629
+do_dknown_of(72,2099
+check_map_spot(86,2383
+clear_stale_map(152,4518
+gold_detect(171,4922
+food_detect(318,8840
+object_detect(455,12571
+    register int x,459,12705
+    register int x, y;459,12705
+    char stuff[stuff460,12728
+    int is_cursed 461,12751
+    int do_dknown 462,12803
+    int ct 465,12941
+    register struct obj *obj,obj466,12966
+    register struct obj *obj, *otmp otmp466,12966
+    register struct monst *mtmp;mtmp467,13021
+    int uw 468,13054
+    int sym,469,13079
+    int sym, boulder 469,13079
+    sym 482,13567
+    	Strcpy(492,13867
+    if (do_dknown) for(obj = invent; obj;498,14078
+    if (do_dknown) for(obj = invent; obj; obj 498,14078
+    for (obj = fobj; obj;500,14157
+    for (obj = fobj; obj; obj 500,14157
+    for (obj = level.buriedobjlist; obj;508,14386
+    for (obj = level.buriedobjlist; obj; obj 508,14386
+    for (mtmp = fmon; mtmp;516,14594
+    for (mtmp = fmon; mtmp; mtmp 516,14594
+monster_detect(653,18390
+sense_trap(726,20279
+trap_detect(761,21106
+level_distance(838,23243
+    const char *what;what912,24642
+    d_level *where;where913,24664
+} level_detects[level_detects914,24684
+use_crystal_ball(934,25060
+show_map_spot(1127,29972
+do_mapping(1158,30721
+do_vicinity_map(1177,31113
+cvt_sdoor_to_door(1198,31655
+findone(1218,32033
+openone(1264,33118
+findit(1327,34741
+openit(1337,34920
+find_trap(1361,35412
+dosearch0(1394,36096
+dosearch(1511,39097
+sokoban_detect(1518,39174
+
+dig.c,896
+static NEARDATA boolean did_dig_msg;19,548
+#define DIGTYP_UNDIGGABLE 30,961
+#define DIGTYP_ROCK 31,989
+#define DIGTYP_STATUE 32,1017
+#define DIGTYP_BOULDER 33,1045
+#define DIGTYP_DOOR 34,1073
+#define DIGTYP_TREE 35,1101
+rm_waslit(39,1150
+mkcavepos(56,1632
+mkcavearea(95,2695
+dig_typ(150,4219
+is_digging(167,4673
+#define BY_YOU	175,4753
+#define BY_OBJECT	176,4781
+dig_check(179,4828
+dig(255,7200
+holetime(558,14875
+fillholetyp(567,15073
+digactualhole(600,16009
+dighole(818,22147
+dig_up_grave(965,26002
+use_pick_axe(1036,27755
+use_pick_axe2(1100,29378
+watch_dig(1357,36169
+mdig_tunnel(1425,37574
+zap_dig(1507,39889
+bury_an_obj(1685,44795
+bury_objs(1739,46258
+unearth_objs(1758,46663
+rot_organic(1791,47536
+rot_corpse(1814,48213
+bury_monst(1862,49376
+bury_you(1884,49896
+unearth_you(1909,50352
+escape_tomb(1922,50547
+bury_obj(1962,51632
+wiz_debug_cmd(1982,51937
+
+display.c,2582
+vobj_at(148,5812
+magic_map_background(168,6253
+map_background(216,7701
+map_trap(234,8072
+map_object(253,8519
+map_invisible(275,9146
+unmap_object(295,9737
+#define _map_location(326,10521
+map_location(340,10909
+#define DETECTED 346,10986
+#define PHYSICALLY_SEEN 347,11006
+#define is_worm_tail(348,11032
+display_monster(362,11421
+display_warning(459,14232
+feel_location(492,15324
+newsym(632,20721
+#undef is_worm_tail772,25029
+shieldeff(781,25230
+static struct tmp_glyph 823,26497
+    coord saved[saved824,26523
+    int sidx;825,26582
+    int style;826,26640
+    int glyph;827,26708
+    struct tmp_glyph *prev;prev828,26757
+} tgfirst;829,26785
+tmp_at(832,26802
+swallowed(924,29228
+under_water(982,30773
+under_ground(1027,31715
+see_monsters(1068,32722
+set_mimic_blocking(1090,33223
+see_objects(1113,33785
+see_traps(1124,33982
+curs_on_u(1140,34284
+doredraw(1146,34374
+docrt(1153,34422
+    xchar new;1205,35514
+    int   glyph;1206,35580
+} gbuf_entry;1207,35597
+static gbuf_entry gbuf[gbuf1209,35612
+static char gbuf_start[gbuf_start1210,35650
+static char gbuf_stop[gbuf_stop1211,35681
+show_glyph(1217,35781
+#define reset_glyph_bbox(1285,38000
+static gbuf_entry nul_gbuf 1296,38178
+clear_glyph_buffer(1301,38285
+row_refresh(1319,38590
+cls(1330,38802
+flush_screen(1343,39118
+back_to_glyph(1392,40611
+swallow_to_glyph(1489,43167
+zapdir_to_glyph(1515,43794
+glyph_at(1535,44312
+static int bad_count[bad_count1554,44824
+static const char *type_names[type_names1555,44896
+type_to_name(1569,45311
+error4(1576,45434
+check_pos(1593,45893
+more_than_one(1607,46199
+#define more_than_one(1617,46377
+set_twall(1622,46543
+set_wall(1640,46973
+set_corn(1663,47445
+set_crosswall(1692,48263
+set_wall_state(1728,49005
+unsigned char seenv_matrix[seenv_matrix1802,50806
+#define sign(1806,50921
+set_seenv(1810,51056
+#define T_d 1821,51371
+#define T_l 1822,51385
+#define T_u 1823,51399
+#define T_r 1824,51413
+#define T_stone 1833,51738
+#define T_tlcorn 1834,51757
+#define T_trcorn 1835,51776
+#define T_hwall 1836,51795
+#define T_tdwall 1837,51814
+static const int wall_matrix[wall_matrix1839,51834
+#define C_bl 1848,52235
+#define C_tl 1849,52250
+#define C_tr 1850,52265
+#define C_br 1851,52280
+#define C_trcorn 1860,52618
+#define C_brcorn 1861,52637
+#define C_blcorn 1862,52656
+#define C_tlwall 1863,52675
+#define C_tuwall 1864,52694
+#define C_crwall 1865,52713
+static const int cross_matrix[cross_matrix1867,52733
+t_warn(1877,53125
+wall_angle(1906,54092
+#define only(1913,54222
+#define set_corner(2061,57997
+
+dlb.c,1685
+#define DATAPREFIX 12,255
+typedef struct dlb_procs 21,495
+    boolean NDECL((*dlb_init_proc)dlb_init_proc22,522
+    void NDECL((*dlb_cleanup_proc)dlb_cleanup_proc23,559
+    boolean FDECL((*dlb_fopen_proc)dlb_fopen_proc24,596
+    int FDECL((*dlb_fclose_proc)dlb_fclose_proc25,669
+    int FDECL((*dlb_fread_proc)dlb_fread_proc26,713
+    int FDECL((*dlb_fseek_proc)dlb_fseek_proc27,771
+    char *FDECL((*dlb_fgets_proc)dlb_fgets_proc28,823
+    int FDECL((*dlb_fgetc_proc)dlb_fgetc_proc29,879
+    long FDECL((*dlb_ftell_proc)dlb_ftell_proc30,922
+} dlb_procs_t;31,966
+#define MAX_LIBS 53,1807
+static library dlb_libs[dlb_libs54,1826
+#define DLB_MIN_VERS 110,3741
+#define DLB_MAX_VERS 111,3813
+readlibdir(121,4167
+find_file(169,5531
+open_library(198,6158
+close_library(217,6492
+lib_dlb_init(232,6805
+lib_dlb_cleanup(249,7196
+lib_dlb_fopen(259,7365
+lib_dlb_fclose(279,7693
+lib_dlb_fread(287,7790
+lib_dlb_fseek(314,8398
+lib_dlb_fgets(334,8797
+lib_dlb_fgetc(366,9395
+lib_dlb_ftell(377,9531
+const dlb_procs_t lib_dlb_procs 383,9588
+const dlb_procs_t rsrc_dlb_procs 398,9836
+#define do_dlb_init 413,10146
+#define do_dlb_cleanup 414,10194
+#define do_dlb_fopen 415,10248
+#define do_dlb_fclose 416,10298
+#define do_dlb_fread 417,10350
+#define do_dlb_fseek 418,10400
+#define do_dlb_fgets 419,10450
+#define do_dlb_fgetc 420,10500
+#define do_dlb_ftell 421,10550
+static const dlb_procs_t *dlb_procs;dlb_procs423,10601
+static boolean dlb_initialized 424,10638
+dlb_init(427,10687
+dlb_cleanup(445,10929
+dlb_fopen(454,11032
+dlb_fclose(477,11445
+dlb_fread(492,11639
+dlb_fseek(503,11896
+dlb_fgets(514,12109
+dlb_fgetc(525,12315
+dlb_ftell(534,12457
+
+do.c,805
+static NEARDATA const char drop_types[drop_types39,1012
+dodrop(44,1148
+boulder_hits_pool(68,1757
+flooreffects(172,4569
+doaltarobj(313,8181
+trycall(347,8928
+dosinkring(357,9080
+canletgo(619,15628
+drop(682,17144
+dropx(757,18747
+dropy(776,19184
+obj_no_longer_held(840,21146
+doddrop(864,21738
+menu_drop(881,22184
+static NEARDATA boolean at_ladder 996,25192
+dodown(999,25240
+doup(1127,28444
+d_level save_dlevel 1198,30178
+currentlevel_rewrite(1202,30276
+save_currentstate(1244,31257
+goto_level(1273,31739
+final_level(1768,46032
+static char *dfr_pre_msg dfr_pre_msg1844,48133
+schedule_goto(1849,48334
+deferred_goto(1874,49078
+revive_corpse(1908,49916
+revive_mon(2033,53567
+donull(2052,53993
+wipeoff(2061,54111
+dowipe(2087,54607
+set_wounded_legs(2110,55065
+heal_legs(2132,55521
+
+do_name.c,854
+getpos_help(24,723
+getpos(68,2056
+christen_monst(237,6079
+do_mname(273,6874
+do_oname(363,8964
+realloc_obj(447,10900
+oname(517,13087
+static NEARDATA const char callable[callable559,14254
+ddocall(564,14424
+docall(616,15253
+static const char * const ghostnames[ghostnames668,16597
+rndghostname(680,17139
+x_monnam(704,18030
+l_monnam(945,24089
+mon_nam(956,24273
+noit_mon_nam(968,24629
+Monnam(977,24815
+noit_Monnam(987,24938
+m_monnam(998,25096
+y_monnam(1006,25245
+Adjmonnam(1026,25640
+a_monnam(1038,25863
+Amonnam(1046,26012
+distant_monnam(1058,26281
+static const char * const bogusmons[bogusmons1080,26991
+rndmonnam(1141,29427
+roguename(1161,29895
+static NEARDATA const char * const hcolors[hcolors1182,30293
+hcolor(1207,31299
+rndcolor(1216,31495
+static const char * const coynames[coynames1230,31788
+coyotename(1273,33413
+
+do_wear.c,1925
+STATIC_DCL long takeoff_mask,17,484
+STATIC_DCL long takeoff_mask, taking_off;17,484
+STATIC_OVL NEARDATA long takeoff_mask 21,545
+static NEARDATA long taking_off 22,589
+static NEARDATA int todelay;24,628
+static boolean cancelled_don 25,657
+static NEARDATA const char see_yourself[see_yourself28,709
+static NEARDATA const char unknown_type[unknown_type30,776
+static NEARDATA const char c_armor[c_armor32,860
+static NEARDATA const char c_armor[c_armor47,1252
+static NEARDATA const long takeoff_order[takeoff_order63,1626
+off_msg(95,2657
+on_msg(112,2970
+Boots_on(143,3557
+Boots_off(198,4763
+Cloak_on(261,6234
+Cloak_off(326,7891
+Helmet_on(386,9335
+Helmet_off(466,11487
+Gloves_on(509,12458
+Gloves_off(535,13027
+Shield_on(607,14935
+Shield_off(626,15237
+Shirt_on(648,15633
+Shirt_off(662,15810
+Armor_on(684,16299
+Armor_off(690,16333
+Armor_gone(702,16594
+Amulet_on(711,16719
+Amulet_off(779,18242
+Ring_on(834,19429
+Ring_off_or_gone(945,22140
+Ring_off(1060,24847
+Ring_gone(1067,24918
+Blindf_on(1074,24989
+Blindf_off(1113,25940
+set_wear(1158,27064
+donning(1173,27409
+cancel_don(1208,28487
+static NEARDATA const char clothes[clothes1223,28871
+static NEARDATA const char accessories[accessories1224,28928
+dotakeoff(1228,29053
+#define MOREARM(1235,29168
+doremring(1313,31105
+#define MOREACC(1318,31174
+cursed(1379,32769
+armoroff(1398,33157
+already_wearing(1466,35110
+already_wearing2(1486,35471
+canwearobj(1503,35912
+dowear(1732,41728
+doputon(1810,43638
+find_ac(2003,48223
+glibr(2080,50453
+some_armor(2168,52672
+erode_armor(2194,53558
+stuck_ring(2208,53869
+unchanger(2233,54690
+select_off(2242,54838
+do_takeoff(2398,59001
+static const char *disrobing disrobing2464,60808
+take_off(2469,60866
+reset_remarm(2561,63262
+doddoremarm(2571,63409
+menu_remarm(2618,64593
+destroy_arm(2670,66089
+#define DESTROY_ARM(2674,66164
+#undef DESTROY_ARM2748,67863
+adj_abon(2754,67922
+
+dog.c,303
+initedog(21,535
+pet_type(44,1159
+make_familiar(57,1421
+makedog(148,3902
+update_mlstmv(214,5777
+losedogs(225,6065
+mon_arrive(249,6578
+mon_catchup_elapsed_time(430,11888
+keepdogs(514,14545
+migrate_to_level(634,17907
+dogfood(695,19655
+tamedog(794,22672
+wary_dog(905,26324
+abuse_dog(982,28340
+
+dogmove.c,513
+DROPPABLES(32,1027
+static NEARDATA const char nofetch[nofetch58,1674
+STATIC_VAR xchar gtyp,64,1834
+STATIC_VAR xchar gtyp, gx,64,1834
+STATIC_VAR xchar gtyp, gx, gy;64,1834
+cursed_object_at(70,2003
+dog_nutrition(81,2175
+dog_eat(131,3665
+dog_hunger(231,6700
+dog_invent(296,8438
+dog_goal(369,10413
+#define DDIST(397,11001
+#define SQSRCHRADIUS 398,11041
+#define FARAWAY 477,13306
+dog_move(517,14299
+#define GDIST(534,14859
+could_reach_item(851,24507
+can_reach_location(870,25181
+wantdoor(907,26035
+
+dokick.c,556
+#define is_bigfoot(16,491
+#define martial(17,542
+static NEARDATA struct rm *maploc;maploc20,655
+static NEARDATA const char *gate_str;gate_str21,690
+static NEARDATA struct obj *kickobj;kickobj32,1115
+static const char kick_passes_thru[kick_passes_thru37,1234
+kickdmg(40,1328
+kick_monster(135,3869
+ghitm(284,8161
+container_impact_dmg(423,11486
+kick_object(497,13308
+kickstr(752,20061
+dokick(825,21797
+drop_to(1508,39678
+impact_drop(1541,40447
+ship_object(1698,44503
+obj_delivery(1826,47949
+otransit_msg(1867,48988
+down_gate(1914,50032
+
+dothrow.c,730
+static NEARDATA const char toss_objs[toss_objs32,1265
+static NEARDATA const char bullets[bullets35,1444
+struct obj *thrownobj thrownobj38,1541
+throw_obj(45,1725
+dothrow(225,6433
+autoquiver(264,7567
+dofire(329,9283
+hitfloor(389,10708
+walk_path(420,11508
+hurtle_step(504,13522
+mhurtle_step(675,17906
+hurtle(704,18623
+mhurtle(776,20945
+check_shop_obj(807,21692
+toss_up(848,22653
+throwing_weapon(987,26509
+sho_obj_return_to_u(1000,26911
+throwit(1018,27295
+omon_adj(1315,35626
+tmiss(1356,36575
+#define quest_arti_hits_leader(1378,37295
+thitmonst(1387,37593
+gem_accept(1646,45103
+hero_breaks(1761,48721
+breaks(1779,49217
+breakobj(1796,49626
+breaktest(1875,52067
+breakmsg(1899,52552
+throw_gold(1967,53921
+
+drawing.c,1400
+#undef C17,434
+#define C(21,468
+#define C(23,489
+#define g_FILLER(26,510
+uchar oc_syms[oc_syms28,538
+uchar showsyms[showsyms29,616
+uchar monsyms[monsyms30,694
+uchar warnsyms[warnsyms31,772
+const char def_oc_syms[def_oc_syms34,905
+const char invisexplain[invisexplain55,1222
+const char * const objexplain[objexplain58,1330
+const char * const oclass_names[oclass_names80,1772
+const char def_monsyms[def_monsyms102,2099
+const char * const monexplain[monexplain171,3211
+const struct symdef def_warnsyms[def_warnsyms200,4254
+const struct symdef defsyms[defsyms225,5464
+#undef C328,10204
+void NDECL((*ibmgraphics_mode_callback)ibmgraphics_mode_callback333,10247
+static uchar ibm_graphics[ibm_graphics337,10358
+void NDECL((*decgraphics_mode_callback)decgraphics_mode_callback435,13304
+static uchar dec_graphics[dec_graphics437,13384
+static uchar mac_graphics[mac_graphics534,16515
+void NDECL((*ascgraphics_mode_callback)ascgraphics_mode_callback631,18783
+def_char_to_objclass(640,19079
+def_char_to_monclass(654,19366
+assign_graphics(664,19511
+switch_graphics(676,19787
+static uchar save_oc_syms[save_oc_syms732,21193
+static uchar save_showsyms[save_showsyms733,21241
+static uchar save_monsyms[save_monsyms734,21289
+static const uchar r_oc_syms[r_oc_syms736,21338
+static const uchar IBM_r_oc_syms[IBM_r_oc_syms765,22043
+assign_rogue_graphics(804,23117
+
+dungeon.c,2949
+#define alloc(14,422
+#define DUNGEON_FILE	19,471
+#define X_START	21,503
+#define X_LOCATE	22,529
+#define X_GOAL	23,555
+struct proto_dungeon 25,581
+	struct	tmpdungeon tmpdungeon[tmpdungeon26,604
+	struct	tmplevel   tmplevel[tmplevel27,647
+	s_level *final_lev[final_lev28,687
+	struct	tmpbranch  tmpbranch[tmpbranch29,754
+	int	start;31,799
+	int	n_levs;32,861
+	int	n_brs;33,907
+int n_dgns;36,957
+static branch *branches branches38,1040
+struct lchoice 40,1111
+	int idx;41,1128
+	schar lev[lev42,1138
+	schar playerlev[playerlev43,1160
+	xchar dgn[dgn44,1188
+	char menuletter;45,1210
+mapseen *mapseenchn mapseenchn71,2500
+#define DD	82,2974
+dumpit(86,3045
+save_dungeon(137,4616
+restore_dungeon(195,6403
+Fread(244,7855
+dname_to_dnum(260,8194
+find_level(274,8431
+find_branch(285,8653
+parent_dnum(317,9441
+level_range(349,10365
+parent_dlevel(382,11262
+correct_branch_type(410,12015
+insert_branch(430,12632
+#define branch_val(450,13154
+add_branch(477,13922
+add_level(508,14968
+init_level(530,15403
+possible_places(565,16490
+pick_level(597,17378
+indent(612,17682
+place_level(627,18087
+struct level_map 667,19158
+	const char *lev_name;lev_name668,19177
+	d_level *lev_spec;lev_spec669,19200
+} level_map[level_map670,19220
+init_dungeons(701,20010
+dunlev(962,28301
+dunlevs_in_dungeon(969,28416
+deepest_lev_reached(976,28562
+ledger_no(1011,29936
+maxledgerno(1028,30484
+ledger_to_dnum(1036,30654
+ledger_to_dlev(1054,31132
+depth(1066,31424
+on_level(1073,31532
+Is_special(1084,31809
+Is_branchlev(1100,32126
+next_level(1114,32393
+prev_level(1132,32861
+u_on_newpos(1151,33457
+u_on_sstairs(1166,33692
+#define badspot(1177,33968
+#undef badspot1187,34261
+u_on_upstairs(1192,34287
+u_on_dnstairs(1201,34443
+On_stairs(1210,34602
+Is_botlevel(1221,34881
+Can_dig_down(1228,34993
+Can_fall_thru(1241,35307
+Can_rise_up(1254,35677
+get_level(1280,36720
+In_quest(1331,37936
+In_mines(1341,38089
+dungeon_branch(1356,38433
+at_dgn_entrance(1382,38957
+In_V_tower(1392,39119
+On_W_tower_level(1399,39244
+In_W_tower(1408,39438
+In_hell(1430,40008
+find_hell(1440,40172
+goto_hell(1448,40310
+assign_level(1458,40486
+assign_rnd_level(1466,40630
+induced_align(1483,41002
+Invocation_lev(1503,41346
+level_difficulty(1514,41621
+lev_by_name(1529,41944
+br_string(1597,44027
+print_branch(1611,44345
+print_dungeon(1650,45448
+recbranch_mapseen(1810,49970
+donamelevel(1841,50734
+find_mapseen(1877,51468
+forget_mapseen(1889,51634
+save_mapseen(1915,52206
+load_mapseen(1939,52813
+remdun_mapseen(1973,53710
+init_mapseen(1992,53998
+#define INTEREST(2028,54876
+interest_mapseen(2044,55207
+recalc_mapseen(2054,55431
+dooverview(2166,58817
+seen_string(2212,59745
+br_string2(2238,60289
+#define TAB 2268,61177
+#define BULLET 2269,61195
+#define PREFIX 2270,61213
+#define COMMA 2271,61243
+#define ADDNTOBUF(2273,61296
+#define ADDNTOBUF(2277,61445
+#define ADDTOBUF(2280,61564
+print_mapseen(2283,61658
+
+eat.c,2556
+#define debugpline	17,521
+#define debugpline	19,565
+char msgbuf[msgbuf54,1931
+#define SATIATED	59,2030
+#define NOT_HUNGRY	60,2049
+#define HUNGRY	61,2070
+#define WEAK	62,2088
+#define FAINTING	63,2104
+#define FAINTED	64,2123
+#define STARVED	65,2142
+#define CANNIBAL_ALLOWED(68,2224
+STATIC_DCL NEARDATA const char comestibles[comestibles72,2307
+STATIC_DCL NEARDATA const char allobj[allobj73,2353
+STATIC_DCL boolean force_save_hs;74,2394
+STATIC_OVL NEARDATA const char comestibles[comestibles78,2436
+STATIC_OVL NEARDATA const char allobj[allobj81,2544
+STATIC_OVL boolean force_save_hs 86,2788
+const char *hu_stat[hu_stat88,2831
+is_edible(116,3208
+init_uhunger(143,4096
+static const struct { const char *txt;txt149,4155
+static const struct { const char *txt; int nut;149,4155
+static const struct { const char *txt; int nut; } tintxts[tintxts149,4155
+#define ROTTEN_TIN 155,4316
+#define HOMEMADE_TIN 157,4355
+#define FRENCH_FRIED_TIN 164,4514
+#define ROTTEN_TIN 175,4731
+#define HOMEMADE_TIN 177,4770
+#define FRENCH_FRIED_TIN 184,4930
+#define TTSZ	192,5067
+	struct	obj *tin;tin195,5120
+	int	usedtime,196,5138
+	int	usedtime, reqtime;196,5138
+} tin;197,5162
+	struct	obj *piece;piece200,5195
+	int	usedtime,205,5454
+		reqtime;206,5494
+	int	nmod;207,5533
+	Bitfield(208,5576
+	Bitfield(211,5672
+	Bitfield(212,5730
+	Bitfield(213,5787
+} victual;214,5842
+static char *eatmbuf eatmbuf216,5854
+eatmdone(220,5919
+food_xname(237,6338
+choke(273,7275
+recalc_wt(351,9169
+reset_eat(367,9470
+touchfood(382,9811
+food_disappears(432,11005
+food_substitution(443,11361
+do_reset_eat(451,11549
+eatfood(472,12081
+done_eating(492,12516
+maybe_cannibal(519,13197
+cprefx(543,13642
+fix_petrification(632,15796
+intrinsic_possible(662,16655
+givit(758,18757
+cpostfx(938,22790
+violated_vegetarian(1180,29141
+costly_tin(1197,29445
+opentin(1215,29902
+start_tin(1393,34725
+Hear_again(1475,36344
+rottenfood(1483,36500
+eatcorpse(1548,37968
+start_eating(1699,42344
+fprefx(1741,43449
+accessory_has_effect(1866,46953
+eataccessory(1879,47278
+eatspecial(2027,51131
+static const char *foodwords[foodwords2094,52992
+foodword(2109,53466
+fpostfx(2124,53812
+edibility_prompts(2198,55725
+doeat(2388,61082
+bite(2662,68895
+gethungry(2689,69410
+morehungry(2733,70799
+lesshungry(2742,70942
+unfaint(2797,72356
+is_fainted(2811,72522
+reset_faint(2817,72583
+sync_hunger(2824,72696
+newuhs(2841,72913
+floorfood(3030,78094
+vomit(3141,81337
+eaten_stat(3148,81452
+consume_oeaten(3170,82086
+maybe_finished_meal(3224,84285
+
+end.c,1369
+#define NEED_VARARGS	12,405
+#define FIRST_GEM 25,707
+#define FIRST_AMULET 26,746
+#define LAST_AMULET 27,781
+struct valuable_data 29,821
+struct valuable_data { long count;29,821
+struct valuable_data { long count; int typ;29,821
+	gems[gems32,897
+	amulets[amulets33,956
+static struct val_list 35,997
+static struct val_list { struct valuable_data *list;list35,997
+static struct val_list { struct valuable_data *list; int size;35,997
+static struct val_list { struct valuable_data *list; int size; } valuables[valuables35,997
+#define nethack_exit 59,1943
+#define done_stopprint 62,1977
+# define NH_abort(65,2038
+# define NH_abort(68,2086
+# define NH_abort(71,2143
+# define NH_abort(73,2185
+#define putchar(79,2265
+static NEARDATA const char *deaths[deaths86,2374
+static NEARDATA const char *ends[ends96,2701
+static NEARDATA const char *ends[ends105,3025
+done1(118,3410
+done2(140,3827
+done_intr(187,4740
+done_hangup(200,5047
+done_in_by(212,5222
+#define NOTIFY_NETHACK_BUGS327,8141
+panic VA_DECL(332,8195
+	    char buf[buf389,9737
+should_query_disclose_option(406,10098
+disclose(444,11171
+savelife(523,13242
+get_valuables(556,13954
+sort_valuables(589,14934
+artifact_score(612,15514
+done(659,16884
+container_contents(1229,31964
+terminate(1276,33195
+list_vanquished(1302,33686
+num_genocides(1408,36350
+list_genocided(1419,36500
+
+engrave.c,725
+STATIC_VAR NEARDATA struct engr *head_engr;head_engr16,464
+static const char *random_mesg[random_mesg20,545
+random_engraving(77,2604
+	char		wipefrom;93,3022
+	const char *	wipeto;94,3039
+} rubouts[rubouts95,3061
+wipeout_text(113,3748
+can_reach_floor(204,5662
+surface(218,5960
+ceiling(283,7161
+engr_at(333,8068
+sengr_at(352,8470
+u_wipe_engr(367,8728
+wipe_engr_at(378,8861
+read_engr_at(401,9354
+make_engr_at(509,11682
+del_engr_at(535,12321
+freehand(547,12485
+static NEARDATA const char styluses[styluses559,12681
+doengrave(592,13943
+save_engravings(1563,37888
+rest_engravings(1587,38489
+del_engr(1610,39037
+rloc_engr(1633,39443
+static const char *epitaphs[epitaphs1651,39738
+make_grave(1717,42542
+
+exper.c,154
+newuexp(18,520
+enermod(43,1233
+experience(62,1499
+more_experienced(122,3181
+losexp(137,3441
+newexplevel(200,5203
+pluslvl(207,5303
+rndexp(256,6745
+
+explode.c,374
+static int expl[expl17,480
+explode(32,1119
+struct scatter_chain 496,13513
+	struct scatter_chain *next;next497,13536
+	struct obj *obj;obj498,13600
+	xchar ox;499,13647
+	xchar oy;500,13680
+	schar dx;501,13706
+	schar dy;502,13740
+	int range;503,13768
+	boolean stopped;504,13805
+scatter(519,14208
+splatter_burning_oil(692,18981
+#define ZT_SPELL_O_FIRE 696,19086
+
+extralev.c,513
+struct rogueroom 13,251
+	xchar rlx,14,270
+	xchar rlx, rly;14,270
+	xchar dx,15,287
+	xchar dx, dy;15,287
+	boolean real;16,302
+	uchar doortable;17,317
+	int nroom;18,335
+#define UP 20,389
+#define DOWN 21,402
+#define LEFT 22,417
+#define RIGHT 23,432
+static NEARDATA struct rogueroom r[r25,449
+roguejoin(32,655
+#define MAX(38,753
+#define MIN(41,815
+roguecorr(64,1345
+miniwalk(149,3659
+#define doorhere 157,3743
+makeroguerooms(198,4665
+#define here 216,5539
+corr(278,7195
+makerogueghost(289,7305
+
+files.c,2881
+#  define SKIP_ERRNO28,711
+#  define SKIP_ERRNO32,761
+# define O_BINARY 58,1209
+#define FQN_NUMBUF 62,1260
+static char fqn_filename_buffer[fqn_filename_buffer63,1281
+char bones[bones67,1410
+char lock[lock68,1440
+char bones[bones71,1536
+char lock[lock72,1589
+char bones[bones75,1667
+char lock[lock76,1699
+char bones[bones79,1798
+char lock[lock80,1828
+#define SAVESIZE	85,1949
+#define SAVESIZE	88,2024
+#define SAVESIZE	91,2113
+#define SAVESIZE	93,2194
+char SAVEF[SAVEF98,2278
+char SAVEP[SAVEP100,2368
+struct level_ftrack 104,2468
+int init;105,2490
+int fd;106,2500
+int oflag;107,2553
+boolean nethack_thinks_it_is_open;108,2608
+} lftrack;109,2685
+#define WIZKIT_MAX 116,2788
+static char wizkit[wizkit117,2811
+static int lockptr;124,2978
+static int lockptr;134,3176
+#define Delay(136,3210
+#define Close 138,3245
+#define DeleteFile 140,3280
+# define unlink 145,3332
+fname_encode(196,4955
+fname_decode(242,5861
+fqname(284,6693
+validate_prefix_locations(314,7514
+fopen_datafile(358,8762
+set_lock_and_bones(384,9345
+set_levelfile_name(413,10001
+create_levelfile(429,10196
+open_levelfile(471,11104
+delete_levelfile(516,12130
+clearlocks(535,12554
+open_levelfile_exclusively(555,13042
+really_close(590,13846
+close(601,14002
+set_bonesfile_name(623,14487
+set_bonestemp_name(650,15245
+create_bonesfile(664,15410
+cancel_bonesfile(712,16759
+commit_bonesfile(724,16986
+open_bonesfile(753,17655
+delete_bonesfile(773,18037
+compress_bonesfile(784,18293
+set_savefile_name(797,18586
+save_savefile_name(841,19686
+set_error_savefile(852,19900
+create_savefile(873,20217
+#   undef getuid894,20804
+open_savefile(906,20975
+delete_savefile(923,21233
+restore_saved_game(932,21428
+plname_from_file(957,21872
+#define EXTSTR 989,22685
+#define EXTSTR 991,22725
+#undef EXTSTR994,22826
+get_saved_games(1010,23102
+free_saved_games(1043,23806
+redirect(1062,24114
+docompress_file(1082,24662
+compress(1225,28363
+uncompress(1240,28637
+static int nesting 1257,28992
+static int lockfd;1260,29057
+#define HUP	1263,29131
+make_lockname(1266,29191
+lock_file(1302,29991
+#define OPENFAILURE(1382,31981
+#define OPENFAILURE(1385,32035
+#  undef unlink1417,32837
+# define unlink(1419,32861
+unlock_file(1424,32974
+const char *configfile configfile1463,33850
+const char *backward_compat_configfile backward_compat_configfile1487,34356
+#define fopenp 1491,34437
+fopen_config_file(1495,34484
+get_uchars(1620,37879
+adjust_prefix(1677,39193
+#define match_varname(1694,39554
+parse_config_line(1698,39642
+can_read_file(2003,48824
+read_config_file(2011,48941
+#define tmp_levels	2014,48992
+#define tmp_ramdisk	2015,49021
+#undef tmp_levels2018,49089
+#undef tmp_ramdisk2022,49166
+fopen_wizkit_file(2084,50491
+read_wizkit(2154,52284
+check_recordfile(2198,53353
+paniclog(2282,55835
+recover_savefile(2311,56499
+copy_bytes(2448,59739
+
+fountain.c,252
+floating_above(23,658
+dowatersnakes(33,821
+dowaterdemon(65,1624
+dowaternymph(104,2597
+dogushforth(137,3306
+gush(158,3698
+dofindgem(193,4444
+dryup(211,4897
+drinkfountain(272,6413
+dipfountain(488,10750
+breaksink(673,15581
+drinksink(689,15888
+
+hack.c,918
+#define IS_SHOP(27,800
+revive_nasty(32,870
+moverock(68,1751
+still_chewing(408,10458
+movobj(582,14756
+static NEARDATA const char fell_on_sink[fell_on_sink597,15054
+dosinkfall(600,15133
+may_dig(673,16923
+may_passwall(682,17108
+bad_rock(693,17286
+invocation_pos(704,17578
+test_move(717,17838
+findtravelpath(913,23534
+domove(1063,27342
+invocation_message(1785,45545
+spoteffects(1829,46635
+monstinroom(1988,50656
+in_rooms(2002,50950
+#define goodtype(2011,51157
+in_town(2071,52401
+move_update(2095,52931
+check_special_room(2137,53829
+dopickup(2317,58008
+lookaround(2434,61096
+monster_nearby(2559,64738
+nomul(2584,65402
+unmul(2596,65725
+maybe_wail(2613,66094
+losehp(2662,67407
+weight_cap(2696,68041
+static int wc;2729,68924
+inv_weight(2734,69150
+calc_capacity(2767,70088
+near_capacity(2779,70310
+max_capacity(2785,70364
+check_capacity(2793,70448
+inv_cnt(2813,70760
+money_cnt(2831,71112
+
+hacklib.c,714
+# define Static	53,1575
+# define Static 55,1616
+digit(60,1667
+letter(67,1769
+highc(76,1957
+lowc(83,2082
+lcase(92,2237
+upstart(106,2482
+mungspaces(115,2678
+eos(135,3017
+strkitten(144,3195
+s_suffix(159,3471
+s_suffix(169,3579
+xcrypt(186,3868
+onlyspace(206,4261
+tabexpand(217,4456
+visctrl(239,4882
+ordin(263,5295
+sitoa(275,5582
+sgn(285,5746
+rounddiv(294,5888
+distmin(319,6287
+dist2(332,6651
+online2(340,6840
+pmatch(354,7257
+strncmpi(379,8114
+strstri(401,8655
+# define TABSIZ 407,8814
+fuzzymatch(441,10130
+setrandom(483,11239
+getlt(522,12172
+getyear(539,12500
+yymmdd(547,12638
+yyyymmdd(582,13288
+phase_of_the_moon(624,14490
+friday_13th(639,14830
+night(647,14961
+midnight(655,15050
+
+invent.c,2524
+#define NOINVSYM	14,427
+#define CONTAINED_SYM	15,448
+static int lastinvnr 41,1504
+static char venom_inv[venom_inv51,2001
+assigninvlet(55,2077
+#define inv_rank(93,3047
+reorder_invent(97,3164
+#undef inv_rank125,3804
+merge_choice(131,4047
+merged(165,5358
+addinv_core1(251,8230
+addinv_core2(293,9440
+addinv(308,9735
+carry_obj_effects(356,10936
+hold_another_object(381,11685
+useupall(450,13797
+useup(459,13930
+consume_obj_charge(476,14315
+freeinv_core(496,14811
+freeinv(539,15988
+delallobj(548,16107
+delobj(569,16502
+sobj_at(595,17155
+carrying(610,17400
+currency(622,17595
+have_lizard(634,17745
+o_on(645,17942
+obj_here(661,18229
+g_at(676,18473
+mkgoldobj(692,18779
+compactify(709,19029
+taking_off(740,19649
+putting_on(748,19834
+static struct trans_verb trans_verb_list[trans_verb_list755,19956
+static struct trans_verb wield 794,21447
+static struct trans_verb dummyverb 798,21523
+*trans_verb(trans_verb803,21623
+getobj(844,22441
+silly_thing(1236,33614
+ckvalidcat(1298,35278
+ckunpaid(1306,35420
+wearing_armor(1313,35505
+is_worn(1323,35641
+static NEARDATA const char removeables[removeables1333,35838
+ggetobj(1347,36590
+askchain(1587,43466
+fully_identify_obj(1694,46324
+identify(1706,46704
+menu_identify(1716,46913
+identify_pack(1754,47894
+obj_to_let(1799,49006
+prinv(1818,49395
+xprname(1839,49805
+ddoinv(1903,51462
+find_unpaid(1919,51892
+display_pickinv(1948,52600
+display_inventory(2074,56147
+count_unpaid(2086,56398
+count_buc(2105,56750
+dounpaid(2141,57517
+static int this_type;2232,60083
+this_type_only(2235,60125
+dotypeinv(2243,60236
+dfeature_at(2372,63414
+look_here(2458,65998
+dolook(2649,71340
+will_feel_cockatrice(2655,71391
+feel_cockatrice(2666,71641
+stackobj(2701,72492
+mergable(2713,72700
+doprgold(2790,75251
+doprwep(2826,75971
+doprarm(2841,76228
+doprring(2872,76832
+dopramulet(2892,77164
+tool_in_use(2905,77344
+doprtool(2919,77617
+doprinuse(2940,78101
+useupf(2962,78567
+STATIC_VAR NEARDATA const char *names[names2994,79389
+static NEARDATA const char oth_symbols[oth_symbols3008,79827
+static NEARDATA const char *oth_names[oth_names3013,79898
+static NEARDATA char *invbuf invbuf3020,79994
+static NEARDATA unsigned invbufsiz 3021,80036
+let_to_name(3024,80084
+free_invbuf(3060,80950
+reassign(3070,81083
+doorganize(3084,81297
+invdisp_nothing(3186,83903
+worn_wield_only(3208,84540
+display_minventory(3230,85100
+display_cinventory(3324,87496
+static coord only;3356,88146
+only_here(3359,88185
+display_binventory(3372,88482
+
+light.c,649
+#define LSF_SHOW	44,1769
+#define LSF_NEEDS_FIXUP	45,1822
+static light_source *light_base light_base47,1873
+new_light_source(59,2173
+del_light_source(90,2802
+do_light_sources(127,3848
+#define mon_is_local(206,6247
+find_mid(209,6305
+save_light_sources(231,6883
+restore_light_sources(281,8139
+relink_light_sources(300,8528
+maybe_write_ls(339,9548
+write_ls(376,10393
+obj_move_light_source(417,11539
+any_light_source(431,11872
+snuff_light_source(441,12055
+obj_sheds_light(475,13091
+obj_is_burning(484,13296
+obj_split_light_source(493,13522
+obj_merge_light_sources(523,14523
+candle_light_range(542,15071
+wiz_light_sources(584,16194
+
+lock.c,498
+STATIC_VAR NEARDATA struct xlock_s 18,566
+	struct rm  *door;door19,603
+	struct obj *box;box20,622
+	int picktyp,21,640
+	int picktyp, chance,21,640
+	int picktyp, chance, usedtime;21,640
+} xlock;22,672
+picking_lock(31,853
+picking_at(45,1043
+lock_action(53,1243
+picklock(101,2558
+forcelock(174,4446
+reset_pick(279,7300
+pick_lock(290,7438
+doforce(598,14988
+doopen(696,17627
+obstructed(824,20396
+doclose(853,21021
+boxlock(983,23524
+doorlock(1025,24498
+chest_shatter_msg(1219,29151
+
+mail.c,714
+int mustgetmail 51,1794
+static struct stat omstat,71,2380
+static struct stat omstat,nmstat;71,2380
+static char *mailbox mailbox72,2414
+static long laststattime;73,2448
+#  define MAILPATH 76,2548
+#  define MAILPATH 79,2651
+#  define MAILPATH 82,2745
+#  define MAILPATH 85,2846
+#  define MAILPATH 88,2952
+getmailstatus(92,2998
+md_start(135,3996
+md_stop(236,6740
+static NEARDATA const char *mail_text[mail_text266,7565
+#define md_exclamations(277,7751
+md_rush(286,8071
+newmail(388,10820
+ckmailstatus(451,12627
+readmail(473,13082
+ckmailstatus(514,13902
+readmail(556,14771
+volatile int broadcasts 587,15440
+ckmailstatus(590,15475
+readmail(606,15800
+ckmailstatus(640,16690
+readmail(668,17214
+
+makemon.c,900
+STATIC_VAR NEARDATA struct monst zeromonst;20,529
+#define quest_mon_represents_role(25,781
+#define m_initsgrp(43,1424
+#define m_initlgrp(44,1480
+#define toostrong(45,1537
+#define tooweak(46,1593
+is_home_elemental(50,1668
+wrong_elem_type(67,2127
+m_initgrp(88,2753
+m_initthrow(154,4982
+m_initweap(171,5307
+mkmonmoney(503,14568
+m_initinv(514,14765
+clone_mon(708,20727
+propagate(825,24078
+makemon(861,25104
+mbirth_limit(1151,34069
+create_critters(1161,34321
+uncommon(1199,35125
+align_shift(1216,35543
+	int choice_count;1242,36248
+	char mchoices[mchoices1243,36267
+} rndmonst_state 1244,36323
+rndmonst(1248,36409
+reset_rndmonst(1338,39185
+mkclass(1361,39926
+adj_lev(1412,41461
+grow_up(1443,42411
+mongets(1541,46211
+golemhp(1593,47547
+peace_minded(1620,48153
+set_malign(1663,49762
+static NEARDATA char syms[syms1714,51049
+set_mimic_sym(1722,51327
+bagotricks(1832,54239
+
+mapglyph.c,658
+#define HI_DOMESTIC 10,288
+int explcolors[explcolors12,333
+#define has_color(23,569
+#define zap_color(27,621
+#define cmap_color(28,694
+#define obj_color(29,771
+#define mon_color(30,851
+#define invis_color(31,926
+#define pet_color(32,966
+#define warn_color(33,1041
+#define explode_color(34,1123
+#  define ROGUE_COLOR36,1251
+#define zap_color(41,1309
+#define cmap_color(42,1330
+#define obj_color(43,1352
+#define mon_color(44,1373
+#define invis_color(45,1394
+#define pet_color(46,1417
+#define warn_color(47,1438
+#define explode_color(48,1460
+#define HAS_ROGUE_IBM_GRAPHICS 53,1554
+#define HAS_ROGUE_IBM_GRAPHICS 56,1659
+mapglyph(62,1770
+
+mcastu.c,939
+#define MGC_PSI_BOLT	15,453
+#define MGC_CURE_SELF	16,477
+#define MGC_HASTE_SELF	17,502
+#define MGC_STUN_YOU	18,528
+#define MGC_DISAPPEAR	19,552
+#define MGC_WEAKEN_YOU	20,577
+#define MGC_DESTRY_ARMR	21,603
+#define MGC_CURSE_ITEMS	22,630
+#define MGC_AGGRAVATION	23,657
+#define MGC_SUMMON_MONS	24,684
+#define MGC_CLONE_WIZ	25,711
+#define MGC_DEATH_TOUCH	26,736
+#define CLC_OPEN_WOUNDS	29,792
+#define CLC_CURE_SELF	30,819
+#define CLC_CONFUSE_YOU	31,844
+#define CLC_PARALYZE	32,871
+#define CLC_BLIND_YOU	33,895
+#define CLC_INSECTS	34,920
+#define CLC_CURSE_ITEMS	35,943
+#define CLC_LIGHTNING	36,970
+#define CLC_FIRE_PILLAR	37,995
+#define CLC_GEYSER	38,1022
+cursetxt(55,1642
+choose_magic_spell(105,2996
+choose_clerical_spell(150,3751
+castmu(187,4323
+cast_wizard_spell(390,10139
+cast_cleric_spell(627,15771
+is_undirected_spell(884,22139
+spell_would_be_useless(915,22676
+#define ad_to_typ(976,25053
+buzzmu(979,25097
+
+mhitm.c,590
+static NEARDATA boolean vis,20,506
+static NEARDATA boolean vis, far_noise;20,506
+static NEARDATA long noisetime;21,546
+static NEARDATA struct obj *otmp;otmp22,578
+static const char brief_feeling[brief_feeling24,613
+static int dieroll;46,1798
+mon_nam_too(51,1979
+noises(70,2396
+missmm(94,2931
+fightm(133,3996
+mattackm(225,6414
+hitmm(422,11859
+gazemm(512,14034
+gulpmm(583,15795
+explmm(659,17685
+mdamagem(696,18449
+noattacks(1438,38864
+sleep_monst(1451,39119
+slept_monst(1473,39637
+mrustm(1490,39968
+mswingsm(1538,41246
+passivemm(1562,41949
+attk_protection(1742,46463
+
+mhitu.c,568
+STATIC_VAR NEARDATA struct obj *otmp;otmp15,448
+static int dieroll;42,1539
+hitmsg(48,1590
+missmu(127,3395
+mswings(156,4073
+mpoisons_subj(175,4617
+u_slow_down(202,5446
+wildmiss(222,5744
+expels(335,9001
+getmattk(410,10623
+mattacku(442,11649
+hurtarmor(958,25718
+diseasemu(1020,27270
+u_slip_free(1043,27807
+magic_negation(1093,29171
+hitmu(1143,30955
+gulpmu(2149,56492
+explmu(2414,63467
+gazemu(2526,66230
+mdamageu(2730,71688
+urustm(2748,71979
+could_seduce(2799,73213
+doseduce(2855,74312
+mayberem(3270,85232
+passiveum(3333,86836
+cloneu(3555,92390
+
+minion.c,213
+msummon(17,468
+summon_minion(94,2678
+#define Athome	155,4092
+demon_talk(158,4136
+bribe(247,6539
+	flags.botl botl307,7816
+dprince(312,7856
+dlord(327,8171
+llord(343,8519
+lminion(352,8641
+ndemon(367,8842
+
+mklev.c,1221
+#define debugpline	17,515
+#define debugpline	19,559
+#define create_vault(56,2038
+#define init_vault(57,2108
+#define do_vault(58,2142
+static xchar		vault_x,59,2177
+static xchar		vault_x, vault_y;59,2177
+boolean goldseen;60,2209
+static boolean made_branch;61,2227
+do_comp(66,2395
+finddpos(87,2861
+sort_rooms(115,3393
+do_room_or_subroom(125,3623
+add_room(198,5490
+add_subroom(215,5820
+makerooms(234,6248
+join(256,6750
+makecorridors(328,8385
+add_door(358,8942
+dosdoor(379,9346
+place_niche(437,10924
+static NEARDATA const char *trap_engravings[trap_engravings458,11497
+makeniche(472,11975
+make_niches(523,13236
+makevtele(542,13612
+makeriver(548,13669
+mkrivers(615,15008
+clear_level_structures(631,15538
+makelevel(693,17143
+mineralize(939,24023
+mklev(1019,26471
+topologize(1050,27217
+find_branch_room(1117,29043
+pos_to_room(1147,29772
+place_branch(1161,30051
+bydoor(1219,31559
+okdoor(1245,32093
+dodoor(1255,32284
+occupied(1268,32485
+mktrap(1282,32771
+mkstairs(1372,35011
+mkfount(1407,35717
+mksink(1433,36241
+mkaltar(1454,36572
+mkgrave(1478,37042
+#define x_maze_min 1519,37995
+#define y_maze_min 1520,38016
+mkinvokearea(1530,38455
+mkinvpos(1584,39806
+mk_knox_portal(1664,42043
+
+mkmap.c,644
+#define HEIGHT	8,220
+#define WIDTH	9,247
+char *new_locations;new_locations23,812
+int min_rx,24,833
+int min_rx, max_rx,24,833
+int min_rx, max_rx, min_ry,24,833
+int min_rx, max_rx, min_ry, max_ry;24,833
+static int n_loc_filled;25,904
+init_map(28,946
+init_fill(39,1098
+get_map(58,1415
+static int dirs[dirs67,1577
+pass_one(73,1737
+#define new_loc(104,2246
+pass_two(107,2324
+pass_three(131,2804
+flood_fill_rm(161,3533
+wallify_map(250,5976
+join_map(268,6343
+finish_map(339,8593
+remove_rooms(375,9734
+remove_room(405,10647
+#define N_P1_ITER	433,11461
+#define N_P2_ITER	434,11522
+#define N_P3_ITER	435,11583
+mkmap(438,11649
+
+mkmaze.c,1595
+iswall(36,1223
+iswall_or_stone(48,1440
+is_solid(63,1768
+extend_spine(89,2535
+wallification(128,3391
+okay(205,5696
+maze0xy(217,5897
+bad_location(232,6243
+place_lregion(245,6673
+put_lregion_here(291,7756
+static boolean was_waterlevel;338,8982
+fixup_special(342,9140
+makemaz(504,13883
+#define x_maze_min 593,16375
+#define y_maze_min 594,16396
+#define INVPOS_X_MARGIN 605,16895
+#define INVPOS_Y_MARGIN 606,16927
+#define INVPOS_DISTANCE 607,16959
+#undef INVPOS_X_MARGIN629,17922
+#undef INVPOS_Y_MARGIN630,17945
+#undef INVPOS_DISTANCE631,17968
+#undef x_maze_min632,17991
+#undef y_maze_min633,18009
+walkfrom(670,18954
+#define CELLS 673,18979
+walkfrom(718,19877
+move(753,20456
+mazexy(767,20677
+bound_digging(805,21405
+mkportal(892,23584
+#define register920,24302
+#define CONS_OBJ 922,24320
+#define CONS_MON 923,24341
+#define CONS_HERO 924,24362
+#define CONS_TRAP 925,24383
+static struct bubble *bbubbles,bbubbles927,24405
+static struct bubble *bbubbles, *ebubbles;ebubbles927,24405
+static struct trap *wportal;wportal929,24449
+static int xmin,930,24478
+static int xmin, ymin,930,24478
+static int xmin, ymin, xmax,930,24478
+static int xmin, ymin, xmax, ymax;930,24478
+#define bxmin 932,24569
+#define bymin 933,24594
+#define bxmax 934,24619
+#define bymax 935,24644
+movebubbles(942,24832
+water_friction(1066,27999
+save_waterlevel(1102,28879
+restore_waterlevel(1125,29492
+const char *waterbody_name(waterbody_name1158,30251
+set_wportal(1205,31163
+setup_waterlevel(1214,31406
+unsetup_waterlevel(1243,31931
+mk_bubble(1257,32148
+mv_bubble(1314,33866
+
+mkobj.c,1748
+struct icp 23,775
+    int  iprob;24,788
+    char iclass;25,839
+const struct icp mkobjprobs[mkobjprobs30,890
+const struct icp boxiprobs[boxiprobs44,1135
+const struct icp rogueprobs[rogueprobs57,1361
+const struct icp hellprobs[hellprobs68,1538
+mkobj_at(82,1775
+mksobj_at(95,1944
+mkobj(107,2131
+mkbox_cnts(138,2821
+rndmonnum(202,4598
+splitobj(227,5311
+replace_object(272,6853
+bill_dummy_object(329,8393
+static const char dknowns[dknowns357,9117
+mksobj(363,9275
+start_corpse_timeout(643,16893
+#define TAINT_AGE 651,17064
+#define TROLL_REVIVE_CHANCE 652,17119
+#define ROT_AGE 653,17194
+bless(691,18278
+unbless(709,18678
+curse(720,18883
+uncurse(749,19701
+blessorcurse(766,20054
+bcsign(786,20315
+weight(804,20744
+static int treefruits[treefruits861,22576
+rnd_treefruit_at(864,22660
+mkgold(873,22813
+#define special_corpse(895,23248
+mkcorpstat(910,23751
+obj_attach_mid(958,24942
+save_mtraits(981,25523
+get_mtraits(1009,26393
+mk_tt_object(1038,27063
+mk_named_object(1056,27587
+is_flammable(1072,27887
+is_rottable(1085,28161
+place_object(1104,28577
+#define ON_ICE(1137,29307
+#define ROT_ICE_ADJUSTMENT 1138,29342
+obj_ice_effects(1144,29528
+peek_at_iced_corpse_age(1170,30238
+obj_timer_checks(1190,30785
+#undef ON_ICE1255,32755
+#undef ROT_ICE_ADJUSTMENT1256,32769
+remove_object(1259,32801
+discard_minvent(1275,33226
+obj_extract_self(1303,34086
+extract_nobj(1340,34840
+extract_nexthere(1367,35438
+add_to_minv(1392,36014
+add_to_container(1418,36695
+add_to_migration(1440,37241
+add_to_buried(1452,37459
+container_weight(1465,37765
+dealloc_obj(1482,38145
+obj_sanity_check(1511,38914
+static const char *obj_state_names[obj_state_names1606,41598
+where_name(1612,41764
+check_contained(1620,41957
+
+mkroom.c,679
+#define sq(33,1237
+isbig(40,1360
+mkroom(49,1533
+mkshop(73,2284
+pick_room(198,4878
+mkzoo(227,5537
+fill_zoo(239,5687
+mkundead(427,11115
+morguemon(449,11643
+antholemon(464,12017
+mkgarden(480,12427
+mkswamp(527,13576
+shrine_pos(564,14610
+mktemple(576,14854
+nexttodoor(600,15428
+has_dnstairs(615,15734
+has_upstairs(626,15933
+somex(640,16158
+somey(647,16259
+inside_room(654,16364
+somexy(663,16536
+search_special(721,17749
+courtmon(743,18317
+#define NSTYPES 757,18786
+    unsigned	pm;760,18849
+    unsigned	prob;761,18866
+} squadprob[squadprob762,18885
+squadmon(767,19020
+save_room(793,19548
+save_rooms(813,19962
+rest_room(825,20163
+rest_rooms(845,20541
+
+mon.c,1950
+#define MKROOM_H14,496
+#define LEVEL_SPECIFIC_NOCORPSE(31,908
+#define LEVEL_SPECIFIC_NOCORPSE(35,1042
+#define warnDelay 43,1234
+long lastwarntime;44,1255
+int lastwarnlev;45,1274
+const char *warnings[warnings47,1292
+STATIC_VAR short cham_to_pm[cham_to_pm59,1521
+undead_to_corpse(67,1824
+genus(104,2757
+pm_to_cham(140,4133
+STATIC_VAR short cham_to_pm[cham_to_pm155,4459
+#define KEEPTRAITS(163,4674
+make_corpse(179,5343
+warn_effects(344,9933
+minliquid(427,11768
+mcalcmove(558,15442
+mcalcdistress(588,16264
+movemon(623,17132
+#define mstoning(718,20102
+meatmetal(730,20520
+meatobj(841,23566
+mpickgold(947,26829
+mpickstuff(978,27470
+curr_mon_load(1027,29026
+max_mon_load(1042,29290
+can_carry(1071,30273
+mfndpos(1114,31607
+mm_aggression(1330,38224
+monnear(1346,38802
+dmonsfree(1358,39133
+replmon(1384,39664
+relmon(1431,41075
+m_detach(1453,41599
+mlifesaver(1480,42375
+lifesaved_monster(1493,42609
+mondead(1554,44138
+corpse_chance(1632,46682
+mondied(1727,49238
+mongone(1740,49539
+monstone(1763,50136
+monkilled(1858,52917
+unstuck(1900,53898
+killed(1918,54161
+xkilled(1926,54277
+mon_to_stone(2133,60100
+mnexto(2161,60740
+mnearto(2187,61244
+static const char *poiseff[poiseff2230,62184
+poisontell(2244,62516
+poisoned(2255,62621
+m_respond(2354,65264
+setmangry(2388,65937
+wakeup(2435,67337
+wake_nearby(2450,67698
+wake_nearto(2465,68035
+seemimic(2479,68389
+rescham(2502,68965
+restartcham(2528,69571
+restore_cham(2547,70072
+restrap(2567,70569
+short *animal_list animal_list2587,71004
+int animal_list_count;2588,71073
+mon_animal_list(2591,71102
+pick_animal(2616,71777
+select_newcham_form(2624,71899
+newcham(2676,73267
+#define BREEDER_EGG 2882,79691
+can_be_hatched(2890,79919
+egg_type_from_parent(2912,80638
+dead_species(2926,81097
+kill_eggs(2946,81694
+kill_genocided_monsters(2977,82524
+golemeffects(3019,83769
+angry_guards(3052,84572
+pacify_guards(3109,85939
+mimic_hit_msg(3122,86195
+
+mondata.c,1729
+set_mon_data(21,548
+attacktype_fordmg(40,883
+attacktype(54,1160
+poly_when_stoned(65,1322
+resists_drli(74,1533
+resists_magm(86,1890
+resists_blnd(111,2755
+can_blnd(142,3737
+ranged_attk(226,6013
+hates_silver(248,6600
+passes_bars(259,6944
+can_track(271,7182
+sliparm(284,7420
+breakarm(292,7604
+sticks(304,7958
+num_horns(313,8211
+dmgtype_fromattack(334,8574
+dmgtype(348,8852
+max_passive_dmg(358,9069
+monsndx(387,9774
+name_to_mon(408,10161
+	static const struct alt_spl 450,11549
+	static const struct alt_spl { const char* name;450,11549
+	static const struct alt_spl { const char* name; short pm_val;450,11549
+gender(525,13838
+pronoun_gender(535,14074
+levl_follower(548,14405
+static const short grownups[grownups563,14875
+little_to_big(628,17361
+big_to_little(655,17967
+raceptr(671,18359
+static const char *levitate[levitate679,18508
+static const char *flys[flys680,18583
+static const char *flyl[flyl681,18652
+static const char *slither[slither682,18721
+static const char *ooze[ooze683,18799
+static const char *immobile[immobile684,18870
+static const char *crawl[crawl685,18949
+static const char *levitate[levitate687,19027
+static const char *flys[flys688,19104
+static const char *flyl[flyl689,19177
+static const char *slither[slither690,19250
+static const char *ooze[ooze691,19326
+static const char *immobile[immobile692,19407
+static const char *crawl[crawl693,19484
+locomotion(697,19587
+stagger(717,20074
+static const char *levitate2	levitate2736,20561
+static const char *fly2	fly2737,20604
+static const char *slither2	slither2738,20643
+static const char *ooze2	ooze2739,20685
+static const char *crawl2	crawl2740,20726
+jumpedthrough(743,20784
+on_fire(760,21132
+
+monmove.c,652
+mb_trapped(30,816
+watch_on_duty(62,1411
+dochugw(105,2390
+onscary(152,3939
+mon_regen(175,4509
+disturb(192,4891
+monflee(231,6139
+distfleeck(270,7057
+m_arrival(310,8310
+dochug(323,8566
+static NEARDATA const char practical[practical629,18045
+static NEARDATA const char magical[magical630,18143
+static NEARDATA const char indigestion[indigestion633,18271
+static NEARDATA const char boulder_class[boulder_class634,18345
+static NEARDATA const char gem_class[gem_class635,18409
+itsstuck(638,18477
+m_move(658,18936
+#define SQSRCHRADIUS	855,24495
+closed_door(1318,39447
+accessible(1326,39594
+set_apparxy(1337,39796
+can_ooze(1409,41656
+
+monst.c,508
+#define NO_ATTK 13,359
+#define WT_ELF	15,386
+#define WT_DRAGON 16,408
+#undef C19,441
+#define C(23,493
+#define HI_DOMESTIC	24,516
+#define HI_LORD	25,580
+#define C(27,615
+#define MON(44,1192
+#define LVL(47,1398
+#define SIZ(48,1447
+#define ATTK(50,1571
+#define A(51,1607
+NEARDATA struct permonst mons[mons93,3038
+struct permonst _mons2[_mons21597,65513
+# define SEDUCTION_ATTACKS 2696,111736
+# define SEDUCTION_ATTACKS 2700,111896
+#undef SEDUCTION_ATTACKS2718,112612
+monst_init(3715,155188
+
+mplayer.c,185
+static const char *developers[developers24,773
+dev_name(53,1550
+get_mplname(78,2075
+mk_mplayer_armor(115,2881
+mk_mplayer(135,3418
+create_mplayers(321,9012
+mplayer_talk(350,9600
+
+mthrowu.c,391
+#define URETREATING(16,496
+#define POLE_LIM 18,574
+STATIC_DCL const char *breathwep[breathwep22,652
+STATIC_OVL NEARDATA const char *breathwep[breathwep29,786
+thitu(57,1256
+drop_throw(144,3481
+ohitmon(193,4724
+m_throw(334,8760
+m_useup(586,16195
+thrwmu(609,16643
+spitmu(755,20515
+breamu(803,21568
+linedup(854,22805
+lined_up(873,23412
+m_carrying(885,23669
+hits_bars(899,23959
+
+muse.c,2802
+boolean m_using 21,489
+static struct musable 42,1474
+	struct obj *offensive;offensive43,1498
+	struct obj *defensive;defensive44,1522
+	struct obj *misc;misc45,1546
+	int has_offense,46,1565
+	int has_offense, has_defense,46,1565
+	int has_offense, has_defense, has_misc;46,1565
+} m;50,1730
+static int trapx,51,1735
+static int trapx, trapy;51,1735
+static boolean zap_oseen;52,1760
+precheck(64,2287
+#define POTION_OCCUPANT_CHANCE(81,2666
+mzapmsg(187,5573
+mreadmsg(221,6355
+mquaffmsg(269,7579
+#define MUSE_SCR_TELEPORTATION 291,8135
+#define MUSE_WAN_TELEPORTATION_SELF 292,8168
+#define MUSE_POT_HEALING 293,8206
+#define MUSE_POT_EXTRA_HEALING 294,8233
+#define MUSE_WAN_DIGGING 295,8266
+#define MUSE_TRAPDOOR 296,8293
+#define MUSE_TELEPORT_TRAP 297,8317
+#define MUSE_UPSTAIRS 298,8346
+#define MUSE_DOWNSTAIRS 299,8370
+#define MUSE_WAN_CREATE_MONSTER 300,8396
+#define MUSE_SCR_CREATE_MONSTER 301,8431
+#define MUSE_UP_LADDER 302,8466
+#define MUSE_DN_LADDER 303,8492
+#define MUSE_SSTAIRS 304,8518
+#define MUSE_WAN_TELEPORTATION 305,8542
+#define MUSE_BUGLE 306,8576
+#define MUSE_UNICORN_HORN 307,8598
+#define MUSE_POT_FULL_HEALING 308,8627
+#define MUSE_LIZARD_CORPSE 309,8660
+find_defensive(322,9101
+#define nomore(495,14569
+#undef nomore587,17648
+use_defensive(595,17881
+#define m_flee(614,18458
+#undef m_flee1055,31333
+rnd_defensive_item(1059,31354
+#define MUSE_WAN_DEATH 1101,32397
+#define MUSE_WAN_SLEEP 1102,32422
+#define MUSE_WAN_FIRE 1103,32447
+#define MUSE_WAN_COLD 1104,32471
+#define MUSE_WAN_LIGHTNING 1105,32495
+#define MUSE_WAN_MAGIC_MISSILE 1106,32524
+#define MUSE_WAN_STRIKING 1107,32557
+#define MUSE_SCR_FIRE 1108,32585
+#define MUSE_POT_PARALYSIS 1109,32609
+#define MUSE_POT_BLINDNESS 1110,32638
+#define MUSE_POT_CONFUSION 1111,32668
+#define MUSE_FROST_HORN 1112,32698
+#define MUSE_FIRE_HORN 1113,32725
+#define MUSE_POT_ACID 1114,32751
+#define MUSE_POT_SLEEPING 1116,32814
+#define MUSE_SCR_EARTH 1117,32843
+find_offensive(1123,32967
+#define nomore(1146,33621
+#undef nomore1251,36790
+mbhitm(1256,36822
+mbhit(1357,39316
+use_offensive(1448,41766
+rnd_offensive_item(1771,50803
+#define MUSE_POT_GAIN_LEVEL 1808,51801
+#define MUSE_WAN_MAKE_INVISIBLE 1809,51831
+#define MUSE_POT_INVISIBILITY 1810,51865
+#define MUSE_POLY_TRAP 1811,51897
+#define MUSE_WAN_POLYMORPH 1812,51922
+#define MUSE_POT_SPEED 1813,51951
+#define MUSE_WAN_SPEED_MONSTER 1814,51976
+#define MUSE_BULLWHIP 1815,52009
+#define MUSE_POT_POLYMORPH 1816,52033
+find_misc(1819,52071
+#define nomore(1866,53409
+#undef nomore1926,55441
+muse_newcham_mon(1932,55628
+use_misc(1947,55918
+you_aggravate(2193,62704
+rnd_misc_item(2227,63440
+searches_for_item(2263,64369
+mon_reflects(2345,66641
+ureflects 2410,68270
+munstone(2470,69510
+mon_consume_unstone(2491,70069
+
+music.c,451
+awaken_monsters(68,2265
+put_monsters_to_sleep(96,2833
+charm_snakes(116,3259
+calm_nymphs(159,4247
+awaken_soldiers(185,4794
+charm_monsters(214,5495
+do_earthquake(241,6059
+do_improvisation(445,10970
+do_play_instrument(611,15423
+atconsole(781,19529
+speaker(802,20343
+#define KIOC 849,21446
+#define KDMKTONE 850,21470
+#define noDEBUG853,21507
+STATIC_OVL void tone(855,21524
+STATIC_OVL void rest(866,21774
+speaker(881,22006
+main(910,22628
+
+o_init.c,448
+static NEARDATA short disco[disco21,665
+shuffle_tiles(37,1269
+setgemprobs(52,1567
+shuffle(79,2227
+init_objects(116,3142
+# define COPY_OBJ_DESCR(121,3232
+# define COPY_OBJ_DESCR(125,3357
+shuffle_all(187,5111
+find_skates(237,6477
+oinit(251,6792
+savenames(257,6870
+restnames(287,7679
+discover_object(308,8188
+undiscover_object(334,8932
+interesting_to_discover(358,9546
+static short uniq_objs[uniq_objs367,9834
+dodiscovered(375,9959
+
+objects.c,1645
+struct monst 7,203
+struct monst { struct monst *dummy;dummy7,203
+#  define COLOR_FIELD(17,437
+# define OBJ(33,982
+# define OBJECT(34,1016
+NEARDATA struct objdescr obj_descr[obj_descr37,1105
+# define BITS(41,1193
+# define OBJECT(43,1355
+#  define HARDGEM(47,1556
+#  define HARDGEM(49,1593
+#define WEAPON(59,1884
+#define PROJECTILE(64,2121
+#define BOW(70,2357
+#define P 79,2696
+#define S 80,2713
+#define B 81,2729
+#undef P274,10818
+#undef S275,10827
+#undef B276,10836
+#undef WEAPON278,10846
+#undef PROJECTILE279,10860
+#undef BOW280,10878
+#define ARMOR(288,11087
+#define HELM(293,11321
+#define CLOAK(295,11470
+#define SHIELD(297,11621
+#define GLOVES(299,11780
+#define BOOTS(301,11933
+#define DRGN_ARMR(344,13698
+#undef DRGN_ARMR376,15583
+#undef HELM513,21703
+#undef CLOAK514,21715
+#undef SHIELD515,21728
+#undef GLOVES516,21742
+#undef BOOTS517,21756
+#undef ARMOR518,21769
+#define RING(521,21799
+#undef RING566,24474
+#define AMULET(569,24551
+#undef AMULET590,25794
+#define TOOL(594,25875
+#define CONTAINER(599,26083
+#define WEPTOOL(604,26290
+#undef CONTAINER617,27104
+#undef TOOL696,31367
+#undef WEPTOOL697,31379
+#define FOOD(700,31417
+#undef FOOD751,34235
+#define POTION(754,34266
+#undef POTION784,36531
+#define SCROLL(787,36564
+#undef SCROLL820,38680
+#define SPELL(823,38716
+#undef SPELL877,43355
+#define WAND(880,43385
+#undef WAND911,45723
+#define COIN(914,45783
+#undef COIN918,45997
+#define GEM(921,46070
+#define ROCK(925,46287
+#undef GEM972,49771
+#undef ROCK973,49782
+#  undef OBJ1009,51408
+#  undef OBJECT1010,51421
+#  define OBJECTS_PASS_2_1011,51437
+objects_init(1018,51559
+
+objnam.c,2186
+#define PREFIX	16,514
+#define PREFIX	19,627
+#define SCHAR_LIM 21,653
+#define NUMOBUF 22,675
+struct Jitem 36,1180
+	int item;37,1195
+	const char *name;name38,1206
+#define GemStone(42,1305
+STATIC_DCL struct Jitem Japanese_items[Japanese_items51,1577
+STATIC_OVL struct Jitem Japanese_items[Japanese_items55,1638
+strprepend(78,2120
+nextobuf(98,2495
+obj_typename(108,2643
+simple_typename(281,5956
+obj_is_pname(295,6313
+distant_name(312,7018
+fruitname(328,7379
+xname(353,7951
+mshot_xname(895,19632
+the_unique_obj(922,20283
+add_erosion_words(936,20590
+doname(996,22223
+not_fully_identified(1415,32577
+corpse_xname(1451,33802
+cxname(1472,34271
+killer_xname(1482,34474
+singular(1525,36111
+an(1544,36480
+An(1575,37037
+the(1590,37317
+The(1641,38669
+aobjnam(1653,38815
+aobjnam(1663,39001
+Tobjnam(1698,39597
+otense(1715,39927
+static const char * const special_subjs[special_subjs1736,40398
+vtense(1751,40704
+Doname2(1847,43666
+yname(1858,43857
+Yname2(1876,44242
+ysimple_name(1892,44486
+Ysimple_name2(1910,44916
+static const char *wrp[wrp1921,45036
+static const char wrpsym[wrpsym1927,45241
+makeplural(1948,45949
+struct o_range 2172,51664
+	const char *name,name2173,51681
+	const char *name, oclass;2173,51681
+	int  f_o_range,2174,51708
+	int  f_o_range, l_o_range;2174,51708
+STATIC_DCL const struct o_range o_ranges[o_ranges2179,51754
+STATIC_OVL NEARDATA const struct o_range o_ranges[o_ranges2184,51853
+#define BSTRCMP(2212,53145
+#define BSTRCMPI(2213,53217
+#define BSTRNCMP(2214,53291
+#define BSTRNCMPI(2215,53371
+makesingular(2228,53834
+wishymatch(2340,56451
+struct alt_spellings 2405,58873
+	const char *sp;sp2406,58896
+	int ob;2407,58913
+} spellings[spellings2408,58922
+readobjnam(2449,60291
+#define UNDEFINED 2499,61996
+#define EMPTY 2500,62016
+#define SPINACH 2501,62032
+#undef WISHDEBUG2510,62180
+#define S(2522,62363
+#define T(2523,62405
+#define D(2524,62438
+#define I(2525,62468
+rnd_class(3714,92150
+Japanese_item_name(3733,92523
+cloak_simple_name(3747,92698
+mimic_obj_name(3791,93421
+substitute(3818,93983
+transpose(3860,94632
+insert(3896,95175
+delete(3909,95329
+digit_8(3917,95437
+atoi_8(3926,95543
+
+options.c,3233
+NEARDATA struct flag flags;9,313
+NEARDATA struct instance_flags iflags;10,363
+#define static11,424
+#define WINTYPELEN 18,508
+#define PREFER_TILED 21,559
+#define PREFER_TILED 23,591
+static struct Bool_Opt36,1016
+	const char *name;name38,1041
+	boolean	*addr,addr39,1060
+	boolean	*addr, initvalue;39,1060
+	int optflags;40,1087
+} boolopt[boolopt41,1102
+static struct Comp_Opt215,7123
+	const char *name,name217,7148
+	const char *name, *descr;descr217,7148
+	int size;218,7175
+	int optflags;223,7403
+} compopt[compopt224,7418
+#undef static539,20412
+static boolean need_redraw;543,20457
+static char def_inv_order[def_inv_order554,20738
+    const char *name;name587,21738
+    char cmd;588,21760
+} menu_cmd_t;589,21774
+#define NUM_MENU_CMDS 591,21789
+static const menu_cmd_t default_menu_cmd_info[default_menu_cmd_info592,21814
+#define MAX_MENU_MAPPED_CMDS 610,22489
+       char mapped_menu_cmds[mapped_menu_cmds611,22539
+static char mapped_menu_op[mapped_menu_op612,22608
+static short n_menu_mapped 613,22660
+static boolean initial,616,22694
+static boolean initial, from_file;616,22694
+match_optname(650,24454
+nh_getenv(681,25412
+initoptions(693,25566
+nmcpy(814,29224
+escapes(836,29845
+rejectoption(892,31076
+badoption(904,31309
+string_for_opt(927,31744
+string_for_env_opt(945,32079
+bad_negation(958,32311
+change_inv_order(977,32858
+graphics_opts(1015,33737
+warning_opts(1036,34239
+assign_warnings(1057,34740
+feature_alert_opts(1066,34914
+set_duplicate_opt_detection(1099,35675
+duplicate_opt_detection(1128,36521
+   const char *name;name1175,37845
+   const int color;1176,37866
+} colornames[colornames1177,37886
+   const char *name;name1196,38351
+   const int attr;1197,38372
+} attrnames[attrnames1198,38391
+add_menu_coloring(1210,38650
+parseoptions(1286,40396
+static NEARDATA const char *menutype[menutype2637,76753
+static NEARDATA const char *burdentype[burdentype2641,76849
+static NEARDATA const char *runmodes[runmodes2651,77053
+oc_to_str(2665,77306
+add_menu_cmd_alias(2684,77664
+map_menu_cmd(2703,78137
+# define OPTIONS_HEADING 2716,78375
+# define OPTIONS_HEADING 2718,78416
+static char fmtstr_doset_add_menu[fmtstr_doset_add_menu2721,78466
+static char fmtstr_doset_add_menu_tab[fmtstr_doset_add_menu_tab2722,78524
+doset_add_menu(2725,78595
+doset(2764,79865
+special_handling(2948,85965
+#define rolestring(3452,101356
+get_compopt_value(3458,101645
+dotogglepickup(3793,114029
+add_autopickup_exception(3826,114755
+remove_autopickup_exception(3862,115712
+count_ape_maps(3884,116260
+free_autopickup_exceptions(3904,116698
+static const char *opt_intro[opt_intro3920,117047
+#define CONFIG_SLOT 3927,117190
+static const char *opt_epilog[opt_epilog3957,118074
+option_help(3971,118424
+next_opt(4023,119778
+fruitadd(4061,120550
+choose_classes_menu(4167,123239
+struct wc_Opt wc_options[wc_options4242,125092
+struct wc_Opt wc2_options[wc2_options4280,126267
+set_option_mod_status(4296,126695
+set_wc_option_mod_status(4329,127510
+is_wc_option(4348,127914
+wc_supported(4361,128115
+set_wc2_option_mod_status(4385,128662
+is_wc2_option(4404,129071
+wc2_supported(4417,129275
+wc_set_font_name(4432,129528
+wc_set_window_colors(4466,130150
+
+pager.c,810
+is_swallow_sym(34,1159
+append_str(49,1513
+lookat(74,2117
+checkfile(475,12904
+#define LOOK_TRADITIONAL	636,17439
+#define LOOK_QUICK	637,17502
+#define LOOK_ONCE	638,17555
+#define LOOK_VERBOSE	639,17611
+const char what_is_an_unknown_object[what_is_an_unknown_object645,17789
+do_look(648,17858
+#define is_cmap_trap(879,24383
+#define is_cmap_drawbridge(880,24456
+dowhatis(1064,29276
+doquickwhatis(1070,29320
+doidtrap(1076,29368
+dowhatdoes_core(1118,30497
+dowhatdoes(1167,31518
+static const char *help_menu_items[help_menu_items1194,32002
+#define PORT_HELP_ID 1207,32470
+#define WIZHLP_SLOT 1208,32495
+#define WIZHLP_SLOT 1210,32524
+#define PORT_HELP_ID 1228,33027
+#define WIZHLP_SLOT 1229,33052
+#define WIZHLP_SLOT 1231,33081
+help_menu(1242,33221
+dohelp(1289,34352
+dohistory(1317,35011
+
+pickup.c,1575
+#define FOLLOW(50,2079
+#define DELTA_CWT(58,2356
+#define GOLD_WT(61,2482
+#define GOLD_CAPACITY(63,2599
+static const char moderateloadmsg[moderateloadmsg66,2675
+static const char nearloadmsg[nearloadmsg67,2750
+static const char overloadmsg[overloadmsg68,2817
+static const char moderateloadmsg[moderateloadmsg70,2896
+static const char nearloadmsg[nearloadmsg71,2964
+static const char overloadmsg[overloadmsg72,3032
+simple_look(79,3287
+collect_obj_classes(105,4024
+query_classes(160,5744
+check_here(291,9229
+static long val_for_n_or_more;314,9707
+n_or_more(318,9837
+static char valid_menu_classes[valid_menu_classes326,10037
+add_valid_menu_class(329,10092
+all_but_uchain(343,10366
+allow_all(352,10499
+allow_category(359,10561
+allow_cat_no_uchain(385,11490
+is_worn_by_type(399,11807
+pickup(420,12305
+is_autopickup_exception(661,19075
+autopick(688,19929
+query_objlist(746,21758
+query_category(845,24557
+count_categories(1034,29556
+carry_count(1065,30227
+lift_object(1267,35019
+safe_qbuf(1358,37640
+pickup_object(1384,38505
+pick_obj(1562,43581
+encumber_msg(1594,44676
+container_at(1657,46376
+able_to_loot(1675,46692
+mon_beside(1717,47723
+doloot(1732,47943
+loot_mon(1978,54272
+mbag_explodes(2051,56403
+static NEARDATA struct obj *current_container;current_container2075,57187
+#define Icebox 2076,57234
+in_container(2080,57375
+ck_bag(2271,63297
+out_container(2279,63472
+mbag_item_gone(2372,65900
+observe_quantum_cat(2402,66603
+#undef Icebox2456,68232
+use_container(2459,68251
+menu_loot(2736,75738
+in_or_out_menu(2818,78067
+
+pline.c,710
+#define NEED_VARARGS 12,407
+static boolean no_repeat 21,576
+pline VA_DECL(34,898
+#define vpline 51,1213
+Norep VA_DECL(80,1786
+static char *you_buf you_buf91,2001
+static int you_buf_siz 92,2027
+You_buf(95,2070
+free_youbuf(107,2271
+#define YouPrefix(114,2429
+#define YouMessage(117,2545
+You VA_DECL(122,2665
+		adj 223,4453
+	tmp 227,4521
+	p 229,4590
+verbalize VA_DECL(248,4926
+	tmp 254,5064
+	tmp 259,5181
+raw_printf VA_DECL(277,5589
+impossible VA_DECL(311,6192
+	program_state.in_impossible in_impossible316,6344
+	    char pbuf[pbuf318,6381
+	program_state.in_impossible in_impossible328,6642
+align_str(333,6703
+mstatusline(356,7130
+ustatusline(517,11611
+self_invis_message(665,15482
+
+polyself.c,509
+set_uasmon(32,964
+polyman(39,1088
+change_sex(113,2853
+newman(145,4174
+polyself(250,7200
+polymon(385,11158
+break_armor(723,20392
+drop_weapon(881,24237
+rehumanize(918,25093
+dobreathe(962,26014
+dospit(995,26647
+doremove(1008,26888
+dospinweb(1022,27047
+dosummon(1190,30754
+dogaze(1217,31218
+dohide(1397,36022
+domindblast(1419,36467
+uunstick(1473,37593
+skinback(1483,37756
+mbodypart(1502,38071
+body_part(1716,45780
+poly_gender(1726,45882
+ugolemeffects(1739,46118
+armor_to_dragon(1770,46901
+
+potion.c,898
+boolean notonhead 15,439
+static NEARDATA int nothing,17,467
+static NEARDATA int nothing, unkn;17,467
+static NEARDATA const char beverages[beverages18,502
+itimeout(27,848
+itimeout_incr(38,1059
+set_itimeout(47,1214
+incr_itimeout(56,1375
+make_confused(64,1489
+make_stunned(86,1880
+make_sick(124,2572
+make_vomiting(185,3907
+static const char vismsg[vismsg203,4231
+static const char eyemsg[eyemsg207,4357
+make_blinded(210,4408
+make_hallucinated(320,7192
+ghost_from_bottle(396,9123
+dodrink(437,10028
+#define POTION_OCCUPANT_CHANCE(490,11138
+dopotion(512,11709
+peffects(543,12340
+make_totter(1249,30150
+healup(1266,30456
+strange_feeling(1286,30865
+const char *bottlenames[bottlenames1310,31392
+bottlename(1320,31589
+potionhit(1326,31657
+potionbreathe(1645,40085
+mixtype(1825,44362
+get_wet(1926,46701
+dodip(2073,50254
+djinni_from_bottle(2607,64216
+split_mon(2691,66191
+
+pray.c,2223
+#define Cursed_obj(35,1273
+static const char	*Moloch Moloch54,2054
+static const char *godvoices[godvoices56,2093
+static aligntyp p_aligntyp;71,2361
+static int p_trouble;72,2389
+static int p_type;73,2411
+#define PIOUS 75,2480
+#define DEVOUT 76,2497
+#define FERVENT 77,2515
+#define STRIDENT 78,2533
+#define TROUBLE_STONED	87,2796
+#define TROUBLE_SLIMED	88,2824
+#define TROUBLE_STRANGLED	89,2852
+#define TROUBLE_LAVA	90,2882
+#define TROUBLE_SICK	91,2908
+#define TROUBLE_STARVING	92,2934
+#define TROUBLE_HIT	93,2963
+#define TROUBLE_LYCANTHROPE	94,2988
+#define TROUBLE_COLLAPSING	95,3020
+#define TROUBLE_STUCK_IN_WALL	96,3051
+#define TROUBLE_CURSED_LEVITATION	97,3085
+#define TROUBLE_UNUSEABLE_HANDS	98,3122
+#define TROUBLE_CURSED_BLINDFOLD	99,3158
+#define TROUBLE_PUNISHED	101,3195
+#define TROUBLE_FUMBLING	102,3232
+#define TROUBLE_CURSED_ITEMS	103,3269
+#define TROUBLE_SADDLE	104,3310
+#define TROUBLE_BLIND	105,3346
+#define TROUBLE_POISONED	106,3381
+#define TROUBLE_WOUNDED_LEGS	107,3418
+#define TROUBLE_HUNGRY	108,3459
+#define TROUBLE_STUNNED	109,3495
+#define TROUBLE_CONFUSED	110,3532
+#define TROUBLE_HALLUCINATION	111,3569
+#define ugod_is_angry(128,4223
+#define on_altar(129,4269
+#define on_shrine(130,4319
+#define a_align(131,4387
+in_trouble(134,4480
+#define SATIATED	141,4562
+#define NOT_HUNGRY	142,4581
+#define HUNGRY	143,4602
+#define WEAK	144,4620
+#define FAINTING	145,4636
+#define FAINTED	146,4655
+#define STARVED	147,4674
+worst_cursed_item(220,7109
+fix_worst_trouble(278,9041
+god_zaps_you(543,15741
+fry_by_god(668,19130
+angrygods(687,19467
+at_your_feet(783,22111
+gcrownu(812,22825
+#define ok_wep(818,22932
+pleased(995,28094
+water_prayer(1330,37283
+godvoice(1365,38416
+gods_angry(1389,38943
+gods_upset(1400,39150
+static NEARDATA const char sacrifice_types[sacrifice_types1408,39288
+consume_offering(1411,39385
+dosacrifice(1453,40438
+#define MAXVALUE 1483,41263
+can_pray(2019,56651
+dopray(2075,58415
+prayer_done(2130,59744
+doturn(2197,61446
+dopurify(2310,64321
+a_gname(2429,67236
+a_gname_at(2435,67300
+u_gname(2444,67485
+align_gname(2450,67598
+halu_gname(2476,68187
+align_gtitle(2501,68719
+altar_wrath(2523,69188
+blocked_boulder(2550,69823
+
+priest.c,456
+#define ALGN_SINNED	19,554
+move_special(31,910
+#define GDIST(73,2032
+temple_occupied(127,3195
+histemple_at(142,3429
+pri_move(154,3721
+priestini(200,4725
+priestname(259,6585
+p_coaligned(350,8592
+has_shrine(357,8726
+findpriest(371,9043
+intemple(387,9429
+priest_talk(512,12826
+mk_roamer(702,17957
+reset_hostility(734,18813
+in_your_sanctuary(749,19163
+ghod_hitsu(773,19781
+angry_priest(842,21432
+clearpriests(873,22407
+restpriest(886,22710
+
+quest.c,493
+#define Not_firsttime	19,474
+#define Qstat(20,522
+on_start(35,988
+on_locate(47,1270
+on_goal(57,1486
+onquest(71,1728
+nemdead(83,1984
+artitouch(92,2101
+ok_to_quest(103,2301
+not_capable(110,2427
+is_pure(116,2509
+expulsion(165,3869
+finish_quest(201,5284
+chat_with_leader(230,6115
+leader_speaks(297,7951
+chat_with_nemesis(316,8456
+nemesis_speaks(324,8622
+chat_with_guardian(340,9176
+prisoner_speaks 350,9402
+quest_chat(377,9983
+quest_talk(393,10349
+quest_stat_check(408,10643
+
+questpgr.c,722
+#define QTEXT_FILE	19,474
+static char	in_line[in_line35,1107
+static char	in_line[80], cvt_buf[cvt_buf35,1107
+static char	in_line[80], cvt_buf[64], out_line[out_line35,1107
+static struct	qtlists	qt_list;36,1160
+static dlb	*msg_file;msg_file37,1191
+static char	nambuf[nambuf40,1291
+dump_qtlist(47,1393
+Fread(63,1752
+construct_qtlist(78,2055
+load_qtlist(99,2482
+unload_qtlist(147,3789
+quest_info(159,4057
+ldrname(173,4358
+intermed(188,4619
+is_quest_artifact(194,4714
+neminame(201,4841
+guardname(216,5104
+homebase(227,5289
+msg_in(233,5397
+convert_arg(246,5638
+convert_line(343,7780
+deliver_by_pline(414,9173
+deliver_by_window(428,9417
+com_pager(445,9778
+qt_pager(463,10194
+qt_montype(481,10592
+
+read.c,876
+#define DEVOUT 15,495
+#define STRIDENT 16,513
+#define Your_Own_Role(18,533
+#define Your_Own_Race(21,654
+boolean	known;27,789
+static NEARDATA const char readable[readable29,805
+static const char all_count[all_count31,898
+doread(46,1443
+stripspe(220,6581
+p_glow1(238,6969
+p_glow2(251,7212
+is_chargeable(272,7745
+recharge(292,8391
+forget_single_object(534,14491
+forget_objclass(552,15017
+randomize(566,15254
+forget_objects(583,15543
+forget_map(611,16178
+forget_traps(634,16700
+forget_levels(649,17056
+forget(709,18585
+maybe_tame(740,19554
+seffects(755,19829
+wand_explode(1698,45183
+set_lit(1719,45668
+litroom(1732,45825
+do_class_genocide(1851,49023
+#define REALLY 2047,54365
+#define PLAYER 2048,54382
+#define ONTHRONE 2049,54399
+do_genocide(2051,54423
+punish(2252,59787
+unpunish(2292,60831
+cant_create(2309,61309
+create_particular(2335,61993
+
+rect.c,283
+#define MAXRECT	16,404
+#define XLIM	17,423
+#define YLIM	18,438
+static NhRect rect[rect20,454
+static int rect_cnt;21,485
+init_rect(29,617
+get_rect_ind(43,783
+get_rect(64,1178
+rnd_rect(85,1552
+intersect(97,1783
+remove_rect(119,2264
+add_rect(134,2423
+split_rects(158,2902
+
+region.c,1041
+static NhRegion **regions;regions14,348
+static int n_regions 15,375
+static int max_regions 16,401
+#define NO_CALLBACK 18,430
+static callback_proc callbacks[callbacks48,1545
+#define INSIDE_GAS_CLOUD 49,1582
+#define EXPIRE_GAS_CLOUD 51,1631
+inside_rect(57,1716
+inside_region(68,1885
+create_region(86,2211
+add_rect_to_reg(141,3649
+add_mon_to_reg(171,4443
+remove_mon_from_reg(196,4992
+mon_in_region(216,5406
+clone_region(235,5682
+free_region(268,6616
+add_region(285,6897
+remove_region(325,7954
+clear_regions(354,8643
+run_regions(373,9008
+in_out_region(419,10331
+m_in_out_region(470,11881
+update_player_regions(518,13317
+update_monster_region(533,13596
+replace_mon_regions(558,14112
+remove_mon_from_regions(574,14453
+visible_region_at(591,14787
+show_region(604,15028
+save_regions(615,15148
+rest_regions(665,17216
+reset_region_mids(754,20664
+create_msg_region(782,21286
+enter_force_field(810,21920
+create_force_field(832,22366
+expire_gas_cloud(876,23360
+inside_gas_cloud(897,23878
+create_gas_cloud(969,25507
+
+restore.c,1224
+#define N_PER_BUCKET 45,1578
+struct bucket 46,1602
+    struct bucket *next;next47,1618
+	unsigned gid;49,1656
+	unsigned nid;50,1686
+    } map[map51,1714
+static int n_ids_mapped 57,1846
+static struct bucket *id_map id_map58,1875
+boolean restoring 68,2054
+static NEARDATA struct fruit *oldfruit;oldfruit69,2081
+static NEARDATA long omoves;70,2121
+#define Is_IceBox(72,2151
+find_lev_obj(76,2297
+inven_inuse(109,3139
+restlevchn(139,3800
+restdamage(162,4252
+restobjchn(205,5395
+restmonchn(255,6755
+loadfruitchn(324,8473
+freefruitchn(341,8763
+ghostfruit(354,8960
+restgamestate(368,9228
+restlevelstate(477,12920
+restlevelfile(501,13498
+dorecover(571,15038
+trickery(719,18855
+getlev(736,19238
+clear_id_mapping(949,24851
+add_id_mapping(962,25065
+lookup_id_mapping(987,25650
+reset_oattached_mids(1013,26141
+#define RLESC 1039,26851
+#define ZEROCOMP_BUFSIZ 1042,26938
+static NEARDATA unsigned char inbuf[inbuf1044,26975
+static NEARDATA unsigned short inbufp 1045,27029
+static NEARDATA unsigned short inbufsz 1046,27072
+static NEARDATA short inrunlength 1047,27116
+static NEARDATA int mreadfd;1048,27156
+mgetc(1051,27197
+minit(1067,27523
+mread(1075,27595
+minit(1102,28149
+mread(1108,28179
+
+rip.c,425
+# define TEXT_TOMBSTONE19,641
+#  define TEXT_TOMBSTONE23,761
+static const char *rip_txt[rip_txt31,900
+#define STONE_LINE_CENT 49,1683
+static const char *rip_txt[rip_txt52,1855
+#define STONE_LINE_CENT 70,2883
+#define STONE_LINE_LEN 72,2985
+#define NAME_LINE 75,3078
+#define GOLD_LINE 76,3136
+#define DEATH_LINE 77,3197
+#define YEAR_LINE 78,3262
+static char **rip;rip80,3315
+center(83,3351
+genl_outrip(95,3525
+
+rnd.c,538
+#define RND(11,284
+#define RND(14,367
+#define RND(17,466
+#define RND(26,699
+rn2(33,820
+rnl(52,1043
+rnd(78,1485
+d(97,1713
+rne(116,2025
+rnz(137,2398
+#define N_MT 204,4793
+#define M_MT 205,4810
+#define MATRIX_A 206,4827
+#define UMASK 207,4883
+#define LMASK 208,4942
+#define MIXBITS(209,5000
+#define TWIST(210,5055
+static unsigned long state[state212,5126
+static int left 213,5198
+static unsigned long *next;next215,5245
+void init_genrand(218,5313
+static void next_state(233,5865
+unsigned long genrand_int32(255,6382
+
+role.c,10395
+const struct Role roles[roles39,1421
+	PM_BARBARIAN,117,3282
+	PM_BARBARIAN, NON_PM,117,3282
+	PM_BARBARIAN, NON_PM, NON_PM,117,3282
+	PM_PELIAS,118,3313
+	PM_PELIAS, PM_CHIEFTAIN,118,3313
+	PM_PELIAS, PM_CHIEFTAIN, PM_THOTH_AMON,118,3313
+	PM_OGRE,119,3354
+	PM_OGRE, PM_TROLL,119,3354
+	PM_OGRE, PM_TROLL, S_OGRE,119,3354
+	PM_OGRE, PM_TROLL, S_OGRE, S_TROLL,119,3354
+	ART_HEART_OF_AHRIMAN,120,3391
+	  ROLE_NEUTRAL|ROLE_CHAOTIC,ROLE_CHAOTIC122,3468
+	10, 14, 0, 0,  8, A_INT,129,3702
+	10, 14, 0, 0,  8, A_INT, SPE_HASTE_SELF,129,3702
+	PM_CAVEMAN,162,4351
+	PM_CAVEMAN, PM_CAVEWOMAN,162,4351
+	PM_CAVEMAN, PM_CAVEWOMAN, PM_LITTLE_DOG,162,4351
+	PM_SHAMAN_KARNOV,163,4393
+	PM_SHAMAN_KARNOV, PM_NEANDERTHAL,163,4393
+	PM_SHAMAN_KARNOV, PM_NEANDERTHAL, PM_CHROMATIC_DRAGON,163,4393
+	PM_BUGBEAR,164,4449
+	PM_BUGBEAR, PM_HILL_GIANT,164,4449
+	PM_BUGBEAR, PM_HILL_GIANT, S_HUMANOID,164,4449
+	PM_BUGBEAR, PM_HILL_GIANT, S_HUMANOID, S_GIANT,164,4449
+	ART_SCEPTRE_OF_MIGHT,165,4498
+	  ROLE_LAWFUL|ROLE_NEUTRAL,ROLE_NEUTRAL167,4575
+	0, 12, 0, 1,  8, A_INT,174,4808
+	0, 12, 0, 1,  8, A_INT, SPE_DIG,174,4808
+	PM_FENCER,208,5383
+	PM_FENCER, NON_PM,208,5383
+	PM_FENCER, NON_PM, NON_PM,208,5383
+	PM_RIGIL,209,5411
+	PM_RIGIL, PM_SWORDSMAN,209,5411
+	PM_RIGIL, PM_SWORDSMAN, PM_TOLIMAN,209,5411
+	PM_AIR_ELEMENTAL,210,5448
+	PM_AIR_ELEMENTAL, PM_SNAKE,210,5448
+	PM_AIR_ELEMENTAL, PM_SNAKE, S_SNAKE,210,5448
+	PM_AIR_ELEMENTAL, PM_SNAKE, S_SNAKE, S_ZOMBIE,210,5448
+	ART_FORTUNE_SWORD,211,5496
+	  ROLE_NEUTRAL|ROLE_CHAOTIC,ROLE_CHAOTIC213,5579
+	0, 1, 1, 10, 20, A_CHA,220,5813
+	0, 1, 1, 10, 20, A_CHA, SPE_CHARM_MONSTER,220,5813
+	PM_HEALER,253,6522
+	PM_HEALER, NON_PM,253,6522
+	PM_HEALER, NON_PM, NON_PM,253,6522
+	PM_HIPPOCRATES,254,6550
+	PM_HIPPOCRATES, PM_ATTENDANT,254,6550
+	PM_HIPPOCRATES, PM_ATTENDANT, PM_CYCLOPS,254,6550
+	PM_GIANT_RAT,255,6593
+	PM_GIANT_RAT, PM_SNAKE,255,6593
+	PM_GIANT_RAT, PM_SNAKE, S_RODENT,255,6593
+	PM_GIANT_RAT, PM_SNAKE, S_RODENT, S_YETI,255,6593
+	ART_STAFF_OF_AESCULAPIUS,256,6636
+	MH_HUMAN|MH_GNOME|MH_HALFELF | ROLE_MALE|ROLE_FEMALE | ROLE_NEUTRAL,257,6663
+	10, 3,-3, 2, 10, A_WIS,264,6935
+	10, 3,-3, 2, 10, A_WIS, SPE_CURE_SICKNESS,264,6935
+	PM_KNIGHT,297,7585
+	PM_KNIGHT, NON_PM,297,7585
+	PM_KNIGHT, NON_PM, PM_PONY,297,7585
+	PM_KING_ARTHUR,298,7614
+	PM_KING_ARTHUR, PM_PAGE,298,7614
+	PM_KING_ARTHUR, PM_PAGE, PM_IXOTH,298,7614
+	PM_QUASIT,299,7650
+	PM_QUASIT, PM_OCHRE_JELLY,299,7650
+	PM_QUASIT, PM_OCHRE_JELLY, S_IMP,299,7650
+	PM_QUASIT, PM_OCHRE_JELLY, S_IMP, S_JELLY,299,7650
+	ART_MAGIC_MIRROR_OF_MERLIN,300,7694
+	MH_HUMAN | ROLE_MALE|ROLE_FEMALE | ROLE_LAWFUL,301,7723
+	10, 8,-2, 0,  9, A_WIS,308,7975
+	10, 8,-2, 0,  9, A_WIS, SPE_TURN_UNDEAD,308,7975
+	PM_MEDIUM,342,8647
+	PM_MEDIUM, NON_PM,342,8647
+	PM_MEDIUM, NON_PM, PM_WHITE_UNICORN_FOAL,342,8647
+	PM_SHINTO_PRIEST,343,8690
+	PM_SHINTO_PRIEST, PM_MAIDEN,343,8690
+	PM_SHINTO_PRIEST, PM_MAIDEN, PM_NINE_TAILED_FOX,343,8690
+	PM_FOX_SPIRIT,344,8740
+	PM_FOX_SPIRIT, PM_HUMAN_ZOMBIE,344,8740
+	PM_FOX_SPIRIT, PM_HUMAN_ZOMBIE, S_DOG,344,8740
+	PM_FOX_SPIRIT, PM_HUMAN_ZOMBIE, S_DOG, S_ZOMBIE,344,8740
+	ART_HOLY_DAGGER,345,8790
+	  ROLE_LAWFUL,347,8834
+	10, 9, 2, 1, 10, A_DEX,354,9054
+	10, 9, 2, 1, 10, A_DEX, SPE_REMOVE_CURSE,354,9054
+	PM_MONK,388,9809
+	PM_MONK, NON_PM,388,9809
+	PM_MONK, NON_PM, NON_PM,388,9809
+	PM_GRAND_MASTER,389,9835
+	PM_GRAND_MASTER, PM_ABBOT,389,9835
+	PM_GRAND_MASTER, PM_ABBOT, PM_MASTER_KAEN,389,9835
+	PM_EARTH_ELEMENTAL,390,9879
+	PM_EARTH_ELEMENTAL, PM_XORN,390,9879
+	PM_EARTH_ELEMENTAL, PM_XORN, S_ELEMENTAL,390,9879
+	PM_EARTH_ELEMENTAL, PM_XORN, S_ELEMENTAL, S_XORN,390,9879
+	ART_EYES_OF_THE_OVERWORLD,391,9930
+	  ROLE_LAWFUL|ROLE_NEUTRAL|ROLE_CHAOTIC,ROLE_CHAOTIC393,10005
+	10, 8,-2, 2, 20, A_WIS,400,10249
+	10, 8,-2, 2, 20, A_WIS, SPE_RESTORE_ABILITY,400,10249
+	PM_PRIEST,433,10969
+	PM_PRIEST, PM_PRIESTESS,433,10969
+	PM_PRIEST, PM_PRIESTESS, NON_PM,433,10969
+	PM_ARCH_PRIEST,434,11003
+	PM_ARCH_PRIEST, PM_ACOLYTE,434,11003
+	PM_ARCH_PRIEST, PM_ACOLYTE, PM_NALZOK,434,11003
+	PM_HUMAN_ZOMBIE,435,11043
+	PM_HUMAN_ZOMBIE, PM_WRAITH,435,11043
+	PM_HUMAN_ZOMBIE, PM_WRAITH, S_ZOMBIE,435,11043
+	PM_HUMAN_ZOMBIE, PM_WRAITH, S_ZOMBIE, S_WRAITH,435,11043
+	ART_MITRE_OF_HOLINESS,436,11092
+	  ROLE_LAWFUL|ROLE_NEUTRAL|ROLE_CHAOTIC,ROLE_CHAOTIC438,11179
+	0, 3,-2, 2, 10, A_WIS,445,11423
+	0, 3,-2, 2, 10, A_WIS, SPE_REMOVE_CURSE,445,11423
+	PM_ROGUE,480,12180
+	PM_ROGUE, NON_PM,480,12180
+	PM_ROGUE, NON_PM, NON_PM,480,12180
+	PM_MASTER_OF_THIEVES,481,12207
+	PM_MASTER_OF_THIEVES, PM_THUG,481,12207
+	PM_MASTER_OF_THIEVES, PM_THUG, PM_MASTER_ASSASSIN,481,12207
+	PM_LEPRECHAUN,482,12259
+	PM_LEPRECHAUN, PM_GUARDIAN_NAGA,482,12259
+	PM_LEPRECHAUN, PM_GUARDIAN_NAGA, S_NYMPH,482,12259
+	PM_LEPRECHAUN, PM_GUARDIAN_NAGA, S_NYMPH, S_NAGA,482,12259
+	ART_BUTTERFLY_KNIFE,483,12310
+	  ROLE_CHAOTIC,485,12386
+	10, 8, 0, 1,  9, A_INT,492,12605
+	10, 8, 0, 1,  9, A_INT, SPE_DETECT_TREASURE,492,12605
+	PM_RANGER,539,14011
+	PM_RANGER, NON_PM,539,14011
+	PM_RANGER, NON_PM, PM_LITTLE_DOG 539,14011
+	PM_ORION,540,14072
+	PM_ORION, PM_HUNTER,540,14072
+	PM_ORION, PM_HUNTER, PM_SCORPIUS,540,14072
+	PM_FOREST_CENTAUR,541,14107
+	PM_FOREST_CENTAUR, PM_SCORPION,541,14107
+	PM_FOREST_CENTAUR, PM_SCORPION, S_CENTAUR,541,14107
+	PM_FOREST_CENTAUR, PM_SCORPION, S_CENTAUR, S_SPIDER,541,14107
+	ART_LONGBOW_OF_DIANA,542,14161
+	  ROLE_NEUTRAL|ROLE_CHAOTIC,ROLE_CHAOTIC544,14254
+	10, 9, 2, 1, 10, A_INT,551,14486
+	10, 9, 2, 1, 10, A_INT, SPE_INVISIBILITY,551,14486
+	PM_SAMURAI,584,15403
+	PM_SAMURAI, NON_PM,584,15403
+	PM_SAMURAI, NON_PM, PM_LITTLE_DOG,584,15403
+	PM_LORD_SATO,585,15439
+	PM_LORD_SATO, PM_ROSHI,585,15439
+	PM_LORD_SATO, PM_ROSHI, PM_ASHIKAGA_TAKAUJI,585,15439
+	PM_WOLF,586,15485
+	PM_WOLF, PM_STALKER,586,15485
+	PM_WOLF, PM_STALKER, S_DOG,586,15485
+	PM_WOLF, PM_STALKER, S_DOG, S_ELEMENTAL,586,15485
+	ART_TSURUGI_OF_MURAMASA,587,15527
+	MH_HUMAN | ROLE_MALE|ROLE_FEMALE | ROLE_LAWFUL,588,15553
+	10, 10, 0, 0,  8, A_INT,595,15804
+	10, 10, 0, 0,  8, A_INT, SPE_CLAIRVOYANCE,595,15804
+	PM_TOURIST,629,16482
+	PM_TOURIST, NON_PM,629,16482
+	PM_TOURIST, NON_PM, NON_PM,629,16482
+	PM_TWOFLOWER,630,16511
+	PM_TWOFLOWER, PM_GUIDE,630,16511
+	PM_TWOFLOWER, PM_GUIDE, PM_MASTER_OF_THIEVES,630,16511
+	PM_GIANT_SPIDER,631,16558
+	PM_GIANT_SPIDER, PM_FOREST_CENTAUR,631,16558
+	PM_GIANT_SPIDER, PM_FOREST_CENTAUR, S_SPIDER,631,16558
+	PM_GIANT_SPIDER, PM_FOREST_CENTAUR, S_SPIDER, S_CENTAUR,631,16558
+	ART_YENDORIAN_EXPRESS_CARD,632,16616
+	MH_HUMAN|MH_HALFELF | ROLE_MALE|ROLE_FEMALE | ROLE_NEUTRAL,633,16645
+	0, 5, 1, 2, 10, A_INT,640,16908
+	0, 5, 1, 2, 10, A_INT, SPE_CHARM_MONSTER,640,16908
+	PM_VALKYRIE,674,17611
+	PM_VALKYRIE, NON_PM,674,17611
+	PM_VALKYRIE, NON_PM, NON_PM 674,17611
+	PM_NORN,675,17664
+	PM_NORN, PM_WARRIOR,675,17664
+	PM_NORN, PM_WARRIOR, PM_LORD_SURTUR,675,17664
+	PM_FIRE_ANT,676,17702
+	PM_FIRE_ANT, PM_FIRE_GIANT,676,17702
+	PM_FIRE_ANT, PM_FIRE_GIANT, S_ANT,676,17702
+	PM_FIRE_ANT, PM_FIRE_GIANT, S_ANT, S_GIANT,676,17702
+	ART_ORB_OF_FATE,677,17747
+	MH_HUMAN|MH_DWARF|MH_HALFELF | ROLE_FEMALE | ROLE_LAWFUL|ROLE_NEUTRAL,ROLE_NEUTRAL678,17765
+	0, 10,-2, 0,  9, A_WIS,685,18039
+	0, 10,-2, 0,  9, A_WIS, SPE_CONE_OF_COLD,685,18039
+	PM_WIZARD,718,18706
+	PM_WIZARD, NON_PM,718,18706
+	PM_WIZARD, NON_PM, PM_KITTEN,718,18706
+	PM_NEFERET_THE_GREEN,719,18737
+	PM_NEFERET_THE_GREEN, PM_APPRENTICE,719,18737
+	PM_NEFERET_THE_GREEN, PM_APPRENTICE, PM_DARK_ONE,719,18737
+	PM_VAMPIRE_BAT,720,18788
+	PM_VAMPIRE_BAT, PM_XORN,720,18788
+	PM_VAMPIRE_BAT, PM_XORN, S_BAT,720,18788
+	PM_VAMPIRE_BAT, PM_XORN, S_BAT, S_WRAITH,720,18788
+	ART_EYE_OF_THE_AETHIOPICA,721,18831
+	  ROLE_NEUTRAL|ROLE_CHAOTIC,ROLE_CHAOTIC723,18929
+	0, 1, 0, 3, 10, A_INT,730,19161
+	0, 1, 0, 3, 10, A_INT, SPE_MAGIC_MISSILE,730,19161
+struct Role urole 740,19355
+const struct Race races[races762,19940
+	PM_ELF,790,20707
+	PM_ELF, NON_PM,790,20707
+	PM_ELF, NON_PM, PM_ELF_MUMMY,790,20707
+	PM_ELF, NON_PM, PM_ELF_MUMMY, PM_ELF_ZOMBIE,790,20707
+	MH_ELF | ROLE_MALE|ROLE_FEMALE | ROLE_CHAOTIC,791,20753
+	MH_ELF,792,20801
+	MH_ELF, MH_ELF,792,20801
+	MH_ELF, MH_ELF, MH_ORC,792,20801
+	PM_DWARF,822,21707
+	PM_DWARF, NON_PM,822,21707
+	PM_DWARF, NON_PM, PM_DWARF_MUMMY,822,21707
+	PM_DWARF, NON_PM, PM_DWARF_MUMMY, PM_DWARF_ZOMBIE,822,21707
+	MH_DWARF | ROLE_MALE|ROLE_FEMALE | ROLE_LAWFUL,823,21759
+	MH_DWARF,824,21808
+	MH_DWARF, MH_DWARF|MH_GNOME,MH_GNOME824,21808
+	MH_DWARF, MH_DWARF|MH_GNOME, MH_ORC,824,21808
+	PM_GNOME,837,22182
+	PM_GNOME, NON_PM,837,22182
+	PM_GNOME, NON_PM, PM_GNOME_MUMMY,837,22182
+	PM_GNOME, NON_PM, PM_GNOME_MUMMY, PM_GNOME_ZOMBIE,837,22182
+	MH_GNOME | ROLE_MALE|ROLE_FEMALE | ROLE_NEUTRAL,838,22234
+	MH_GNOME,839,22284
+	MH_GNOME, MH_DWARF|MH_GNOME,MH_GNOME839,22284
+	MH_GNOME, MH_DWARF|MH_GNOME, MH_HUMAN,839,22284
+	PM_ORC,852,22639
+	PM_ORC, NON_PM,852,22639
+	PM_ORC, NON_PM, PM_ORC_MUMMY,852,22639
+	PM_ORC, NON_PM, PM_ORC_MUMMY, PM_ORC_ZOMBIE,852,22639
+	MH_ORC | ROLE_MALE|ROLE_FEMALE | ROLE_CHAOTIC,853,22685
+	MH_ORC,854,22733
+	MH_ORC, 0, MH_HUMAN|MH_ELF|MH_DWARF,MH_DWARF854,22733
+struct Race urace 869,23135
+const struct Gender genders[genders887,23574
+const struct Align aligns[aligns902,24078
+static char NEARDATA randomstr[randomstr921,24755
+validrole(925,24810
+randrole(933,24904
+str2role(940,24955
+validrace(973,25643
+randrace(983,25847
+str2race(1008,26393
+validgend(1038,26963
+randgend(1049,27226
+str2gend(1075,27795
+validalign(1104,28375
+randalign(1115,28643
+str2align(1141,29219
+ok_role(1170,29871
+pick_role(1210,31105
+ok_race(1236,31720
+pick_race(1276,32954
+ok_gend(1303,33644
+pick_gend(1338,34714
+ok_align(1365,35402
+pick_align(1400,36481
+rigid_role_checks(1425,37021
+#define BP_ALIGN	1458,38309
+#define BP_GEND	1459,38328
+#define BP_RACE	1460,38347
+#define BP_ROLE	1461,38366
+#define NUM_BP	1462,38385
+STATIC_VAR char pa[pa1464,38404
+STATIC_VAR char pa[NUM_BP], post_attribs;1464,38404
+promptsep(1467,38465
+role_gendercount(1489,38905
+race_alignmentcount(1502,39196
+root_plselection_prompt(1515,39519
+build_plselection_prompt(1710,44658
+#undef BP_ALIGN1785,46307
+#undef BP_GEND1786,46323
+#undef BP_RACE1787,46338
+#undef BP_ROLE1788,46353
+#undef NUM_BP1789,46368
+plnamesuffix(1792,46388
+role_init(1845,47756
+Hello(1952,51313
+Goodbye(1985,51975
+Hello(2004,52357
+Goodbye(2050,53213
+
+rumors.c,620
+#define alloc(40,1633
+static long true_rumor_start,47,1762
+static long true_rumor_start,  true_rumor_size,47,1762
+static long true_rumor_start,  true_rumor_size,  true_rumor_end,47,1762
+	    false_rumor_start,48,1827
+	    false_rumor_start, false_rumor_size,48,1827
+	    false_rumor_start, false_rumor_size, false_rumor_end;48,1827
+static int oracle_flg 49,1886
+static unsigned oracle_cnt 50,1962
+static long *oracle_loc oracle_loc51,1994
+init_rumors(54,2040
+getrumor(80,2986
+outrumor(162,5258
+init_oracles(225,6723
+save_oracles(247,7263
+restore_oracles(264,7639
+outoracle(276,7949
+doconsult(340,9707
+
+save.c,1755
+long bytes_counted;24,609
+static int count_only;25,629
+int dotcnt,29,673
+int dotcnt, dotrow;29,673
+static long nulls[nulls47,1306
+#define nulls 49,1335
+#define HUP	53,1433
+#define HUP55,1480
+static unsigned ustuck_id 63,1643
+dosave(66,1694
+hangup(103,2509
+dosave0(133,3161
+savegamestate(299,7229
+savestateinlock(353,8821
+savelev(428,11007
+savelev0(458,11691
+#define RLESC 591,15673
+#define flushoutrun(592,15738
+# define ZEROCOMP_BUFSIZ 595,15822
+static NEARDATA unsigned char outbuf[outbuf597,15860
+static NEARDATA unsigned short outbufp 598,15915
+static NEARDATA short outrunlength 599,15959
+static NEARDATA int bwritefd;600,16000
+static NEARDATA boolean compressing 601,16030
+bputc(609,16177
+bufon(626,16439
+bufoff(635,16516
+bflush(648,16703
+bwrite(673,17183
+bclose(711,17968
+static int bw_fd 721,18064
+static FILE *bw_FILE bw_FILE722,18087
+static boolean buffering 723,18113
+bufon(726,18153
+bufoff(740,18384
+bflush(748,18452
+bwrite(761,18613
+bclose(801,19447
+savelevchn(818,19665
+savedamage(840,20192
+saveobjchn(865,20788
+savemonchn(897,21679
+savetrapchn(927,22422
+savefruitchn(951,23131
+free_dungeons(973,23638
+free_menu_coloring(984,23779
+freedynamicdata(1002,24060
+# define freeobjchn(1012,24315
+# define freemonchn(1013,24376
+# define freetrapchn(1014,24437
+# define freefruitchn(1015,24499
+# define freenames(1016,24551
+# define free_oracles(1017,24597
+# define free_waterlevel(1018,24648
+# define free_worm(1019,24705
+# define free_timers(1020,24751
+# define free_light_sources(1021,24805
+# define free_engravings(1022,24873
+# define freedamage(1023,24930
+# define free_animals(1024,24978
+swapin_file(1073,26260
+swapout_oldest(1100,26801
+copyfile(1132,27511
+co_false(1160,28208
+
+shk.c,4187
+#define PAY_SOME 17,461
+#define PAY_BUY 18,483
+#define PAY_CANT 19,505
+#define PAY_SKIP 20,542
+#define PAY_BROKE 21,565
+#define IS_SHOP(31,805
+#define no_cheat 33,875
+STATIC_VAR NEARDATA long int followmsg;39,1078
+#define SHK_NOMATCH 83,3380
+#define SHK_MATCH 84,3455
+#define SHK_GENERAL 85,3530
+#define NOBOUND 86,3605
+money2mon(122,5079
+money2u(154,5804
+next_shkp(189,6545
+shkname(209,6954
+shkgone(216,7065
+set_residency(251,8108
+replshk(261,8349
+restshk(272,8641
+clear_unpaid(296,9230
+setpaid(310,9502
+addupbill(341,10204
+call_kops(360,10505
+inside_shop(425,11911
+u_left_shop(438,12125
+remote_burglary(492,13451
+rob_shop(519,14118
+u_entered_shop(562,15081
+same_price(715,19412
+shop_debt(747,20530
+shopper_financial_report(761,20794
+inhishop(816,22152
+shop_keeper(825,22348
+tended_shop(842,22657
+onbill(854,22860
+delete_contents(881,23488
+obfree(894,23713
+check_credit(955,25256
+pay(981,25760
+home_shk(1007,26264
+angry_shk_exists(1030,26680
+pacify_shk(1042,26949
+rile_shk(1061,27408
+rouse_shk(1080,27828
+make_happy_shk(1101,28324
+hot_pursuit(1152,29617
+make_angry_shk(1168,30031
+STATIC_VAR const char no_money[no_money1205,31249
+STATIC_VAR const char not_enough_money[not_enough_money1207,31329
+STATIC_VAR const char not_enough_money[not_enough_money1210,31435
+STATIC_VAR const char no_money[no_money1215,31552
+STATIC_VAR const char not_enough_money[not_enough_money1216,31586
+cheapest_item(1222,31674
+dopay(1240,32052
+shk_other_services(1788,45366
+dopayobj(1956,49630
+static coord repo_location;2089,53445
+paybill(2093,53556
+inherits(2132,54679
+set_repo_loc(2273,58452
+finish_paybill(2301,59275
+bp_to_obj(2324,59993
+find_oid(2343,60401
+get_cost(2372,61219
+contained_cost(2456,63771
+contained_gold(2489,64715
+dropped_container(2506,65064
+picked_container(2526,65525
+set_cost(2547,65987
+unpaid_cost(2585,66963
+add_one_tobill(2602,67454
+add_to_billobjs(2648,68549
+bill_box_content(2663,68858
+shk_names_obj(2684,69395
+addtobill(2730,70676
+splitbill(2878,74223
+sub_one_frombill(2916,75062
+subfrombill(2959,76043
+stolen_container(2982,76460
+stolen_value(3024,77343
+static char sell_response 3127,79899
+static int sell_how 3128,79932
+static boolean auto_credit 3131,80111
+sellobj_state(3134,80153
+sellobj(3149,80646
+doinvbill(3425,88461
+#define HUNGRY	3522,90993
+getprice(3525,91027
+shkcatch(3563,91873
+add_damage(3607,92976
+remove_damage(3655,94376
+repair_damage(3777,97388
+#define NEED_UPDATE 3838,99197
+#define OPEN	3839,99219
+#define INSHOP	3840,99238
+#define horiz(3841,99259
+#define vert(3842,99286
+#undef NEED_UPDATE3900,101104
+#undef OPEN3901,101123
+#undef INSHOP3902,101135
+#undef vert3903,101149
+#undef horiz3904,101161
+shk_move(3912,101287
+#define	GDIST(4000,103662
+after_shk_move(4040,104632
+is_fshk(4057,104997
+shopdig(4065,105143
+makekops(4188,108171
+pay_for_damage(4214,108832
+costly_spot(4417,114061
+shop_object(4436,114550
+price_quote(4456,115145
+shk_embellish(4532,117274
+const char *Izchak_speaks[Izchak_speaks4585,118563
+shk_chat(4610,119860
+kops_gone(4724,123117
+cost_per_charge(4751,123668
+check_unpaid_usage(4812,125629
+check_unpaid(4868,127081
+costly_gold(4875,127185
+block_door(4931,128434
+block_entry(4968,129532
+shk_your(5013,130573
+Shk_Your(5027,130791
+shk_owns(5039,130943
+mon_owns(5066,131465
+sasc_bug(5088,131788
+static NEARDATA const char identify_types[identify_types5094,131873
+static NEARDATA const char weapon_types[weapon_types5095,131939
+static NEARDATA const char armor_types[armor_types5096,132016
+static NEARDATA const char ident_chars[ident_chars5103,132157
+shk_identify(5106,132219
+shk_uncurse(5286,136608
+shk_appraisal(5375,138638
+static const char we_offer[we_offer5452,140472
+shk_weapon_works(5454,140559
+shk_armor_works(5663,145536
+static NEARDATA const char wand_types[wand_types5811,149270
+static NEARDATA const char tool_types[tool_types5812,149331
+static NEARDATA const char ring_types[ring_types5813,149392
+static NEARDATA const char spbook_types[spbook_types5814,149453
+shk_charge(5817,149531
+shk_obj_match(5970,153364
+shk_offer_price(5986,153649
+shk_smooth_charge(6051,155091
+
+shknam.c,802
+static const char * const shkliquors[shkliquors30,870
+static const char * const shkbooks[shkbooks47,1377
+static const char * const shkarmors[shkarmors58,1804
+static const char * const shkwands[shkwands69,2240
+static const char * const shkrings[shkrings83,2752
+static const char * const shkfoods[shkfoods96,3234
+static const char * const shkweapons[shkweapons108,3715
+static const char * const shktools[shktools119,4166
+static const char * const shklight[shklight150,5068
+static const char * const shkgeneral[shkgeneral162,5539
+const struct shclass shtypes[shtypes196,6886
+init_shop_selection(272,9342
+mkshobj_at(290,9829
+nameshk(318,10576
+shkinit(410,13210
+stock_room(504,15909
+init_shk_services(576,18068
+saleable(623,19487
+get_shop_item(641,20019
+shop_string(658,20370
+
+sit.c,74
+take_gold(16,451
+dosit(58,1140
+rndcurse(511,11515
+attrcurse(603,13735
+
+sounds.c,647
+mon_in_room(33,764
+dosounds(43,925
+static const char * const h_sounds[h_sounds404,9679
+growl_sound(417,10108
+growl(490,11130
+yelp(515,11759
+whimper(577,12967
+beg(621,13925
+domonnoise(642,14444
+dotalk(1349,32215
+dochat(1360,32438
+typedef struct audio_mapping_rec 1484,35635
+	struct re_pattern_buffer regex;1486,35695
+	char *pattern;pattern1488,35734
+	char *filename;filename1490,35757
+	int volume;1491,35774
+	struct audio_mapping_rec *next;next1492,35787
+} audio_mapping;1493,35820
+static audio_mapping *soundmap soundmap1495,35838
+char* sounddir 1497,35875
+add_sound_mapping(1501,35970
+play_sound_for_message(1563,37352
+
+sp_lev.c,2016
+#define debugpline	18,433
+#define debugpline	20,477
+#define LEFT	48,1649
+#define H_LEFT	49,1664
+#define CENTER	50,1681
+#define H_RIGHT	51,1698
+#define RIGHT	52,1716
+#define TOP	54,1733
+#define BOTTOM	55,1747
+#define sq(57,1765
+#define XLIM	59,1790
+#define YLIM	60,1805
+#define Fread	62,1821
+#define Fgetc	63,1851
+#define New(64,1882
+#define NewTab(65,1930
+#define Free(66,2006
+static NEARDATA walk walklist[walklist68,2061
+static char Map[Map71,2159
+static char robjects[robjects72,2190
+static char robjects[10], rloc_x[rloc_x72,2190
+static char robjects[10], rloc_x[10], rloc_y[rloc_y72,2190
+static char robjects[10], rloc_x[10], rloc_y[10], rmonst[rmonst72,2190
+static aligntyp	ralign[ralign73,2252
+static NEARDATA xchar xstart,74,2319
+static NEARDATA xchar xstart, ystart;74,2319
+static NEARDATA char xsize,75,2357
+static NEARDATA char xsize, ysize;75,2357
+char *lev_message lev_message94,3252
+lev_region *lregions lregions95,3275
+int num_lregions 96,3301
+lev_init init_lev;97,3323
+set_wall_property(104,3441
+rnddoor(120,3759
+rndtrap(131,3863
+#define DRY	165,4827
+#define WET	166,4843
+get_location(171,4944
+is_ok_location(210,5851
+sp_lev_shuffle(236,6348
+get_room_loc(262,6769
+get_free_room_loc(290,7258
+check_room(308,7627
+create_room(363,8846
+create_subroom(539,13058
+create_door(588,14099
+create_secret_door(672,15846
+create_trap(714,16838
+noncoalignment(741,17198
+create_monster(753,17355
+create_object(914,21462
+create_engraving(1052,25146
+create_stairs(1074,25473
+create_altar(1094,25753
+create_gold(1164,27436
+create_feature(1186,27773
+search_door(1227,28676
+dig_corridor(1280,29527
+fix_stair_rooms(1388,32080
+create_corridor(1430,33260
+fill_room(1472,34141
+free_rooms(1536,35375
+build_room(1608,36597
+light_region(1689,38787
+load_common_data(1718,39520
+load_one_monster(1766,40713
+load_one_object(1788,41284
+load_one_engraving(1804,41616
+load_rooms(1818,41891
+maze1xy(2048,48252
+load_maze(2074,48882
+load_special(2656,65127
+
+spell.c,962
+static NEARDATA schar delay;14,400
+static NEARDATA struct obj *book;book15,462
+#define SPELLMENU_CAST 18,613
+#define SPELLMENU_VIEW 19,641
+#define KEEN 21,670
+#define MAX_SPELL_STUDY 22,689
+#define incrnknow(23,715
+#define spellev(25,779
+#define spellname(26,826
+#define spellet(27,885
+#define uarmhbon 93,3595
+#define uarmgbon 94,3658
+#define uarmfbon 95,3718
+static const char explodes[explodes99,3869
+spell_let_to_idx(104,4031
+cursed_book(118,4307
+confused_book(232,6950
+deadbook(268,7934
+learn(416,11883
+study_book(509,14408
+book_disappears(642,17804
+book_substitution(652,18092
+age_spells(660,18236
+getspell(680,18722
+docast(737,20084
+spelltypemnemonic(747,20218
+spell_skilltype(793,20872
+cast_protection(800,20971
+spell_backfire(873,23018
+spelleffects(901,23691
+throwspell(1217,32274
+losespells(1274,33557
+dovspell(1294,33945
+dospellmenu(1327,34657
+isqrt(1411,37285
+percent_success(1425,37447
+initialspell(1534,40819
+
+steal.c,351
+equipname(21,628
+somegold(52,1180
+stealgold(63,1360
+somegold(100,2374
+findgold(120,2881
+stealgold(131,3101
+unsigned int stealoid;176,4504
+unsigned int stealmid;177,4554
+stealarm(180,4627
+remove_worn_item(217,5692
+steal(270,7192
+mpickobj(509,14264
+stealamulet(554,15635
+mdrop_obj(605,17094
+mdrop_special_objs(646,18317
+relobj(664,18756
+
+steed.c,294
+static NEARDATA const char steeds[steeds18,451
+rider_cant_reach(26,707
+can_saddle(38,975
+use_saddle(51,1257
+can_ride(209,5100
+doride(219,5302
+mount_steed(242,5776
+exercise_steed(482,12230
+kick_steed(498,12476
+landing_spot(566,14238
+dismount_steed(610,15490
+place_monster(812,21286
+
+teleport.c,581
+goodpos(28,959
+enexto(104,3467
+enexto_core(113,3604
+#define MAX_GOOD 119,3722
+tele_jump_ok(192,5830
+teleok(225,6880
+teleds(237,7144
+safe_teleds(343,10293
+vault_tele(361,10603
+teleport_pet(374,10803
+tele(408,11363
+dotele(485,12978
+level_tele(622,15611
+domagicportal(960,24718
+tele_trap(1001,25676
+level_tele_trap(1022,26072
+rloc_pos_ok(1061,26990
+rloc_to(1113,28709
+rloc(1158,29901
+mvault_tele(1211,31233
+tele_restrict(1226,31487
+mtele_trap(1244,31795
+mlevel_tele_trap(1281,32630
+rloco(1368,34714
+random_teleport_level(1420,36135
+u_teleport_mon(1477,38259
+
+timeout.c,1775
+static NEARDATA const char * const stoned_texts[stoned_texts27,925
+stoned_dialogue(44,1394
+static NEARDATA const char * const vomiting_texts[vomiting_texts58,1680
+vomiting_dialogue(75,2139
+static NEARDATA const char * const choke_texts[choke_texts98,2580
+static NEARDATA const char * const choke_texts2[choke_texts2114,2938
+choke_dialogue(131,3360
+static NEARDATA const char * const slime_texts[slime_texts153,3800
+slime_dialogue(170,4340
+burn_away_slime(202,5120
+nh_timeout(220,5367
+fall_asleep(487,11751
+attach_egg_hatch_timeout(510,12466
+kill_egg(535,13131
+hatch_egg(544,13308
+learn_egg_type(761,19258
+attach_fig_transform_timeout(773,19560
+slip_or_trip(792,19967
+see_lamp_flicker(925,22921
+lantern_message(948,23396
+burn_object(985,24149
+begin_burn(1358,32428
+end_burn(1452,34509
+cleanup_burn(1481,35235
+do_storms(1506,35682
+static timer_element *timer_base;timer_base1620,39198
+static unsigned long timer_id 1621,39248
+#define VERBOSE_TIMER1624,39355
+    timeout_proc f,1627,39395
+    timeout_proc f, cleanup;1627,39395
+    const char *name;name1629,39445
+# define TTAB(1630,39467
+# define TTAB(1632,39504
+} ttable;1634,39540
+static const ttable timeout_funcs[timeout_funcs1637,39584
+#undef TTAB1645,39964
+kind_name(1651,40023
+print_queue(1664,40272
+wiz_timeout_queue(1693,40984
+timer_sanity_check(1715,41432
+run_timers(1739,42021
+start_timer(1763,42596
+stop_timer(1797,43377
+obj_move_timers(1823,43924
+obj_split_timers(1845,44394
+obj_stop_timers(1865,44921
+insert_timer(1891,45527
+remove_timer(1908,45838
+write_timer(1930,46235
+obj_is_local(1983,47464
+mon_is_local(2004,47912
+timer_is_local(2023,48376
+maybe_write_timer(2042,48869
+save_timers(2087,49775
+restore_timers(2126,50677
+relink_timers(2151,51324
+
+topten.c,1547
+# define UPDATE_RECORD_IN_PLACE16,457
+static long final_fpos;26,787
+#define done_stopprint 29,819
+#define newttentry(31,867
+#define dealloc_ttentry(32,945
+#define NAMSZ	33,1005
+#define DTHSZ	34,1022
+#define ROLESZ 35,1040
+#define PERSMAX	36,1059
+#define POINTSMIN	37,1124
+#define ENTRYMAX	38,1162
+#define PERS_IS_UID	41,1260
+struct toptenentry 43,1335
+	struct toptenentry *tt_next;tt_next44,1356
+	long fpos;46,1416
+	long points;48,1435
+	int deathdnum,49,1449
+	int deathdnum, deathlev;49,1449
+	int maxlvl,50,1475
+	int maxlvl, hp,50,1475
+	int maxlvl, hp, maxhp,50,1475
+	int maxlvl, hp, maxhp, deaths;50,1475
+	int ver_major,51,1507
+	int ver_major, ver_minor,51,1507
+	int ver_major, ver_minor, patchlevel;51,1507
+	long deathdate,52,1546
+	long deathdate, birthdate;52,1546
+	int uid;53,1574
+	char plrole[plrole54,1584
+	char plrace[plrace55,1608
+	char plgend[plgend56,1632
+	char plalign[plalign57,1656
+	char name[name58,1681
+	char death[death59,1702
+} *tt_head;tt_head60,1724
+NEARDATA const char * const killed_by_prefix[killed_by_prefix79,2514
+static winid toptenwin 91,2969
+topten_print(94,3020
+topten_print_bold(104,3161
+observable_depth(114,3313
+readentry(132,3822
+#define TTFIELDS 150,4471
+#undef TTFIELDS157,4724
+writeentry(195,5740
+free_ttlist(236,6881
+topten(250,7074
+#define HUP	285,7958
+#define HUP287,8005
+outheader(579,15634
+outentry(593,15914
+score_wanted(866,22903
+prscore(913,24112
+classmon(1054,27205
+tt_oname(1082,27914
+nsb_mung_line(1132,29023
+nsb_unmung_line(1139,29115
+
+track.c,202
+#define UTSZ	8,228
+STATIC_VAR NEARDATA int utcnt,10,245
+STATIC_VAR NEARDATA int utcnt, utpnt;10,245
+STATIC_VAR NEARDATA coord utrack[utrack11,283
+initrack(16,342
+settrack(26,433
+gettrack(39,605
+
+trap.c,2315
+STATIC_VAR const char *a_your[a_your41,1775
+STATIC_VAR const char *A_Your[A_Your42,1809
+STATIC_VAR const char tower_of_flame[tower_of_flame43,1843
+STATIC_VAR const char *A_gush_of_water_hits;A_gush_of_water_hits44,1883
+STATIC_VAR const char * const blindgas[blindgas45,1928
+STATIC_VAR const char *dig_you[dig_you47,1984
+STATIC_VAR const char *web_you[web_you48,2019
+STATIC_VAR const char * const blindgas[blindgas49,2054
+STATIC_VAR const char * const a_your[a_your55,2125
+STATIC_VAR const char * const A_Your[A_Your56,2184
+STATIC_VAR const char tower_of_flame[tower_of_flame57,2243
+STATIC_VAR const char * const A_gush_of_water_hits 58,2302
+STATIC_VAR const char * const blindgas[blindgas59,2379
+const char *set_you[set_you62,2496
+STATIC_VAR const char *dig_you[dig_you63,2549
+STATIC_VAR const char *web_you[web_you64,2611
+STATIC_VAR const char * const blindgas[blindgas65,2673
+burnarmor(75,2971
+#define burn_dmg(83,3105
+#undef burn_dmg145,4770
+rust_dmg(154,5065
+grease_protect(289,8612
+maketrap(338,9711
+fall_through(426,12205
+animate_statue(533,15094
+activate_statue_trap(682,19756
+keep_saddle_with_steedcorpse(713,20493
+dotrap(743,21214
+steedintrap(1644,44950
+blow_up_landmine(1742,47144
+launch_obj(1770,47962
+seetrap(2045,55191
+mkroll_launch(2058,55363
+isclearpath(2120,56913
+mintrap(2145,57256
+instapetrify(2830,75504
+minstapetrify(2846,75773
+selftouch(2872,76322
+mselftouch(2909,77380
+float_up(2933,77961
+fill_pit(3013,79805
+float_down(3031,80122
+dofiretrap(3194,84415
+domagictrap(3278,86653
+fire_damage(3424,90093
+water_damage(3544,93187
+emergency_disrobe(3621,95420
+drown(3695,97440
+drain_en(3899,102156
+dountrap(3917,102443
+untrap_prob(3955,103413
+cnv_trap_obj(3978,104076
+move_into_trap(3999,104621
+try_disarm(4026,105257
+reward_untrap(4146,108496
+disarm_holdingtrap(4175,109223
+disarm_landmine(4219,110364
+static NEARDATA const char oil[oil4234,110735
+disarm_squeaky_board(4238,110909
+disarm_shooting_trap(4276,111751
+try_lift(4294,112147
+help_monster_out(4327,112998
+untrap(4455,116177
+chest_trap(4753,123652
+t_at(5013,129993
+deltrap(5028,130218
+delfloortrap(5043,130470
+b_trapped(5077,131430
+thitm(5101,132067
+unconscious(5159,133381
+static const char lava_killer[lava_killer5180,133878
+lava_effects(5183,133941
+
+u_init.c,3101
+struct trobj 7,201
+	short trotyp;8,216
+	schar trspe;9,231
+	char trclass;10,245
+	Bitfield(11,260
+	Bitfield(12,281
+#define UNDEF_TYP	20,508
+#define UNDEF_SPE	21,528
+#define UNDEF_BLESS	22,553
+static struct trobj Archeologist[Archeologist28,628
+static struct trobj Barbarian[Barbarian42,1220
+#define B_MAJOR	43,1256
+#define B_MINOR	44,1312
+static struct trobj Cave_man[Cave_man51,1576
+#define C_AMMO	52,1611
+static struct trobj Fencer[Fencer61,1923
+static struct trobj Healer[Healer68,2186
+#define H_ARMOR1 69,2219
+#define H_ARMOR2 70,2238
+static struct trobj Knight[Knight85,2854
+static struct trobj Medium[Medium97,3282
+#define MED_BOW	98,3315
+#define MED_TWO_ARROWS	99,3335
+#define MED_ZERO_ARROWS	100,3360
+static struct trobj Priest[Priest111,3780
+static struct trobj Monk[Monk122,4184
+#define M_BOOK	123,4215
+static struct trobj Ranger[Ranger138,4828
+#define RAN_BOW	139,4861
+#define RAN_TWO_ARROWS	140,4881
+#define RAN_ZERO_ARROWS	141,4906
+static struct trobj Rogue[Rogue150,5226
+#define R_DAGGERS	151,5258
+static struct trobj Samurai[Samurai161,5628
+#define S_ARROWS	162,5662
+static struct trobj Tourist[Tourist171,5988
+#define T_DARTS	172,6022
+static struct trobj Valkyrie[Valkyrie184,6443
+static struct trobj Wizard[Wizard191,6711
+#define W_MULTSTART	192,6744
+#define W_MULTEND	193,6766
+static struct trobj Tinopener[Tinopener209,7277
+static struct trobj Magicmarker[Magicmarker213,7373
+static struct trobj Lamp[Lamp217,7481
+static struct trobj Blindfold[Blindfold221,7570
+static struct trobj Instrument[Instrument225,7665
+static struct trobj Xtra_food[Xtra_food229,7764
+static struct trobj Leash[Leash234,7882
+static struct trobj Towel[Towel238,7969
+static struct trobj Wishing[Wishing243,8077
+static struct trobj Money[Money248,8187
+static struct inv_sub 256,8414
+static struct inv_sub { short race_pm,256,8414
+static struct inv_sub { short race_pm, item_otyp,256,8414
+static struct inv_sub { short race_pm, item_otyp, subs_otyp;256,8414
+static struct inv_sub { short race_pm, item_otyp, subs_otyp; } inv_subs[inv_subs256,8414
+static const struct def_skill Skill_A[Skill_A291,10076
+static const struct def_skill Skill_B[Skill_B309,10770
+static const struct def_skill Skill_C[Skill_C328,11525
+static struct def_skill Skill_F[Skill_F344,12218
+static const struct def_skill Skill_H[Skill_H357,12813
+static const struct def_skill Skill_K[Skill_K371,13405
+static const struct def_skill Skill_Med[Skill_Med394,14355
+static const struct def_skill Skill_Mon[Skill_Mon406,14846
+static const struct def_skill Skill_P[Skill_P418,15338
+static const struct def_skill Skill_R[Skill_R434,16056
+static const struct def_skill Skill_Ran[Skill_Ran455,16914
+static const struct def_skill Skill_S[Skill_S476,17761
+static const struct def_skill Skill_T[Skill_T495,18502
+static const struct def_skill Skill_V[Skill_V521,19616
+static const struct def_skill Skill_W[Skill_W540,20369
+knows_object(561,21168
+knows_class(572,21436
+u_init(582,21619
+restricted_spell_discipline(937,30839
+ini_inv(972,31953
+
+uhitm.c,730
+static int dieroll;33,1412
+static boolean override_confirmation 35,1499
+#define PROJECTILE(37,1546
+hurtmarmor(42,1722
+attack_checks(104,3410
+check_caitiff(238,7609
+find_roll_to_hit(254,7930
+attack(323,9529
+known_hitum(466,13816
+hitum(529,15645
+hmon(544,16034
+hmon_hitmon(563,16545
+#define useup_eggs(854,25489
+#undef useup_eggs936,27885
+shade_aware(1306,38442
+m_slips_free(1329,39146
+joust(1385,40763
+demonpet(1419,42030
+steal_it(1449,42957
+damageum(1548,45994
+explum(2052,58604
+start_engulf(2135,60283
+end_engulf(2152,60595
+gulpum(2161,60695
+missum(2416,67416
+hmonas(2440,67934
+passive(2693,74702
+passive_obj(2955,81222
+stumble_onto_mimic(3017,82712
+nohandglow(3068,83944
+flash_hits_mon(3102,84593
+
+vault.c,292
+#define g_monnam(17,486
+clear_fcorr(29,901
+restfakecorr(76,2187
+grddead(84,2353
+in_fcorridor(102,2758
+findgd(117,3039
+vault_occupied(131,3291
+invault(143,3469
+move_gold(430,11323
+wallify_vault(446,11589
+gd_move(526,13750
+paygd(881,22700
+hidden_gold(952,24245
+gd_sound(966,24519
+
+version.c,305
+version_string(30,826
+getversionstring(38,982
+doversion(52,1206
+doextversion(62,1315
+comp_times(70,1402
+check_version(78,1501
+uptodate(114,2517
+store_version(139,3002
+const char amiga_version_string[amiga_version_string155,3332
+get_feature_notice_ver(159,3412
+get_current_feature_ver(190,3973
+
+vision.c,2229
+char circle_data[circle_data25,894
+char circle_start[circle_start48,1642
+boolean	vision_full_recalc 75,2191
+char	**viz_array;viz_array78,2268
+char	*viz_rmin,viz_rmin80,2293
+char	*viz_rmin, *viz_rmax;viz_rmax80,2293
+static char could_see[could_see86,2390
+static char *cs_rows0[cs_rows087,2455
+static char *cs_rows0[ROWNO], *cs_rows1[cs_rows187,2455
+static char  cs_rmin0[cs_rmin088,2503
+static char  cs_rmin0[ROWNO],  cs_rmax0[cs_rmax088,2503
+static char  cs_rmin1[cs_rmin189,2551
+static char  cs_rmin1[ROWNO],  cs_rmax1[cs_rmax189,2551
+static char  viz_clear[viz_clear91,2600
+static char *viz_clear_rows[viz_clear_rows92,2670
+static char  left_ptrs[left_ptrs94,2707
+static char right_ptrs[right_ptrs95,2774
+#define sign(109,3298
+#define v_abs(110,3346
+vision_init(121,3641
+does_block(158,4419
+vision_reset(195,5434
+get_unused_cs(257,7082
+rogue_vision(300,8039
+new_angle(400,11360
+#define new_angle(442,12415
+vision_recalc(492,14659
+block_point(821,25486
+unblock_point(844,26036
+dig_point(904,27999
+fill_point(985,30212
+static int  start_row;1073,32669
+static int  start_col;1074,32692
+static int  step;1075,32715
+static char **cs_rows;cs_rows1076,32733
+static char *cs_left;cs_left1077,32756
+static char *cs_right;cs_right1078,32778
+static genericptr_t varg;1081,32858
+#define set_cs(1096,33382
+#define good_row(1097,33431
+#define set_min(1098,33477
+#define set_max(1099,33531
+#define is_clear(1100,33585
+#define q1_path(1132,34644
+#define q4_path(1176,35588
+#define q2_path(1221,36541
+#define q3_path(1265,37486
+#define q1_path(1314,38656
+#define q2_path(1315,38718
+#define q3_path(1316,38780
+#define q4_path(1317,38842
+_q1_path(1323,38953
+_q4_path(1367,39644
+_q2_path(1411,40335
+_q3_path(1455,41027
+clear_path(1505,41889
+#define FROM_RIGHT 1541,42665
+#define FROM_LEFT 1542,42686
+static close2d *close_dy[close_dy1552,42798
+static far2d   *far_dy[far_dy1553,42841
+view_init(1565,43272
+#define OFF_TABLE 1582,43642
+close_shadow(1585,43681
+far_shadow(1614,44534
+right_side(1654,45768
+left_side(1909,53991
+view_from(2090,59135
+view_init(2185,61949
+right_side(2194,62126
+left_side(2376,68003
+view_from(2498,71132
+do_clear_area(2593,74254
+
+weapon.c,2139
+#define PN_BARE_HANDED	23,701
+#define PN_TWO_WEAPONS	24,759
+#define PN_RIDING	25,789
+#define PN_POLEARMS	26,814
+#define PN_SABER	27,841
+#define PN_HAMMER	28,865
+#define PN_WHIP	29,890
+#define PN_ATTACK_SPELL	30,914
+#define PN_HEALING_SPELL	31,945
+#define PN_DIVINATION_SPELL	32,976
+#define PN_ENCHANTMENT_SPELL	33,1011
+#define PN_CLERIC_SPELL	34,1047
+#define PN_ESCAPE_SPELL	35,1079
+#define PN_MATTER_SPELL	36,1111
+STATIC_DCL NEARDATA const short skill_names_indices[skill_names_indices42,1211
+STATIC_DCL NEARDATA const char *odd_skill_names[odd_skill_names43,1266
+STATIC_DCL NEARDATA const char *barehands_or_martial[barehands_or_martial44,1317
+STATIC_VAR NEARDATA const short skill_names_indices[skill_names_indices48,1392
+STATIC_VAR NEARDATA const char * const odd_skill_names[odd_skill_names68,2132
+STATIC_VAR NEARDATA const char * const barehands_or_martial[barehands_or_martial86,2557
+give_may_advance_msg(91,2684
+#define P_NAME(130,3463
+#define PP_NAME(136,3720
+#define P_NAME(141,3972
+static NEARDATA const char kebabable[kebabable145,4043
+hitval(154,4253
+dmgval(225,6851
+#define Oselect(350,9994
+oselect(353,10088
+static NEARDATA const int rwep[rwep370,10470
+static NEARDATA const int pwep[pwep379,10841
+static struct obj *propellor;propellor384,11016
+select_rwep(387,11060
+static const NEARDATA short hwep[hwep497,14582
+select_hwep(514,15249
+possibly_unwield(555,16522
+mon_wield_item(616,18430
+abon(763,22254
+dbon(790,22928
+skill_level_name(809,23424
+slots_required(842,24441
+can_advance(868,25046
+could_advance(885,25507
+peaked_skill(898,25926
+skill_advance(908,26145
+const static struct skill_range 926,26641
+	short first,927,26675
+	short first, last;927,26675
+	const char *name;name928,26695
+} skill_ranges[skill_ranges929,26714
+enhance_weapon_skill(953,27490
+unrestrict_weapon_skill(1120,32458
+use_skill(1134,32687
+add_weapon_skill(1149,32987
+lose_weapon_skill(1164,33351
+weapon_type(1188,34121
+uwep_skill_type(1206,34519
+weapon_hit_bonus(1218,34722
+weapon_dam_bonus(1301,37009
+skill_init(1384,39258
+setmnotwielded(1454,41183
+weapon_range(1476,41698
+
+were.c,122
+were_change(17,443
+counter_were(59,1503
+new_were(74,1914
+were_summon(111,2812
+you_were(157,3913
+you_unwere(177,4350
+
+wield.c,668
+#define erodeable_wep(64,2492
+#define will_weld(70,2705
+setuwep(91,3501
+ready_weapon(126,4507
+setuqwep(252,8049
+setuswapwep(260,8145
+static NEARDATA const char wield_objs[wield_objs270,8290
+static NEARDATA const char ready_objs[ready_objs272,8391
+static NEARDATA const char bullets[bullets274,8480
+dowield(278,8621
+doswapweapon(341,9894
+dowieldquiver(391,10749
+wield_tool(482,13036
+can_twoweapon(578,15408
+#define NOT_WEAPON(582,15446
+drop_uswapwep(659,17821
+dotwoweapon(674,18105
+uwepgone(708,18857
+uswapwepgone(725,19181
+uqwepgone(734,19287
+untwoweapon(743,19388
+erode_obj(758,19667
+chwepon(911,23709
+welded(1042,27123
+weldmsg(1053,27264
+
+windows.c,315
+NEARDATA struct window_procs windowprocs;46,1152
+struct win_choices 49,1202
+    struct window_procs *procs;procs50,1223
+    void NDECL((*ini_routine)ini_routine51,1255
+} winchoices[winchoices52,1314
+def_raw_print(89,2058
+choose_windows(96,2113
+genl_message_menu(126,2875
+genl_preference_update(137,3006
+
+wizard.c,674
+static NEARDATA const int nasties[nasties33,1162
+static NEARDATA const unsigned wizapp[wizapp45,1746
+amulet(60,2143
+mon_has_amulet(118,3497
+mon_has_special(129,3697
+#define STRAT(150,4303
+#define M_Wants(152,4383
+which_arti(155,4454
+mon_has_arti(174,4984
+other_mon_has_arti(192,5303
+on_ground(207,5669
+you_have(222,5950
+target_on(237,6343
+strategy(260,6925
+tactics(319,8490
+aggravate(400,10800
+clonewiz(415,11041
+pick_nasty(434,11547
+nasty(444,11876
+resurrect(495,13351
+intervene(557,14905
+wizdead(586,15491
+const char * const random_insult[random_insult595,15616
+const char * const random_malediction[random_malediction657,16382
+cuss(687,17165
+
+worm.c,672
+#define newseg(15,442
+#define dealloc_seg(16,503
+struct wseg 19,587
+    struct wseg *nseg;nseg20,601
+    xchar  wx,21,624
+    xchar  wx, wy;21,624
+struct wseg *wheads[wheads76,3168
+long	    wgrowtime[wgrowtime77,3246
+get_wormno(93,3795
+initworm(118,4401
+toss_wsegs(149,5123
+shrink_worm(182,5763
+worm_move(203,6140
+worm_nomove(251,7403
+wormgone(270,7714
+wormhitu(295,8244
+cutworm(322,9047
+see_wsegs(433,12363
+detect_wsegs(452,12703
+save_worm(478,13318
+rest_worm(524,14435
+place_wsegs(557,15172
+remove_worm(579,15718
+place_worm_tail_randomly(603,16334
+random_dir(660,17730
+count_wsegs(695,18354
+create_worm_tail(717,18742
+worm_known(749,19398
+
+worn.c,551
+const struct worn 17,604
+	long w_mask;18,624
+	struct obj **w_obj;w_obj19,638
+} worn[worn20,659
+#define w_blocks(43,1115
+setworn(53,1473
+setnotworn(115,3312
+mon_set_minvis(138,3887
+mon_adjust_speed(150,4124
+update_mon_intrinsics(231,6621
+find_mac(348,9529
+m_dowear(379,10703
+#define RACE_EXCEPTION 383,10775
+m_dowear_type(419,12201
+#undef RACE_EXCEPTION544,15872
+which_armor(547,15908
+m_lose_armor(560,16171
+clear_bypasses(577,16604
+bypass_obj(617,17669
+mon_break_armor(625,17754
+extra_pref(888,24375
+racial_exception(907,24797
+
+write.c,84
+cost(19,470
+static NEARDATA const char write_on[write_on76,1506
+dowrite(79,1586
+
+zap.c,2052
+#define MAGIC_COOKIE 19,700
+static NEARDATA boolean obj_zapped;22,739
+static NEARDATA int poly_zapped;23,775
+#define ZT_MAGIC_MISSILE	50,1600
+#define ZT_FIRE	51,1637
+#define ZT_COLD	52,1667
+#define ZT_SLEEP	53,1697
+#define ZT_DEATH	54,1727
+#define ZT_LIGHTNING	55,1781
+#define ZT_POISON_GAS	56,1815
+#define ZT_ACID	57,1850
+#define ZT_WAND(60,1920
+#define ZT_SPELL(61,1944
+#define ZT_BREATH(62,1974
+#define is_hero_spell(64,2006
+STATIC_VAR const char are_blinded_by_the_flash[are_blinded_by_the_flash67,2078
+STATIC_VAR const char are_blinded_by_the_flash[are_blinded_by_the_flash73,2263
+const char * const flash_types[flash_types75,2351
+bhitm(148,3608
+probe_monster(450,12166
+get_obj_location(489,13346
+get_mon_location(527,14066
+montraits(548,14550
+get_container_location(628,17000
+revive(653,17629
+revive_egg(817,22159
+unturn_dead(830,22472
+static const char charged_objs[charged_objs879,23688
+costly_cancel(882,23786
+cancel_item(920,24723
+drain_item(1023,27486
+obj_resists(1095,29130
+obj_shudders(1113,29620
+polyuse(1141,30333
+create_polymon(1179,31261
+do_osshock(1299,33575
+poly_obj(1351,34897
+#define USES_CORPSENM(1376,35718
+#undef USES_CORPSENM1379,35887
+bhito(1600,42042
+bhitpile(1881,49386
+zappable(1925,50709
+zapnodir(1944,51055
+backfire(1999,52148
+static NEARDATA const char zap_syms[zap_syms2014,52483
+dozap(2017,52547
+zapyourself(2077,54072
+zap_steed(2449,62787
+cancel_monst(2515,64258
+zap_updown(2585,65949
+weffects(2793,71561
+spell_damage_bonus(2861,73292
+spell_hit_bonus(2886,73798
+exclam(2915,74451
+hit(2928,74802
+miss(2952,75401
+bhit(2990,76826
+boomhit(3231,83624
+zhitm(3294,85116
+zhitu(3464,89845
+burn_floor_paper(3631,93659
+zap_hit(3691,95307
+buzz(3715,96071
+#define oresist_disintegration(3867,100240
+melt_ice(4019,104067
+zap_over_floor(4067,105563
+fracture_rock(4345,112412
+break_statue(4372,113247
+const char * const destroy_strings[destroy_strings4399,114019
+destroy_item(4418,114860
+destroy_mitem(4561,118229
+resist(4671,120517
+makewish(4717,121577
