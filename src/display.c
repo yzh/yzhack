@@ -186,6 +186,9 @@ magic_map_background(x, y, show)
     if (level.flags.hero_memory)
 	lev->glyph = glyph;
     if (show) show_glyph(x,y, glyph);
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+    lev->styp = lev->typ;
+#endif /*D_OVERVIEW*/
 }
 
 /*

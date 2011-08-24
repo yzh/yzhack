@@ -606,7 +606,7 @@ register struct monst *priest;
 /*JP
 		    pline("%s preaches the virtues of poverty.", Monnam(priest));
 */
-		    pline("%sは貧困の美徳について説教した。", Monnam(priest));
+		    pline("%sは清貧の美徳について説教した。", Monnam(priest));
 		exercise(A_WIS, TRUE);
 	    } else
 /*JP
@@ -644,7 +644,7 @@ register struct monst *priest;
 /*JP
 		    verbalize("I thank thee for thy contribution.");
 */
-		    verbalize("汝の寄贈に報いようぞ。");
+		    verbalize("汝の寄贈に感謝を。");
 		    /*  give player some token  */
 		    exercise(A_WIS, TRUE);
 		}
@@ -652,7 +652,7 @@ register struct monst *priest;
 /*JP
 		verbalize("Thou art indeed a pious individual.");
 */
-		verbalize("汝、まさに敬虔なり。");
+		verbalize("汝、まさに敬虔なる人物なり。");
 #ifndef GOLDOBJ
 		if(u.ugold < (offer * 2L)) {
 #else
@@ -663,7 +663,7 @@ register struct monst *priest;
 /*JP
 		    verbalize("I bestow upon thee a blessing.");
 */
-		    verbalize("汝に祝福を。");
+		    verbalize("汝に祝福を与えん。");
 		    incr_itimeout(&HClairvoyant, rn1(500,500));
 		}
 	    } else if(offer < (u.ulevel * 600) &&
@@ -672,7 +672,7 @@ register struct monst *priest;
 /*JP
 		verbalize("Thy devotion has been rewarded.");
 */
-		verbalize("汝が献身に報わん。");
+		verbalize("汝が献身は報われり。");
 		if (!(HProtection & INTRINSIC))  {
 			HProtection |= FROMOUTSIDE;
 			if (!u.ublessed)  u.ublessed = rn1(3, 2);
@@ -681,7 +681,7 @@ register struct monst *priest;
 /*JP
 		verbalize("Thy selfless generosity is deeply appreciated.");
 */
-		verbalize("汝自身の真価は大いに認められた。");
+		verbalize("汝の無私なる寛容に深い感謝を。");
 #ifndef GOLDOBJ
 		if(u.ugold < (offer * 2L) && coaligned) {
 #else

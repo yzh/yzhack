@@ -1020,6 +1020,9 @@ mklev()
 {
 	struct mkroom *croom;
 
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	init_mapseen(&u.uz);
+#endif /*D_OVERVIEW*/
 	if(getbones()) return;
 	in_mklev = TRUE;
 	makelevel();

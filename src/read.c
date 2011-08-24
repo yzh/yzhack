@@ -623,6 +623,9 @@ forget_map(howmuch)
 		levl[zx][zy].seenv = 0;
 		levl[zx][zy].waslit = 0;
 		levl[zx][zy].glyph = cmap_to_glyph(S_stone);
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+		levl[zx][zy].styp = STONE;
+#endif /*D_OVERVIEW*/
 	    }
 }
 
@@ -683,6 +686,9 @@ forget_levels(percent)
 	count = ((count * percent) + 50) / 100;
 	for (i = 0; i < count; i++) {
 	    level_info[indices[i]].flags |= FORGOTTEN;
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	    forget_mapseen(indices[i]);
+#endif /*D_OVERVIEW*/
 	}
 }
 
@@ -1405,7 +1411,7 @@ register struct obj	*sobj;
 /*JP
 			Your("mind releases itself from mundane concerns.");
 */
-			Your("心は平凡な利害関係から解放された。");
+			Your("心は世俗的な関心から解き放たれた。");
 		else if (!strncmpi(plname, "Maud", 4))
 /*JP
 			pline("As your mind turns inward on itself, you forget everything else.");
@@ -1679,7 +1685,7 @@ register struct obj	*sobj;
 	}
 	case SCR_DESTRUCTION:
 		pline("これは破壊の巻物だ！");
-		//do_destruction();
+		explode(u.ux, u.uy, 11, d(12,8), WAND_CLASS, EXPL_FIERY);
 		known = TRUE;
 		break;
 	default:

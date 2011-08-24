@@ -1220,7 +1220,7 @@ peffects(otmp)
 			losehp(d(otmp->cursed ? 2 : 1, otmp->blessed ? 4 : 8),
 					"potion of acid", KILLED_BY_AN);
 #else
-			pline("%s焦げた！", otmp->blessed ? "少し" :
+			pline("%sひりひりする！", otmp->blessed ? "少し" :
 					otmp->cursed ? "すごく" : "");
 			losehp(d(otmp->cursed ? 2 : 1, otmp->blessed ? 4 : 8),
 					"酸の薬を飲んで", KILLED_BY_AN);

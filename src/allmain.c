@@ -385,7 +385,7 @@ moveloop()
 /*JP
 		    killer = "molten lava";
 */
-			    killer = "どろどろの溶岩で";
+			    killer = "煮えたぎる溶岩に沈み";
 /*JP
 		    You("sink below the surface and die.");
 */
@@ -395,7 +395,7 @@ moveloop()
 /*JP
 		    Norep("You sink deeper into the lava.");
 */
-			    Norep("溶岩に深く沈んだ。");
+			    Norep("溶岩にますます深く沈んだ。");
 		    u.utrap += rnd(4);
 		}
 	    }
@@ -610,12 +610,12 @@ boolean new_game;	/* false => restoring an old game */
 	  (currentgend && urole.name.f) ? urole.name.f : urole.name.m);
 #else
     if(new_game){
-	pline("%s、NetHackの世界へ！このゲームではあなたは%sの%s(%s)だ。",
+	pline("%s、NetHackへようこそ！あなたは%sの%s(%s)だ。",
 	      Hello((struct monst *) 0, TRUE), urace.j,
 	      (currentgend && urole.jname.f) ? urole.jname.f : urole.jname.m,
 	      buf);
     } else {
-	pline("%s、NetHackの世界へ！あなたは%sの%sだ！",
+	pline("%s、%sの%s、NetHackへお帰りなさい！",
 	      Hello((struct monst *) 0, TRUE), urace.j,
 	      (currentgend && urole.jname.f) ? urole.jname.f : urole.jname.m);
     }

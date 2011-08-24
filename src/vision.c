@@ -806,6 +806,9 @@ skip:
     /* Set the new min and max pointers. */
     viz_rmin  = next_rmin;
     viz_rmax = next_rmax;
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+    recalc_mapseen();
+#endif /*D_OVERVIEW*/
 }
 
 

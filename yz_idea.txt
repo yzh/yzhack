@@ -32,6 +32,7 @@ item name
 烏漆の弓
 罠探知
 ラピスラズリ lapis lazuli
+破壊の巻物
 
 **brass
 ladies wear
@@ -71,6 +72,8 @@ ring of clairvoyance
 recolours the walls and floor http://www.greyfire.org/~l/glyphcolor.diff
 ice ant
 orb of light
+hp status bar
+dungeon overview (jpn)
 
 *NOT USED
 **patch
@@ -382,8 +385,13 @@ Cディープフリーズ
 
 属性剣はinvokeでfireball/ice corn？
 
+サンフラワーイージス
+
 *本家bug
 あなたはつまづいたくものすにひっかかった
 - 警官s - plur(cnt)
 店から盗んで店主のいないとこで死んでも「近づいて金をとっていった」
 - あなたはスライムは消えた
+
+Vのクエストで最下層が階段溶岩にかこまれてできることある
+

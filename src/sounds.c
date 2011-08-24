@@ -88,7 +88,7 @@ dosounds()
 /*JP
 		"dishes being washed!",
 */
-		"皿洗いの音を聞いた！",
+		"皿を洗う音を聞いた！",
 	};
 	You_hear(sink_msg[rn2(2)+hallu]);
     }
@@ -202,7 +202,7 @@ dosounds()
 				"the quarterback calling the play.");
 #else
 			    You_hear(!hallu ? "誰かが金を数えている音を聞いた。" :
-				"クォータバックが指示をする声を聞いた。");
+				"クォーターバックが指示をする声を聞いた。");
 #endif
 			else
 /*JP
@@ -333,7 +333,7 @@ dosounds()
 		"a sound reminiscent of a seal barking.",
 		"Doctor Doolittle!",
 #else
-		"象がピーナッツの上で踊るような音を聞いた。",
+		"象がピーナッツを踏み潰すような音を聞いた。",
 		"アシカが吠えるような声を聞いた。",
 		"ドリトル先生の声を聞いた！",
 #endif
@@ -1045,7 +1045,7 @@ register struct monst *mtmp;
 /*JP
 	       default: pline_msg = "shouts \"Fee Fie Foe Foo!\" and guffaws.";
 */
-	       default: pline_msg = "『わっはっはっは！』と叫ぶと、高笑いした。";
+	       default: pline_msg = "『フィー、ファイ、フォー、ファム！』と叫び、高笑いした。";
 			wake_nearto(mtmp->mx, mtmp->my, 7*7);
 			break;
 		}
@@ -1092,7 +1092,7 @@ register struct monst *mtmp;
 /*JP
 		pline_msg = "asks for a potion of healing.";
 */
-		pline_msg = "回復の薬をわけてくれと尋ねた。";
+		pline_msg = "回復の薬をわけてくれと頼んだ。";
 	    else if (mtmp->mtame && !mtmp->isminion &&
 						moves > EDOG(mtmp)->hungrytime)
 /*JP
@@ -1214,7 +1214,7 @@ register struct monst *mtmp;
 #else
 		    "おまえの発言はすべて不利な証拠となる可能性がある。",
 		    "逮捕する！",
-		    "法の名のもとに中止せよ！",
+		    "法の名において、止まれ！",
 #endif
 		};
 		verbl_msg = arrest_msg[rn2(3)];

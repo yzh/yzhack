@@ -5,6 +5,9 @@
 #include "hack.h"
 #include "dgn_file.h"
 #include "dlb.h"
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+#include "display.h"
+#endif /*D_OVERVIEW*/
 
 #if defined(_MSC_VER) && !defined(WIN32)
 #include "../japanese/emalloc.h"
@@ -42,6 +45,10 @@ struct lchoice {
 	char menuletter;
 };
 
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+extern const struct shclass shtypes[];	/* defined in shknam.c */
+#endif /*D_OVERVIEW*/
+
 static void FDECL(Fread, (genericptr_t, int, int, dlb *));
 STATIC_DCL xchar FDECL(dname_to_dnum, (const char *));
 STATIC_DCL int FDECL(find_branch, (const char *, struct proto_dungeon *));
@@ -59,6 +66,17 @@ STATIC_DCL boolean FDECL(place_level, (int, struct proto_dungeon *));
 STATIC_DCL const char *FDECL(br_string, (int));
 STATIC_DCL void FDECL(print_branch, (winid, int, int, int, BOOLEAN_P, struct lchoice *));
 #endif
+
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+mapseen *mapseenchn = (struct mapseen *)0;
+STATIC_DCL mapseen *FDECL(load_mapseen, (int));
+STATIC_DCL void FDECL(save_mapseen, (int, mapseen *));
+STATIC_DCL mapseen *FDECL(find_mapseen, (d_level *));
+STATIC_DCL void FDECL(print_mapseen, (winid,mapseen *,boolean));
+STATIC_DCL boolean FDECL(interest_mapseen, (mapseen *));
+STATIC_DCL char *FDECL(seen_string, (xchar x, const char *));
+STATIC_DCL const char *FDECL(br_string2, (branch *));
+#endif /*D_OVERVIEW*/
 
 #ifdef DEBUG
 #define DD	dungeons[i]
@@ -121,6 +139,9 @@ save_dungeon(fd, perform_write, free_data)
     boolean perform_write, free_data;
 {
     branch *curr, *next;
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+    mapseen *curr_ms, *next_ms;
+#endif /*D_OVERVIEW*/
     int    count;
 
     if (perform_write) {
@@ -141,6 +162,14 @@ save_dungeon(fd, perform_write, free_data)
 	bwrite(fd, (genericptr_t) level_info,
 			(unsigned)count * sizeof (struct linfo));
 	bwrite(fd, (genericptr_t) &inv_pos, sizeof inv_pos);
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	for (count = 0, curr_ms = mapseenchn; curr_ms; curr_ms = curr_ms->next)
+	    count++;
+	bwrite(fd, (genericptr_t) &count, sizeof(count));
+
+	for (curr_ms = mapseenchn; curr_ms; curr_ms = curr_ms->next)
+	    save_mapseen(fd, curr_ms);
+#endif /*D_OVERVIEW*/
     }
 
     if (free_data) {
@@ -149,6 +178,15 @@ save_dungeon(fd, perform_write, free_data)
 	    free((genericptr_t) curr);
 	}
 	branches = 0;
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	for (curr_ms = mapseenchn; curr_ms; curr_ms = next_ms) {
+	    next_ms = curr_ms->next;
+	    if (curr_ms->custom)
+	        free((genericptr_t)curr_ms->custom);
+	    free((genericptr_t) curr_ms);
+	}
+	mapseenchn = 0;
+#endif /*D_OVERVIEW*/
     }
 }
 
@@ -158,6 +196,9 @@ restore_dungeon(fd)
     int fd;
 {
     branch *curr, *last;
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+    mapseen *curr_ms, *last_ms;
+#endif /*D_OVERVIEW*/
     int    count, i;
 
     mread(fd, (genericptr_t) &n_dgns, sizeof(n_dgns));
@@ -184,6 +225,19 @@ restore_dungeon(fd)
 	panic("level information count larger (%d) than allocated size", count);
     mread(fd, (genericptr_t) level_info, (unsigned)count*sizeof(struct linfo));
     mread(fd, (genericptr_t) &inv_pos, sizeof inv_pos);
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+    mread(fd, (genericptr_t) &count, sizeof(count));
+    last_ms = (mapseen *) 0;
+    for (i = 0; i < count; i++) {
+	curr_ms = load_mapseen(fd);
+	curr_ms->next = (mapseen *) 0;
+	if (last_ms)
+	    last_ms->next = curr_ms;
+	else
+	    mapseenchn = curr_ms;
+	last_ms = curr_ms;
+    }
+#endif /*D_OVERVIEW*/
 }
 
 static void
@@ -1745,5 +1799,658 @@ xchar *rdgn;
 #endif /* WIZARD */
 
 #endif /* OVL1 */
+
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+/* Record that the player knows about a branch from a level. This function
+ * will determine whether or not it was a "real" branch that was taken.
+ * This function should not be called for a transition done via level
+ * teleport or via the Eye.
+ */
+void 
+recbranch_mapseen(source, dest)
+	d_level *source;
+	d_level *dest;
+{
+	mapseen *mptr;
+	branch* br;
+
+	/* not a branch */
+	if (source->dnum == dest->dnum) return;
+
+	/* we only care about forward branches */
+	for (br = branches; br; br = br->next) {
+		if (on_level(source, &br->end1) && on_level(dest, &br->end2)) break;
+		if (on_level(source, &br->end2) && on_level(dest, &br->end1)) return;
+	}
+
+	/* branch not found, so not a real branch. */
+	if (!br) return;
+  
+	if ((mptr = find_mapseen(source)) != 0) {
+		if (mptr->br && br != mptr->br)
+			impossible("Two branches on the same level?");
+		mptr->br = br;
+	} else {
+		impossible("Can't note branch for unseen level (%d, %d)", 
+			source->dnum, source->dlevel);
+	}
+}
+
+/* add a custom name to the current level */
+int
+donamelevel()
+{
+	mapseen *mptr;
+	char qbuf[QBUFSZ];	/* Buffer for query text */
+	char nbuf[BUFSZ];	/* Buffer for response */
+	int len;
+
+	if (!(mptr = find_mapseen(&u.uz))) return 0;
+
+/*JP
+	Sprintf(qbuf,"What do you want to call this dungeon level? ");
+*/
+	Sprintf(qbuf,"この階を何と呼びますか？");
+	getlin(qbuf, nbuf);
+
+	if (index(nbuf, '\033')) return 0;
+
+	len = strlen(nbuf) + 1;
+	if (mptr->custom) {
+		free((genericptr_t)mptr->custom);
+		mptr->custom = (char *)0;
+		mptr->custom_lth = 0;
+	}
+	
+	if (*nbuf) {
+		mptr->custom = (char *) alloc(sizeof(char) * len);
+		mptr->custom_lth = len;
+		strcpy(mptr->custom, nbuf);
+	}
+   
+	return 0;
+}
+
+/* find the particular mapseen object in the chain */
+/* may return 0 */
+STATIC_OVL mapseen *
+find_mapseen(lev)
+d_level *lev;
+{
+	mapseen *mptr;
+
+	for (mptr = mapseenchn; mptr; mptr = mptr->next)
+		if (on_level(&(mptr->lev), lev)) break;
+
+	return mptr;
+}
+
+void
+forget_mapseen(ledger_no)
+int ledger_no;
+{
+	mapseen *mptr;
+
+	for (mptr = mapseenchn; mptr; mptr = mptr->next)
+		if (dungeons[mptr->lev.dnum].ledger_start + 
+			mptr->lev.dlevel == ledger_no) break;
+
+	/* if not found, then nothing to forget */
+	if (mptr) {
+		mptr->feat.forgot = 1;
+		mptr->br = (branch *)0;
+
+		/* custom names are erased, not forgotten until revisted */
+		if (mptr->custom) {
+			mptr->custom_lth = 0;
+			free((genericptr_t)mptr->custom);
+			mptr->custom = (char *)0;
+		}
+
+		memset((genericptr_t) mptr->rooms, 0, sizeof(mptr->rooms));
+	}
+}
+
+STATIC_OVL void
+save_mapseen(fd, mptr)
+int fd;
+mapseen *mptr;
+{
+	branch *curr;
+	int count;
+
+	count = 0;
+	for (curr = branches; curr; curr = curr->next) {
+		if (curr == mptr->br) break;
+		count++;
+	}
+
+	bwrite(fd, (genericptr_t) &count, sizeof(int));
+	bwrite(fd, (genericptr_t) &mptr->lev, sizeof(d_level));
+	bwrite(fd, (genericptr_t) &mptr->feat, sizeof(mapseen_feat));
+	bwrite(fd, (genericptr_t) &mptr->custom_lth, sizeof(unsigned));
+	if (mptr->custom_lth)
+		bwrite(fd, (genericptr_t) mptr->custom, 
+		sizeof(char) * mptr->custom_lth);
+	bwrite(fd, (genericptr_t) &mptr->rooms, sizeof(mptr->rooms));
+}
+
+STATIC_OVL mapseen *
+load_mapseen(fd)
+int fd;
+{
+	int branchnum, count;
+	mapseen *load;
+	branch *curr;
+
+	load = (mapseen *) alloc(sizeof(mapseen));
+	mread(fd, (genericptr_t) &branchnum, sizeof(int));
+
+	count = 0;
+	for (curr = branches; curr; curr = curr->next) {
+		if (count == branchnum) break;
+		count++;
+	}
+	load->br = curr;
+
+	mread(fd, (genericptr_t) &load->lev, sizeof(d_level));
+	mread(fd, (genericptr_t) &load->feat, sizeof(mapseen_feat));
+	mread(fd, (genericptr_t) &load->custom_lth, sizeof(unsigned));
+	if (load->custom_lth > 0) {
+		load->custom = (char *) alloc(sizeof(char) * load->custom_lth);
+		mread(fd, (genericptr_t) load->custom, 
+			sizeof(char) * load->custom_lth);
+	} else load->custom = (char *) 0;
+	mread(fd, (genericptr_t) &load->rooms, sizeof(load->rooms));
+
+	return load;
+}
+
+/* Remove all mapseen objects for a particular dnum.
+ * Useful during quest expulsion to remove quest levels.
+ */
+void
+remdun_mapseen(dnum)
+int dnum;
+{
+	mapseen *mptr, *prev;
+	
+	prev = mapseenchn;
+	if (!prev) return;
+	mptr = prev->next;
+
+	for (; mptr; prev = mptr, mptr = mptr->next) {
+		if (mptr->lev.dnum == dnum) {
+			prev->next = mptr->next;
+			free((genericptr_t) mptr);
+			mptr = prev;
+		}
+	}
+}
+
+void
+init_mapseen(lev)
+d_level *lev;
+{
+	/* Create a level and insert in "sorted" order.  This is an insertion
+	 * sort first by dungeon (in order of discovery) and then by level number.
+	 */
+	mapseen *mptr;
+	mapseen *init;
+	mapseen *old;
+	
+	init = (mapseen *) alloc(sizeof(mapseen));
+	(void) memset((genericptr_t)init, 0, sizeof(mapseen));
+	init->lev.dnum = lev->dnum;
+	init->lev.dlevel = lev->dlevel;
+
+	if (!mapseenchn) {
+		mapseenchn = init;
+		return;
+	}
+
+	/* walk until we get to the place where we should
+	 * insert init between mptr and mptr->next
+	 */
+	for (mptr = mapseenchn; mptr->next; mptr = mptr->next) {
+		if (mptr->next->lev.dnum == init->lev.dnum) break;
+	}
+	for (; mptr->next; mptr = mptr->next) {
+		if ((mptr->next->lev.dnum != init->lev.dnum) ||
+			(mptr->next->lev.dlevel > init->lev.dlevel)) break;
+	}
+
+	old = mptr->next;
+	mptr->next = init;
+	init->next = old;
+}
+
+#define INTEREST(feat) \
+	((feat).nfount) || \
+	((feat).nsink) || \
+	((feat).nthrone) || \
+	((feat).naltar) || \
+	((feat).nshop) || \
+	((feat).ntemple) || \
+	((feat).ntree)
+	/*
+	|| ((feat).water) || \
+	((feat).ice) || \
+	((feat).lava)
+	*/
+
+/* returns true if this level has something interesting to print out */
+STATIC_OVL boolean
+interest_mapseen(mptr)
+mapseen *mptr;
+{
+	return ((on_level(&u.uz, &mptr->lev) || (!mptr->feat.forgot))
+		&& (INTEREST(mptr->feat) || (mptr->custom) || (mptr->br))
+		);
+}
+
+/* recalculate mapseen for the current level */
+void
+recalc_mapseen()
+{
+	mapseen *mptr;
+	struct monst *shkp;
+	int x, y, ridx;
+
+	/* Should not happen in general, but possible if in the process
+	 * of being booted from the quest.  The mapseen object gets
+	 * removed during the expulsion but prior to leaving the level
+	 */
+	if (!(mptr = find_mapseen(&u.uz))) return;
+
+	/* reset all features */
+	memset((genericptr_t) &mptr->feat, 0, sizeof(mapseen_feat));
+
+	/* track rooms the hero is in */
+	for (x = 0; x < sizeof(u.urooms); x++) {
+		if (!u.urooms[x]) continue;
+
+		ridx = u.urooms[x] - ROOMOFFSET;
+		if (rooms[ridx].rtype < SHOPBASE ||
+			((shkp = shop_keeper(u.urooms[x])) && inhishop(shkp)))
+			mptr->rooms[ridx] |= MSR_SEEN;
+		else
+			/* shops without shopkeepers are no shops at all */
+			mptr->rooms[ridx] &= ~MSR_SEEN;
+	}
+
+	/* recalculate room knowledge: for now, just shops and temples
+	 * this could be extended to an array of 0..SHOPBASE
+	 */
+	for (x = 0; x < sizeof(mptr->rooms); x++) {
+		if (mptr->rooms[x] & MSR_SEEN) {
+			if (rooms[x].rtype >= SHOPBASE) {
+				if (!mptr->feat.nshop)
+					mptr->feat.shoptype = rooms[x].rtype - SHOPBASE;
+				else if (mptr->feat.shoptype != rooms[x].rtype)
+					mptr->feat.shoptype = 0;
+				mptr->feat.nshop = min(mptr->feat.nshop + 1, 3);
+			} else if (rooms[x].rtype == TEMPLE)
+				/* altar and temple alignment handled below */
+				mptr->feat.ntemple = min(mptr->feat.ntemple + 1, 3);
+		}
+	}
+
+	/* Update styp with typ if and only if it is in sight or the hero can
+	 * feel it on their current location (i.e. not levitating).  This *should*
+	 * give the "last known typ" for each dungeon location.  (At the very least,
+	 * it's a better assumption than determining what the player knows from
+	 * the glyph and the typ (which is isn't quite enough information in some
+	 * cases).
+	 *
+	 * It was reluctantly added to struct rm to track.  Alternatively
+	 * we could track "features" and then update them all here, and keep
+	 * track of when new features are created or destroyed, but this
+	 * seemed the most elegant, despite adding more data to struct rm.
+	 *
+	 * Although no current windowing systems (can) do this, this would add the
+	 * ability to have non-dungeon glyphs float above the last known dungeon
+	 * glyph (i.e. items on fountains).
+	 *
+	 * (vision-related styp update done in loop below)
+	 */
+	if (!Levitation)
+		levl[u.ux][u.uy].styp = levl[u.ux][u.uy].typ;
+
+	for (x = 0; x < COLNO; x++) {
+		for (y = 0; y < ROWNO; y++) {
+			/* update styp from viz_array */
+			if (viz_array[y][x] & IN_SIGHT)
+				levl[x][y].styp = levl[x][y].typ;
+
+			switch (levl[x][y].styp) {
+			/*
+			case ICE:
+				mptr->feat.ice = 1;
+				break;
+			case POOL:
+			case MOAT:
+			case WATER:
+				mptr->feat.water = 1;
+				break;
+			case LAVAPOOL:
+				mptr->feat.lava = 1;
+				break;
+			*/
+			case TREE:
+				mptr->feat.ntree = min(mptr->feat.ntree + 1, 3);
+				break;
+			case FOUNTAIN:
+				mptr->feat.nfount = min(mptr->feat.nfount + 1, 3);
+				break;
+			case THRONE:
+				mptr->feat.nthrone = min(mptr->feat.nthrone + 1, 3);
+				break;
+			case SINK:
+				mptr->feat.nsink = min(mptr->feat.nsink + 1, 3);
+				break;
+			case ALTAR:
+				if (!mptr->feat.naltar)
+					mptr->feat.msalign = Amask2msa(levl[x][y].altarmask);
+				else if (mptr->feat.msalign != Amask2msa(levl[x][y].altarmask))
+					mptr->feat.msalign = MSA_NONE;
+						
+				mptr->feat.naltar = min(mptr->feat.naltar + 1, 3);
+				break;
+			}
+		}
+	}
+}
+
+int
+dooverview()
+{
+	winid win;
+	mapseen *mptr;
+	boolean first;
+	boolean printdun;
+	int lastdun = 0;
+	int ct = 0;	/* fix display bug when undiscoverd [Sakusha]*/
+
+	first = TRUE;
+
+	/* lazy intialization */
+	(void) recalc_mapseen();
+
+	win = create_nhwindow(NHW_MENU);
+
+	for (mptr = mapseenchn; mptr; mptr = mptr->next) {
+
+		/* only print out info for a level or a dungeon if interest */
+		if (interest_mapseen(mptr)) {
+			ct ++;	/* fix display bug when undiscoverd [Sakusha]*/
+			printdun = (first || lastdun != mptr->lev.dnum);
+			/* if (!first) putstr(win, 0, ""); */
+			print_mapseen(win, mptr, printdun);
+
+			if (printdun) {
+				first = FALSE;
+				lastdun = mptr->lev.dnum;
+			}
+		}
+	}
+
+	/* fix display bug when undiscoverd [Sakusha]*/
+	if(!ct) {
+/*JP
+		You("haven't discovered anything yet...");
+*/
+		You("まだ何も発見していない…");
+	} else
+		display_nhwindow(win, TRUE);
+	destroy_nhwindow(win);
+
+	return 0;
+}
+
+STATIC_OVL char *
+seen_string(x, obj)
+xchar x;
+const char *obj;
+{
+	/* players are computer scientists: 0, 1, 2, n */
+	switch(x) {
+#if 0 /*JP*/
+	case 0: return "no";
+	/* an() returns too much.  index is ok in this case */
+	case 1: return index(vowels, *obj) ? "an" : "a";
+	case 2: return "some";
+	case 3: return "many";
+#else
+	case 0: return " 無し";
+	/* an() returns too much.  index is ok in this case */
+	case 1: return " 1";
+	case 2: return " 幾つか";
+	case 3: return " 多数";
+#endif
+	}
+
+	return "(unknown)";
+}
+
+/* better br_string */
+STATIC_OVL const char *
+br_string2(br)
+branch *br;
+{
+	/* Special case: quest portal says closed if kicked from quest */
+	boolean closed_portal = 
+		(br->end2.dnum == quest_dnum && u.uevent.qexpelled);
+	switch(br->type)
+	{
+#if 0 /*JP*/
+	case BR_PORTAL:	 return closed_portal ? "Sealed portal" : "Portal";
+	case BR_NO_END1: return "Connection";
+	case BR_NO_END2: return (br->end1_up) ? "One way stairs up" : 
+		"One way stairs down";
+	case BR_STAIR:	 return (br->end1_up) ? "Stairs up" : "Stairs down";
+#else
+	case BR_PORTAL:	 return closed_portal ? "魔法の入り口(封印状態)" : "魔法の入り口";
+	case BR_NO_END1: return "Connection";
+	case BR_NO_END2: return (br->end1_up) ? "上り階段(一方通行)" : 
+		"下り階段(一方通行)";
+	case BR_STAIR:	 return (br->end1_up) ? "上り階段" : "下り階段";
+#endif
+	}
+
+	return "(unknown)";
+}
+
+/*shop_string(rtype)*/
+/* ->moved to shknam.c*/
+
+/* some utility macros for print_mapseen */
+#define TAB "   "
+#define BULLET ""
+#define PREFIX TAB TAB BULLET
+#define COMMA (i++ > 0 ? ", " : PREFIX)
+#if 0 /*JP*/
+#define ADDNTOBUF(nam, var) { if (var) \
+	Sprintf(eos(buf), "%s%s " nam "%s", COMMA, seen_string((var), (nam)), \
+	((var) != 1 ? "s" : "")); }
+#else
+#define ADDNTOBUF(nam, var) { if (var) \
+	Sprintf(eos(buf), "%s" nam "%s", COMMA, seen_string((var), (nam))); }
+#endif
+#define ADDTOBUF(nam, var) { if (var) Sprintf(eos(buf), "%s " nam, COMMA); }
+
+STATIC_OVL void
+print_mapseen(win, mptr, printdun)
+winid win;
+mapseen *mptr;
+boolean printdun;
+{
+	char buf[BUFSZ];
+	int i, depthstart;
+
+	buf[0] = '\0';
+	/* Damnable special cases */
+	/* The quest and knox should appear to be level 1 to match
+	 * other text.
+	 */
+	if (mptr->lev.dnum == quest_dnum || mptr->lev.dnum == knox_level.dnum)
+		depthstart = 1;
+	else
+		depthstart = dungeons[mptr->lev.dnum].depth_start;  
+
+	if (printdun) {
+		/* Sokoban lies about dunlev_ureached and we should
+		 * suppress the negative numbers in the endgame.
+		 */
+		if (dungeons[mptr->lev.dnum].dunlev_ureached == 1 ||
+			mptr->lev.dnum == sokoban_dnum || In_endgame(&mptr->lev))
+/*JP
+			Sprintf(buf, "%s:", dungeons[mptr->lev.dnum].dname);
+*/
+			Sprintf(buf, "%s:", jtrns_obj('d',dungeons[mptr->lev.dnum].dname));
+		else
+#if 0 /*JP*/
+			Sprintf(buf, "%s: levels %d to %d", 
+				dungeons[mptr->lev.dnum].dname,
+				depthstart, depthstart + 
+				dungeons[mptr->lev.dnum].dunlev_ureached - 1);
+#else
+			Sprintf(buf, "%s: %d階-%d階まで探索済み", 
+				jtrns_obj('d',dungeons[mptr->lev.dnum].dname),
+				depthstart, depthstart + 
+				dungeons[mptr->lev.dnum].dunlev_ureached - 1);
+#endif
+		putstr(win, ATR_INVERSE, buf);
+	}
+
+	/* calculate level number */
+	i = depthstart + mptr->lev.dlevel - 1;
+	if (Is_astralevel(&mptr->lev))
+/*JP
+		Sprintf(buf, TAB "Astral Plane:");
+*/
+		Sprintf(buf, TAB "精霊界:");
+	else if (In_endgame(&mptr->lev))
+		/* Negative numbers are mildly confusing, since they are never
+		 * shown to the player, except in wizard mode.  We could show
+		 * "Level -1" for the earth plane, for example.  Instead,
+		 * show "Plane 1" for the earth plane to differentiate from
+		 * level 1.  There's not much to show, but maybe the player
+		 * wants to #annotate them for some bizarre reason.
+		 */
+/*JP
+		Sprintf(buf, TAB "Plane %i:", -i);
+*/
+		Sprintf(buf, TAB "天上界 %i:", -i);
+	else
+/*JP
+		Sprintf(buf, TAB "Level %d:", i);
+*/
+		Sprintf(buf, TAB "%d階:", i);
+	
+#ifdef WIZARD
+	/* wizmode prints out proto dungeon names for clarity */
+	if (wizard) {
+		s_level *slev;
+		if ((slev = Is_special(&mptr->lev)) != 0)
+			Sprintf(eos(buf), " [%s]", slev->proto);
+	}
+#endif
+
+	if (mptr->custom)
+		Sprintf(eos(buf), " (%s)", mptr->custom);
+
+	/* print out glyph or something more interesting? */
+	Sprintf(eos(buf), "%s", on_level(&u.uz, &mptr->lev) ? 
+/*JP
+		" <- You are here" : "");
+*/
+		" <-現在階" : "");
+	putstr(win, ATR_BOLD, buf);
+
+	if (mptr->feat.forgot) return;
+
+	if (INTEREST(mptr->feat)) {
+		buf[0] = 0;
+		
+		i = 0; /* interest counter */
+
+		/* List interests in an order vaguely corresponding to
+		 * how important they are.
+		 */
+///*tes*/	if(wizard) pline("shoptype:%d",mptr->feat.shoptype);
+		if (mptr->feat.nshop > 1)
+/*JP
+			ADDNTOBUF("shop", mptr->feat.nshop)
+*/
+			ADDNTOBUF("店", mptr->feat.nshop)
+		else if (mptr->feat.nshop == 1)
+			Sprintf(eos(buf), "%s%s", COMMA, 
+				an(shop_string(mptr->feat.shoptype)));
+
+		/* Temples + non-temple altars get munged into just "altars" */
+		if (!mptr->feat.ntemple || mptr->feat.ntemple != mptr->feat.naltar)
+/*JP
+			ADDNTOBUF("altar", mptr->feat.naltar)
+*/
+			ADDNTOBUF("祭壇", mptr->feat.naltar)
+		else
+/*JP
+			ADDNTOBUF("temple", mptr->feat.ntemple)
+*/
+			ADDNTOBUF("寺院", mptr->feat.ntemple)
+
+		/* only print out altar's god if they are all to your god */
+		if (Amask2align(Msa2amask(mptr->feat.msalign)) == u.ualign.type)
+/*JP
+			Sprintf(eos(buf), " to %s", align_gname(u.ualign.type));
+*/
+			Sprintf(eos(buf), "(%s)", align_gname(u.ualign.type));
+
+#if 0 /*JP*/
+		ADDNTOBUF("fountain", mptr->feat.nfount)
+		ADDNTOBUF("sink", mptr->feat.nsink)
+		ADDNTOBUF("throne", mptr->feat.nthrone)
+		ADDNTOBUF("tree", mptr->feat.ntree);
+#else
+		ADDNTOBUF("泉", mptr->feat.nfount)
+		ADDNTOBUF("流し台", mptr->feat.nsink)
+		ADDNTOBUF("玉座", mptr->feat.nthrone)
+		ADDNTOBUF("木", mptr->feat.ntree);
+#endif
+		/*
+		ADDTOBUF("water", mptr->feat.water)
+		ADDTOBUF("lava", mptr->feat.lava)
+		ADDTOBUF("ice", mptr->feat.ice)
+		*/
+
+		/* capitalize afterwards */
+		i = strlen(PREFIX);
+//		buf[i] = toupper(buf[i]);
+
+		putstr(win, 0, buf);
+	}
+
+	/* print out branches */
+	if (mptr->br) {
+#if 0 /*JP*/
+		Sprintf(buf, PREFIX "%s to %s", br_string2(mptr->br), 
+			dungeons[mptr->br->end2.dnum].dname);
+#else
+		Sprintf(buf, PREFIX "%sへの%s",
+			jtrns_obj('d',dungeons[mptr->br->end2.dnum].dname),
+			br_string2(mptr->br)); 
+#endif
+
+		/* since mapseen objects are printed out in increasing order
+		 * of dlevel, clarify which level this branch is going to
+		 * if the branch goes upwards.  Unless it's the end game
+		 */
+		if (mptr->br->end1_up && !In_endgame(&(mptr->br->end2)))
+			Sprintf(eos(buf), ", level %d", depth(&(mptr->br->end2)));
+		putstr(win, 0, buf);
+	}
+}
+#endif /*D_OVERVIEW*/
 
 /*dungeon.c*/

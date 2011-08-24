@@ -396,6 +396,8 @@ typedef unsigned char	uchar;
 #define OTHER_SERVICES  /* shopkeeper services -- NetHack brass */
 #undef NOPOLYPILE      /* polymorph affects only one item on the first pile -- NetHack brass */
 //#define DEBUG
+#define D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/ /*based patch -- 2006.12.02*/
+
 /* End of Section 5 */
 
 #include "global.h"	/* Define everything else according to choices above */

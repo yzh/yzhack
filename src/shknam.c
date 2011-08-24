@@ -653,4 +653,13 @@ int type;
 
 #endif /* OVL0 */
 
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+const char*
+shop_string(rtype)
+int rtype;
+{
+	return (shtypes[rtype/* - SHOPBASE*/].name);
+}
+#endif /*D_OVERVIEW*/
+
 /*shknam.c*/

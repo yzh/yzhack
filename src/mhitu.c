@@ -2452,7 +2452,7 @@ common:
 /*JP
 			You("duck some of the blast.");
 */
-			You("衝撃をさけた。");
+			You("衝撃を避けきれなかった。");
 			tmp = (tmp+1) / 2;
 		    } else {
 /*JP

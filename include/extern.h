@@ -507,6 +507,15 @@ E schar FDECL(lev_by_name, (const char *));
 #ifdef WIZARD
 E schar FDECL(print_dungeon, (BOOLEAN_P,schar *,xchar *));
 #endif
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+E int NDECL(donamelevel);
+E int NDECL(dooverview);
+E void FDECL(forget_mapseen, (int));
+E void FDECL(init_mapseen, (d_level *));
+E void NDECL(recalc_mapseen);
+E void FDECL(recbranch_mapseen, (d_level *, d_level *));
+E void FDECL(remdun_mapseen, (int));
+#endif /*D_OVERVIEW*/
 
 /* ### eat.c ### */
 
@@ -1860,6 +1869,9 @@ E char *FDECL(Shk_Your, (char *,struct obj *));
 E void FDECL(stock_room, (int,struct mkroom *));
 E boolean FDECL(saleable, (struct monst *,struct obj *));
 E int FDECL(get_shop_item, (int));
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+E const char*FDECL(shop_string, (int));
+#endif /*D_OVERVIEW*/
 
 /* ### sit.c ### */
 

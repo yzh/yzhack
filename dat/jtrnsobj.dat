@@ -599,7 +599,7 @@
 ?GARVEN DEH:           『あなたをはんにんです』と書かれた巻物:
 ?READ ME:              『ふもっふ』と書かれた巻物:
 ?KIRJE:                『うっうー』と書かれた巻物:
-?stamped:		消印の押された巻物:
+?stamped:		切手の貼られた巻物:
 ?unlabeled:		ラベルのない巻物:
 #
 #	spellbooks
@@ -866,6 +866,7 @@ AThundersteel:		サンダースティール:
 ADisrupter:		ディスラプター:
 AEbony Lacquered Bow:	烏漆の弓:
 AStarring Inferno:	スターリングインフェルノ:
+ASunflower Aegis:	サンフラワーイージス:
 
 # A
 AThe Orb of Detection:		探索のオーブ:
@@ -1069,7 +1070,7 @@ Siron bars:		鉄棒:
 ^land mine:		地雷:
 ^sleeping gas trap:	睡眠ガスの罠:
 ^hole:			穴:
-^rust trap:		腐食の罠:
+^rust trap:		錆の罠:
 ^fire trap:		火の罠:
 ^pit:			落し穴:
 ^spiked pit:		トゲだらけの落し穴:

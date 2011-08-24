@@ -16,7 +16,7 @@
 
 DUNGEON:	"The Dungeons of Doom" "D" (37, 5)
 ALIGNMENT:	unaligned
-LEVEL:         "bigshop" "none" @ (31,0)
+#LEVEL:         "bigshop" "none" @ (31,0)
 BRANCH:		"The Gnomish Mines" @ (2, 3)
 %REINCARNATION LEVEL:		"rogue" "R" @ (15, 4)
 LEVEL:		"oracle" "O" @ (5, 5)

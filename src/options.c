@@ -249,7 +249,7 @@ static struct Comp_Opt
 	{ "catname",  "the name of your (first) cat (e.g., catname:Tabby)",
 						PL_PSIZ, DISP_IN_GAME },
 #else /*JP*/
-	{ "catname",  "冒険を供にする(最初の)猫の名前 (例 catname:たま)",
+	{ "catname",  "冒険を共にする(最初の)猫の名前 (例 catname:たま)",
 						PL_PSIZ, DISP_IN_GAME },
 #endif /*JP*/
 #if 0 /*JP*/
@@ -264,7 +264,7 @@ static struct Comp_Opt
 	{ "disclose", "ゲーム終了時に見る情報の種類",
 						sizeof(flags.end_disclose) * 2,
 						SET_IN_GAME },
-	{ "dogname",  "冒険を供にする(最初の)犬の名前 (例 dogname:ポチ)",
+	{ "dogname",  "冒険を共にする(最初の)犬の名前 (例 dogname:ポチ)",
 						PL_PSIZ, DISP_IN_GAME },
 	{ "dungeon",  "ダンジョンを描画するシンボル文字",
 						MAXDCHARS+1, SET_IN_FILE },
@@ -315,7 +315,7 @@ static struct Comp_Opt
 	{ "horsename", "the name of your (first) horse (e.g., horsename:Silver)",
 						PL_PSIZ, DISP_IN_GAME },
 #else /*JP*/
-	{ "horsename", "冒険を供にする(最初の)馬の名前 (例 ghoulname:シルバー)",
+	{ "horsename", "冒険を共にする(最初の)馬の名前 (例 horsename:シルバー)",
 						PL_PSIZ, DISP_IN_GAME },
 #endif /*JP*/
 #if 0 /*JP*/
@@ -2644,7 +2644,7 @@ static NEARDATA const char *burdentype[] = {
 	"strained", "overtaxed", "overloaded"
 #else
 	"通常", "重荷", "圧迫",
-	"過多", "限界", "超過"
+	"重圧", "過多", "超過"
 #endif
 };
 

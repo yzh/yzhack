@@ -1,3 +1,59 @@
+2011-08-24  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/botl.c: 訳修正
+
+	* src/options.c: 訳修正
+
+2011-08-23  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/monst.c (_mons2): maidからM2_HUMANフラグ削除
+
+	* dat/jtrnsobj.dat: 訳修正
+
+	* src/u_init.c: Kの初期装備をring mailとiron shoesに
+
+	* dat/jrumors.fal: 訳修正
+
+	* src/allmain.c (welcome): 訳修正
+
+	* src/role.c (Hello): 訳修正
+
+	* src/mhitu.c (explmu): 訳修正
+
+	* src/potion.c (peffects): 訳修正
+
+	* dat/jtrnsmon.dat: 訳修正
+
+2011-08-22  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/priest.c (priest_talk): 訳修正
+
+2011-08-19  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/options.c (]): 訳修正
+
+	* dat/jwizhelp: 訳追加
+
+	* include/artilist.h (]): サンフラワーイージス追加、ディープフリーズ、ファイアウォール削除
+
+2011-08-18  yzh  <yuzuha.tomo@gmail.com>
+
+	* patch: D_OVERVIEW-3.0-J1.0.0.diff
+
+	* dat/jopthelp: メッセージ修正
+
+	* dat/jhistory: 記号修正
+
+	* dat/jcmdhelp: 記号修正
+
+	* dat/jhh: 記号修正
+
+	* dat/jhelp: 記号修正
+
+	* src/objects.c (]): 破壊の巻物
+
+	* src/read.c (seffects): 破壊の巻物(周辺に12d8の爆発ダメージ)
+
 2011-08-12  yzh  <yuzuha.tomo@gmail.com>
 
 	* src/shk.c (shk_chat): メッセージ修正

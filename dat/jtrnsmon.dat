@@ -12,7 +12,7 @@ giant ant:		巨大蟻:
 killer bee:		殺人蜂:
 soldier ant:		兵隊蟻:
 fire ant:		火蟻:
-giant beetle:		巨大カブト虫:
+giant beetle:		巨大甲虫:
 queen bee:		女王蜂:
 queen ant:		女王蟻:
 ice ant:		氷蟻:
@@ -339,16 +339,16 @@ giant mummy:		巨人のミイラ:
 red naga hatchling:	赤色ナーガの雛:
 black naga hatchling:	黒ナーガの雛:
 golden naga hatchling:	金色ナーガの雛:
-guardian naga hatchling:	番兵ナーガの雛:
+guardian naga hatchling:	ガーディアンナーガの雛:
 red naga:		赤色ナーガ:
 black naga:		黒ナーガ:
 golden naga:		金色ナーガ:
-guardian naga:		番兵ナーガ:
+guardian naga:		ガーディアンナーガ:
 #
 #	Ogres
 #
 ogre:			オーガ:
-ogre lord:		オーガの君主:
+ogre lord:		オーガの貴族:
 ogre king:		オーガの王:
 #
 #	Puddings 
@@ -494,7 +494,7 @@ hezrou:			ヘズロウ:
 bone devil:		骨の悪魔:
 ice devil:		氷の悪魔:
 nalfeshnee:		ナルフェシニ:
-pit fiend:		穴の悪霊:
+pit fiend:		地獄の悪鬼:
 balrog:			バルログ:
 Juiblex:		ジョウビレックス:
 Yeenoghu:		イーノグ:

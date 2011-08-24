@@ -115,6 +115,9 @@ STATIC_PTR int NDECL(doprev_message);
 STATIC_PTR int NDECL(timed_occupation);
 STATIC_PTR int NDECL(doextcmd);
 STATIC_PTR int NDECL(domonability);
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+STATIC_PTR int NDECL(dooverview_or_wiz_where);
+#endif /*D_OVERVIEW*/
 STATIC_PTR int NDECL(dotravel);
 # ifdef WIZARD
 STATIC_PTR int NDECL(wiz_wish);
@@ -550,6 +553,23 @@ enter_explore_mode()
 	}
 	return 0;
 }
+
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+/*[Sakusha]
+ * arrange -- we can choose simple view or wizard view, if wizard mode
+ */
+STATIC_PTR int
+dooverview_or_wiz_where()
+{
+#ifdef WIZARD
+	if (wizard && (yn("迷宮全体の構造を表示しますか？") == 'y'))
+	    return wiz_where();
+	else
+#endif
+	dooverview();
+	return 0;
+}
+#endif /*D_OVERVIEW*/
 
 #ifdef WIZARD
 
@@ -1952,9 +1972,18 @@ static const struct func_tab cmdlist[] = {
 	{C('i'), TRUE, wiz_identify},
 #endif
 	{C('l'), TRUE, doredraw}, /* if number_pad is set */
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+/****************/
+	{C('n'), TRUE, donamelevel}, /* if number_pad is set */
+	{C('o'), TRUE, dooverview_or_wiz_where}, /* depending on wizard status [Sakusha]*/
+/****************/
+#else /*3.4*/
+/*****no use*****/
 #ifdef WIZARD
 	{C('o'), TRUE, wiz_where},
 #endif
+/*****no use*****/
+#endif /*D_OVERVIEW*/
 	{C('p'), TRUE, doprev_message},
 	{C('r'), TRUE, doredraw},
 	{C('t'), TRUE, dotele},
@@ -2077,6 +2106,9 @@ static const struct func_tab cmdlist[] = {
 struct ext_func_tab extcmdlist[] = {
 #if 0 /*JP*/
 	{"adjust", "adjust inventory letters", doorganize, TRUE},
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	{"annotate", "name current level", donamelevel, TRUE},
+#endif /*D_OVERVIEW*/
 	{"chat", "talk to someone", dotalk, TRUE},	/* converse? */
 	{"conduct", "list which challenges you have adhered to", doconduct, TRUE},
 	{"dip", "dip an object into something", dodip, FALSE},
@@ -2089,6 +2121,9 @@ struct ext_func_tab extcmdlist[] = {
 	{"monster", "use a monster's special ability", domonability, TRUE},
 	{"name", "name an item or type of object", ddocall, TRUE},
 	{"offer", "offer a sacrifice to the gods", dosacrifice, FALSE},
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	{"overview", "show an overview of the dungeon", dooverview, TRUE},
+#endif /*D_OVERVIEW*/
 	{"pray", "pray to the gods for help", dopray, TRUE},
 	{"purify", "purify yourself", dopurify, TRUE},
 	{"quit", "exit without saving current game", done2, TRUE},
@@ -2106,6 +2141,9 @@ struct ext_func_tab extcmdlist[] = {
 	{"?", "get this list of extended commands", doextlist, TRUE},
 #else /*JP*/
 	{"adjust", "持ち物の並び換え", doorganize, TRUE},
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	{"annotate", "この階に名前をつける", donamelevel, TRUE},
+#endif /*D_OVERVIEW*/
 	{"chat", "誰かに話しかける", dotalk, TRUE},	/* converse? */
 	{"conduct", "あなたがこだわる挑戦の一覧を見る", doconduct, TRUE},
 	{"dip", "物を何かに浸す", dodip, FALSE},
@@ -2117,6 +2155,9 @@ struct ext_func_tab extcmdlist[] = {
 	{"monster", "怪物の特殊能力を使う", domonability, TRUE},
 	{"name", "所持品に名前をつける", ddocall, TRUE},
 	{"offer", "神に供物を捧げる", dosacrifice, FALSE},
+#ifdef D_OVERVIEW	/*Dungeon Map Overview 3 [Hojita Discordia]*/
+	{"overview", "迷宮の構造を表示する", dooverview, TRUE},
+#endif /*D_OVERVIEW*/
 	{"pray", "神に祈る", dopray, TRUE},
 	{"purify", "みそぎをする", dopurify, TRUE},
 	{"quit", "ゲームを放棄する", done2, TRUE},

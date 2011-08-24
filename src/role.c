@@ -2011,15 +2011,15 @@ int nameflg;
     switch (Role_switch) {
     case PM_KNIGHT:
 	if(nameflg)
-	    Sprintf(helo_buf, "よくぞ參った%sよ", plname);
+	    Sprintf(helo_buf, "挨拶を、%s", plname);
 	else
-	    Sprintf(helo_buf, "よくぞ參った");
+	    Sprintf(helo_buf, "挨拶を");
 	break;
     case PM_SAMURAI:
 	if(nameflg)
-	    Sprintf(helo_buf, "よくぞ参られた%sよ", plname);
+	    Sprintf(helo_buf, "こんにちは%s", plname);
 	else
-	    Sprintf(helo_buf, "よくぞ参られた");
+	    Sprintf(helo_buf, "こんにちは");
 	break;
 #ifdef TOURIST
     case PM_TOURIST:
@@ -2031,15 +2031,15 @@ int nameflg;
 #endif
     case PM_VALKYRIE:
 	if(nameflg)
-	    Sprintf(helo_buf, "魂の守護者%sよ", plname);
+	    Sprintf(helo_buf, "こんにちは%s", plname);
 	else
-	    Sprintf(helo_buf, "魂の守護者");
+	    Sprintf(helo_buf, "こんにちは");
 	break;
     default:
 	if(nameflg)
-	    Sprintf(helo_buf, "ようこそ%s", plname);
+	    Sprintf(helo_buf, "こんにちは%s", plname);
 	else
-	    Sprintf(helo_buf, "ようこそ");
+	    Sprintf(helo_buf, "こんにちは");
 	break;
     }
 
