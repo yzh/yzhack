@@ -855,7 +855,7 @@ register struct permonst *ptr;
 /*JP
 				You_feel("grounded in reality.");
 */
-				You("実はアースされているように感じた。");
+				You("本当に地に足がついているように感じた。");
 			else
 /*JP
 				Your("health currently feels amplified!");
@@ -1500,7 +1500,7 @@ struct obj *obj;
 /*JP
 		pline("Everything suddenly goes dark.");
 */
-		pline("突然全てが暗くなった。");
+	        //pline("突然全てが暗くなった。");
 		//make_blinded((long)d(2,10),FALSE);
 		//if (!Blind) Your(vision_clears);
 	} else if(!rn2(3)) {
@@ -1537,7 +1537,7 @@ struct obj *obj;
 /*JP
 		nomovemsg = "You are conscious again.";
 */
-		nomovemsg = "あなたはまた正気づいた。";
+		nomovemsg = "あなたは意識を取り戻した。";
 		afternmv = Hear_again;
 		return(1);
 	}
@@ -1577,7 +1577,7 @@ eatcorpse(otmp)		/* called when a corpse is selected as food */
 		      !vegetarian(&mons[mnum]) ? "meat" : "protoplasm",
 		      cannibal ? " cannibal" : "");
 #else
-		pline("オェ！この%sは腐っている%s！", 
+		pline("オェ、この%sは腐っている%s！", 
 		      mons[mnum].mlet == S_FUNGUS ? "細菌に汚染された植物" :
 		      !vegetarian(&mons[mnum]) ? "肉" : "生物",
 		      cannibal ? "。しかも共食いだ" : "");
@@ -2831,7 +2831,7 @@ sync_hunger()
 /*JP
 		nomovemsg = "You regain consciousness.";
 */
-		nomovemsg = "あなたは正気づいた。";
+		nomovemsg = "あなたは意識を取り戻した。";
 		afternmv = unfaint;
 	}
 }
@@ -2896,13 +2896,13 @@ boolean incr;
 /*JP
 				You("faint from lack of food.");
 */
-				You("腹が減って倒れた。");
+				You("腹が減って卒倒した。");
 				flags.soundok = 0;
 				nomul(-10+(u.uhunger/10));
 /*JP
 				nomovemsg = "You regain consciousness.";
 */
-				nomovemsg = "あなたは正気づいた。";
+				nomovemsg = "あなたは意識を取り戻した。";
 				afternmv = unfaint;
 				newhs = FAINTED;
 			}
@@ -2951,8 +2951,8 @@ boolean incr;
 				  (u.uhunger < 145) ? "feel hungry." :
 				   "are beginning to feel hungry.");
 #else
-			    You((!incr) ? "単に腹ペコ状態になった。" :
-				  (u.uhunger < 145) ? "空腹感を感じた。" :
+			    You((!incr) ? "単に空腹状態になった。" :
+				  (u.uhunger < 145) ? "空腹感をおぼえた。" :
 				   "空腹感をおぼえはじめた。");
 #endif
 			if (incr && occupation &&

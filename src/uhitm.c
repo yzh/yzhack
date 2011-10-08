@@ -1361,7 +1361,7 @@ struct attack *mattk;
 #else
 	    You("%sの%s%s%s！",
 		mon_nam(mdef),
-		obj->greased ? "油の塗られた" : "滑りやすい",
+		obj->greased ? "脂の塗られた" : "滑りやすい",
 		(obj->greased || objects[obj->otyp].oc_name_known) ?
 		xname(obj) : cloak_simple_name(obj),
 		mattk->adtyp == AD_WRAP ?
@@ -1372,7 +1372,7 @@ struct attack *mattk;
 /*JP
 		pline_The("grease wears off.");
 */
-		pline("油は落ちてしまった。");
+		pline("脂は落ちてしまった。");
 		obj->greased = 0;
 	    }
 	    return TRUE;

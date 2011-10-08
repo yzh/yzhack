@@ -472,7 +472,7 @@ boolean newlev;
 		      "%s!  Don't you leave without paying!",
 #else
 		      "%sさん！お帰りの前にお支払いを。" :
-		      "%s！帰るなら金を払ってからにしろ！",
+		      "%s！帰るまえに金を払え！",
 #endif
 		      plname);
 	    return;

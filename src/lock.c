@@ -571,13 +571,44 @@ pick_lock(pick) /* pick a lock with a given object */
 		    switch(picktyp) {
 #ifdef TOURIST
 			case CREDIT_CARD:
+			    if(!rn2(20) && !pick->blessed && !pick->oartifact) {
+#if 0 /*JP*/
+				Your("credit card breaks in half!");
+#else
+				Your("クレジットカードは真っ二つに折れた！");
+#endif
+				useup(pick);
+				//*pickp = (struct obj *)0;
+				return(1);
+			    }
 			    ch = 2*ACURR(A_DEX) + 20*Role_if(PM_ROGUE);
 			    break;
 #endif
 			case LOCK_PICK:
+			    if(!rn2(Role_if(PM_ROGUE) ? 40 : 30) &&
+			    		!pick->blessed && !pick->oartifact) {
+#if 0 /*JP*/
+				You("break your pick!");
+#else
+				You("工具を壊してしまった！");
+#endif
+				useup(pick);
+				//*pickp = (struct obj *)0;
+				return(1);
+			    }
 			    ch = 3*ACURR(A_DEX) + 30*Role_if(PM_ROGUE);
 			    break;
 			case SKELETON_KEY:
+			    if(!rn2(15) && !pick->blessed && !pick->oartifact) {
+#if 0 /*JP*/
+				Your("key didn't quite fit the lock and snapped!");
+#else
+				Your("鍵は全く鍵穴に合わずポキンと折れてしまった！");
+#endif
+				useup(pick);
+				//*pickp = (struct obj *)0;
+				return(1);
+			    }
 			    ch = 70 + ACURR(A_DEX);
 			    break;
 			default:    ch = 0;

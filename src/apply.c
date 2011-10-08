@@ -2432,7 +2432,7 @@ static NEARDATA const char need_to_remove_outer_armor[] =
 /*JP
 			"need to remove your %s to grease your %s.";
 */
-			"%sに油を塗るには%sをはずす必要がある。";
+			"%sに脂を塗るには%sをはずす必要がある。";
 
 STATIC_OVL void
 use_grease(obj)

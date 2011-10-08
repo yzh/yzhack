@@ -719,12 +719,12 @@ level_tele()
 /*JP
 		if (ynq("Go to Nowhere.  Are you sure?") != 'y') return;
 */
-		if(ynq("どことも知れぬ場所に行きます？よろしいですか？") != 'y') return;
+		if(ynq("どこにもない場所に行きます？よろしいですか？") != 'y') return;
 #if 0 /*JP*/
 		You("%s in agony as your body begins to warp...",
 		    is_silent(youmonst.data) ? "writhe" : "scream");
 #else
-	        You("体が移動しはじめると、苦しみ%s…",
+	        You("体がワープしはじめると、苦しみ%s…",
 		    is_silent(youmonst.data) ? "で身もだえした" : "のあえぎ声を出した");
 #endif
 		display_nhwindow(WIN_MESSAGE, FALSE);

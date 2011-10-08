@@ -3,6 +3,7 @@
 #
 
 LEVEL: "guild1"
+FLAGS: hardfloor
 
 ROOM: "ordinary", lit, random, random, (12,6)
 NAME: "central"
@@ -53,6 +54,7 @@ RANDOM_CORRIDORS
 
 
 LEVEL: "guild2"
+FLAGS: hardfloor
 
 ROOM: "ordinary", lit, random, random, (12,6)
 NAME: "central"
@@ -120,6 +122,7 @@ RANDOM_CORRIDORS
 #
 ##
 LEVEL: "guild3"
+FLAGS: hardfloor
 
 ROOM: "ordinary", lit, random, random, (12,6)
 NAME: "central"

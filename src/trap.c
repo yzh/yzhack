@@ -294,7 +294,7 @@ struct monst *victim;
 /*JP
 	static const char txt[] = "protected by the layer of grease!";
 */
-	static const char txt[] = "油の塗りこみによって守られている！";
+	static const char txt[] = "脂の塗りこみによって守られている！";
 	boolean vismon = victim && (victim != &youmonst) && canseemon(victim);
 
 	if (ostr) {
@@ -328,7 +328,7 @@ struct monst *victim;
 /*JP
 		pline_The("grease dissolves.");
 */
-		pline("油ははげてしまった。");
+		pline("脂ははげてしまった。");
 		update_inventory();
 	    }
 	}

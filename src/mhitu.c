@@ -1068,7 +1068,7 @@ struct attack *mattk;
 #else
 	    pline("%sは%s%s%s！",
 		  Monnam(mtmp),
-		  obj->greased ? "油の塗られた" : "滑りやすい",
+		  obj->greased ? "脂の塗られた" : "滑りやすい",
 		  (obj->greased || objects[obj->otyp].oc_name_known) ?
 			xname(obj) : cloak_simple_name(obj),
 		  (mattk->adtyp == AD_WRAP) ?

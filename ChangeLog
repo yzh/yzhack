@@ -1,4 +1,36 @@
+2011-10-04  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/lock.c (pick_lock): 鍵が壊れるように
+
+2011-09-21  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/potion.c (make_sick): 訳修正
+
+2011-09-13  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/trap.c: 訳修正
+
+	* src/apply.c: 訳修正
+
+	* src/mhitu.c: 訳修正
+
+	* src/objnam.c: 訳修正
+
+	* src/trap.c: 訳修正
+
+	* src/uhitm.c: 訳修正
+
+2011-08-30  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/eat.c: 訳修正
+
+2011-08-27  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/makemon.c (m_initweap): ミスリル服の出現確率上昇
+
 2011-08-24  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/guild.des: hardfloorフラグ
 
 	* src/botl.c: 訳修正
 

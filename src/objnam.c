@@ -1139,7 +1139,7 @@ register struct obj *obj;
 /*JP
 	if (obj->greased) Strcat(prefix, "greased ");
 */
-	if (obj->greased) Strcat(prefix, "油の塗られた");
+	if (obj->greased) Strcat(prefix, "脂の塗られた");
 
 	switch(obj->oclass) {
 	case AMULET_CLASS:
@@ -2599,7 +2599,7 @@ boolean from_user;
 	S("真っ白な", "blank ");
 
 	S("毒の塗られた", "poisoned ");
-	S("油の塗られた", "greased ");
+	S("脂の塗られた", "greased ");
 	S("脂の塗られた", "greased ");
 
 	S("とても", "very ");

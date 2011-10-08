@@ -615,7 +615,7 @@ boolean new_game;	/* false => restoring an old game */
 	      (currentgend && urole.jname.f) ? urole.jname.f : urole.jname.m,
 	      buf);
     } else {
-	pline("%s、%sの%s、NetHackへお帰りなさい！",
+	pline("%s、NetHackへお帰りなさい！あなたは%sの%sだ。",
 	      Hello((struct monst *) 0, TRUE), urace.j,
 	      (currentgend && urole.jname.f) ? urole.jname.f : urole.jname.m);
     }

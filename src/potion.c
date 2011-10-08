@@ -136,7 +136,7 @@ int type;
 /*JP
 		You_feel("deathly sick.");
 */
-		You("病気で死にそうだ。");
+		You("死ぬほど気分が悪い。");
 	    } else {
 		/* already sick */
 #if 0 /*JP*/
@@ -1402,7 +1402,7 @@ boolean your_fault;
 		    pline("This burns%s!", obj->blessed ? " a little" :
 				    obj->cursed ? " a lot" : "");
 #else
-		    pline("%s燃えた！", obj->blessed ? "少し" :
+		    pline("%sひりひりする！", obj->blessed ? "少し" :
 				    obj->cursed ? "はげしく" : "");
 #endif
 #if 0 /*JP*/

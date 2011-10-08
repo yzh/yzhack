@@ -226,7 +226,7 @@ register struct monst *mtmp;
 		} else if (is_elf(ptr)) {
 		    if (rn2(2))
 			(void) mongets(mtmp,
-				       rn2(20) ? ELVEN_CLOAK: ELVEN_MITHRIL_COAT );
+				       rn2(12) ? ELVEN_CLOAK: ELVEN_MITHRIL_COAT );
 		    if (rn2(2)) (void)mongets(mtmp, ELVEN_LEATHER_HELM);
 		    else if (!rn2(4)) (void)mongets(mtmp, ELVEN_BOOTS);
 		    if (rn2(2)) (void)mongets(mtmp, ELVEN_DAGGER);
@@ -326,7 +326,7 @@ register struct monst *mtmp;
 			}
 			(void)mongets(mtmp, DWARVISH_IRON_HELM);
 			if (!rn2(3))
-			  (void)mongets(mtmp, rn2(20) ? CHAIN_MAIL : DWARVISH_MITHRIL_COAT);
+			  (void)mongets(mtmp, rn2(16) ? CHAIN_MAIL : DWARVISH_MITHRIL_COAT);
 		    } else {
 			(void)mongets(mtmp, !rn2(3) ? PICK_AXE : DAGGER);
 		    } if (!rn2(7)) {
