@@ -246,9 +246,9 @@ whetstoneパッチとremove curse魔法を参考にちまちまやってみる�
 猫耳萌え ク・メル萌え
 http://hiroshima.cool.ne.jp/kotechan/r-felpurr.htm
 混沌のみ
-Bar (Fen) Mon Pri Ran Rog Wiz
+Bar Fen Pri Ran Rog Wiz
  Str Agi Con Int Wis Cha
-18/50 20  16  15  16  18
+18/30 20  16  15  18  18
 lv.1 暗視、忍び、素早さ
 毒耐性、幸運
 フェルプール、ゾンビ、ミイラ
