@@ -177,7 +177,7 @@ A("Vorpal Blade",		LONG_SWORD,
 
 A("Disrupter",                  MACE,
 	(SPFX_RESTR|SPFX_DFLAG2), 0, M2_UNDEAD,
-	PHYS(5,30),     NO_DFNS,        NO_CARY,        0, A_NEUTRAL, PM_PRIEST, NON_PM, 500L ),
+	PHYS(5,30),     NO_DFNS,        NO_CARY,        0, A_LAWFUL, PM_PRIEST, NON_PM, 500L ),
 
 A("Ebony Lacquered Bow",         YUMI,
 	(SPFX_RESTR|SPFX_SEARCH), 0, 0,

@@ -1,6 +1,10 @@
+2011-10-11  yzh  <yuzuha.tomo@gmail.com>
+
+	* include/artilist.h (]): ディスラプターは秩序
+
 2011-10-04  yzh  <yuzuha.tomo@gmail.com>
 
-	* src/lock.c (pick_lock): 鍵が壊れるように
+	* src/lock.c (pick_lock): 鍵が壊れるように [slash'em]
 
 2011-09-21  yzh  <yuzuha.tomo@gmail.com>
 

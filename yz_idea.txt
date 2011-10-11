@@ -250,12 +250,11 @@ Bar Fen Pri Ran Rog Wiz
  Str Agi Con Int Wis Cha
 18/30 20  16  15  18  18
 lv.1 暗視、忍び、素早さ
-毒耐性、幸運
-フェルプール、ゾンビ、ミイラ
 ペットは猫
 シンボルfがつねに友好的、dがつねに敵対的
 睡眠が長い
 眠り耐性つかない？
+
 ***種族ハーフエルフ Peredhil
 中立と混沌
 A B F H M P Ra Ro T V W
