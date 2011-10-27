@@ -118,7 +118,11 @@ const struct Role roles[] = {
 	PM_PELIAS, PM_CHIEFTAIN, PM_THOTH_AMON,
 	PM_OGRE, PM_TROLL, S_OGRE, S_TROLL,
 	ART_HEART_OF_AHRIMAN,
+#ifdef FELPURR
+	MH_HUMAN|MH_ORC|MH_HALFELF|MH_FELPURR | ROLE_MALE|ROLE_FEMALE |
+#else
 	MH_HUMAN|MH_ORC|MH_HALFELF | ROLE_MALE|ROLE_FEMALE |
+#endif
 	  ROLE_NEUTRAL|ROLE_CHAOTIC,
 	/* Str Int Wis Dex Con Cha */
 	{  16,  7,  7, 15, 16,  6 },
@@ -209,7 +213,11 @@ const struct Role roles[] = {
 	PM_RIGIL, PM_SWORDSMAN, PM_TOLIMAN,
 	PM_AIR_ELEMENTAL, PM_SNAKE, S_SNAKE, S_ZOMBIE,
 	ART_FORTUNE_SWORD,
+#ifdef FELPURR
+	MH_HUMAN|MH_ELF|MH_GNOME|MH_HALFELF|MH_FELPURR | ROLE_MALE|ROLE_FEMALE |
+#else
 	MH_HUMAN|MH_ELF|MH_GNOME|MH_HALFELF | ROLE_MALE|ROLE_FEMALE |
+#endif
 	  ROLE_NEUTRAL|ROLE_CHAOTIC,
 	/* Str Int Wis Dex Con Cha */
 	{  10,  9,  7,  9,  9,  7 },
@@ -434,7 +442,11 @@ const struct Role roles[] = {
 	PM_ARCH_PRIEST, PM_ACOLYTE, PM_NALZOK,
 	PM_HUMAN_ZOMBIE, PM_WRAITH, S_ZOMBIE, S_WRAITH,
 	ART_MITRE_OF_HOLINESS,
+#ifdef FELPURR
+	MH_HUMAN|MH_ELF|MH_DWARF|MH_HALFELF|MH_FELPURR | ROLE_MALE|ROLE_FEMALE |
+#else
 	MH_HUMAN|MH_ELF|MH_DWARF|MH_HALFELF | ROLE_MALE|ROLE_FEMALE |
+#endif
 	  ROLE_LAWFUL|ROLE_NEUTRAL|ROLE_CHAOTIC,
 	/* Str Int Wis Dex Con Cha */
 	{  7,  7, 10,  7,  7,  7 },
@@ -481,7 +493,11 @@ const struct Role roles[] = {
 	PM_MASTER_OF_THIEVES, PM_THUG, PM_MASTER_ASSASSIN,
 	PM_LEPRECHAUN, PM_GUARDIAN_NAGA, S_NYMPH, S_NAGA,
 	ART_BUTTERFLY_KNIFE,
+#ifdef FELPURR
+	MH_HUMAN|MH_ORC|MH_HALFELF|MH_FELPURR | ROLE_MALE|ROLE_FEMALE |
+#else
 	MH_HUMAN|MH_ORC|MH_HALFELF | ROLE_MALE|ROLE_FEMALE |
+#endif
 	  ROLE_CHAOTIC,
 	/* Str Int Wis Dex Con Cha */
 	{  7,  7,  7, 10,  7,  6 },
@@ -540,7 +556,11 @@ const struct Role roles[] = {
 	PM_ORION, PM_HUNTER, PM_SCORPIUS,
 	PM_FOREST_CENTAUR, PM_SCORPION, S_CENTAUR, S_SPIDER,
 	ART_LONGBOW_OF_DIANA,
+#ifdef FELPURR
+	MH_HUMAN|MH_ELF|MH_GNOME|MH_ORC|MH_HALFELF|MH_FELPURR | ROLE_MALE|ROLE_FEMALE |
+#else
 	MH_HUMAN|MH_ELF|MH_GNOME|MH_ORC|MH_HALFELF | ROLE_MALE|ROLE_FEMALE |
+#endif
 	  ROLE_NEUTRAL|ROLE_CHAOTIC,
 	/* Str Int Wis Dex Con Cha */
 	{ 13, 13, 13,  9, 13,  7 },
@@ -719,7 +739,11 @@ const struct Role roles[] = {
 	PM_NEFERET_THE_GREEN, PM_APPRENTICE, PM_DARK_ONE,
 	PM_VAMPIRE_BAT, PM_XORN, S_BAT, S_WRAITH,
 	ART_EYE_OF_THE_AETHIOPICA,
+#ifdef FELPURR
+	MH_HUMAN|MH_ELF|MH_GNOME|MH_ORC|MH_HALFELF|MH_FELPURR | ROLE_MALE|ROLE_FEMALE |
+#else
 	MH_HUMAN|MH_ELF|MH_GNOME|MH_ORC|MH_HALFELF | ROLE_MALE|ROLE_FEMALE |
+#endif
 	  ROLE_NEUTRAL|ROLE_CHAOTIC,
 	/* Str Int Wis Dex Con Cha */
 	{  7, 10,  7,  7,  7,  7 },
@@ -859,6 +883,23 @@ const struct Race races[] = {
 	{  1, 0,  0, 1,  0, 0 },	/* Hit points */
 	{  1, 0,  1, 0,  1, 0 }		/* Energy */
 },
+#ifdef FELPURR
+/*JP
+{	"felpurr", "felpurr", "felpurr", "Fel",
+*/
+{	"felpurr", "フェルプール", "felpurr", "felpurr", "Fel",
+	{0, 0},
+	PM_FELPURR, NON_PM, PM_FELPURR_MUMMY, PM_FELPURR_ZOMBIE,
+	MH_FELPURR | ROLE_MALE|ROLE_FEMALE | ROLE_CHAOTIC,
+	MH_FELPURR, 0, MH_HUMAN|MH_ELF|MH_DWARF|MH_ORC,
+	/*  Str    Int Wis Dex Con Cha */
+	{   3,      3,  3,  3,  3,  3 },
+	{STR18(30),15, 20, 20, 16, 18 },
+	/* Init   Lower  Higher */
+	{  1, 0,  0, 1,  1, 0 },	/* Hit points */
+	{  1, 0,  2, 0,  2, 0 }		/* Energy */
+},
+#endif
 /* Array terminator */
 { 0, 0, 0, 0 }};
 

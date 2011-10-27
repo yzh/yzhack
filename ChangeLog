@@ -1,3 +1,9 @@
+2011-10-28  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/role.c: felpurr
+
+	* src/monst.c: felpurr
+
 2011-10-27  yzh  <yuzuha.tomo@gmail.com>
 
 	* src/attrib.c: felpurr
@@ -12,7 +18,7 @@
 
 2011-10-11  yzh  <yuzuha.tomo@gmail.com>
 
-	* include/artilist.h (]): ディスラプターは秩序
+	* include/artilist.h: ディスラプターは秩序
 
 2011-10-04  yzh  <yuzuha.tomo@gmail.com>
 
