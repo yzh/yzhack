@@ -1,3 +1,15 @@
+2011-10-27  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/attrib.c: felpurr
+
+	* include/monflag.h: felpurr
+
+	* include/mondata.h: felpurr
+
+	* include/config.h: felpurr
+
+	* dat/jtrnsmon.dat: felpurr
+
 2011-10-11  yzh  <yuzuha.tomo@gmail.com>
 
 	* include/artilist.h (]): ディスラプターは秩序

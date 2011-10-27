@@ -201,8 +201,14 @@ const struct innate {
 		     {	 0, 0, 0, 0 } },
 #endif
 
+#ifdef FELPURR
+	felpurr_abil[] = { {	1, &(HStealth), "人目を盗む力を得た", "人目を盗む力を失った" },
+			   {	1, &(HFast), "素早さを得た", "遅くなった" },
+		     {	0, 0, 0, 0 } },
+
 	orc_abil[] = { {	1, &(HPoison_resistance), "", "" },
 		     {	 0, 0, 0, 0 } };
+
 
 static long next_check = 600L;	/* arbitrary first setting */
 STATIC_DCL void NDECL(exerper);
@@ -710,6 +716,9 @@ int oldlevel, newlevel;
 	case PM_HALF_ELF:	rabil = halfelf_abil;	break;
 #endif
 	case PM_ORC:            rabil = orc_abil;	break;
+#ifdef FELPURR
+	case PM_FELPURR:	rabil = felpurr_abil;	break;
+#endif
 	case PM_HUMAN:
 	case PM_DWARF:
 	case PM_GNOME:

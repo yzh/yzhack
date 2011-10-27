@@ -85,6 +85,9 @@
 #define is_gnome(ptr)		(((ptr)->mflags2 & M2_GNOME) != 0L)
 #define is_orc(ptr)		(((ptr)->mflags2 & M2_ORC) != 0L)
 #define is_human(ptr)		(((ptr)->mflags2 & M2_HUMAN) != 0L)
+#ifdef FELPURR
+#define is_felpurr(ptr)	(((ptr)->mflags2 & M2_FELPURR) !=0L)
+#endif
 #define your_race(ptr)		(((ptr)->mflags2 & urace.selfmask) != 0L)
 #define is_bat(ptr)		((ptr) == &mons[PM_BAT] || \
 				 (ptr) == &mons[PM_GIANT_BAT] || \

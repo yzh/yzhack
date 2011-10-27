@@ -371,8 +371,8 @@ typedef unsigned char	uchar;
 #define HALFELF  /* add new race half-elf */
 #define FENCER   /* add new role Fencer */
 #define DEATH_EXPLORE  /* define death expolore */
-
 #define BUCPREFIX	/* more visible blessed/uncursed/cursed prefix */
+#define FELPURR  /* add new race felpurr */
 
 /*
  * Section 5:  EXPERIMENTAL STUFF

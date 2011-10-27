@@ -83,6 +83,7 @@ dwarf lord:		ドワーフの貴族:
 dwarf king:		ドワーフの王:
 mind flayer:		マインドフレア:
 master mind flayer:	マスターマインドフレア:
+felpurr:    		フェルプール:
 #
 #	imps & other minor demons/devils
 #
@@ -331,6 +332,7 @@ orc mummy:		オークのミイラ:
 dwarf mummy:		ドワーフのミイラ:
 elf mummy:		エルフのミイラ:
 human mummy:		人間のミイラ:
+felpurr mummy:		フェルプールのミイラ:
 ettin mummy:		エティンのミイラ:
 giant mummy:		巨人のミイラ:
 #
@@ -421,6 +423,7 @@ orc zombie:		オークのゾンビ:
 dwarf zombie:		ドワーフのゾンビ:
 elf zombie:		エルフのゾンビ:
 human zombie:		人間のゾンビ:
+felpurr zombie:		フェルプールのゾンビ:
 
 ettin zombie:		エティンのゾンビ:
 giant zombie:		巨人のゾンビ:

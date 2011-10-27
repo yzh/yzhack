@@ -126,6 +126,9 @@
 #define M2_MINION	0x00001000L	/* is a minion of a deity */
 #define M2_GIANT	0x00002000L	/* is a giant */
 #define M2_DEMON	0x00004000L	/* is a demon */
+#ifdef FELPURR
+#define M2_FELPURR	0x00008000L	/* is a felpurr */
+#endif
 #define M2_MALE		0x00010000L	/* always male */
 #define M2_FEMALE	0x00020000L	/* always female */
 #define M2_NEUTER	0x00040000L	/* neither male nor female */
@@ -182,6 +185,9 @@
 
 #ifdef HALFELF
 #define MH_HALFELF	M2_HALFELF
+#endif
+#ifdef FELPURR
+#define MH_FELPURR	M2_FELPURR
 #endif
 
 /* for mons[].geno (constant during game) */
