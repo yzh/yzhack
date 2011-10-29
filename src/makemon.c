@@ -1033,6 +1033,15 @@ register int	mmflags;
 			if (Inhell && is_bat(ptr))
 			    mon_adjust_speed(mtmp, 2, (struct obj *)0);
 			break;
+#ifdef FELPURR
+		/* cats always friendly and dogs always hostile to felpurr */
+		case S_FELINE:
+			if (Race_if(PM_FELPURR)) mtmp->mpeaceful = TRUE;
+			break;
+		case S_DOG:
+			if (Race_if(PM_FELPURR)) mtmp->mpeaceful = FALSE:
+			break;
+#endif
 	}
 	if ((ct = emits_light(mtmp->data)) > 0)
 		new_light_source(mtmp->mx, mtmp->my, ct,
