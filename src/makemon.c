@@ -1039,7 +1039,7 @@ register int	mmflags;
 			if (Race_if(PM_FELPURR)) mtmp->mpeaceful = TRUE;
 			break;
 		case S_DOG:
-			if (Race_if(PM_FELPURR)) mtmp->mpeaceful = FALSE:
+			if (Race_if(PM_FELPURR)) mtmp->mpeaceful = FALSE;
 			break;
 #endif
 	}

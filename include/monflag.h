@@ -120,15 +120,17 @@
 #ifdef HALFELF
 #define M2_HALFELF	0x00000100L	/* is a half-elf */
 #endif
+#ifdef FELPURR
+#define M2_FELPURR	0x00000200L	/* is a felpurr */
+#define M2_MERC		0x00008000L	/* is a guard or soldier */
+#else
 #define M2_MERC		0x00000200L	/* is a guard or soldier */
+#endif
 #define M2_LORD		0x00000400L	/* is a lord to its kind */
 #define M2_PRINCE	0x00000800L	/* is an overlord to its kind */
 #define M2_MINION	0x00001000L	/* is a minion of a deity */
 #define M2_GIANT	0x00002000L	/* is a giant */
 #define M2_DEMON	0x00004000L	/* is a demon */
-#ifdef FELPURR
-#define M2_FELPURR	0x00008000L	/* is a felpurr */
-#endif
 #define M2_MALE		0x00010000L	/* always male */
 #define M2_FEMALE	0x00020000L	/* always female */
 #define M2_NEUTER	0x00040000L	/* neither male nor female */

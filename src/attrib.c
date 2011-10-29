@@ -205,6 +205,7 @@ const struct innate {
 	felpurr_abil[] = { {	1, &(HStealth), "人目を盗む力を得た", "人目を盗む力を失った" },
 			   {	1, &(HFast), "素早さを得た", "遅くなった" },
 		     {	0, 0, 0, 0 } },
+#endif
 
 	orc_abil[] = { {	1, &(HPoison_resistance), "", "" },
 		     {	 0, 0, 0, 0 } };
