@@ -45,6 +45,10 @@ pet_type()
 {
 	if (urole.petnum != NON_PM)
 	    return (urole.petnum);
+#ifdef FELPURR
+	else if Race_if(PM_FELPURR)
+	    return (PM_KITTEN);
+#endif
 	else if (preferred_pet == 'c')
 	    return (PM_KITTEN);
 	else if (preferred_pet == 'd')
