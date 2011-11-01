@@ -1036,6 +1036,16 @@ unsigned trflags;
 		    You("ガス雲につつまれた！");
 		    break;
 		}
+#ifdef FELPURR
+		else if Race_if(PM_FELPURR) {
+		    pline("あなたはガス雲で眠ってしまった！");
+		fall_asleep(-rnd(40), TRUE);
+#ifdef STEED
+		(void) steedintrap(trap, (struct obj *)0);
+#endif
+		    break;
+		  }
+#endif
 /*JP
 		pline("A cloud of gas puts you to sleep!");
 */
