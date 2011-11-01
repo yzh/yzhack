@@ -249,7 +249,7 @@ http://hiroshima.cool.ne.jp/kotechan/r-felpurr.htm
 Bar Fen Pri Ran Rog Wiz
  Str Agi Con Int Wis Cha
 18/30 20  16  15  18  18
-lv.1 暗視、忍び、素早さ
+lv.1 暗視、忍び、素早さ、透明視
 ペットは猫
 シンボルfがつねに友好的、dがつねに敵対的
 罠、薬、魔法、杖

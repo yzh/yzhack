@@ -204,6 +204,8 @@ const struct innate {
 #ifdef FELPURR
 	felpurr_abil[] = { {	1, &(HStealth), "人目を盗む力を得た", "人目を盗む力を失った" },
 			   {	1, &(HFast), "素早さを得た", "遅くなった" },
+			   {	1, &(HSearching), "知覚力を得た", "知覚力を失った" },
+			   {	4, &(HSee_invisible), "", "" },
 		     {	0, 0, 0, 0 } },
 #endif
 
