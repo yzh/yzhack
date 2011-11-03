@@ -24,13 +24,13 @@ const char	* const plusattr[] = {
 /*JP
 	"strong", "smart", "wise", "agile", "tough", "charismatic"
 */
-	"¶¯¤¤","¸­ÌÀ¤À","¸­¤¤","µ¡ÉÒ¤À","´è¾æ¤À","Ì¥ÎÏÅª¤À"
+	"¶¯ð×¤À","Íø¸ý¤À","¸­ÌÀ¤À","µ¡ÉÒ¤À","´è¾æ¤À","Ì¥ÎÏÅª¤À"
 },
 		* const minusattr[] = {
 /*JP
 	"weak", "stupid", "foolish", "clumsy", "fragile", "repulsive"
 */
-	"¼å¤¤","¶ò¤«¤À","´ÖÈ´¤±¤À","ÉÔ´ïÍÑ¤À","ÀÈ¼å¤À","½¹¤¤"
+	"µõ¼å¤À","¶ò¤«¤À","´ÖÈ´¤±¤À","ÉÔ´ïÍÑ¤À","ÀÈ¼å¤À","½¹°­¤À"
 };
 
 

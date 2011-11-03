@@ -871,6 +871,10 @@ register struct monst *mtmp;
 		    pline_msg = "purrs.";
 */
 		    pline_msg = "喉をならした。";
+#ifdef FELPURR
+		else if Race_if(PM_FELPURR)
+		    pline_msg = "重々しく挨拶した。";
+#endif
 		else
 /*JP
 		    pline_msg = "mews.";
@@ -1246,7 +1250,7 @@ register struct monst *mtmp;
 	    if (mtmp->mtame) {
 #if 0 /*JP*/
 				Sprintf(verbuf, "We've come this far, %s, so we'd better...",
-				flags.female ? "Mistress" : "Master");
+				flags.female ? "Ma'am" : "Master");
 #else
 				Sprintf(verbuf, "%s、もう帰りましょうよ…",
 				flags.female ? "お嬢様" : "ご主人様");

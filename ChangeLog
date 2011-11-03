@@ -1,3 +1,9 @@
+2011-11-03  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/attrib.c (]): Ìõ½¤Àµ
+
+	* src/sounds.c (domonnoise): felpurr talking
+
 2011-11-02  yzh  <yuzuha.tomo@gmail.com>
 
 	* src/trap.c (dotrap): felpurr
