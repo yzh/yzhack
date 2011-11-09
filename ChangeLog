@@ -1,6 +1,10 @@
+2011-11-10  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/trap.c (dotrap): felpurr slp trap
+
 2011-11-03  yzh  <yuzuha.tomo@gmail.com>
 
-	* src/attrib.c (]): 訳修正
+	* src/attrib.c: 訳修正
 
 	* src/sounds.c (domonnoise): felpurr talking
 
