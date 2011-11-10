@@ -1,6 +1,10 @@
 2011-11-10  yzh  <yuzuha.tomo@gmail.com>
 
-	* src/trap.c (dotrap): felpurr slp trap
+	* src/zap.c: felpurr slp
+
+	* src/potion.c: felpurr slp
+
+	* src/trap.c: felpurr slp trap
 
 2011-11-03  yzh  <yuzuha.tomo@gmail.com>
 

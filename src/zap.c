@@ -2280,7 +2280,14 @@ boolean ordinary;
 			You("don't feel sleepy!");
 */
 			You("眠くならない！");
-		    } else {
+		    }
+#ifdef FELPURR
+		    else if Race_if(PM_FELPURR) {
+			pline("眠り光線があなたに命中した！");
+			fall_asleep(-rnd(60), TRUE);
+		      }
+#endif
+		    else {
 /*JP
 			pline_The("sleep ray hits you!");
 */
@@ -3525,7 +3532,13 @@ xchar sx, sy;
 		You("don't feel sleepy.");
 */
 		You("眠くならない。");
-	    } else {
+	    }
+#ifdef FELPURR
+		    else if Race_if(PM_FELPURR) {
+			fall_asleep(-d(nd,35), TRUE); /* sleep ray */
+		      }
+#endif
+	    else {
 		fall_asleep(-d(nd,25), TRUE); /* sleep ray */
 	    }
 	    break;

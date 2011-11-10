@@ -839,6 +839,12 @@ peffects(otmp)
 		    You("yawn.");
 */
 		    You("あくびをした。");
+#ifdef FELPURR
+		else if Race_if(PM_FELPURR) {
+		    pline("突然眠ってしまった！");
+		    fall_asleep(-rn1(10, 35 - 12*bcsign(otmp)), TRUE);
+		    }
+#endif
 		else {
 /*JP
 		    You("suddenly fall asleep!");
