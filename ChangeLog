@@ -1,3 +1,11 @@
+2011-11-21  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/jtrnsobj.dat: 訳修正
+
+2011-11-20  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/engrave.c: 訳修正
+
 2011-11-12  yzh  <yuzuha.tomo@gmail.com>
 
 	* release/2011-11-12: release

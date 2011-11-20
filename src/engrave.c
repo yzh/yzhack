@@ -771,7 +771,7 @@ doengrave()
 /*JP
 		You_cant("engrave with such a large object!");
 */
-		pline("そんな大きなものを使って文字を刻めない！");
+		pline("そんな大きなものでは文字を刻めない！");
 		ptext = FALSE;
 		break;
 
@@ -783,7 +783,7 @@ doengrave()
 		Your("%s would get %s.", xname(otmp),
 			is_ice(u.ux,u.uy) ? "all frosty" : "too dirty");
 #else
-		Your("%sは%sなった。", xname(otmp),
+		Your("%sが%sなってしまう。", xname(otmp),
 			is_ice(u.ux,u.uy) ? "氷づけに" : "汚なく");
 #endif
 		ptext = FALSE;
@@ -875,7 +875,7 @@ doengrave()
 /*JP
 				   "The %s is riddled by bullet holes!",
 */
-				   "%sは散弾で細かい穴だらけになった！",
+				   "%sは弾痕で穴だらけになった！",
 				   surface(u.ux, u.uy));
 			}
 			break;
@@ -1035,7 +1035,7 @@ doengrave()
 /*JP
 			Your("%s too dull for engraving.", aobjnam(otmp,"are"));
 */
-			pline("%sは刃がボロボロで、文字を彫れない。",xname(otmp));
+			pline("%sは刃がボロボロで刻めない。",xname(otmp));
 		}
 		break;
 
@@ -1045,7 +1045,7 @@ doengrave()
 /*JP
 		"That is a bit difficult to engrave with, don't you think?");
 */
-		"ちょっとそれで彫るのは大変だろう、そう思わない？");
+		"それで刻むのはちょっと難しいとは思わないか？");
 		    return(0);
 		}
 		switch (otmp->otyp)  {
@@ -1079,7 +1079,7 @@ doengrave()
 #else
 				    pline("%sは%sなった。", xname(otmp),
 					  is_ice(u.ux,u.uy) ?
-					  "氷づけに" : "ほこりまみれに");
+					  "霜まみれに" : "ほこりまみれに");
 #endif
 				dengr = TRUE;
 			    } else
@@ -1094,7 +1094,7 @@ doengrave()
 				  is_ice(u.ux,u.uy) ? "frosty" : "dusty");
 #else
 			    pline("%sは%sなった。", xname(otmp),
-				  is_ice(u.ux,u.uy) ? "氷づけに" : "ほこりまみれに");
+				  is_ice(u.ux,u.uy) ? "霜まみれに" : "ほこりまみれに");
 #endif
 			break;
 		    default:
@@ -1108,7 +1108,7 @@ doengrave()
 /*JP
 		    pline("Writing a poison pen letter??");
 */
-		    pline("ふむ。これこそ本当の毒舌だ。");
+		    pline("これこそ本当の毒舌だ。");
 		    break;
 		}
 #endif
@@ -1241,7 +1241,7 @@ doengrave()
 			   (is_ice(u.ux,u.uy) ? "melted into" : "burned into") :
 			   "engraved in", surface(u.ux,u.uy));
 #else
-			You("%sメッセージを拭きとれなかった。",
+			You("%sメッセージを拭きとれない。",
 			    ((oep->engr_type == DUST)  ? "ほこりに書かれている" :
 			    ((oep->engr_type == BLOOD) ? "血文字でなぐり書きされている"   :
 							 "書かれている")));
@@ -1253,7 +1253,7 @@ doengrave()
 /*JP
 				You("will overwrite the current message.");
 */
-				You("メッセージを上書きしようとした。");
+				You("メッセージを上書きした。");
 			    eow = TRUE;
 			}
 	    }
@@ -1510,7 +1510,7 @@ doengrave()
 /*JP
 		if (multi) nomovemsg = "You finish scrawling.";
 */
-		if (multi) nomovemsg = "はしり書きを書き終えた。";
+		if (multi) nomovemsg = "殴り書きを書き終えた。";
 		break;
 	}
 
@@ -1682,7 +1682,7 @@ static const char *epitaphs[] = {
 #else
 	"安らかに眠れ。",
 	"注意 --墓の中に価値あるものは＊一つも＊ない。",
-	"1994-1995 今迄でもっとも長生きしたハッカー。",
+	"1994-1995 かつてもっとも長生きしたハッカー。",
 	"名もしらぬハッカーの墓。",
 	"ここに眠っているのは誰かは知らない。しかし我々は埋葬した。",
 	"スパーキー -- すばらしい犬だった。",
@@ -1692,11 +1692,11 @@ static const char *epitaphs[] = {
 	"肉汁、肉汁、肉汁",
 	"下を見ろ！",
 	"掘らないでください。とても幸せなんです。-- 居住者",
-	"郵便屋さん。電報は下記の住所に転送してください。ゲヘナ市アスモデウス要塞5番町。",
+	"郵便屋へ、次の住所に転送してください：ゲヘナ市アスモデウス要塞5番町。",
 	"メリーさんの羊/ふわふわ真っ白/困ったときには/最初に逃げた",
-	"気をつけよ！さもなくば同じことが起きる。-- 使用者",
-	"もうすぐ仲間になれる！！ -- イェンダーの魔法使い",
-	"気をつけよ！この墓は有毒な廃棄物が含まれている。",
+	"気をつけろ、さもないと同じ目にあうぞ！",
+	"もうすぐ仲間になれる！ -- イェンダーの魔法使い",
+	"注意！この墓は有毒な廃棄物が含まれている。",
 	"涅槃で待つ",
 	"無神論者ここに眠る。みんな着飾っているが、行く所がない。",
 	"エゼキエルここに眠る。享年102歳。いいやつは早く死ぬ。",
