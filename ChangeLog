@@ -1,3 +1,9 @@
+2011-12-11  yzh  <yuzuha.tomo@gmail.com>
+
+	* src/monst.c: moat monster
+
+	* dat/jtrnsmon.dat: moat monster
+
 2011-11-21  yzh  <yuzuha.tomo@gmail.com>
 
 	* dat/jtrnsobj.dat: Ìõ½¤Àµ
