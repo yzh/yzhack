@@ -1,3 +1,13 @@
+2012-01-08  yzh  <yuzuha.tomo@gmail.com>
+
+	* dat/drgncave.des: マップ修正
+
+	* dat/castle.des: add moat monsters
+
+	* dat/abdcstl.des: add moat monsters
+
+	* src/potion.c (peffects): [bug] 獣人で聖水を飲んだときのメッセージ修正
+
 2011-12-11  yzh  <yuzuha.tomo@gmail.com>
 
 	* src/monst.c: moat monster

@@ -611,7 +611,8 @@ peffects(otmp)
 			    Your("affinity to %s disappears!",
 */
 			    Your("%sへの親近感はなくなった！",
-				 makeplural(mons[u.ulycn].mname));
+				 jtrns_mon(mons[u.ulycn].mname));
+			    /*makeplural(mons[u.ulycn].mname));*/
 			    if (youmonst.data == &mons[u.ulycn])
 				you_unwere(FALSE);
 			    u.ulycn = NON_PM;	/* cure lycanthropy */

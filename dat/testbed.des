@@ -12,8 +12,8 @@ MAP
 |....................................|
 |....................................|
 |....................................|
-|....................................|
-|....................................|
+|-------------------.................|
+|..................|.................|
 --------------------------------------
 ENDMAP
 REGION:(01,01,36,8),lit,"ordinary"
@@ -85,3 +85,21 @@ OBJECT:'?',"charging",contained, blessed, 0
 OBJECT:'?',"charging",contained, blessed, 0
 OBJECT:'?',"charging",contained, blessed, 0
 OBJECT:'(',"skeleton key", (3,5)
+MONSTER: 'W',random,(01,08)
+MONSTER: 'E',random,(02,08)
+MONSTER: 'L',random,(03,08)
+MONSTER: 'C',random,(04,08)
+MONSTER: 'O',random,(05,08)
+MONSTER: 'M',random,(06,08)
+MONSTER: 'E',random,(07,08)
+MONSTER: ' ',"shade",(08,08)
+MONSTER: 'T',random,(09,08)
+MONSTER: 'O',random,(10,08)
+MONSTER: ' ',"shade",(11,08)
+MONSTER: 'N',random,(12,08)
+MONSTER: 'E',random,(13,08)
+MONSTER: 'T',random,(14,08)
+MONSTER: 'H',random,(15,08)
+MONSTER: 'A',random,(16,08)
+MONSTER: 'C',random,(17,08)
+MONSTER: 'K',random,(18,08)
