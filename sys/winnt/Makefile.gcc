@@ -524,7 +524,11 @@ $(O)sp_lev.tag: $(O)utility.tag $(DAT)/bigroom.des  $(DAT)/castle.des \
 	 $(DAT)/caveman.des $(DAT)/healer.des   $(DAT)/knight.des \
 	 $(DAT)/monk.des    $(DAT)/priest.des   $(DAT)/ranger.des \
 	 $(DAT)/rogue.des   $(DAT)/samurai.des  $(DAT)/sokoban.des \
-	 $(DAT)/tourist.des $(DAT)/valkyrie.des $(DAT)/wizard.des
+	 $(DAT)/tourist.des $(DAT)/valkyrie.des $(DAT)/wizard.des \
+	 $(DAT)/abdcstl.des $(DAT)/drgncave.des $(DAT)/antcaves.des \
+	 $(DAT)/newmall.des $(DAT)/sea.des	$(DAT)/bigshop.des \
+	 $(DAT)/forest.des  $(DAT)/mall-1.des   $(DAT)/guild.des \
+	 $(DAT)/mall-2.des
 	$(subst /,\,$(U)lev_comp $(DAT)/bigroom.des)
 	$(subst /,\,$(U)lev_comp $(DAT)/castle.des)
 	$(subst /,\,$(U)lev_comp $(DAT)/endgame.des)
@@ -549,6 +553,16 @@ $(O)sp_lev.tag: $(O)utility.tag $(DAT)/bigroom.des  $(DAT)/castle.des \
 	$(subst /,\,$(U)lev_comp $(DAT)/tourist.des)
 	$(subst /,\,$(U)lev_comp $(DAT)/valkyrie.des)
 	$(subst /,\,$(U)lev_comp $(DAT)/wizard.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/abdcstl.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/antcaves.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/bigshop.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/drgncave.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/forest.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/guild.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/mall-1.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/mall-2.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/newmall.des)
+	$(subst /,\,$(U)lev_comp $(DAT)/sea.des)
 	$(subst /,\,copy *.lev $(DAT))
 	$(subst /,\,del *.lev)
 	$(subst /,\,echo sp_levs done > $(O)sp_lev.tag)

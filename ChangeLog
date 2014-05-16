@@ -1,3 +1,7 @@
+2014-05-16  yzh  <yuzuha.tomo@gmail.com>
+
+	* sys/winnt/Makefile.gcc: add new dat/ files
+
 2012-01-08  yzh  <yuzuha.tomo@gmail.com>
 
 	* dat/drgncave.des: マップ修正
